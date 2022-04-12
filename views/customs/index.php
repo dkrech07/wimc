@@ -13917,7 +13917,7 @@ foreach ($list as $list_number => $list_item) {
     // print_r($list_item);
     print("'customs" . $list_number . "'" . ' => [' . '<br>');
     print("'CODE' =>");
-    print($list_item['CODE']);
+    print("'" . $list_item['CODE'] . "'");
     print(', ' . '<br>');
 
     print("'NAMT' =>");
@@ -13925,15 +13925,15 @@ foreach ($list as $list_number => $list_item) {
     print(', ' . '<br>');
 
     print("'OKPO' =>");
-    print($list_item['OKPO']);
+    print("'" . $list_item['OKPO'] . "'");
     print(', ' . '<br>');
 
     print("'OGRN' =>");
-    print($list_item['OGRN']);
+    print("'" . $list_item['OGRN'] . "'");
     print(', ' . '<br>');
 
     print("'INN' =>");
-    print($list_item['INN']);
+    print("'" . $list_item['INN'] . "'");
     print(', ' . '<br>');
 
     print("'NAME_ALL' =>");
@@ -13945,7 +13945,7 @@ foreach ($list as $list_number => $list_item) {
     print(', ' . '<br>');
 
     print("'PROSF' =>");
-    print($list_item['PROSF']);
+    print("'" . $list_item['PROSF'] . "'");
     print(', ' . '<br>');
 
     print("'TELEFON' =>");
