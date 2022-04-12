@@ -3,13 +3,16 @@
 namespace app\controllers;
 
 use yii\web\Controller;
+use app\models\SearchCustoms;
 
 class CustomsController extends Controller
 {
     public function actionIndex()
     {
+        $searchCustomsModel = new SearchCustoms();
+
         return $this->render('index', [
-            // 'model' => $RegistrationModel,
+            'searchCustomsModel' => $searchCustomsModel,
             // 'cities' => $cities,
         ]);
     }

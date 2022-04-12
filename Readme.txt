@@ -29,6 +29,11 @@ yii migrate
 
 php yii fixture/load Customs
 
+
+
+
+
+
 Дополнительно:
 
 1. Генерация тестовых данных:
