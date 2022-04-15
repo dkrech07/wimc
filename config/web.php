@@ -46,7 +46,10 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [],
+            'rules' => [
+                // '/' => '/customs/index',
+                'geoapi/<geocode>' => 'api/geocoder',
+            ],
         ],
     ],
     'params' => $params,
