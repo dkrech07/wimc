@@ -38,9 +38,9 @@ class Customs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['CODE', 'NAMT', 'OKPO', 'OGRN', 'INN', 'NAME_ALL', 'ADRTAM', 'PROSF', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'required'],
-            [['CODE', 'OKPO', 'OGRN', 'INN', 'PROSF'], 'integer'],
-            [['NAMT', 'NAME_ALL', 'ADRTAM', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'string', 'max' => 128],
+            // [['CODE', 'NAMT', 'OKPO', 'OGRN', 'INN', 'NAME_ALL', 'ADRTAM', 'PROSF', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'required'],
+            // [['CODE', 'OKPO', 'OGRN', 'INN', 'PROSF'], 'integer'],
+            [['CODE', 'NAMT', 'OKPO', 'OGRN', 'INN', 'NAME_ALL', 'ADRTAM', 'PROSF', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'string', 'max' => 256],
         ];
     }
 

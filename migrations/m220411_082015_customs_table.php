@@ -14,19 +14,19 @@ class m220411_082015_customs_table extends Migration
     {
         $this->createTable('{{%customs}}', [
             'ID' => $this->primaryKey(),
-            'CODE' => $this->integer()->notNull(),
-            'NAMT' => $this->string(128)->notNull(),
-            'OKPO' => $this->integer()->null(),
-            'OGRN' => $this->integer()->null(),
-            'INN' => $this->integer()->null(),
-            'NAME_ALL' => $this->string(128)->notNull(),
-            'ADRTAM' => $this->string(128)->notNull(),
-            'PROSF' => $this->integer()->null(),
-            'TELEFON' => $this->string(128)->null(),
-            'FAX' => $this->string(128)->null(),
-            'EMAIL' => $this->string(128)->null(),
-            'COORDS_LATITUDE' => $this->string(128)->notNull(),
-            'COORDS_LONGITUDE' => $this->string(128)->notNull(),
+            'CODE' => $this->string(256)->notNull(),
+            'NAMT' => $this->string(256)->notNull(),
+            'OKPO' => $this->string(256)->null(),
+            'OGRN' => $this->string(256)->null(),
+            'INN' => $this->string(256)->null(),
+            'NAME_ALL' => $this->string(256)->notNull(),
+            'ADRTAM' => $this->string(256)->notNull(),
+            'PROSF' => $this->string(256)->null(),
+            'TELEFON' => $this->string(256)->null(),
+            'FAX' => $this->string(256)->null(),
+            'EMAIL' => $this->string(256)->null(),
+            'COORDS_LATITUDE' => $this->string(256)->notNull(),
+            'COORDS_LONGITUDE' => $this->string(256)->notNull(),
         ]);
 
         $this->createTable('{{%users}}', [
