@@ -7,12 +7,14 @@ use yii\web\Response;
 use yii\widgets\ActiveForm;
 use yii\web\Controller;
 use app\models\SearchCustoms;
+use app\services\CustomsFilterService;
 
 class CustomsController extends Controller
 {
     public function actionIndex()
     {
         $searchCustomsModel = new SearchCustoms();
+        $customs = (new CustomsFilterService())->getFilteredCustoms();
 
         if (Yii::$app->request->isPost) {
             $searchCustomsModel->load(Yii::$app->request->post());
@@ -32,7 +34,7 @@ class CustomsController extends Controller
 
         return $this->render('index', [
             'searchCustomsModel' => $searchCustomsModel,
-            // 'cities' => $cities,
+            'customs' => $customs,
         ]);
     }
 }

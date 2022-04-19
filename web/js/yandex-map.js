@@ -56,6 +56,17 @@ function init() {
             // // Масштабируем карту на область видимости коллекции.
             // myMap.setBounds(res.geoObjects.getBounds());
         });
+
+        $.ajax({
+            url: 'test.php',
+            method: 'get',
+            dataType: 'json',
+            success: function(data){
+                console.log(data);
+                // alert(data.text);    /* выведет "Текст" */
+                // alert(data.error);   /* выведет "Ошибка" */
+            }
+        });
 }
 
 

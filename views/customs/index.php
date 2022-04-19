@@ -2,12 +2,14 @@
 
 <?php
 
+use app\assets\AppAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\assets\AutoCompleteAsset;
 
+AppAsset::register($this);
 AutoCompleteAsset::register($this);
 $apiKey = Yii::$app->params['geocoderApiKey'];
 $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_RU");
@@ -17,6 +19,12 @@ $this->registerJsFile('js/yandex-map.js');
 
 // $this->registerJsFile('/js/custom.js');
 $this->title = 'Where is my customs?';
+
+// foreach ($customs as $custom) {
+//     print_r($custom);
+//     print('<br>');
+//     print('<br>');
+// }
 ?>
 
 

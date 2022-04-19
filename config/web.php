@@ -49,6 +49,7 @@ $config = [
             'rules' => [
                 // '/' => '/customs/index',
                 'geoapi/<geocode>' => 'api/geocoder',
+                '/' => '/customs',
             ],
         ],
     ],
