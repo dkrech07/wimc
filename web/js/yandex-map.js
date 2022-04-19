@@ -1,64 +1,64 @@
 const yandexMap = document.querySelector('#map');
 
-// if (yandexMap) {
-//     ymaps.ready(init);
-//     function init(){
-//         var myMap = new ymaps.Map("map", {
-//             center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-//             zoom: 7
-//         });
-//     }
-// }
-
 ymaps.ready(init);
 
 function init() {
-    // var myMap = new ymaps.Map('map', {
-    //         center: [55.753994, 37.622093],
-    //         zoom: 9
-    //     }, {
-    //         searchControlProvider: 'yandex#search'
-    //     });
+    var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 10
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
 
-        var myMap = new ymaps.Map('map', {
-        center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-        zoom: 1,
-        controls: []
-    });
-
-    
-    // Поиск станций метро.
-    ymaps.geocode(myMap.getCenter(), {
-        /**
-         * Опции запроса
-         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/geocode.xml
-         */
-        // Ищем только станции метро.
-        // kind: 'metro',
-        // Запрашиваем не более 20 результатов.
-        // results: 20
-    }).then(function (res) {
-
-            // // Задаем изображение для иконок меток.
-            // res.geoObjects.options.set('preset', 'islands#redCircleIcon');
-            // res.geoObjects.events
-            //     // При наведении на метку показываем хинт с названием станции метро.
-            //     .add('mouseenter', function (event) {
-            //         var geoObject = event.get('target');
-            //         myMap.hint.open(geoObject.geometry.getCoordinates(), geoObject.getPremise());
-            //     })
-            //     // Скрываем хинт при выходе курсора за пределы метки.
-            //     .add('mouseleave', function (event) {
-            //         myMap.hint.close(true);
-            //     });
-            // // Добавляем коллекцию найденных геообъектов на карту.
-            // myMap.geoObjects.add(res.geoObjects);
-            // // Масштабируем карту на область видимости коллекции.
-            // myMap.setBounds(res.geoObjects.getBounds());
+    // Создаем геообъект с типом геометрии "Точка".
+        myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [55.8, 37.8]
+            },
+            // Свойства.
+            properties: {
+                // Контент метки.
+                iconContent: 'Я тащусь',
+                hintContent: 'Ну давай уже тащи'
+            }
+        }, {
+            // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#blackStretchyIcon',
+            // Метку можно перемещать.
+            draggable: true
+        }),
+        myPieChart = new ymaps.Placemark([
+            55.847, 37.6
+        ], {
+            // Данные для построения диаграммы.
+            data: [
+                {weight: 8, color: '#0E4779'},
+                {weight: 6, color: '#1E98FF'},
+                {weight: 4, color: '#82CDFF'}
+            ],
+            iconCaption: "Диаграмма"
+        }, {
+            // Зададим произвольный макет метки.
+            iconLayout: 'default#pieChart',
+            // Радиус диаграммы в пикселях.
+            iconPieChartRadius: 30,
+            // Радиус центральной части макета.
+            iconPieChartCoreRadius: 10,
+            // Стиль заливки центральной части.
+            iconPieChartCoreFillStyle: '#ffffff',
+            // Cтиль линий-разделителей секторов и внешней обводки диаграммы.
+            iconPieChartStrokeStyle: '#ffffff',
+            // Ширина линий-разделителей секторов и внешней обводки диаграммы.
+            iconPieChartStrokeWidth: 3,
+            // Максимальная ширина подписи метки.
+            iconPieChartCaptionMaxWidth: 200
         });
-
+    
         $.ajax({
-            url: '/wimc/web/ajax',
+            url: '/ajax',
             method: 'get',
             dataType: 'json',
             success: function(data){
@@ -66,77 +66,21 @@ function init() {
                 // alert(data.text);    /* выведет "Текст" */
                 // alert(data.error);   /* выведет "Ошибка" */
 
-                // data.foreach((item) => {
-                //     ymaps.geoQuery(ymaps.geocode(item[0], item[1])).addToMap(myMap);
-                // });
+                data.forEach((item) => {
+                    ymaps.geoQuery(ymaps.geocode(item)).addToMap(myMap);
+                });
+
+                // myMap.geoObjects
+                // .add(myGeoObject)
+                // .add(myPieChart)
+                // .add(new ymaps.Placemark(data[0], {
+                //     balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+                // }, {
+                //     preset: 'islands#icon',
+                //     iconColor: '#0095b6'
+                // }));
             }
         });
 
-
-       
+ 
 }
-
-
-
-
-
-
-// ymaps.ready(init);
-
-// function init() {
-
-//     var myMap = new ymaps.Map('map', {
-//         center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-//         zoom: 9,
-//         controls: []
-//     });
-
-//     // Поиск координат центра Нижнего Новгорода.
-//     ymaps.geocode('Нижний Новгород', {
-//         /**
-//          * Опции запроса
-//          * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/geocode.xml
-//          */
-//         // Сортировка результатов от центра окна карты.
-//         // boundedBy: myMap.getBounds(),
-//         // strictBounds: true,
-//         // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy.
-//         // Если нужен только один результат, экономим трафик пользователей.
-//         results: 1
-//     }).then(function (res) {
-//             // Выбираем первый результат геокодирования.
-//             var firstGeoObject = res.geoObjects.get(0),
-//                 // Координаты геообъекта.
-//                 coords = firstGeoObject.geometry.getCoordinates(),
-//                 // Область видимости геообъекта.
-//                 bounds = firstGeoObject.properties.get('boundedBy');
-
-//             firstGeoObject.options.set('preset', 'islands#darkBlueDotIconWithCaption');
-//             // Получаем строку с адресом и выводим в иконке геообъекта.
-//             firstGeoObject.properties.set('iconCaption', firstGeoObject.getAddressLine());
-
-//             // Добавляем первый найденный геообъект на карту.
-//             myMap.geoObjects.add(firstGeoObject);
-//             // Масштабируем карту на область видимости геообъекта.
-//             myMap.setBounds(bounds, {
-//                 // Проверяем наличие тайлов на данном масштабе.
-//                 checkZoomRange: true
-//             });
-
-   
-
-//             /**
-//              * Если нужно добавить по найденным геокодером координатам метку со своими стилями и контентом балуна, создаем новую метку по координатам найденной и добавляем ее на карту вместо найденной.
-//              */
-//             /**
-//              var myPlacemark = new ymaps.Placemark(coords, {
-//              iconContent: 'моя метка',
-//              balloonContent: 'Содержимое балуна <strong>моей метки</strong>'
-//              }, {
-//              preset: 'islands#violetStretchyIcon'
-//              });
-
-//              myMap.geoObjects.add(myPlacemark);
-//              */
-//         });
-// }
