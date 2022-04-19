@@ -50,6 +50,7 @@ $config = [
                 // '/' => '/customs/index',
                 'geoapi/<geocode>' => 'api/geocoder',
                 '/' => '/customs',
+                'ajax' => 'customs/ajax',
             ],
         ],
     ],

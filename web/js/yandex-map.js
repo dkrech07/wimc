@@ -22,7 +22,7 @@ function init() {
 
         var myMap = new ymaps.Map('map', {
         center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-        zoom: 9,
+        zoom: 1,
         controls: []
     });
 
@@ -58,15 +58,22 @@ function init() {
         });
 
         $.ajax({
-            url: 'test.php',
+            url: '/wimc/web/ajax',
             method: 'get',
             dataType: 'json',
             success: function(data){
                 console.log(data);
                 // alert(data.text);    /* выведет "Текст" */
                 // alert(data.error);   /* выведет "Ошибка" */
+
+                // data.foreach((item) => {
+                //     ymaps.geoQuery(ymaps.geocode(item[0], item[1])).addToMap(myMap);
+                // });
             }
         });
+
+
+       
 }
 
 

@@ -14,7 +14,6 @@ class CustomsController extends Controller
     public function actionIndex()
     {
         $searchCustomsModel = new SearchCustoms();
-        $customs = (new CustomsFilterService())->getFilteredCustoms();
 
         if (Yii::$app->request->isPost) {
             $searchCustomsModel->load(Yii::$app->request->post());
@@ -34,7 +33,30 @@ class CustomsController extends Controller
 
         return $this->render('index', [
             'searchCustomsModel' => $searchCustomsModel,
-            'customs' => $customs,
+            // 'customs' => $customs,
         ]);
+    }
+
+    public function actionAjax() //: array
+    {
+        $customs = (new CustomsFilterService())->getFilteredCustoms();
+        $customs_coords = [];
+
+        foreach ($customs as $nuber => $custom) {
+            $customs_coords[$nuber] = [$custom['COORDS_LATITUDE'], $custom['COORDS_LONGITUDE']];
+        }
+
+        // header('Content-Type: text/html; charset=utf-8');
+
+        // $customs_coords = array(
+        //     'text'  => 'лалала',
+        //     'error' => 'лалала'
+        // );
+
+        echo json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
+        // Yii::$app->response->format = Response::FORMAT_JSON;
+        // print((new GeocoderService())->getCoords($geocode));
+        // exit;
+        // return $result;
     }
 }
