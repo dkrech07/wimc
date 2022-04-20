@@ -43,9 +43,9 @@ class CustomsController extends Controller
         $customs_coords = [];
 
         foreach ($customs as $number => $custom) {
-            if ($number < 100) {
-                $customs_coords[] = [$custom['COORDS_LATITUDE'], $custom['COORDS_LONGITUDE']];
-            }
+            // if ($number < 159) {
+            $customs_coords[] = [$custom['COORDS_LATITUDE'], $custom['COORDS_LONGITUDE']];
+            // }
         }
 
         // header('Content-Type: text/html; charset=utf-8');
@@ -56,7 +56,7 @@ class CustomsController extends Controller
         // );
 
         // print_r($customs_coords);
-        echo json_encode($customs_coords);
+        return json_encode($customs_coords);
         // Yii::$app->response->format = Response::FORMAT_JSON;
         // print((new GeocoderService())->getCoords($geocode));
         // exit;

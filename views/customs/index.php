@@ -43,6 +43,6 @@ $this->title = 'Where is my customs?';
 <?php ActiveForm::end(); ?>
 
 <div class="map">
-    <div id="map" style="width: 925px; height: 346px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
+    <div id="map" style="width: 1280px; height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
 </div>
 <!-- data-latitude="55.76" data-longitude="37.64" -->
