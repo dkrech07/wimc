@@ -9,12 +9,15 @@ class SearchCustoms extends Model
     public $ADRTAM;
     public $latitude;
     public $longitude;
+    public $city;
 
     public function rules()
     {
         return [
-            [['ADRTAM'], 'required'],
-            [['ADRTAM'], 'string', 'max' => 128],
+            [['city'], 'required'],
+
+            // [['ADRTAM'], 'required'],
+            // [['ADRTAM'], 'string', 'max' => 128],
             [['latitude', 'longitude'], 'string'],
         ];
     }
@@ -22,7 +25,7 @@ class SearchCustoms extends Model
     public function attributeLabels()
     {
         return [
-            'ADRTAM' => 'Адрес таможенного поста',
+            'city' => '',
         ];
     }
 }

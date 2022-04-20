@@ -27,7 +27,7 @@ yii migrate
 
 7. Загрузить тестовые данные:
 
-php yii fixture/load Customs
+php yii fixture "Customs, Cities"
 
 
 

@@ -30,9 +30,10 @@ $this->title = 'Where is my customs?';
 
 <?php $form = ActiveForm::begin([
     'id' => 'search-customs',
+    'options' => ['autocomplete' => 'off'],
 ]); ?>
 
-<?= $form->field($searchCustomsModel, 'ADRTAM')->textInput(['id' => 'autoComplete', 'style' => 'padding-left: 45px;', 'data-api-url' => Url::to(['/geoapi'])]) ?>
+<?= $form->field($searchCustomsModel, 'city')->textInput(['id' => 'autoComplete', 'style' => 'width: 675px; padding-left: 45px;', 'data-api-url' => Url::to(['http://localhost/wimc/web/ajaxcities'])]) ?>
 
 <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
 <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>

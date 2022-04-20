@@ -3,10 +3,11 @@
 namespace app\controllers;
 
 use Yii;
-// use yii\web\Response;
+use yii\web\Response;
 use yii\widgets\ActiveForm;
 use yii\web\Controller;
 use app\models\SearchCustoms;
+use app\models\Cities;
 use app\services\CustomsFilterService;
 
 class CustomsController extends Controller
@@ -18,10 +19,10 @@ class CustomsController extends Controller
         if (Yii::$app->request->isPost) {
             $searchCustomsModel->load(Yii::$app->request->post());
 
-            // if (Yii::$app->request->isAjax) {
-            //     Yii::$app->response->format = Response::FORMAT_JSON;
-            //     return ActiveForm::validate($searchCustomsModel);
-            // }
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ActiveForm::validate($searchCustomsModel);
+            }
 
             if ($searchCustomsModel->validate()) {
                 // print_r($searchCustomsModel);
@@ -37,25 +38,26 @@ class CustomsController extends Controller
         ]);
     }
 
+    public function actionAjaxcities()
+    {
+        $cities = (new CustomsFilterService())->getFilteredCities();
+
+        $city_coords = [];
+        foreach ($cities as $number => $city) {
+            // if ($number < 2) {
+            $city_coords[] = [
+                // 'id' => $number,
+                'city' => $city['CITY'],
+                'coordinates' => [$city["COORDS_LATITUDE"], $city["COORDS_LONGITUDE"]],
+            ];
+            // }
+        }
+        // return ($city_coords['Абаза']);
+        return json_encode($city_coords, JSON_UNESCAPED_UNICODE);
+    }
+
     public function actionAjax() //: array
     {
-        $list = [
-            "type" => "FeatureCollection",
-            "features" => [
-                [
-                    "type" => "Feature", "id" => 0, "geometry" => ["type" => "Point", "coordinates" => [55.831903, 37.411961]],
-                    "properties" =>
-                    [
-                        "balloonContentHeader" => "<font size=3><b><a target='_blank' href='https =>//yandex.ru'>Здесь может быть ваша ссылка</a></b></font>",
-                        "balloonContentBody" => "<p>Ваше имя => <input name='login'></p><p><em>Телефон в формате 2xxx-xxx =></em>  <input></p><p><input type='submit' value='Отправить'></p>",
-                        "balloonContentFooter" => "<font size=1>Информация предоставлена => </font> <strong>этим балуном</strong>",
-                        "clusterCaption" => "<strong><s>Еще</s> одна</strong> метка", "hintContent" => "<strong>Текст  <s>подсказки</s></strong>"
-                    ]
-                ],
-
-            ]
-        ];
-
         $customs = (new CustomsFilterService())->getFilteredCustoms();
         $customs_coords = [
             "type" => "FeatureCollection",
@@ -63,7 +65,6 @@ class CustomsController extends Controller
         ];
 
         foreach ($customs as $number => $custom) {
-
             $customs_coords['features'][] =
                 [
                     "type" => "Feature",
@@ -82,46 +83,10 @@ class CustomsController extends Controller
                     ]
 
                 ];
-
-
-
-
-
-            // if ($number < 3) {
-            // $customs_coords[] = [
-            //     'ID' => $custom['ID'],
-            //     'CODE' => $custom['CODE'],
-            //     'NAMT' => $custom['NAMT'],
-            //     'OKPO' => $custom['OKPO'],
-            //     'OGRN' => $custom['OGRN'],
-            //     'INN' => $custom['INN'],
-            //     'NAME_ALL' => $custom['NAME_ALL'],
-            //     'ADRTAM' => $custom['ADRTAM'],
-            //     'PROSF' => $custom['PROSF'],
-            //     'TELEFON' => $custom['TELEFON'],
-            //     'FAX' => $custom['FAX'],
-            //     'EMAIL' => $custom['EMAIL'],
-            //     'COORDS_LATITUDE' => $custom['COORDS_LATITUDE'],
-            //     'COORDS_LONGITUDE' => $custom['COORDS_LONGITUDE'],
-            // ];
-            // }
-            // $customs_coords[] = [$custom['COORDS_LATITUDE'], $custom['COORDS_LONGITUDE']];
-
-
-
-
-
-
-
-
-
-
-
         }
 
 
 
         return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
-        // return serialize($customs_coords);
     }
 }
