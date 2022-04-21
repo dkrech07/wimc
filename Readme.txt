@@ -43,3 +43,6 @@ php yii fixture/generate customs --count=10
 
 // Получить ответ от геокодера:
 http://localhost/wimc/web/geoapi/Екатеринбург
+
+// Роут без ЧПУ (enablePrettyUrl):
+http://localhost/wimc/web/index.php?r=customs/index
