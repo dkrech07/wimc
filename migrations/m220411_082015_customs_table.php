@@ -29,12 +29,12 @@ class m220411_082015_customs_table extends Migration
             'COORDS_LONGITUDE' => $this->string(256)->notNull(),
         ]);
 
-        $this->createTable('{{%cities}}', [
-            'ID' => $this->primaryKey(),
-            'CITY' => $this->string(128)->notNull(),
-            'COORDS_LATITUDE' => $this->string(128)->notNull(),
-            'COORDS_LONGITUDE' => $this->string(128)->notNull(),
-        ]);
+        // $this->createTable('{{%cities}}', [
+        //     'ID' => $this->primaryKey(),
+        //     'CITY' => $this->string(128)->notNull(),
+        //     'COORDS_LATITUDE' => $this->string(128)->notNull(),
+        //     'COORDS_LONGITUDE' => $this->string(128)->notNull(),
+        // ]);
 
         $this->createTable('{{%users}}', [
             'ID' => $this->primaryKey(),
@@ -52,7 +52,7 @@ class m220411_082015_customs_table extends Migration
     public function safeDown()
     {
         $this->dropTable('{{%customs}}');
-        $this->dropTable('{{%cities}}');
+        // $this->dropTable('{{%cities}}');
         $this->dropTable('{{%users}}');
     }
 }

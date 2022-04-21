@@ -1,13 +1,18 @@
 const yandexMap = document.querySelector('#map');
 
+if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
+    yandexMap.dataset.latitude = 55.76;
+    yandexMap.dataset.longitude = 37.64;
+}
 
 ymaps.ready(init);
 
 function init () {
     var myMap = new ymaps.Map('map', {
             // center: [55.76, 37.64],
+        
             center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-            zoom: 7,
+            zoom: 10,
             controls: []
         }, {
             searchControlProvider: 'yandex#search'
@@ -34,7 +39,7 @@ function init () {
     //             }));
 
     $.ajax({
-        url: "http://localhost/wimc/web/ajax"
+        url: "/ajax"
     }).done(function(data) {
         objectManager.add(data);
     });

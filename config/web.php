@@ -47,8 +47,10 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                // '/' => '/customs/index',
-                'geoapi/term/<geocode>' => 'api/geocoder',
+                '/' => '/customs/index',
+                'api/geocoder' => 'geoapi/term<geocode>',
+
+                'geoapi/<geocode>' => 'api/geocoder',
                 '/' => '/customs',
                 'ajax' => 'customs/ajax',
                 'ajaxcities' => 'customs/ajaxcities',

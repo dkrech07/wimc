@@ -14,6 +14,6 @@ class AutoCompleteAsset extends AssetBundle
 
     public $js = [
         'https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js',
-        '/wimc/web/js/auto-complete.js',
+        '/js/auto-complete.js',
     ];
 }

@@ -18,11 +18,7 @@ class GeocoderService
             'q' => $geocode,
             'polygon_geojson' => 1,
         ]);
-
         $url = "http://nominatim.openstreetmap.org/search?$query";
-
-
-
         $client = new Client([
             'base_uri' => $url,
         ]);
@@ -30,7 +26,26 @@ class GeocoderService
         $request = new Request('PUT', $url);
         $response = $client->send($request);
         $content = $response->getBody()->getContents();
-        return $content;
+        $responseData = json_decode($content, false);
+        // $responseData = json_encode($content);
+
+
+        // FeatureCollection
+        $result = [];
+        foreach ($responseData as $item) {
+            $result[] = [
+                'display_name' => $item->display_name,
+                'lat' => $item->lat,
+                'lon' => $item->lon,
+            ];
+        }
+
+        // print_r($responseData);
+        // print_r($responseData[3]);
+        // print_r($responseData[10]->lat);
+        // print_r($responseData[10]->lon);
+
+        return json_encode($result, JSON_UNESCAPED_UNICODE);
 
         // $query = http_build_query([
         //     'format' => 'json',

@@ -19,6 +19,10 @@ class ApiController extends Controller
         // Yii::$app->response->format = Response::FORMAT_JSON;
         // print((new GeocoderService())->getCoords($geocode));
         // exit;
+        // $this->redirect($this->createUrl('contorller/action', $_GET));
+        // $this->redirect('/geoapi/?term=' . $geocode);
+
+
         return (new GeocoderService())->getCoords($geocode);
     }
 }
