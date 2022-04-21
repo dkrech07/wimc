@@ -14,9 +14,9 @@ class ApiController extends Controller
      * 
      * @return array
      */
-    public function actionGeocoder(string $geocode): array
+    public function actionGeocoder($geocode) //: array
     {
-        Yii::$app->response->format = Response::FORMAT_JSON;
+        // Yii::$app->response->format = Response::FORMAT_JSON;
         // print((new GeocoderService())->getCoords($geocode));
         // exit;
         return (new GeocoderService())->getCoords($geocode);

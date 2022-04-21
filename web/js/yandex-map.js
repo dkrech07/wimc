@@ -7,7 +7,7 @@ function init () {
     var myMap = new ymaps.Map('map', {
             // center: [55.76, 37.64],
             center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-            zoom: 8,
+            zoom: 7,
             controls: []
         }, {
             searchControlProvider: 'yandex#search'
@@ -25,6 +25,13 @@ function init () {
     objectManager.objects.options.set('preset', 'islands#greenDotIcon');
     objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
     myMap.geoObjects.add(objectManager);
+
+    // myMap.geoObjects.add(new ymaps.Placemark(yandexMap.dataset.latitude, yandexMap.dataset.longitude, {
+    //                 balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+    //             }, {
+    //                 preset: 'islands#icon',
+    //                 iconColor: '#0095b6'
+    //             }));
 
     $.ajax({
         url: "http://localhost/wimc/web/ajax"

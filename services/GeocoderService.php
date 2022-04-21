@@ -11,60 +11,81 @@ use GuzzleHttp\Psr7\Request;
 
 class GeocoderService
 {
-    /**
-     * @param string $geocode
-     * 
-     * @return array
-     */
-    public function getCoords(string $geocode): array
+    function getCoords($geocode)
     {
-        $client = new Client([
-            'base_uri' => 'https://geocode-maps.yandex.ru/1.x/',
+        $query = http_build_query([
+            'format' => 'json',
+            'q' => $geocode,
+            'polygon_geojson' => 1,
         ]);
 
-        try {
-            $request = new Request('GET', '');
-            $response = $client->send($request, [
-                'query' => [
-                    'geocode' => $geocode,
-                    'apikey' => Yii::$app->params['geocoderApiKey'],
-                    'format' => 'json'
-                ]
-            ]);
+        $url = "http://nominatim.openstreetmap.org/search?$query";
 
-            if ($response->getStatusCode() !== 200) {
-                throw new BadResponseException("Response error: " . $response->getReasonPhrase(), $request);
-            }
 
-            $content = $response->getBody()->getContents();
-            $responseData = json_decode($content, false);
 
-            if (json_last_error() !== JSON_ERROR_NONE) {
-                throw new ServerException('Invalid json format', $request);
-            }
+        $client = new Client([
+            'base_uri' => $url,
+        ]);
 
-            $geoMembers = $responseData->response->GeoObjectCollection->featureMember;
-            $result = [];
+        $request = new Request('PUT', $url);
+        $response = $client->send($request);
+        $content = $response->getBody()->getContents();
+        return $content;
 
-            foreach ($geoMembers as $geoMemberNumber => $geoMember) {
-                $geoObject = $geoMember->GeoObject;
-                $GeocoderMetaData = $geoObject->metaDataProperty->GeocoderMetaData;
+        // $query = http_build_query([
+        //     'format' => 'json',
+        //     'q' => $geocode,
+        //     'polygon_geojson' => 1,
+        // ]);
 
-                $components = $GeocoderMetaData->Address->Components;
-                $locality = array_values(array_filter($components, function ($city) {
-                    return $city->kind === 'locality';
-                }))[0] ?? null;
 
-                $result[$geoMemberNumber] = [
-                    'city' => $locality->name ?? null, // Получаю название города, если оно найдено;
-                    'text' => $GeocoderMetaData->text, // Получаю подробную информацию о расположении города;
-                    'pos' => explode(' ', $geoObject->Point->pos), // Получаю координаты города;
-                ];
-            }
-        } catch (RequestException $ex) {
-            $result = [];
-        }
 
-        return $result;
+        // $request = new Request('GET', '');
+
+        // $response = $client->send($request, [
+        //     'query' => [
+        //         'geocode' => $geocode,
+        //         'format' => 'json'
+        //     ]
+        // ]);
+
+
+
+
+        // $url = "http://nominatim.openstreetmap.org/search?$query";
+
+        // $query = http_build_query([
+        //     'format' => 'json',
+        //     'q' => $geocode,
+        //     'polygon_geojson' => 1,
+        // ]);
+        // $url = "http://nominatim.openstreetmap.org/search?$query";
+        // $response = json_decode(file_get_contents($url), true);
+
+        // $response = json_decode($url, false);
+
+        // $response = json_decode(file_get_contents($url), true);
+        // $result = [];
+
+        // if ($response[0]['geojson']['type'] === 'MultiPolygon') {
+        //     $coords = $response[0]['geojson']['coordinates'];
+        //     foreach ($coords as $coord) {
+        //         $temp = [];
+        //         foreach ($coord[0] as $item) {
+        //             $temp[] = array_reverse($item);
+        //         }
+        //         $result[] = $temp;
+        //     }
+        // } elseif ($response[0]['geojson']['type'] === 'Polygon') {
+        //     $coords = $response[0]['geojson']['coordinates'][0];
+        //     foreach ($coords as $coord) {
+        //         $result[] = array_reverse($coord);
+        //     }
+        // }
+
+        // return $result;
+
     }
+
+    // echo json_encode(areaCoordsParser('Адмиралтейский район, Санкт-Петербург'));
 }
