@@ -5,25 +5,57 @@ const autoCompleteJS = new autoComplete({
     placeHolder: "Введите название адрес и мы найдем таможни рядом!",
 
     data: {
+      
         src: async query => {
-            try {
+
+            console.log('без await');
+            console.log(query);
+
+
+            // try {
                 const apiUrl = autoCompleteJS.input.dataset.apiUrl;
                 const source = await fetch(`${apiUrl}/${query}`);
+                console.log('с await');
+                console.log(query);
                 const data = await source.json();
-                console.log(data);
+
+                // console.log('Пришло от openMaps: ');
+                // console.log(data);
                 return data;
-            } catch (error) {
-                return error;
-            }
+            // } catch (error) {
+            //     return error;
+            // }
         },
-        keys: ['display_name']
+        keys: ['display_name'],
+        // cache: true,
     },
-    // resultsList: {
-    //     maxResults: 20,
-    //     threshold: 3,
-    // },
+    threshold: 1,
+    debounce: 800,
+    searchEngine: "loose",
+    diacritics: true,
+    resultsList: {
+        tag: "ul",
+        id: "autoComplete_list",
+        class: "results_list",
+        destination: "#autoComplete",
+        position: "afterend",
+        maxResults: 25,
+        noResults: true,
+        element: (list, data) => {
+            list.setAttribute("data-parent", "geo-list");
+            // console.log('Пришло от autocomplete: ');
+            // console.log(list);
+            // console.log(data);
+        },
+    },
     resultItem: {
-        highlight: true,
+        tag: "li",
+        class: "autoComplete_result",
+        element: (item, data) => {
+            item.setAttribute("data-parent", "geo-list");
+        },
+        highlight: "autoComplete_highlight",
+        selected: "autoComplete_selected"
     },
     events: {
         input: {
