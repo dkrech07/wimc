@@ -39,7 +39,7 @@ function init () {
     //             }));
 
     $.ajax({
-        url: "http://localhost/wimc/web/ajax"
+        url: "/ajax"
     }).done(function(data) {
         objectManager.add(data);
     });

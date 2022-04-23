@@ -1,105 +1,118 @@
-const autoCompleteJS = new autoComplete({ 
-// API Advanced Configuration Object
+// const output = document.querySelector('#output');
+const autoComplete = document.querySelector('#autoComplete');
+const apiUrl = 'geoapi';
 
-    selector: "#autoComplete",
-    placeHolder: "Введите название адрес и мы найдем таможни рядом!",
+// function debounce(f, ms) {
 
-    data: {
-      
-        src: async query => {
+//   let isCooldown = false;
 
-            console.log('без await');
-            console.log(query);
+//   return function() {
+//     if (isCooldown) return;
 
+//     f.apply(this, arguments);
 
-            // try {
-                const apiUrl = autoCompleteJS.input.dataset.apiUrl;
-                const source = await fetch(`${apiUrl}/${query}`);
-                console.log('с await');
-                console.log(query);
-                const data = await source.json();
+//     isCooldown = true;
 
-                // console.log('Пришло от openMaps: ');
-                // console.log(data);
-                return data;
-            // } catch (error) {
-            //     return error;
-            // }
-        },
-        keys: ['display_name'],
-        // cache: true,
-    },
-    threshold: 1,
-    debounce: 800,
-    searchEngine: "loose",
-    diacritics: true,
-    resultsList: {
-        tag: "ul",
-        id: "autoComplete_list",
-        class: "results_list",
-        destination: "#autoComplete",
-        position: "afterend",
-        maxResults: 25,
-        noResults: true,
-        element: (list, data) => {
-            list.setAttribute("data-parent", "geo-list");
-            // console.log('Пришло от autocomplete: ');
-            // console.log(list);
-            // console.log(data);
-        },
-    },
-    resultItem: {
-        tag: "li",
-        class: "autoComplete_result",
-        element: (item, data) => {
-            item.setAttribute("data-parent", "geo-list");
-        },
-        highlight: "autoComplete_highlight",
-        selected: "autoComplete_selected"
-    },
-    events: {
-        input: {
-            selection: event => {
-                const selectionValue = event.detail.selection.value;
-                autoCompleteJS.input.value = selectionValue.display_name;
+//     setTimeout(() => isCooldown = false, ms);
+//   };
 
-                const latitudeInputElement = document.querySelector('#latitude');
-                const longitudeInputElement = document.querySelector('#longitude');
-                // const cityNameInputElement = document.querySelector('#city_name');
-                // const addressInputElement = document.querySelector('#address');
-                
-                latitudeInputElement.value = selectionValue.lat;
-                longitudeInputElement.value = selectionValue.lon;
-                // cityNameInputElement.value = selectionValue.city ? selectionValue.city : 0;
-                // addressInputElement.value = selectionValue.text ? selectionValue.text : 0;
-            }
-        }
+// }
+
+function debounce( callback, delay ) {
+  let timeout;
+  return function() {
+      clearTimeout( timeout );
+      timeout = setTimeout( callback, delay );
+  }
+}
+
+var removeChild = function (element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+};
+
+async function getGeoObjects(apiUrl, query) {
+  try {
+    let response = await fetch(`${apiUrl}/${query}`);
+    const data = await response.json();
+    console.log(query);
+    console.log(data);
+
+    let oldContainer = document.querySelector('.geoList');
+    if (oldContainer) {
+      removeChild(oldContainer);
     }
+    let container = document.createElement("ul");
+    container.className = 'geoList';
+    data.forEach(item => {
+      let element = document.createElement("li");
+      element.textContent = item['display_name'];
+      element.setAttribute("geo_data", [item['lat'], item['lon']])  
 
-    // data: {
-    //     src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
-    //     cache: true,
-    // },
-    // resultsList: {
-    //     element: (list, data) => {
-    //         if (!data.results.length) {
-    //             // Create "No Results" message element
-    //             const message = document.createElement("div");
-    //             // Add class to the created element
-    //             message.setAttribute("class", "no_result");
-    //             // Add message text content
-    //             message.innerHTML = `<span>Found No Results for "${data.query}"</span>`;
-    //             // Append message element to the results list
-    //             list.prepend(message);
-    //         }
-    //     },
-    //     noResults: true,
-    // },
-    // resultItem: {
-    //     highlight: {
-    //         render: true
-    //     }
-    // }
+      element.addEventListener('click', (evt) => {
+        // data.value = evt.target.value
+        // console.log('В evt.target.value:');
+        console.log(evt.target.attributes.geo_data);
+      
+   
+      
+      });
 
+      
+      container.appendChild(element);
+    });
+    autoComplete.after(container);
+
+
+
+  } catch (error) {
+    return error;
+  }
+}
+
+const data = {
+  _value: '',
+  get value() {
+    return this._value;
+  },
+  set value(newValue) {
+    this._value = newValue;
+    autoComplete.value = newValue;
+    //   output.textContent = newValue;
+    // getGeoObjects(apiUrl, newValue);
+    // console.log('В переменной data:');
+    // console.log(newValue);
+  }
+};
+
+autoComplete.addEventListener('input', (evt) => {
+  data.value = evt.target.value
+  console.log('В evt.target.value:');
+  console.log(evt.target.value);
+
+  debounce(getGeoObjects(apiUrl, data.value), 0);
+  // setTimeout(
+  //   getGeoObjects(apiUrl, data.value)
+  //   // data.value = `Random value is ${Math.random().toFixed(3)}`
+  // , 3000);
 
 });
+
+
+
+
+
+
+// const returnedFunction = debounce(function() {
+//   // Что то делаем
+//   console.log('debounce');
+// }, 250);
+
+// setInterval(() => {
+//   getGeoObjects(apiUrl, data.value);
+//   // data.value = `Random value is ${Math.random().toFixed(3)}`
+// }, 3000);
+
+
+

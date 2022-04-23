@@ -11,11 +11,12 @@ use GuzzleHttp\Psr7\Request;
 
 class GeocoderService
 {
+    const COUNTRY = 'Россия';
     function getCoords($geocode)
     {
         $query = http_build_query([
             'format' => 'json',
-            'q' => $geocode,
+            'q' => $geocode . ' Россия',
             'polygon_geojson' => 1,
         ]);
         $url = "http://nominatim.openstreetmap.org/search?$query";

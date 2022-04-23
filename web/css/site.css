@@ -82,3 +82,30 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.geoList {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.geoList li {
+    border-bottom: 1px solid #c55;
+    padding: 5px;
+    z-index: 0;
+    list-style-type: none;
+    cursor: pointer;    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.geoList li:hover {
+    background-color: #f5f5f5;
+    /* font-weight: bold;
+    font-size: 14px; */
+    /* border-bottom: 1px solid #c55;
+    padding: 5px;
+    z-index: 0;
+    list-style-type: none;
+    cursor: pointer; */
+}
