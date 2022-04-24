@@ -45,8 +45,8 @@ class GeocoderService
         // print_r($responseData[3]);
         // print_r($responseData[10]->lat);
         // print_r($responseData[10]->lon);
-
-        return json_encode($result, JSON_UNESCAPED_UNICODE);
+        // print_r($result);
+        return $result; //json_encode($result, JSON_UNESCAPED_UNICODE);
 
         // $query = http_build_query([
         //     'format' => 'json',

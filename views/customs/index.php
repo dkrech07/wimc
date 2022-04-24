@@ -8,6 +8,7 @@ use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\assets\AutoCompleteAsset;
+use yii\jui\AutoComplete;
 
 AppAsset::register($this);
 AutoCompleteAsset::register($this);
@@ -30,11 +31,34 @@ $this->title = 'Where is my customs?';
 
 <?php $form = ActiveForm::begin([
     'id' => 'search-customs',
+    'enableAjaxValidation' => true,
     'options' => ['autocomplete' => 'off'],
 ]); ?>
 
 
-<?= $form->field($searchCustomsModel, 'city')->textInput(['id' => 'autoComplete', 'style' => 'width: 675px; padding-left: 45px;', 'data-api-url' => Url::to(['/geoapi'])]) ?>
+<!-- <?= $form->field($searchCustomsModel, 'city')->textInput(['id' => 'autoComplete', 'style' => 'width: 675px; padding-left: 45px;', 'data-api-url' => Url::to(['/geoapi'])]) ?> -->
+
+<?
+//фомируем список
+$listdata = $address; //['тест1', 'тест2', 'тест3', 'тест4', 'тест5'];
+// print_r($address);
+?>
+
+
+<? //Передаем список виджету AutoComplete
+?>
+<?= $form->field($searchCustomsModel, 'geo')->widget(
+    AutoComplete::className(),
+    [
+        'clientOptions' => [
+            'source' => $listdata,
+        ],
+        'options' => [
+            'class' => 'form-control'
+        ]
+    ]
+);
+?>
 
 <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
 <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>

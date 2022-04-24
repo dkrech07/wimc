@@ -9,11 +9,13 @@ use yii\web\Controller;
 use app\models\SearchCustoms;
 use app\models\Cities;
 use app\services\CustomsFilterService;
+use app\services\GeocoderService;
 
 class CustomsController extends Controller
 {
     public function actionIndex()
     {
+        $address = [];
         $searchCustomsModel = new SearchCustoms();
 
         if (Yii::$app->request->isPost) {
@@ -25,7 +27,14 @@ class CustomsController extends Controller
             }
 
             if ($searchCustomsModel->validate()) {
-                // print_r($searchCustomsModel);
+
+                $geocode = $searchCustomsModel->geo;
+                $items = (new GeocoderService())->getCoords($geocode);
+                foreach ($items as $item) {
+                    $address[] = $item['display_name'];
+                };
+
+                // print($address);
                 // exit;
                 // $taskId = $tasksService->createTask($addTaskFormModel);
                 // $this->redirect(['tasks/view', 'id' => $taskId]);
@@ -34,6 +43,7 @@ class CustomsController extends Controller
 
         return $this->render('index', [
             'searchCustomsModel' => $searchCustomsModel,
+            'address' => $address,
             // 'customs' => $customs,
         ]);
     }
@@ -84,8 +94,6 @@ class CustomsController extends Controller
 
                 ];
         }
-
-
 
         return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
     }
