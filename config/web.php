@@ -53,7 +53,6 @@ $config = [
                 'geoapi/<geocode>' => 'api/geocoder',
                 '/' => '/customs',
                 'ajax' => 'customs/ajax',
-                'ajaxcities' => 'customs/ajaxcities',
             ],
         ],
     ],

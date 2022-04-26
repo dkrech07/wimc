@@ -9,6 +9,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\assets\AutoCompleteAsset;
 use yii\jui\AutoComplete;
+use yii\web\JsExpression;
 
 AppAsset::register($this);
 AutoCompleteAsset::register($this);
@@ -20,12 +21,6 @@ $this->registerJsFile('js/yandex-map.js');
 
 // $this->registerJsFile('/js/custom.js');
 $this->title = 'Where is my customs?';
-
-// foreach ($customs as $custom) {
-//     print_r($custom);
-//     print('<br>');
-//     print('<br>');
-// }
 ?>
 
 
@@ -38,10 +33,12 @@ $this->title = 'Where is my customs?';
 
 <!-- <?= $form->field($searchCustomsModel, 'city')->textInput(['id' => 'autoComplete', 'style' => 'width: 675px; padding-left: 45px;', 'data-api-url' => Url::to(['/geoapi'])]) ?> -->
 
-<?
+<?php
 //фомируем список
-$listdata = $address; //['тест1', 'тест2', 'тест3', 'тест4', 'тест5'];
+$listdata = ['тест1', 'тест2', 'тест3', 'тест4', 'тест5'];
+$url = '/geoapi';
 // print_r($address);
+
 ?>
 
 
@@ -51,7 +48,10 @@ $listdata = $address; //['тест1', 'тест2', 'тест3', 'тест4', 'т
     AutoComplete::className(),
     [
         'clientOptions' => [
-            'source' => $listdata,
+            'source' => Url::to(['autocomplete']),
+            'minLength' => '2',
+            // 'source' => Url::to(['autocomplete']),
+            // 'minLength' => '2',
         ],
         'options' => [
             'class' => 'form-control'

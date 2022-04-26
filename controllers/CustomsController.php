@@ -13,9 +13,25 @@ use app\services\GeocoderService;
 
 class CustomsController extends Controller
 {
+
+    public function actionAutocomplete()
+    {
+        $searchCustomsModel = new SearchCustoms();
+
+        if (Yii::$app->request->get('term')) {
+            // $model = Company::find()->where(['like', 'name', Yii::$app->request->get('term')])->limit(5)->asArray()->all();
+            // foreach ($model as $value) {
+            //     $result[] = $value['name'];
+            // }
+
+            // return 'Тест, Тест, Тест.';
+            return (new GeocoderService())->getCoords($searchCustomsModel->geo);
+        }
+    }
+
+
     public function actionIndex()
     {
-        $address = [];
         $searchCustomsModel = new SearchCustoms();
 
         if (Yii::$app->request->isPost) {
@@ -27,14 +43,7 @@ class CustomsController extends Controller
             }
 
             if ($searchCustomsModel->validate()) {
-
-                $geocode = $searchCustomsModel->geo;
-                $items = (new GeocoderService())->getCoords($geocode);
-                foreach ($items as $item) {
-                    $address[] = $item['display_name'];
-                };
-
-                // print($address);
+                // print_r($searchCustomsModel);
                 // exit;
                 // $taskId = $tasksService->createTask($addTaskFormModel);
                 // $this->redirect(['tasks/view', 'id' => $taskId]);
@@ -43,27 +52,8 @@ class CustomsController extends Controller
 
         return $this->render('index', [
             'searchCustomsModel' => $searchCustomsModel,
-            'address' => $address,
             // 'customs' => $customs,
         ]);
-    }
-
-    public function actionAjaxcities()
-    {
-        $cities = (new CustomsFilterService())->getFilteredCities();
-
-        $city_coords = [];
-        foreach ($cities as $number => $city) {
-            // if ($number < 2) {
-            $city_coords[] = [
-                // 'id' => $number,
-                'city' => $city['CITY'],
-                'coordinates' => [$city["COORDS_LATITUDE"], $city["COORDS_LONGITUDE"]],
-            ];
-            // }
-        }
-        // return ($city_coords['Абаза']);
-        return json_encode($city_coords, JSON_UNESCAPED_UNICODE);
     }
 
     public function actionAjax() //: array

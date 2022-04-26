@@ -11,7 +11,6 @@ use GuzzleHttp\Psr7\Request;
 
 class GeocoderService
 {
-    const COUNTRY = 'Россия';
     function getCoords($geocode)
     {
         $query = http_build_query([
@@ -45,8 +44,8 @@ class GeocoderService
         // print_r($responseData[3]);
         // print_r($responseData[10]->lat);
         // print_r($responseData[10]->lon);
-        // print_r($result);
-        return $result; //json_encode($result, JSON_UNESCAPED_UNICODE);
+
+        return json_encode($result, JSON_UNESCAPED_UNICODE);
 
         // $query = http_build_query([
         //     'format' => 'json',
