@@ -25,7 +25,8 @@ class CustomsController extends Controller
             // }
 
             // return 'Тест, Тест, Тест.';
-            return (new GeocoderService())->getCoords($searchCustomsModel->geo);
+            // print(Yii::$app->request->get('term'));
+            return (new GeocoderService())->getCoords(Yii::$app->request->get('term'));
         }
     }
 
