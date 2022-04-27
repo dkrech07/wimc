@@ -48,10 +48,22 @@ $url = '/geoapi';
     AutoComplete::className(),
     [
         'clientOptions' => [
-            'source' => Url::to(['autocomplete']),
-            'minLength' => '2',
+            // 'source' => Url::to(['autocomplete']),
             // 'source' => Url::to(['autocomplete']),
             // 'minLength' => '2',
+
+            'source' => new JsExpression("function (request, response) {
+               
+                $.getJSON('http://localhost/wimc/web/customs/autocomplete', {
+                    term: request.term
+                }, response).done(function(json){
+                    console.log(json);
+                    return json;
+                });
+     
+                console.log(request);
+            }"),
+            'minLength' => '2',
         ],
         'options' => [
             'class' => 'form-control'
