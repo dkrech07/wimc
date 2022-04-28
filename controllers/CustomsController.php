@@ -30,11 +30,52 @@ class CustomsController extends Controller
         }
     }
 
+    public function actionSearch()
+    {
+
+        $form_model = new SearchCustoms();
+        if (\Yii::$app->request->isAjax) {
+            // return 'Запрос принят!';
+        }
+        if ($form_model->load(\Yii::$app->request->post())) {
+            // var_dump($form_model->geo);
+            return json_encode($form_model, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
+        }
+
+
+        // if (Yii::$app->request->isPost) {
+        //     $form_model->load(Yii::$app->request->post());
+
+        //     if (Yii::$app->request->isAjax) {
+        //         Yii::$app->response->format = Response::FORMAT_JSON;
+        //         return ActiveForm::validate($form_model);
+        //     }
+
+        //     if ($form_model->validate()) {
+        //         return json_encode($form_model, JSON_UNESCAPED_UNICODE);
+        //         // exit;
+        //         // $taskId = $tasksService->createTask($addTaskFormModel);
+        //         // $this->redirect(['tasks/view', 'id' => $taskId]);
+        //     }
+        // }
+    }
+
+    // public function actionPage()
+    // {
+    //     $form_model = new TestForm();
+    //     if (\Yii::$app->request->isAjax) {
+    //         return 'Запрос принят!';
+    //     }
+    //     if ($form_model->load(\Yii::$app->request->post())) {
+    //         var_dump($form_model);
+    //     }
+    //     return $this->render('page', compact('form_model'));
+    // }
+
 
     public function actionIndex()
     {
         $searchCustomsModel = new SearchCustoms();
-
         if (Yii::$app->request->isPost) {
             $searchCustomsModel->load(Yii::$app->request->post());
 
@@ -44,7 +85,7 @@ class CustomsController extends Controller
             }
 
             if ($searchCustomsModel->validate()) {
-                // print_r($searchCustomsModel);
+                print_r($searchCustomsModel);
                 // exit;
                 // $taskId = $tasksService->createTask($addTaskFormModel);
                 // $this->redirect(['tasks/view', 'id' => $taskId]);

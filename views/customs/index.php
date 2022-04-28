@@ -30,21 +30,6 @@ $this->title = 'Where is my customs?';
     'options' => ['autocomplete' => 'off'],
 ]); ?>
 
-
-<!-- <?= $form->field($searchCustomsModel, 'city')->textInput(['id' => 'autoComplete', 'style' => 'width: 675px; padding-left: 45px;', 'data-api-url' => Url::to(['/geoapi'])]) ?> -->
-
-<?php
-//фомируем список
-$listdata = ['тест1', 'тест2', 'тест3', 'тест4', 'тест5'];
-$url = '/geoapi';
-// print_r($address);
-
-?>
-
-
-<? //Передаем список виджету AutoComplete
-?>
-
 <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
 <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>
 
@@ -81,12 +66,12 @@ $url = '/geoapi';
                     this.value = ui.item.label;
                     let geo = ui.item.value;
 
-                    $("#latitude").val(ui.item.value["geo.lat"]);
-                    $("#longitude").val(ui.item.value["geo.lon"]);
+                    // $("#latitude").val(ui.item.value["ui.item.value"]);
+                    // $("#longitude").val(ui.item.value["ui.item.value"]);
 
+                    $("#latitude").val(geo[0]);
+                    $("#longitude").val(geo[1]);
                 
-
-
                     event.preventDefault();
                 }
             '),
@@ -145,6 +130,8 @@ $url = '/geoapi';
 
 
 <?php ActiveForm::end(); ?>
+
+
 
 <div class="map">
     <div id="map" style="width: 1280px; height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>

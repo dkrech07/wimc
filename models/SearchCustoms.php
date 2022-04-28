@@ -6,10 +6,10 @@ use yii\base\Model;
 
 class SearchCustoms extends Model
 {
-    public $ADRTAM;
+    // public $ADRTAM;
     public $latitude;
     public $longitude;
-    public $city;
+    // public $city;
     public $geo;
 
     public function rules()
