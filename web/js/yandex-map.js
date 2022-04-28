@@ -48,7 +48,7 @@ function init () {
     //             }));
 
     $.ajax({
-        url: "http://localhost/wimc/web/customs/ajax"
+        url: "/ajax"
     }).done(function(data) {
         objectManager.add(data);
     });
@@ -90,21 +90,35 @@ function init () {
     $('#search-customs').on('beforeSubmit', function(){
         var data = $(this).serialize();
         $.ajax({
-        url: 'http://localhost/wimc/web/customs/search',
+        url: '/customs/search',
         type: 'POST',
         data: data,
         success: function(res){
-        //     let geo = JSON.parse(res);
+            let geo = JSON.parse(res);
 
-        //     myMap.geoObjects.add(new ymaps.Placemark([geo['latitude'], geo['longitude']], {
-        //         balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
-        //     }, {
-        //         preset: 'islands#icon',
-        //         iconColor: 'red'
-        //     }));
+            myMap.geoObjects.add(new ymaps.Placemark([geo['latitude'], geo['longitude']], {
+                balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+            }, {
+                preset: 'islands#icon',
+                iconColor: 'red'
+            }));
 
-        // myMap.setCenter([geo['latitude'], geo['longitude']]);
-        // myMap.setZoom(14);
+            myMap.geoObjects.add(new ymaps.Placemark([geo['nearest_lat'], geo['nearest_lon']], {
+                balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+            }, {
+                preset: 'islands#icon',
+                iconColor: 'red'
+            }));
+
+        myMap.setCenter([geo['latitude'], geo['longitude']]);
+        myMap.setZoom(14);
+        
+        // myMap.setBounds(myCollection.getBounds(),{checkZoomRange:true, zoomMargin:9});
+                   // if (object.status == "free") {
+            //     objectManager.objects.setObjectOptions(object.id, {
+            //       preset: 'islands#greenAutoIcon'
+            //     });
+            // }
 
         console.log('Ответ при отправке формы:');
         console.log(res);

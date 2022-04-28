@@ -15,9 +15,10 @@ class GeocoderService
     {
         $query = http_build_query([
             'format' => 'json',
-            'q' => $geocode . ' Россия',
+            'q' => $geocode,
             'polygon_geojson' => 1,
         ]);
+
         $url = "http://nominatim.openstreetmap.org/search?$query";
         $client = new Client([
             'base_uri' => $url,

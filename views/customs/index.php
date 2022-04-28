@@ -43,7 +43,7 @@ $this->title = 'Where is my customs?';
             'source' => new JsExpression('
             function (request, response) {
                 $.ajax({
-                    url: "http://localhost/wimc/web/customs/autocomplete",
+                    url: "/customs/autocomplete",
                     data: {
                         term: request.term
                     },

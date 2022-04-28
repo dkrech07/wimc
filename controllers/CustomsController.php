@@ -42,13 +42,14 @@ class CustomsController extends Controller
             // var_dump($form_model->geo);
             // $nearest_point = new Point($form_model->latitude, $form_model->longitude);
 
-            // $form_model->nearest_lat = $nearest_point['x'];
-            // $form_model->nearest_lon = $nearest_point['y'];
-
             $nearest_point = (new NearestPointService())->getNearestPoint($form_model->latitude, $form_model->longitude);
-            return json_encode($nearest_point, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
 
-            // return json_encode($form_model, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
+            $form_model->nearest_lat = $nearest_point['x'];
+            $form_model->nearest_lon = $nearest_point['y'];
+
+            // return json_encode($nearest_point, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
+
+            return json_encode($form_model, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
         }
 
 
