@@ -94,23 +94,23 @@ function init () {
         type: 'POST',
         data: data,
         success: function(res){
-            let geo = JSON.parse(res);
+        //     let geo = JSON.parse(res);
 
-            myMap.geoObjects.add(new ymaps.Placemark([geo['latitude'], geo['longitude']], {
-                balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
-            }, {
-                preset: 'islands#icon',
-                iconColor: 'red'
-            }));
+        //     myMap.geoObjects.add(new ymaps.Placemark([geo['latitude'], geo['longitude']], {
+        //         balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+        //     }, {
+        //         preset: 'islands#icon',
+        //         iconColor: 'red'
+        //     }));
 
-        myMap.setCenter([geo['latitude'], geo['longitude']]);
-        myMap.setZoom(14);
+        // myMap.setCenter([geo['latitude'], geo['longitude']]);
+        // myMap.setZoom(14);
 
         console.log('Ответ при отправке формы:');
         console.log(res);
-        console.log('Точка');
-        console.log(geo['latitude']);
-        console.log(geo['longitude']);
+        // console.log('Точка');
+        // console.log(geo['latitude']);
+        // console.log(geo['longitude']);
         },
         error: function(){
         alert('Error!');

@@ -33,6 +33,9 @@ $this->title = 'Where is my customs?';
 <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
 <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>
 
+<?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
+<?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>
+
 <?= $form->field($searchCustomsModel, 'geo')->widget(
     AutoComplete::className(),
     [
