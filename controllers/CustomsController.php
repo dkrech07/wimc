@@ -44,8 +44,10 @@ class CustomsController extends Controller
 
             $nearest_point = (new NearestPointService())->getNearestPoint($form_model->latitude, $form_model->longitude);
 
-            $form_model->nearest_lat = $nearest_point['x'];
-            $form_model->nearest_lon = $nearest_point['y'];
+            $form_model->nearest_lat = $nearest_point['nearestPoint']['x'];
+            $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
+            $form_model->distance = $nearest_point['distance'] * 100000;
+
 
             // return json_encode($nearest_point, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
 

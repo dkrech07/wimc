@@ -13,6 +13,7 @@ class SearchCustoms extends Model
     public $geo;
     public $nearest_lat;
     public $nearest_lon;
+    public $distance;
 
     public function rules()
     {
@@ -22,7 +23,7 @@ class SearchCustoms extends Model
 
             // [['ADRTAM'], 'required'],
             // [['ADRTAM'], 'string', 'max' => 128],
-            [['latitude', 'longitude', 'nearest_lat', 'nearest_lon'], 'string'],
+            [['latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'distance'], 'string'],
         ];
     }
 

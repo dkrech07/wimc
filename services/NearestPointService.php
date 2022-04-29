@@ -42,6 +42,6 @@ class NearestPointService
             }
         }
 
-        return  $curNearestPoint;
+        return  ['nearestPoint' => $curNearestPoint, 'distance' => $curNearestDistance];
     }
 }
