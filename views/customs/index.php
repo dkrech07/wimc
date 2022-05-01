@@ -16,7 +16,7 @@ AutoCompleteAsset::register($this);
 $apiKey = Yii::$app->params['geocoderApiKey'];
 $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_RU");
 $this->registerJsFile('js/yandex-map.js');
-// $this->registerJsFile('js/auto-complete.js');
+$this->registerJsFile('js/customs-filter.js');
 
 
 // $this->registerJsFile('/js/custom.js');
@@ -145,7 +145,55 @@ $this->title = 'Where is my customs?';
 
 <div class='row'>
     <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
-    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+        <?php $form = ActiveForm::begin([
+            'id' => 'tasks-form',
+            'fieldConfig' => [
+                'template' => "{input}"
+            ]
+        ]); ?>
+
+        <?= $form
+            ->field($searchCustomsModel, 'head', [
+                'template' => "{input}\n{label}",
+                'options' => [
+                    // 'style' => 'margin-bottom: 20px;',
+                    'class' => 'customs-label'
+                ]
+            ])
+            ->checkbox(['id' => 'head', 'class' => 'customs-checkbox'], false); ?>
+
+        <?= $form
+            ->field($searchCustomsModel, 'excise', [
+                'template' => "{input}\n{label}",
+                'options' => [
+                    // 'style' => 'margin-bottom: 20px;',
+                    'class' => 'customs-label'
+                ]
+            ])
+            ->checkbox(['id' => 'excise', 'class' => 'customs-checkbox'], false); ?>
+
+        <?= $form
+            ->field($searchCustomsModel, 'others', [
+                'template' => "{input}\n{label}",
+                'options' => [
+                    // 'style' => 'margin-bottom: 20px;',
+                    'class' => 'customs-label'
+                ]
+            ])
+            ->checkbox(['id' => 'others', 'class' => 'customs-checkbox'], false); ?>
+
+        <?= $form
+            ->field($searchCustomsModel, 'captions', [
+                'template' => "{input}\n{label}",
+                'options' => [
+                    // 'style' => 'margin-bottom: 20px;',
+                    'class' => 'customs-label'
+                ]
+            ])
+            ->checkbox(['id' => 'captions', 'class' => 'customs-checkbox'], false); ?>
+        <?php ActiveForm::end(); ?>
+    </div>
 </div>
 
 <!-- <div class="map">

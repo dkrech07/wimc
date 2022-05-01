@@ -84,6 +84,25 @@ class CustomsController extends Controller
     //     return $this->render('page', compact('form_model'));
     // }
 
+    public function actionCheckbox()
+    {
+
+        $form_model = new SearchCustoms();
+        if (\Yii::$app->request->isAjax) {
+            return 'Запрос от чекбокса принят!';
+        }
+        if ($form_model->load(\Yii::$app->request->post())) {
+            // $form_model->head;
+            // $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
+            // $form_model->distance = $nearest_point['distance'] * 100000;
+
+
+            // // return json_encode($nearest_point, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
+
+            // return json_encode($form_model, JSON_UNESCAPED_UNICODE);
+        }
+    }
+
 
     public function actionIndex()
     {

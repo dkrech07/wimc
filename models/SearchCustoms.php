@@ -6,31 +6,33 @@ use yii\base\Model;
 
 class SearchCustoms extends Model
 {
-    // public $ADRTAM;
+    public $geo;
     public $latitude;
     public $longitude;
-    // public $city;
-    public $geo;
     public $nearest_lat;
     public $nearest_lon;
     public $distance;
+    public $head;
+    public $excise;
+    public $others;
+    public $captions;
 
     public function rules()
     {
         return [
-            // [['city'], 'required'],
-            [['geo'], 'string'],
-
-            // [['ADRTAM'], 'required'],
-            // [['ADRTAM'], 'string', 'max' => 128],
-            [['latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'distance'], 'string'],
+            [['geo', 'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'distance'], 'string'],
+            [['head', 'excise', 'others', 'captions'], 'boolean'],
         ];
     }
 
     public function attributeLabels()
     {
         return [
-            'geo' => 'Адрес таможенного поста:',
+            'geo' => 'Введите адрес, и сервис найдет ближайшие таможенные посты',
+            'head' => 'Головные таможни',
+            'excise' => 'Посты Акцизной таможни',
+            'others' => 'Прочие посты (экспертные, оперативные и т.п. 121-125***',
+            'captions' => 'Подписи ко всем меткам',
         ];
     }
 }

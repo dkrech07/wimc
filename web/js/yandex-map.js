@@ -5,8 +5,6 @@ if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
     yandexMap.dataset.longitude = 37.64;
 }
 
-
-
 ymaps.ready(init);
 
 function init () {
