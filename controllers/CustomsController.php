@@ -84,7 +84,7 @@ class CustomsController extends Controller
     //     return $this->render('page', compact('form_model'));
     // }
 
-    public function actionCheckbox()
+    public function actionCheckbox($customscode)
     {
 
         $form_model = new SearchCustoms();

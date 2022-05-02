@@ -20,6 +20,7 @@ class SearchCustoms extends Model
     public function rules()
     {
         return [
+            [['geo'], 'required'],
             [['geo', 'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'distance'], 'string'],
             [['head', 'excise', 'others', 'captions'], 'boolean'],
         ];

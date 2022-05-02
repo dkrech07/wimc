@@ -56,7 +56,7 @@ $config = [
                 '/autocomplete' => '/customs/autocomplete',
                 'ajax' => 'customs/ajax',
                 'search' => 'customs/search',
-
+                'checkbox/<customscode>' => 'customs/checkbox',
             ],
         ],
     ],

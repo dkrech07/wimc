@@ -6,7 +6,7 @@ checkboxes.forEach(function(checkbox, i) {
 
     checkbox.onchange = function() {
         $.ajax({
-            url: '/customs/checkbox',
+            url: 'http://localhost/wimc/web/checkbox', // '/checkbox'
             type: 'POST',
             data: {
                 settings: this.name,
