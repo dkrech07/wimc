@@ -9,28 +9,48 @@ use app\models\Cities;
 
 class CustomsFilterService
 {
-    public function getFilteredCustoms() //: object
+    public function getFilteredCustoms($customscodes = []) //: object
     {
+
+
+        $query = Customs::find();
+
+
+
+        foreach ($customscodes as $customscode) {
+            if ($customscode === 'head') {
+                $query->where(['CODE' => '000']);
+            }
+
+            if ($customscode === 'excise') {
+                $query->andWhere(['CODE' => '000']);
+            }
+        }
+
+
+
+
+        //     if ($customscode === 'others') {
+        //         $query->andWhere(['status' => '121'])
+        //             ->andWhere(['CODE' => '122'])
+        //             ->andWhere(['CODE' => '123'])
+        //             ->andWhere(['CODE' => '124'])
+        //             ->andWhere(['CODE' => '125']);
+        //     }
+
         // if ($customscode === 'head') {
         //     $query = Customs::find()->all();
         // }
 
-        // if ($customscode === 'excise') {
-        //     $query = Customs::find()->all();
+
         // }
 
-        // if ($customscode === 'others') {
-        //     $query = Customs::find()->all();
+
+
+
+
+        // foreach ($queries as $query) {
+        return $query->all();
         // }
-
-        // if ($customscode === 'head') {
-        //     $query = Customs::find()->all();
-        // }
-
-        $query = Customs::find()->all();
-
-
-
-        return $query;
     }
 }

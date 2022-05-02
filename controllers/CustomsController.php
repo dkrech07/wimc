@@ -91,67 +91,35 @@ class CustomsController extends Controller
     //     return $this->render('page', compact('form_model'));
     // }
 
-    public function actionCheckbox($customscode)
+    public function actionCheckbox()
     {
+        $form_model = new SearchCustoms();
         $request = Yii::$app->request;
 
-        if (\Yii::$app->request->isAjax) {
+        if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
             $data = $request->post();
-            return json_encode($data, JSON_UNESCAPED_UNICODE);
+
+            if ($data['settings'] === 'head') {
+                $form_model->head = $data['checked'];
+            }
+            if ($data['settings'] === 'excise') {
+                $form_model->excise = $data['checked'];
+            }
+            if ($data['settings'] === 'others') {
+                $form_model->others = $data['checked'];
+            }
+            if ($data['settings'] === 'captions') {
+                $form_model->captions = $data['checked'];
+            }
+
+
+            $customscodes = [$form_model->head, $form_model->excise, $form_model->others];
+
+            (new CustomsFilterService())->getFilteredCustoms($customscodes);
+
+
+            return json_encode($customscodes, JSON_UNESCAPED_UNICODE);
         }
-        // $form_model = new SearchCustoms();
-        // $customsCodes = [];
-
-
-
-
-        // return 'От сервера пришло: ' . $customscode;
-
-        // if ($customscode === 'head' && !isset($form_model->head)) {
-        //     $form_model->head = true;
-        // } else {
-        //     $form_model->head = '';
-        // }
-
-
-
-        // $request = new Request('PUT', $url);
-        // $response = $client->send($request);
-        // $content = $response->getBody()->getContents();
-        // $responseData = json_decode($content, false);
-
-        // return json_encode('[ok]', JSON_UNESCAPED_UNICODE);
-
-        // if ($customscode === 'excise') {
-        //     $form_model->excise = true;
-        // }
-        // if ($customscode === 'others') {
-        //     $form_model->others = true;
-        // }
-        // if ($customscode === 'captions') {
-        //     $form_model->captions = true;
-        // }
-
-
-        // $customsCodes[] = $customscode;
-        // foreach ($customsCodes as $code) {
-        //     if ($code === $customscode) {
-        //         unset($customsCodes[$code]);
-        //     }
-        // }
-
-
-
-        // if ($form_model->load(\Yii::$app->request->post())) {
-        //     // $form_model->head;
-        //     // $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
-        //     // $form_model->distance = $nearest_point['distance'] * 100000;
-
-
-        //     // // return json_encode($nearest_point, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
-
-        //     return json_encode(\Yii::$app->request->post(''), JSON_UNESCAPED_UNICODE);
-        // }
     }
 
 
