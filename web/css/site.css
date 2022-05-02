@@ -86,3 +86,8 @@ a.desc:after {
 .customs-label {
     font-size: 14px;
 }
+
+#map > ymaps {
+    border-radius: 5px;
+    overflow: hidden;
+    }

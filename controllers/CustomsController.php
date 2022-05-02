@@ -161,23 +161,24 @@ class CustomsController extends Controller
 
 
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
+
             $request = Yii::$app->request;
             $data = $request->post();
 
             $form_model->head = $data['head'];
-            $form_model->excise = $data['excise'];
-            $form_model->others = $data['others'];
-            $form_model->captions = $data['captions'];
+            // $form_model->excise = $data['excise'];
+            // $form_model->others = $data['others'];
+            // $form_model->captions = $data['captions'];
 
             if (isset($form_model->head)) {
                 $customs = (new CustomsFilterService())->getFilteredCustoms('head');
             }
-            if (isset($form_model->excise)) {
-                $customs = (new CustomsFilterService())->getFilteredCustoms('excise');
-            }
-            if (isset($form_model->others)) {
-                $customs = (new CustomsFilterService())->getFilteredCustoms('others');
-            }
+            // if (isset($form_model->excise)) {
+            //     $customs = (new CustomsFilterService())->getFilteredCustoms('excise');
+            // }
+            // if (isset($form_model->others)) {
+            //     $customs = (new CustomsFilterService())->getFilteredCustoms('others');
+            // }
 
 
             // (new CustomsFilterService())->getFilteredCustoms($customscodes);

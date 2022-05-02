@@ -11,15 +11,21 @@ class CustomsFilterService
 {
     public function getFilteredCustoms($customscode = null) //: object
     {
-        $query = Customs::find();
+        // $query = Customs::find();
 
         if (!$customscode) {
-            return $query->all();
+            return Customs::find()->all();
         }
 
 
         if ($customscode == 'head') {
-            return $query->where(['customs.CODE' => '000'])->all();
+
+
+            return Customs::findBySql('SELECT * FROM customs WHERE SUBSTRING(CODE, -3)=000')->all();
+
+            // return Customs::find()
+            //     ->where(['CODE' => '000'])->substr(-3)
+            //     ->all();
         }
 
         // return $query;
