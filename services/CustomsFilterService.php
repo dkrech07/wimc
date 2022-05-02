@@ -13,24 +13,29 @@ class CustomsFilterService
     {
         $query = Customs::find();
 
+        if (!$customscode) {
+            return $query->all();
+        }
 
-        return $query->all();
 
         if ($customscode == 'head') {
-            $query->where(['CODE' => '000']);
+            return $query->where(['customs.CODE' => '000'])->all();
         }
 
-        if ($customscode === 'excise') {
-            $query->andWhere(['CODE' => '000']);
-        }
+        // return $query;
 
-        if ($customscode === 'others') {
-            $query->andWhere(['status' => '121'])
-                ->andWhere(['CODE' => '122'])
-                ->andWhere(['CODE' => '123'])
-                ->andWhere(['CODE' => '124'])
-                ->andWhere(['CODE' => '125']);
-        }
+        // if ($customscode === 'excise') {
+        //     $query->andWhere(['CODE' => '000']);
+        // }
+
+        // if ($customscode === 'others') {
+        //     $query->andWhere(['status' => '121'])
+        //         ->andWhere(['CODE' => '122'])
+        //         ->andWhere(['CODE' => '123'])
+        //         ->andWhere(['CODE' => '124'])
+        //         ->andWhere(['CODE' => '125']);
+        // }
+
 
         // if ($customscode === 'head') {
         //     $query = Customs::find()->all();

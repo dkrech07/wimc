@@ -14,7 +14,7 @@ checkboxes.forEach(function(checkbox, i) {
 
   
         $.ajax({
-            url: 'http://localhost/wimc/web/checkbox', // '/checkbox'
+            url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
             type: 'POST',
             data: data,
             // beforeSend: function() { checkbox.disabled = true; },

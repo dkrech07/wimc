@@ -32,11 +32,11 @@ function init () {
     // обратимся к дочерним коллекциям ObjectManager.
     objectManager.objects.options.set('preset', 'islands#greenDotIcon');
     objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+    // myMap.geoObjects.removeAll(); 
     myMap.geoObjects.add(objectManager);
 
-
     $.ajax({
-        url: "http://localhost/wimc/web/checkbox" // "/ajax" // '/checkbox'
+        url: '/checkbox' // "/ajax" // '/checkbox' "http://localhost/wimc/web/checkbox"
     }).done(function(data) {
         objectManager.add(data);
     });
@@ -44,7 +44,7 @@ function init () {
     $('#search-customs').on('beforeSubmit', function(){
         var data = $(this).serialize();
         $.ajax({
-        url: 'http://localhost/wimc/web/search', // '/search'
+        url: '/search', // '/search' 'http://localhost/wimc/web/search'
         type: 'POST',
         data: data,
         success: function(res){

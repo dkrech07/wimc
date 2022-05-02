@@ -29,6 +29,7 @@ $this->title = 'Where is my customs?';
     'options' => [
         'autocomplete' => 'off',
         'class' => 'row form-horizontal',
+        'style' => 'margin: 20px 0;',
     ],
 ]); ?>
 
@@ -41,8 +42,8 @@ $this->title = 'Where is my customs?';
 <?= $form->field($searchCustomsModel, 'geo', [
     'template' => "{label}\n{input}",
     'options' => [
-        'style' => 'margin-bottom: 20px;',
-        'class' => 'col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10'
+        'style' => '',
+        'class' => 'col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8'
     ]
 ])->widget(
     AutoComplete::className(),
@@ -51,7 +52,7 @@ $this->title = 'Where is my customs?';
             'source' => new JsExpression('
             function (request, response) {
                 $.ajax({
-                    url: "http://localhost/wimc/web/autocomplete", // "/autocomplete"
+                    url: "/autocomplete", // "/autocomplete" "http://localhost/wimc/web/autocomplete"
                     data: {
                         term: request.term
                     },
@@ -137,12 +138,15 @@ $this->title = 'Where is my customs?';
 
 
 
-<?= Html::submitInput('Найти таможни', ['style' => 'margin-bottom: 20px;', 'class' => 'col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btn btn-primary']) ?>
+<?= Html::submitInput('Найти таможни', [
+    'style' => 'margin-top: 30px;',
+    'class' => 'col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btn btn-primary'
+]) ?>
 
 
 <?php ActiveForm::end(); ?>
 
-<div class='row'>
+<div class='row' style="margin-bottom: 20px;">
     <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
         <?php $form = ActiveForm::begin([
