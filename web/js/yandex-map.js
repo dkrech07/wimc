@@ -36,7 +36,7 @@ function init () {
 
 
     $.ajax({
-        url: "/customs/ajax"
+        url: "http://localhost/wimc/web/ajax" // "/ajax"
     }).done(function(data) {
         objectManager.add(data);
     });
@@ -44,7 +44,7 @@ function init () {
     $('#search-customs').on('beforeSubmit', function(){
         var data = $(this).serialize();
         $.ajax({
-        url: '/customs/search',
+        url: 'http://localhost/wimc/web/search', // '/search'
         type: 'POST',
         data: data,
         success: function(res){

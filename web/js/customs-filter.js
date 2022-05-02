@@ -21,3 +21,30 @@ checkboxes.forEach(function(checkbox, i) {
         });
     }
 });
+
+// let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
+
+// let checkboxHead = document.querySelector('#head')
+
+
+
+// checkboxHead.onchange = function() {
+//         $.ajax({
+//             url: 'http://localhost/wimc/web/customs/checkbox/head', //'/customs/checkbox'
+//             type: 'POST',
+//             data: {
+//                 settings: this.name,
+//                 id: this.value,
+//                 checked: this.checked ? 1:0
+//             },
+//             beforeSend: function() { checkboxHead.disabled = true; },
+//             complete: function() { checkboxHead.disabled = false; },
+//             success: function(response) {
+//                 console.log(response);
+//             }
+//         });
+//     }
+
+
+
+// console.log(checkboxHead);

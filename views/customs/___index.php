@@ -16,7 +16,7 @@ AutoCompleteAsset::register($this);
 $apiKey = Yii::$app->params['geocoderApiKey'];
 $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_RU");
 $this->registerJsFile('js/yandex-map.js');
-$this->registerJsFile('js/customs-filter.js');
+// $this->registerJsFile('js/auto-complete.js');
 
 
 // $this->registerJsFile('/js/custom.js');
@@ -27,32 +27,25 @@ $this->title = 'Where is my customs?';
 <?php $form = ActiveForm::begin([
     'id' => 'search-customs',
     'enableAjaxValidation' => true,
-    'options' => [
-        'autocomplete' => 'off',
-        'class' => 'row form-horizontal',
-    ],
+    'options' => ['autocomplete' => 'off'],
 ]); ?>
 
 <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
 <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>
+
 <?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lat']) ?>
 <?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lon']) ?>
 <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
 
-<?= $form->field($searchCustomsModel, 'geo', [
-    'template' => "{label}\n{input}",
-    'options' => [
-        'style' => 'margin-bottom: 20px;',
-        'class' => 'col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10'
-    ]
-])->widget(
+
+<?= $form->field($searchCustomsModel, 'geo')->widget(
     AutoComplete::className(),
     [
         'clientOptions' => [
             'source' => new JsExpression('
             function (request, response) {
                 $.ajax({
-                    url: "http://localhost/wimc/web/autocomplete", // "/autocomplete"
+                    url: "http://localhost/wimc/web/customs/autocomplete",
                     data: {
                         term: request.term
                     },
@@ -138,65 +131,14 @@ $this->title = 'Where is my customs?';
 
 
 
-<?= Html::submitInput('Найти таможни', ['style' => 'margin-bottom: 20px;', 'class' => 'col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btn btn-primary']) ?>
+<?= Html::submitInput('Найти таможни', ['style' => 'margin-bottom: 25px;', 'class' => 'button button--blue']) ?>
 
 
 <?php ActiveForm::end(); ?>
 
-<div class='row'>
-    <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
-    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-        <?php $form = ActiveForm::begin([
-            'id' => 'tasks-form',
-            'fieldConfig' => [
-                'template' => "{input}"
-            ]
-        ]); ?>
 
-        <?= $form
-            ->field($searchCustomsModel, 'head', [
-                'template' => "{input}\n{label}",
-                'options' => [
-                    // 'style' => 'margin-bottom: 20px;',
-                    'class' => 'customs-label'
-                ]
-            ])
-            ->checkbox(['id' => 'head', 'class' => 'customs-checkbox'], false); ?>
 
-        <?= $form
-            ->field($searchCustomsModel, 'excise', [
-                'template' => "{input}\n{label}",
-                'options' => [
-                    // 'style' => 'margin-bottom: 20px;',
-                    'class' => 'customs-label'
-                ]
-            ])
-            ->checkbox(['id' => 'excise', 'class' => 'customs-checkbox'], false); ?>
-
-        <?= $form
-            ->field($searchCustomsModel, 'others', [
-                'template' => "{input}\n{label}",
-                'options' => [
-                    // 'style' => 'margin-bottom: 20px;',
-                    'class' => 'customs-label'
-                ]
-            ])
-            ->checkbox(['id' => 'others', 'class' => 'customs-checkbox'], false); ?>
-
-        <?= $form
-            ->field($searchCustomsModel, 'captions', [
-                'template' => "{input}\n{label}",
-                'options' => [
-                    // 'style' => 'margin-bottom: 20px;',
-                    'class' => 'customs-label'
-                ]
-            ])
-            ->checkbox(['id' => 'captions', 'class' => 'customs-checkbox'], false); ?>
-        <?php ActiveForm::end(); ?>
-    </div>
-</div>
-
-<!-- <div class="map">
+<div class="map">
     <div id="map" style="width: 1280px; height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
-</div> -->
+</div>
 <!-- data-latitude="55.76" data-longitude="37.64" -->

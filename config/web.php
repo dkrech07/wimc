@@ -53,7 +53,10 @@ $config = [
 
                 'geoapi/<geocode>' => 'api/geocoder',
                 '/' => '/customs',
+                '/autocomplete' => '/customs/autocomplete',
                 'ajax' => 'customs/ajax',
+                'search' => 'customs/search',
+
             ],
         ],
     ],
