@@ -154,44 +154,44 @@ $this->title = 'Where is my customs?';
         ]); ?>
 
         <?= $form
-            ->field($searchCustomsModel, 'head', [
+            ->field($filterCustoms, 'head', [
                 'template' => "{input}\n{label}",
                 'options' => [
                     // 'style' => 'margin-bottom: 20px;',
                     'class' => 'customs-label'
                 ]
             ])
-            ->checkbox(['id' => 'head', 'class' => 'customs-checkbox', 'checked' => false], false); ?>
+            ->checkbox(['id' => 'head', 'class' => 'customs-checkbox'], false); ?>
 
         <?= $form
-            ->field($searchCustomsModel, 'excise', [
+            ->field($filterCustoms, 'excise', [
                 'template' => "{input}\n{label}",
                 'options' => [
                     // 'style' => 'margin-bottom: 20px;',
                     'class' => 'customs-label'
                 ]
             ])
-            ->checkbox(['id' => 'excise', 'class' => 'customs-checkbox', 'checked' => false], false); ?>
+            ->checkbox(['id' => 'excise', 'class' => 'customs-checkbox'], false); ?>
 
         <?= $form
-            ->field($searchCustomsModel, 'others', [
+            ->field($filterCustoms, 'others', [
                 'template' => "{input}\n{label}",
                 'options' => [
                     // 'style' => 'margin-bottom: 20px;',
                     'class' => 'customs-label'
                 ]
             ])
-            ->checkbox(['id' => 'others', 'class' => 'customs-checkbox', 'checked' => false], false); ?>
+            ->checkbox(['id' => 'others', 'class' => 'customs-checkbox'], false); ?>
 
         <?= $form
-            ->field($searchCustomsModel, 'captions', [
+            ->field($filterCustoms, 'captions', [
                 'template' => "{input}\n{label}",
                 'options' => [
                     // 'style' => 'margin-bottom: 20px;',
                     'class' => 'customs-label'
                 ]
             ])
-            ->checkbox(['id' => 'captions', 'class' => 'customs-checkbox', 'checked' => false], false); ?>
+            ->checkbox(['id' => 'captions', 'class' => 'customs-checkbox'], false); ?>
         <?php ActiveForm::end(); ?>
     </div>
 </div>

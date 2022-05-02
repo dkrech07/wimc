@@ -7,6 +7,7 @@ use yii\web\Response;
 use yii\widgets\ActiveForm;
 use yii\web\Controller;
 use app\models\SearchCustoms;
+use app\models\FilterCustoms;
 use app\models\Cities;
 use app\services\CustomsFilterService;
 use app\services\GeocoderService;
@@ -93,32 +94,38 @@ class CustomsController extends Controller
 
     public function actionCheckbox()
     {
-        $form_model = new SearchCustoms();
-        $request = Yii::$app->request;
+        $form_model = new FilterCustoms();
+
 
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
+            $request = Yii::$app->request;
             $data = $request->post();
 
-            if ($data['settings'] === 'head') {
-                $form_model->head = $data['checked'];
-            }
-            if ($data['settings'] === 'excise') {
-                $form_model->excise = $data['checked'];
-            }
-            if ($data['settings'] === 'others') {
-                $form_model->others = $data['checked'];
-            }
-            if ($data['settings'] === 'captions') {
-                $form_model->captions = $data['checked'];
-            }
+            $form_model->head = $data['head'];
+            $form_model->excise = $data['excise'];
+            $form_model->others = $data['others'];
+            $form_model->captions = $data['captions'];
+
+            // if ($data['settings'] === 'head') {
+            //     
+            // }
+            // if ($data['settings'] === 'excise') {
+            //     $form_model->excise = $data['checked'];
+            // }
+            // if ($data['settings'] === 'others') {
+            //     $form_model->others = $data['checked'];
+            // }
+            // if ($data['settings'] === 'captions') {
+            //     $form_model->captions = $data['checked'];
+            // }
 
 
-            $customscodes = [$form_model->head, $form_model->excise, $form_model->others];
+            // $customscodes = [$form_model->head, $form_model->excise, $form_model->others];
 
-            (new CustomsFilterService())->getFilteredCustoms($customscodes);
+            // (new CustomsFilterService())->getFilteredCustoms($customscodes);
 
 
-            return json_encode($customscodes, JSON_UNESCAPED_UNICODE);
+            return json_encode($form_model, JSON_UNESCAPED_UNICODE);
         }
     }
 
@@ -126,6 +133,8 @@ class CustomsController extends Controller
     public function actionIndex()
     {
         $searchCustomsModel = new SearchCustoms();
+        $filterCustoms = new filterCustoms();
+
         if (Yii::$app->request->isPost) {
             $searchCustomsModel->load(Yii::$app->request->post());
 
@@ -144,6 +153,8 @@ class CustomsController extends Controller
 
         return $this->render('index', [
             'searchCustomsModel' => $searchCustomsModel,
+            'filterCustoms' => $filterCustoms,
+
             // 'customs' => $customs,
         ]);
     }
