@@ -1,4 +1,5 @@
-checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
+let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
+
 // console.log(checkboxes);
 // console.log('ok');
 
@@ -6,7 +7,7 @@ checkboxes.forEach(function(checkbox, i) {
 
     checkbox.onchange = function() {
         $.ajax({
-            url: 'http://localhost/wimc/web/checkbox', // '/checkbox'
+            url: 'http://localhost/wimc/web/checkbox/' + checkbox['id'], // '/checkbox'
             type: 'POST',
             data: {
                 settings: this.name,
@@ -22,15 +23,12 @@ checkboxes.forEach(function(checkbox, i) {
     }
 });
 
-// let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
 
-// let checkboxHead = document.querySelector('#head')
-
-
+// let checkboxHead = document.querySelector('#head');
 
 // checkboxHead.onchange = function() {
 //         $.ajax({
-//             url: 'http://localhost/wimc/web/customs/checkbox/head', //'/customs/checkbox'
+//             url: 'http://localhost/wimc/web/checkbox/head', //'/customs/checkbox'
 //             type: 'POST',
 //             data: {
 //                 settings: this.name,
@@ -44,7 +42,3 @@ checkboxes.forEach(function(checkbox, i) {
 //             }
 //         });
 //     }
-
-
-
-// console.log(checkboxHead);

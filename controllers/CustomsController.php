@@ -88,9 +88,13 @@ class CustomsController extends Controller
     {
 
         $form_model = new SearchCustoms();
+
+
         if (\Yii::$app->request->isAjax) {
-            return 'Запрос от чекбокса принят!';
+
+            return 'Запрос от чекбокса ' . $customscode . ' принят!';
         }
+
         if ($form_model->load(\Yii::$app->request->post())) {
             // $form_model->head;
             // $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
