@@ -18,7 +18,6 @@ $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_
 $this->registerJsFile('js/yandex-map.js');
 $this->registerJsFile('js/customs-filter.js');
 
-
 // $this->registerJsFile('/js/custom.js');
 $this->title = 'Where is my customs?';
 ?>

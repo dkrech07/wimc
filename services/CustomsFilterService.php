@@ -9,34 +9,28 @@ use app\models\Cities;
 
 class CustomsFilterService
 {
-    public function getFilteredCustoms($customscodes = []) //: object
+    public function getFilteredCustoms($customscode = null) //: object
     {
-
-
         $query = Customs::find();
 
 
+        return $query->all();
 
-        foreach ($customscodes as $customscode) {
-            if ($customscode === 'head') {
-                $query->where(['CODE' => '000']);
-            }
-
-            if ($customscode === 'excise') {
-                $query->andWhere(['CODE' => '000']);
-            }
+        if ($customscode == 'head') {
+            $query->where(['CODE' => '000']);
         }
 
+        if ($customscode === 'excise') {
+            $query->andWhere(['CODE' => '000']);
+        }
 
-
-
-        //     if ($customscode === 'others') {
-        //         $query->andWhere(['status' => '121'])
-        //             ->andWhere(['CODE' => '122'])
-        //             ->andWhere(['CODE' => '123'])
-        //             ->andWhere(['CODE' => '124'])
-        //             ->andWhere(['CODE' => '125']);
-        //     }
+        if ($customscode === 'others') {
+            $query->andWhere(['status' => '121'])
+                ->andWhere(['CODE' => '122'])
+                ->andWhere(['CODE' => '123'])
+                ->andWhere(['CODE' => '124'])
+                ->andWhere(['CODE' => '125']);
+        }
 
         // if ($customscode === 'head') {
         //     $query = Customs::find()->all();
@@ -50,7 +44,7 @@ class CustomsFilterService
 
 
         // foreach ($queries as $query) {
-        return $query->all();
+
         // }
     }
 }

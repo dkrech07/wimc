@@ -36,7 +36,7 @@ function init () {
 
 
     $.ajax({
-        url: "http://localhost/wimc/web/ajax" // "/ajax"
+        url: "http://localhost/wimc/web/checkbox" // "/ajax" // '/checkbox'
     }).done(function(data) {
         objectManager.add(data);
     });

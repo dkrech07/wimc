@@ -92,44 +92,6 @@ class CustomsController extends Controller
     //     return $this->render('page', compact('form_model'));
     // }
 
-    public function actionCheckbox()
-    {
-        $form_model = new FilterCustoms();
-
-
-        if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
-            $request = Yii::$app->request;
-            $data = $request->post();
-
-            $form_model->head = $data['head'];
-            $form_model->excise = $data['excise'];
-            $form_model->others = $data['others'];
-            $form_model->captions = $data['captions'];
-
-            // if ($data['settings'] === 'head') {
-            //     
-            // }
-            // if ($data['settings'] === 'excise') {
-            //     $form_model->excise = $data['checked'];
-            // }
-            // if ($data['settings'] === 'others') {
-            //     $form_model->others = $data['checked'];
-            // }
-            // if ($data['settings'] === 'captions') {
-            //     $form_model->captions = $data['checked'];
-            // }
-
-
-            // $customscodes = [$form_model->head, $form_model->excise, $form_model->others];
-
-            // (new CustomsFilterService())->getFilteredCustoms($customscodes);
-
-
-            return json_encode($form_model, JSON_UNESCAPED_UNICODE);
-        }
-    }
-
-
     public function actionIndex()
     {
         $searchCustomsModel = new SearchCustoms();
@@ -159,9 +121,85 @@ class CustomsController extends Controller
         ]);
     }
 
-    public function actionAjax() //: array
+    // public function actionAjax() //: array
+    // {
+    //     $customs = (new CustomsFilterService())->getFilteredCustoms();
+    //     $customs_coords = [
+    //         "type" => "FeatureCollection",
+    //         "features" => []
+    //     ];
+
+    //     foreach ($customs as $number => $custom) {
+    //         $customs_coords['features'][] =
+    //             [
+    //                 "type" => "Feature",
+    //                 "id" => $number,
+    //                 "geometry" => [
+    //                     "type" => "Point",
+    //                     "coordinates" => [
+    //                         $custom['COORDS_LATITUDE'], $custom['COORDS_LONGITUDE']
+    //                     ]
+    //                 ],
+    //                 "properties" => [
+    //                     "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
+    //                     "balloonContentBody" => $custom['ADRTAM'],
+    //                     "balloonContentFooter" => $custom['TELEFON'],
+    //                     "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
+    //                 ]
+
+    //             ];
+    //     }
+
+    //     return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
+    // }
+
+    public function actionCheckbox()
     {
+
+        $form_model = new FilterCustoms();
         $customs = (new CustomsFilterService())->getFilteredCustoms();
+
+
+        if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
+            $request = Yii::$app->request;
+            $data = $request->post();
+
+            $form_model->head = $data['head'];
+            $form_model->excise = $data['excise'];
+            $form_model->others = $data['others'];
+            $form_model->captions = $data['captions'];
+
+            if (isset($form_model->head)) {
+                $customs = (new CustomsFilterService())->getFilteredCustoms('head');
+            }
+            if (isset($form_model->excise)) {
+                $customs = (new CustomsFilterService())->getFilteredCustoms('excise');
+            }
+            if (isset($form_model->others)) {
+                $customs = (new CustomsFilterService())->getFilteredCustoms('others');
+            }
+
+
+            // (new CustomsFilterService())->getFilteredCustoms($customscodes);
+            // if ($data['settings'] === 'excise') {
+            //     $form_model->excise = $data['checked'];
+            // }
+            // if ($data['settings'] === 'others') {
+            //     $form_model->others = $data['checked'];
+            // }
+            // if ($data['settings'] === 'captions') {
+            //     $form_model->captions = $data['checked'];
+            // }
+
+
+            // $customscodes = [$form_model->head, $form_model->excise, $form_model->others];
+
+            // (new CustomsFilterService())->getFilteredCustoms($customscodes);
+
+
+            // return json_encode($customscodes, JSON_UNESCAPED_UNICODE);
+        }
+
         $customs_coords = [
             "type" => "FeatureCollection",
             "features" => []
