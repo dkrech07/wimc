@@ -11,7 +11,25 @@ class CustomsFilterService
 {
     public function getFilteredCustoms() //: object
     {
+        // if ($customscode === 'head') {
+        //     $query = Customs::find()->all();
+        // }
+
+        // if ($customscode === 'excise') {
+        //     $query = Customs::find()->all();
+        // }
+
+        // if ($customscode === 'others') {
+        //     $query = Customs::find()->all();
+        // }
+
+        // if ($customscode === 'head') {
+        //     $query = Customs::find()->all();
+        // }
+
         $query = Customs::find()->all();
+
+
 
         return $query;
     }

@@ -161,7 +161,7 @@ $this->title = 'Where is my customs?';
                     'class' => 'customs-label'
                 ]
             ])
-            ->checkbox(['id' => 'head', 'class' => 'customs-checkbox'], false); ?>
+            ->checkbox(['id' => 'head', 'class' => 'customs-checkbox', 'checked' => false], false); ?>
 
         <?= $form
             ->field($searchCustomsModel, 'excise', [
@@ -171,7 +171,7 @@ $this->title = 'Where is my customs?';
                     'class' => 'customs-label'
                 ]
             ])
-            ->checkbox(['id' => 'excise', 'class' => 'customs-checkbox'], false); ?>
+            ->checkbox(['id' => 'excise', 'class' => 'customs-checkbox', 'checked' => false], false); ?>
 
         <?= $form
             ->field($searchCustomsModel, 'others', [
@@ -181,7 +181,7 @@ $this->title = 'Where is my customs?';
                     'class' => 'customs-label'
                 ]
             ])
-            ->checkbox(['id' => 'others', 'class' => 'customs-checkbox'], false); ?>
+            ->checkbox(['id' => 'others', 'class' => 'customs-checkbox', 'checked' => false], false); ?>
 
         <?= $form
             ->field($searchCustomsModel, 'captions', [
@@ -191,7 +191,7 @@ $this->title = 'Where is my customs?';
                     'class' => 'customs-label'
                 ]
             ])
-            ->checkbox(['id' => 'captions', 'class' => 'customs-checkbox'], false); ?>
+            ->checkbox(['id' => 'captions', 'class' => 'customs-checkbox', 'checked' => false], false); ?>
         <?php ActiveForm::end(); ?>
     </div>
 </div>

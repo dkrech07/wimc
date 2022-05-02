@@ -11,6 +11,13 @@ use app\models\Cities;
 use app\services\CustomsFilterService;
 use app\services\GeocoderService;
 use app\services\NearestPointService;
+use phpDocumentor\Reflection\Types\Null_;
+
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Exception\ServerException;
+use GuzzleHttp\Psr7\Request;
 
 class CustomsController extends Controller
 {
@@ -86,25 +93,65 @@ class CustomsController extends Controller
 
     public function actionCheckbox($customscode)
     {
-
-        $form_model = new SearchCustoms();
-
+        $request = Yii::$app->request;
 
         if (\Yii::$app->request->isAjax) {
-
-            return 'Запрос от чекбокса ' . $customscode . ' принят!';
+            $data = $request->post();
+            return json_encode($data, JSON_UNESCAPED_UNICODE);
         }
-
-        if ($form_model->load(\Yii::$app->request->post())) {
-            // $form_model->head;
-            // $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
-            // $form_model->distance = $nearest_point['distance'] * 100000;
+        // $form_model = new SearchCustoms();
+        // $customsCodes = [];
 
 
-            // // return json_encode($nearest_point, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
 
-            // return json_encode($form_model, JSON_UNESCAPED_UNICODE);
-        }
+
+        // return 'От сервера пришло: ' . $customscode;
+
+        // if ($customscode === 'head' && !isset($form_model->head)) {
+        //     $form_model->head = true;
+        // } else {
+        //     $form_model->head = '';
+        // }
+
+
+
+        // $request = new Request('PUT', $url);
+        // $response = $client->send($request);
+        // $content = $response->getBody()->getContents();
+        // $responseData = json_decode($content, false);
+
+        // return json_encode('[ok]', JSON_UNESCAPED_UNICODE);
+
+        // if ($customscode === 'excise') {
+        //     $form_model->excise = true;
+        // }
+        // if ($customscode === 'others') {
+        //     $form_model->others = true;
+        // }
+        // if ($customscode === 'captions') {
+        //     $form_model->captions = true;
+        // }
+
+
+        // $customsCodes[] = $customscode;
+        // foreach ($customsCodes as $code) {
+        //     if ($code === $customscode) {
+        //         unset($customsCodes[$code]);
+        //     }
+        // }
+
+
+
+        // if ($form_model->load(\Yii::$app->request->post())) {
+        //     // $form_model->head;
+        //     // $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
+        //     // $form_model->distance = $nearest_point['distance'] * 100000;
+
+
+        //     // // return json_encode($nearest_point, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
+
+        //     return json_encode(\Yii::$app->request->post(''), JSON_UNESCAPED_UNICODE);
+        // }
     }
 
 

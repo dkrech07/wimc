@@ -6,14 +6,23 @@ let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
 checkboxes.forEach(function(checkbox, i) {
 
     checkbox.onchange = function() {
+        var data = {
+                settings: this.id,
+                id: this.value,
+                checked: this.checked ? 1:0
+            };
+        // var data = $(this).serialize();
+        // console.log('Эти данные уходят на сервер по клику на чекбокс:');
+        // console.log(data);
         $.ajax({
             url: 'http://localhost/wimc/web/checkbox/' + checkbox['id'], // '/checkbox'
             type: 'POST',
-            data: {
-                settings: this.name,
-                id: this.value,
-                checked: this.checked ? 1:0
-            },
+            data: data,
+            // data: {
+            //     settings: this.name,
+            //     id: this.value,
+            //     checked: this.checked ? 1:0
+            // },
             beforeSend: function() { checkbox.disabled = true; },
             complete: function() { checkbox.disabled = false; },
             success: function(response) {
