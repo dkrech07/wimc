@@ -3,25 +3,56 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Response;
-use app\services\GeocoderService;
 use yii\web\Controller;
 use app\services\CustomsFilterService;
+use app\models\FilterCustoms;
 
-
-class AjaxController extends Controller
+class FilterController extends Controller
 {
-    // /**
-    //  * @param string $geocode
-    //  * 
-    //  * @return array
-    //  */
-    public function actionAjax() //: array
+    public function actionCheckbox()
     {
-        // Yii::$app->response->format = Response::FORMAT_JSON;
-        // // print((new GeocoderService())->getCoords($geocode));
-        // // exit;
-        // return (new GeocoderService())->getCoords($geocode);
-        return (new CustomsFilterService())->getFilteredCustoms();
+
+        $form_model = new FilterCustoms();
+
+        if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
+
+            $request = Yii::$app->request;
+            $data = $request->post();
+
+            $form_model->head = $data['head'];
+            $form_model->excise = $data['excise'];
+            $form_model->others = $data['others'];
+            $form_model->captions = $data['captions'];
+        }
+
+        $customs = (new CustomsFilterService())->getFilteredCustoms($form_model);
+
+        $customs_coords = [
+            "type" => "FeatureCollection",
+            "features" => []
+        ];
+
+        foreach ($customs as $number => $custom) {
+            $customs_coords['features'][] =
+                [
+                    "type" => "Feature",
+                    "id" => $number,
+                    "geometry" => [
+                        "type" => "Point",
+                        "coordinates" => [
+                            $custom['COORDS_LATITUDE'], $custom['COORDS_LONGITUDE']
+                        ]
+                    ],
+                    "properties" => [
+                        "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
+                        "balloonContentBody" => $custom['ADRTAM'],
+                        "balloonContentFooter" => $custom['TELEFON'],
+                        "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
+                    ]
+
+                ];
+        }
+
+        return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
     }
 }

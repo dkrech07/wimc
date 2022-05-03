@@ -63,7 +63,6 @@ $this->title = 'Where is my customs?';
                             return {
                                 label: geo.display_name,
                                 value: [geo.lat, geo.lon]
-                                // dataset: [geo.lat, geo.lon] // geo.display_name 
                             };
                         }));
                     },
@@ -78,9 +77,6 @@ $this->title = 'Where is my customs?';
                     this.value = ui.item.label;
                     let geo = ui.item.value;
 
-                    // $("#latitude").val(ui.item.value["ui.item.value"]);
-                    // $("#longitude").val(ui.item.value["ui.item.value"]);
-
                     $("#latitude").val(geo[0]);
                     $("#longitude").val(geo[1]);
                 
@@ -92,47 +88,6 @@ $this->title = 'Where is my customs?';
             'class' => 'form-control'
         ]
     ]
-
-    // [
-    //     'clientOptions' => [
-    //         // 'source' => Url::to(['autocomplete']),
-    //         // 'source' => Url::to(['autocomplete']),
-    //         // 'minLength' => '2',
-
-    //         // 'source' => new JsExpression("function (request, response) {
-
-    //         //     $.getJSON('http://localhost/wimc/web/customs/autocomplete', {
-    //         //         term: request.term
-    //         //     }, response).done(function(json){
-
-    //         //         array = [];
-    //         //         json.forEach(item => {
-    //         //             array.push(item['display_name']);
-    //         //         });
-
-
-
-    //         //         console.log('Массив:');
-    //         //         console.log(json);
-    //         //         // return array;
-    //         //     });
-
-    //         //     console.log('Запрос:');
-    //         //     console.log(request);
-    //         // }"),
-
-    //         'source' => new JsExpression("function(request, response) {
-    //             $.getJSON('http://localhost/wimc/web/customs/autocomplete', {
-    //                 term: request.term
-    //             }, response);
-    //         }"),
-
-    //         'minLength' => '2',
-    //     ],
-    //     'options' => [
-    //         'class' => 'form-control'
-    //     ]
-    // ]
 );
 ?>
 

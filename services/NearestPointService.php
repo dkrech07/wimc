@@ -3,7 +3,7 @@
 namespace app\services;
 
 use app\services\CustomsFilterService;
-
+use app\models\FilterCustoms;
 
 class NearestPointService
 {
@@ -22,7 +22,8 @@ class NearestPointService
             "y" => $y,
         ];
 
-        $customs = (new CustomsFilterService())->getFilteredCustoms();
+        $form_model = new FilterCustoms();
+        $customs = (new CustomsFilterService())->getFilteredCustoms($form_model);
         $customs_points = [];
         foreach ($customs as $number => $custom) {
             $customs_points[] = [
