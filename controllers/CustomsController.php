@@ -157,8 +157,6 @@ class CustomsController extends Controller
     {
 
         $form_model = new FilterCustoms();
-        $customs = (new CustomsFilterService())->getFilteredCustoms();
-
 
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
 
@@ -166,40 +164,12 @@ class CustomsController extends Controller
             $data = $request->post();
 
             $form_model->head = $data['head'];
-            // $form_model->excise = $data['excise'];
-            // $form_model->others = $data['others'];
-            // $form_model->captions = $data['captions'];
-
-            if (isset($form_model->head)) {
-                $customs = (new CustomsFilterService())->getFilteredCustoms('head');
-            }
-            // if (isset($form_model->excise)) {
-            //     $customs = (new CustomsFilterService())->getFilteredCustoms('excise');
-            // }
-            // if (isset($form_model->others)) {
-            //     $customs = (new CustomsFilterService())->getFilteredCustoms('others');
-            // }
-
-
-            // (new CustomsFilterService())->getFilteredCustoms($customscodes);
-            // if ($data['settings'] === 'excise') {
-            //     $form_model->excise = $data['checked'];
-            // }
-            // if ($data['settings'] === 'others') {
-            //     $form_model->others = $data['checked'];
-            // }
-            // if ($data['settings'] === 'captions') {
-            //     $form_model->captions = $data['checked'];
-            // }
-
-
-            // $customscodes = [$form_model->head, $form_model->excise, $form_model->others];
-
-            // (new CustomsFilterService())->getFilteredCustoms($customscodes);
-
-
-            // return json_encode($customscodes, JSON_UNESCAPED_UNICODE);
+            $form_model->excise = $data['excise'];
+            $form_model->others = $data['others'];
+            $form_model->captions = $data['captions'];
         }
+
+        $customs = (new CustomsFilterService())->getFilteredCustoms($form_model);
 
         $customs_coords = [
             "type" => "FeatureCollection",
@@ -228,5 +198,6 @@ class CustomsController extends Controller
         }
 
         return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
+        // return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
     }
 }
