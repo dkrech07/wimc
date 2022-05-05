@@ -11,11 +11,12 @@ class FilterCustoms extends Model
     public $excise;
     public $others;
     public $captions;
+    public $main;
 
     public function rules()
     {
         return [
-            [['head', 'excise', 'others', 'captions'], 'boolean'],
+            [['head', 'excise', 'others', 'main', 'captions'], 'boolean'],
         ];
     }
 

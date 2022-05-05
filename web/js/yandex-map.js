@@ -7,9 +7,11 @@ function getCollectionCoords(customsCoords, collection) {
             // hintContent: 'Ну давай уже тащи',
             // iconContent: 'Я тащусь',
             // iconCaption: custom['properties']['iconCaption'],
-            balloonContentHeader: custom['properties']['balloonContentHeader'],
-            balloonContentBody: custom['properties']['balloonContentBody'],
-            balloonContentFooter: custom['properties']['balloonContentFooter'],
+
+        
+            // balloonContentHeader: custom['properties']['balloonContentHeader'],
+            // balloonContentBody: custom['properties']['balloonContentBody'],
+            // balloonContentFooter: custom['properties']['balloonContentFooter'],
         }));
     });
 }
@@ -37,22 +39,20 @@ function init () {
             searchControlProvider: 'yandex#search'
         }),
         mainCollection = new ymaps.GeoObjectCollection(null, { // Создал коллекция Головных таможенных постов;
-            preset: 'islands#governmentCircleIcon',
-            iconColor: 'green'
-            // preset: 'islands#redCircleIcon',
-            // preset: 'islands#blackStretchyIcon',
+            preset: 'islands#greenStretchyIcon',
+            // iconColor: 'green'
         }), 
         headCollection = new ymaps.GeoObjectCollection(null, { // Создал коллекция Головных таможенных постов;
-            preset: 'islands#governmentCircleIcon',
-            iconColor: 'red'
+            preset: 'islands#redStretchyIcon',
+            // iconColor: 'red'
         }),
         exciseCollection = new ymaps.GeoObjectCollection(null, { // Создал коллекция Головных таможенных постов;
-            preset: 'islands#governmentCircleIcon',
-            iconColor: 'yellow'
+            preset: 'islands#yellowStretchyIcon',
+            // iconColor: 'yellow'
         }),
         othersCollection = new ymaps.GeoObjectCollection(null, { // Создал коллекция Головных таможенных постов;
-            preset: 'islands#governmentCircleIcon',
-            iconColor: 'blue'
+            preset: 'islands#blueStretchyIcon',
+            // iconColor: 'blue'
         }),
         searchCollection = new ymaps.GeoObjectCollection(null, { // Создал коллекция для найденных точек (одна пользовательская, вторая ближайшая);
             preset: 'islands#yellowIcon'
@@ -78,7 +78,7 @@ function init () {
     // Отприсовывает точки при загрузке страницы;
 
     $.ajax({
-        url: 'http://localhost/wimc/web/checkbox' // "/ajax" // '/checkbox' "http://localhost/wimc/web/checkbox"
+        url: '/checkbox' // "/ajax" // '/checkbox' "http://localhost/wimc/web/checkbox"
     }).done(function(response) {
         console.log(response);
 
@@ -104,7 +104,7 @@ function init () {
                 });
     
                 $.ajax({
-                    url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                    url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
                     type: 'POST',
                     data: data,
                     success: function (response) {
@@ -194,7 +194,7 @@ function init () {
     $('#search-customs').on('beforeSubmit', function(){
         var data = $(this).serialize();
         $.ajax({
-        url: 'http://localhost/wimc/web/search', // 'http://localhost/wimc/web/search'
+        url: '/search', // 'http://localhost/wimc/web/search'
         type: 'POST',
         data: data,
         success: function(res){
@@ -227,5 +227,23 @@ function init () {
     });
 
     myMap.geoObjects.add(objectManager);
+
+    myMap.geoObjects.events.add('click', function (e) {
+        var code = e.get('target').properties;
+        console.log(code);
+        // var objectId = e.get('objectId'),
+        //     obj = objectManager.objects.getById(objectId);
+        // if (hasBalloonData(objectId)) {
+        //     objectManager.objects.balloon.open(objectId);
+        // } else {
+        //     obj.properties.balloonContent = "Идет загрузка данных...";
+        //     objectManager.objects.balloon.open(objectId);
+        //     loadBalloonData(objectId).then(function (data) {
+        //         obj.properties.balloonContent = data;
+        //         objectManager.objects.balloon.setData(obj);
+        //     });
+        // }
+    });
+
 
 }
