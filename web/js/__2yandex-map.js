@@ -1,160 +1,109 @@
-const yandexMap = document.querySelector('#map');
-
-if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
-    yandexMap.dataset.latitude = 55.76;
-    yandexMap.dataset.longitude = 37.64;
-}
-
 ymaps.ready(init);
 
-function init () {
-    var myMap = new ymaps.Map('map', {
-            // center: [55.76, 37.64],
-        
-            center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-            zoom: 5,
-            controls: []
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 10
         }, {
             searchControlProvider: 'yandex#search'
         }),
-        searchCollection = new ymaps.GeoObjectCollection(null, { // Создал коллекция для найденных точек (одна пользовательская, вторая ближайшая);
-            preset: 'islands#yellowIcon'
-        }),
-        objectManager = new ymaps.ObjectManager({
-            // Чтобы метки начали кластеризоваться, выставляем опцию.
-            clusterize: true,
-            // ObjectManager принимает те же опции, что и кластеризатор.
-            gridSize: 32,
-            clusterDisableClickZoom: true
-        });
 
-    // Чтобы задать опции одиночным объектам и кластерам,
-    // обратимся к дочерним коллекциям ObjectManager.
-    objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-    objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
-    // myMap.geoObjects.removeAll(); 
-    myMap.geoObjects.add(objectManager);
-
-    $.ajax({
-        url: '/checkbox' // "/ajax" // '/checkbox' "http://localhost/wimc/web/checkbox"
-    }).done(function(data) {
-        objectManager.add(data);
-    });
-
-    $('#search-customs').on('beforeSubmit', function(){
-        var data = $(this).serialize();
-        $.ajax({
-        url: '/search', // '/search' 'http://localhost/wimc/web/search'
-        type: 'POST',
-        data: data,
-        success: function(res){
-            let geo = JSON.parse(res);
-
-            searchCollection.removeAll();
-            searchCollection.add(new ymaps.Placemark([geo['latitude'], geo['longitude']], {
-                balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
-            }, {
-                preset: 'islands#icon',
-                iconColor: 'red'
-            }));
-            searchCollection.add(new ymaps.Placemark([geo['nearest_lat'], geo['nearest_lon']]));
-
-            myMap.geoObjects.add(searchCollection);
-
-
-        // Добавляем на карту метку пользователя
-            // myMap.geoObjects.add(new ymaps.Placemark([geo['latitude'], geo['longitude']], {
-            //     balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
-            // }, {
-            //     preset: 'islands#icon',
-            //     iconColor: 'red'
-            // }));
-
-            // myMap.geoObjects.add(new ymaps.Placemark([geo['nearest_lat'], geo['nearest_lon']], {
-            //     balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
-            // }, {
-            //     preset: 'islands#icon',
-            //     iconColor: 'red'
-            // }));
-
-        // Добавляем на карту круг 
-
-        var myCircle = new ymaps.Circle([
-            // Координаты центра круга.
-            [geo['latitude'], geo['longitude']],
-            // Радиус круга в метрах.
-            geo['distance']
-        ], {
-            // Описываем свойства круга.
-            // Содержимое балуна.
-            balloonContent: "Радиус круга - 10 км",
-            // Содержимое хинта.
-            hintContent: "Подвинь меня"
+    // Создаем геообъект с типом геометрии "Точка".
+        myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [55.8, 37.8]
+            },
+            // Свойства.
+            properties: {
+                // Контент метки.
+                iconContent: 'Я тащусь',
+                hintContent: 'Ну давай уже тащи'
+            }
         }, {
-            // Задаем опции круга.
-            // Включаем возможность перетаскивания круга.
-            draggable: false,
-            // Цвет заливки.
-            // Последний байт (77) определяет прозрачность.
-            // Прозрачность заливки также можно задать используя опцию "fillOpacity".
-            fillColor: "#DB709377",
-            // Цвет обводки.
-            strokeColor: "#990066",
-            // Прозрачность обводки.
-            strokeOpacity: 0.8,
-            // Ширина обводки в пикселях.
-            strokeWidth: 5
+            // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#blackStretchyIcon',
+            // Метку можно перемещать.
+            draggable: true
+        }),
+        myPieChart = new ymaps.Placemark([
+            55.847, 37.6
+        ], {
+            // Данные для построения диаграммы.
+            data: [
+                {weight: 8, color: '#0E4779'},
+                {weight: 6, color: '#1E98FF'},
+                {weight: 4, color: '#82CDFF'}
+            ],
+            iconCaption: "Диаграмма"
+        }, {
+            // Зададим произвольный макет метки.
+            iconLayout: 'default#pieChart',
+            // Радиус диаграммы в пикселях.
+            iconPieChartRadius: 30,
+            // Радиус центральной части макета.
+            iconPieChartCoreRadius: 10,
+            // Стиль заливки центральной части.
+            iconPieChartCoreFillStyle: '#ffffff',
+            // Cтиль линий-разделителей секторов и внешней обводки диаграммы.
+            iconPieChartStrokeStyle: '#ffffff',
+            // Ширина линий-разделителей секторов и внешней обводки диаграммы.
+            iconPieChartStrokeWidth: 3,
+            // Максимальная ширина подписи метки.
+            iconPieChartCaptionMaxWidth: 200
         });
-    
 
-
-        
-        console.log('Новый центр карты:');
-        console.log([geo['latitude'], geo['longitude']]);
-        // myMap.panTo(
-        //     // Координаты нового центра карты
-        //     [geo['latitude'], geo['longitude']], {
-        //         /* Опции перемещения:
-        //            разрешить уменьшать и затем увеличивать зум
-        //            карты при перемещении между точками 
-        //         */
-        //         flying: true
-        //     }
-        // )
-
-        // myMap.setZoom(14);
-        
-        // myMap.setBounds(myCollection.getBounds(),{checkZoomRange:true, zoomMargin:9});
-                   // if (object.status == "free") {
-            //     objectManager.objects.setObjectOptions(object.id, {
-            //       preset: 'islands#greenAutoIcon'
-            //     });
-            // }
-
-        console.log('Ответ при отправке формы:');
-        console.log(res);
-        // console.log('Точка');
-        // console.log(geo['latitude']);
-        // console.log(geo['longitude']);
-
-
-                // Добавляем круг на карту.
-                myMap.geoObjects.add(myCircle);
-                // Отцентруем карту по точке пользователя;
-                myMap.setCenter([geo['latitude'], geo['longitude']]);
-                // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
-                myMap.setBounds(searchCollection.getBounds()); 
-                myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
-
-                // myMap.setBounds(myMap.searchCollection.getBounds())
-        },
-        error: function(){
-        alert('Error!');
-        }
-        });
-        return false;
-    });
-
-
-    
+    myMap.geoObjects
+        .add(myGeoObject)
+        .add(myPieChart)
+        .add(new ymaps.Placemark([55.684758, 37.738521], {
+            balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+        }, {
+            preset: 'islands#icon',
+            iconColor: '#0095b6'
+        }))
+        .add(new ymaps.Placemark([55.833436, 37.715175], {
+            balloonContent: '<strong>серобуромалиновый</strong> цвет'
+        }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#735184'
+        }))
+        .add(new ymaps.Placemark([55.687086, 37.529789], {
+            balloonContent: 'цвет <strong>влюбленной жабы</strong>'
+        }, {
+            preset: 'islands#circleIcon',
+            iconColor: '#3caa3c'
+        }))
+        .add(new ymaps.Placemark([55.782392, 37.614924], {
+            balloonContent: 'цвет <strong>детской неожиданности</strong>'
+        }, {
+            preset: 'islands#circleDotIcon',
+            iconColor: 'yellow'
+        }))
+        .add(new ymaps.Placemark([55.642063, 37.656123], {
+            balloonContent: 'цвет <strong>красный</strong>'
+        }, {
+            preset: 'islands#redSportIcon'
+        }))
+        .add(new ymaps.Placemark([55.826479, 37.487208], {
+            balloonContent: 'цвет <strong>фэйсбука</strong>'
+        }, {
+            preset: 'islands#governmentCircleIcon',
+            iconColor: '#3b5998'
+        }))
+        .add(new ymaps.Placemark([55.694843, 37.435023], {
+            balloonContent: 'цвет <strong>носика Гены</strong>',
+            iconCaption: 'Очень длиннный, но невероятно интересный текст'
+        }, {
+            preset: 'islands#greenDotIconWithCaption'
+        }))
+        .add(new ymaps.Placemark([55.790139, 37.814052], {
+            balloonContent: 'цвет <strong>голубой</strong>',
+            iconCaption: 'Очень длиннный, но невероятно интересный текст'
+        }, {
+            preset: 'islands#blueCircleDotIconWithCaption',
+            iconCaptionMaxWidth: '50'
+        }));
 }
