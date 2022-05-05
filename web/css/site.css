@@ -91,3 +91,9 @@ a.desc:after {
     border-radius: 5px;
     overflow: hidden;
     }
+
+.customs-label,
+.customs-checkbox {
+    cursor: pointer;
+}
+    

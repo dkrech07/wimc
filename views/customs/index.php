@@ -115,6 +115,7 @@ $this->title = 'Where is my customs?';
             ->field($filterCustoms, 'head', [
                 'template' => "{input}\n{label}",
                 'options' => [
+                    'style' => 'color: red;',
                     // 'style' => 'margin-bottom: 20px;',
                     'class' => 'customs-label'
                 ]
@@ -126,6 +127,7 @@ $this->title = 'Where is my customs?';
                 'template' => "{input}\n{label}",
                 'options' => [
                     // 'style' => 'margin-bottom: 20px;',
+                    'style' => 'color: #cda20b;',
                     'class' => 'customs-label'
                 ]
             ])
@@ -136,6 +138,7 @@ $this->title = 'Where is my customs?';
                 'template' => "{input}\n{label}",
                 'options' => [
                     // 'style' => 'margin-bottom: 20px;',
+                    'style' => 'color: blue;',
                     'class' => 'customs-label'
                 ]
             ])

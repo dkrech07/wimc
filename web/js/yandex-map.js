@@ -9,7 +9,7 @@ function getCountsCount (response) {
 
 if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
     yandexMap.dataset.latitude = 55.76;
-    yandexMap.dataset.longitude = 37.64;
+    yandexMap.dataset.longitude = 57.64;
 }
 
 ymaps.ready(init);
@@ -29,14 +29,37 @@ function init () {
             // Чтобы метки начали кластеризоваться, выставляем опцию.
             clusterize: true,
             // ObjectManager принимает те же опции, что и кластеризатор.
-            gridSize: 32,
-            clusterDisableClickZoom: true
+            gridSize: 16,
+            clusterDisableClickZoom: true,
+            groupByCoordinates: false,
         });
 
     // Чтобы задать опции одиночным объектам и кластерам,
     // обратимся к дочерним коллекциям ObjectManager.
     objectManager.objects.options.set('preset', 'islands#greenDotIcon');
     objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+
+
+    // console.log(objectManager.objects._objectsById);
+    // console.log(objectManager.objects._objectsById);
+    // Отприсовывает точки при загрузке страницы;
+
+    $.ajax({
+        url: 'http://localhost/wimc/web/checkbox' // "/ajax" // '/checkbox' "http://localhost/wimc/web/checkbox"
+    }).done(function(response) {
+        objectManager.add(response);
+        getCountsCount(response); // Получаю количество отрисованных метов в отдельной функции
+    });
+
+
+
+
+
+
+
+
+
+
 
     // Отрисовывает точки при поиске обеъкта на карте;
     $('#search-customs').on('beforeSubmit', function(){
@@ -59,8 +82,8 @@ function init () {
             myMap.geoObjects.add(searchCollection);
 
             // Отцентруем карту по точке пользователя;
-            console.log('Новый центр карты:');
-            console.log([geo['latitude'], geo['longitude']]);
+            // console.log('Новый центр карты:');
+            // console.log([geo['latitude'], geo['longitude']]);
             myMap.setCenter([geo['latitude'], geo['longitude']]);
             
             // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
@@ -73,17 +96,6 @@ function init () {
         });
         return false;
     });
-
-    // Отприсовывает точки при загрузке страницы;
-
-    $.ajax({
-        url: 'http://localhost/wimc/web/checkbox' // "/ajax" // '/checkbox' "http://localhost/wimc/web/checkbox"
-    }).done(function(response) {
-        objectManager.add(response);
-        getCountsCount(response)
-        console.log(response);
-    });
-
 
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
@@ -103,7 +115,7 @@ function init () {
                     objectManager.add(response);
                     getCountsCount(response)
 
-                    console.log(response);
+                    // console.log(response);
                 }
             });
         }

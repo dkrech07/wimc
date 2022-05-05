@@ -34,6 +34,20 @@ class FilterController extends Controller
         ];
 
         foreach ($customs as $number => $custom) {
+            $preset = "islands#greenIcon";
+
+            if (substr($custom['CODE'], -3) == '000') {
+                $preset = "islands#redIcon";
+            }
+
+            if (substr($custom['CODE'], 0, 5) == '10009') {
+                $preset = "islands#yellowIcon";
+            }
+
+            if (substr($custom['CODE'], 0, 3) == '121' || substr($custom['CODE'], 0, 3) == '122' || substr($custom['CODE'], 0, 3) == '123' || substr($custom['CODE'], 0, 3) == '124' || substr($custom['CODE'], 0, 3) == '125') {
+                $preset = "islands#blueIcon";
+            }
+
             $customs_coords['features'][] =
                 [
                     "type" => "Feature",
@@ -49,8 +63,10 @@ class FilterController extends Controller
                         "balloonContentBody" => $custom['ADRTAM'],
                         "balloonContentFooter" => $custom['TELEFON'],
                         "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
-                    ]
-
+                    ],
+                    "options" => [
+                        "preset" => $preset,
+                    ],
                 ];
         }
 

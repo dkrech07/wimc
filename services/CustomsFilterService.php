@@ -13,17 +13,7 @@ class CustomsFilterService
 {
     public function getFilteredCustoms(FilterCustoms $form_model) //: object
     {
-        $sql = "SELECT * FROM customs WHERE ";
-
-        // $without_head_query = ['head', "SUBSTRING(CODE, -3) NOT IN (000)"];
-        // $without_excise_query = ['excise', "SUBSTRING(CODE, 1, 5) NOT IN (10009)"];
-        // $without_others_query = ['others', "SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)"];
-
-        // $queries = [
-        //     'head' => $without_head_query,
-        //     'excise' => $without_excise_query,
-        //     'others' => $without_others_query,
-        // ];
+        $sql = "SELECT * FROM customs";
 
         $without_head_query = "SUBSTRING(CODE, -3) NOT IN (000)";
         $without_excise_query = "SUBSTRING(CODE, 1, 5) NOT IN (10009)";
@@ -59,7 +49,9 @@ class CustomsFilterService
         }
 
         foreach ($queries_keys as $key => $query) {
-            if ($key > 0) {
+            if ($key === 0) {
+                $sql .= " WHERE ";
+            } else {
                 $sql .= " AND ";
             }
             $sql .= $queries[$query];
