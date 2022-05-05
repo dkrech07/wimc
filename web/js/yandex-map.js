@@ -101,6 +101,8 @@ function init () {
                 success: function (response) {
                     objectManager.removeAll();
                     objectManager.add(response);
+                    getCountsCount(response)
+
                     console.log(response);
                 }
             });

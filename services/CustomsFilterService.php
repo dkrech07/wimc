@@ -13,26 +13,61 @@ class CustomsFilterService
 {
     public function getFilteredCustoms(FilterCustoms $form_model) //: object
     {
-        $query = "SELECT * FROM customs";
+        $sql = "SELECT * FROM customs WHERE ";
+
+        // $without_head_query = ['head', "SUBSTRING(CODE, -3) NOT IN (000)"];
+        // $without_excise_query = ['excise', "SUBSTRING(CODE, 1, 5) NOT IN (10009)"];
+        // $without_others_query = ['others', "SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)"];
+
+        // $queries = [
+        //     'head' => $without_head_query,
+        //     'excise' => $without_excise_query,
+        //     'others' => $without_others_query,
+        // ];
 
         $without_head_query = "SUBSTRING(CODE, -3) NOT IN (000)";
         $without_excise_query = "SUBSTRING(CODE, 1, 5) NOT IN (10009)";
         $without_others_query = "SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
 
-        $sql_array = [$without_head_query, $without_excise_query, $without_others_query];
+        $queries = [
+            'head' => $without_head_query,
+            'excise' => $without_excise_query,
+            'others' => $without_others_query,
+        ];
 
-        foreach ($sql_array as $sql_key => $sql) {
-            if ($sql_key == 0) {
-                $query .= " WHERE ";
-            } else {
-                $query .= " AND ";
-            }
-            $query .= $sql;
+        if ($form_model->head == '1') {
+            unset($queries['head']);
+        } else {
+            $queries['head'] = $without_head_query;
         }
 
-        // if ($form_model->head == '1') {
-        //     $form_array[] = 'head';
-        // }
+        if ($form_model->excise == '1') {
+            unset($queries['excise']);
+        } else {
+            $queries['excise'] = $without_excise_query;
+        }
+
+        if ($form_model->others == '1') {
+            unset($queries['others']);
+        } else {
+            $queries['others'] = $without_others_query;
+        }
+
+        $queries_keys = [];
+        foreach ($queries as $key => $query) {
+            $queries_keys[] = $key;
+        }
+
+        foreach ($queries_keys as $key => $query) {
+            if ($key > 0) {
+                $sql .= " AND ";
+            }
+            $sql .= $queries[$query];
+        }
+
+        return Customs::findBySql($sql)->all();
+
+
         // if ($form_model->excise == '1') {
         //     $form_array[] = 'excise';
         // }
@@ -63,7 +98,6 @@ class CustomsFilterService
         //     }
         // }
 
-        return Customs::findBySql($query)->all();
 
 
 
