@@ -29,7 +29,8 @@ class FilterController extends Controller
 
         $customs_coords = [
             "type" => "FeatureCollection",
-            "features" => []
+            "features" => [],
+            'customs_count' => count($customs),
         ];
 
         foreach ($customs as $number => $custom) {

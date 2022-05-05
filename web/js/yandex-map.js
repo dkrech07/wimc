@@ -1,5 +1,12 @@
 const yandexMap = document.querySelector('#map');
 
+function getCountsCount (response) {
+    let costomsObj = JSON.parse(response);
+
+    var customsCountElement = document.querySelector('.customs-number');
+    customsCountElement.textContent = costomsObj['customs_count'];
+}
+
 if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
     yandexMap.dataset.latitude = 55.76;
     yandexMap.dataset.longitude = 37.64;
@@ -35,7 +42,7 @@ function init () {
     $('#search-customs').on('beforeSubmit', function(){
         var data = $(this).serialize();
         $.ajax({
-        url: '/search', // 'http://localhost/wimc/web/search'
+        url: 'http://localhost/wimc/web/search', // 'http://localhost/wimc/web/search'
         type: 'POST',
         data: data,
         success: function(res){
@@ -70,9 +77,10 @@ function init () {
     // Отприсовывает точки при загрузке страницы;
 
     $.ajax({
-        url: '/checkbox' // "/ajax" // '/checkbox' "http://localhost/wimc/web/checkbox"
+        url: 'http://localhost/wimc/web/checkbox' // "/ajax" // '/checkbox' "http://localhost/wimc/web/checkbox"
     }).done(function(response) {
         objectManager.add(response);
+        getCountsCount(response)
         console.log(response);
     });
 
@@ -87,7 +95,7 @@ function init () {
             });
    
             $.ajax({
-                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
                 type: 'POST',
                 data: data,
                 success: function (response) {
@@ -100,4 +108,7 @@ function init () {
     });
    
     myMap.geoObjects.add(objectManager);
+    
+
+  
 }

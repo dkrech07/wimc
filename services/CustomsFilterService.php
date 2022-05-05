@@ -13,44 +13,57 @@ class CustomsFilterService
 {
     public function getFilteredCustoms(FilterCustoms $form_model) //: object
     {
-        $sql = "SELECT * FROM customs";
+        $query = "SELECT * FROM customs";
 
-        $form_array = [];
+        $without_head_query = "SUBSTRING(CODE, -3) NOT IN (000)";
+        $without_excise_query = "SUBSTRING(CODE, 1, 5) NOT IN (10009)";
+        $without_others_query = "SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
 
-        if ($form_model->head == '1') {
-            $form_array[] = 'head';
-        }
-        if ($form_model->excise == '1') {
-            $form_array[] = 'excise';
-        }
-        if ($form_model->others == '1') {
-            $form_array[] = 'others';
-        }
-        if ($form_model->captions == '1') {
-            $form_array[] = 'captions';
-        }
+        $sql_array = [$without_head_query, $without_excise_query, $without_others_query];
 
-        foreach ($form_array as $form_key => $form_param) {
-            if ($form_key == 0) {
-                $sql .= " WHERE ";
+        foreach ($sql_array as $sql_key => $sql) {
+            if ($sql_key == 0) {
+                $query .= " WHERE ";
             } else {
-                $sql .= " OR ";
+                $query .= " AND ";
             }
-
-            if ($form_param === 'head') {
-                $sql .= "SUBSTRING(CODE, -3) IN (000)";
-            }
-
-            if ($form_param === 'excise') {
-                $sql .= "SUBSTRING(CODE, 1, 5) IN (10009)";
-            }
-
-            if ($form_param === 'others') {
-                $sql .= "SUBSTRING(CODE, 1, 3) IN (121, 122, 123, 124, 125)";
-            }
+            $query .= $sql;
         }
 
-        return Customs::findBySql($sql)->all();
+        // if ($form_model->head == '1') {
+        //     $form_array[] = 'head';
+        // }
+        // if ($form_model->excise == '1') {
+        //     $form_array[] = 'excise';
+        // }
+        // if ($form_model->others == '1') {
+        //     $form_array[] = 'others';
+        // }
+        // if ($form_model->captions == '1') {
+        //     $form_array[] = 'captions';
+        // }
+
+        // foreach ($form_array as $form_key => $form_param) {
+        // if ($form_key == 0) {
+        //     $sql .= " WHERE ";
+        // } else {
+        //     $sql .= " OR ";
+        // }
+
+        //     if ($form_param === 'head') {
+        //         $sql .= "SUBSTRING(CODE, -3) IN (000)";
+        //     }
+
+        //     if ($form_param === 'excise') {
+        //         $sql .= "SUBSTRING(CODE, 1, 5) IN (10009)";
+        //     }
+
+        //     if ($form_param === 'others') {
+        //         $sql .= "SUBSTRING(CODE, 1, 3) IN (121, 122, 123, 124, 125)";
+        //     }
+        // }
+
+        return Customs::findBySql($query)->all();
 
 
 
