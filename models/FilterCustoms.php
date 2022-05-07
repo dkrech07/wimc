@@ -16,13 +16,14 @@ class FilterCustoms extends Model
     public function rules()
     {
         return [
-            [['head', 'excise', 'others', 'main', 'captions'], 'boolean'],
+            [['main', 'head', 'excise', 'others', 'captions'], 'boolean'],
         ];
     }
 
     public function attributeLabels()
     {
         return [
+            'main' => 'Основные таможни',
             'head' => 'Головные таможни',
             'excise' => 'Посты Акцизной таможни',
             'others' => 'Прочие посты (экспертные, оперативные и т.п. 121-125***',
