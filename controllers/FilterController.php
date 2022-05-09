@@ -20,14 +20,15 @@ class FilterController extends Controller
             $data = $request->post();
 
             $form_model->main = $data['main'];
-            // $form_model->head = $data['head'];
-            // $form_model->excise = $data['excise'];
-            // $form_model->others = $data['others'];
+            $form_model->head = $data['head'];
+            $form_model->excise = $data['excise'];
+            $form_model->others = $data['others'];
             // $form_model->captions = $data['captions'];
         }
 
-        $customs = (new CustomsFilterService())->getFilteredCustoms($form_model);
+        // $form_model_cache = Yii::$app->cache->get('filter_params');
 
+        $customs = (new CustomsFilterService())->getFilteredCustoms($form_model);
 
         $customs_coords = [
             'main' => [],
@@ -38,6 +39,22 @@ class FilterController extends Controller
 
         function getCustom($custom)
         {
+            // if ($captions == 1) {
+            //     return [
+            //         "coordinates" => [
+            //             'lat' => $custom['COORDS_LATITUDE'],
+            //             'lon' => $custom['COORDS_LONGITUDE'],
+            //         ],
+            //         "properties" => [
+            //             "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
+            //             "balloonContentBody" => $custom['ADRTAM'],
+            //             "balloonContentFooter" => $custom['TELEFON'],
+            //             "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
+            //         ],
+            //     ];
+            // } else {
+
+            // }
             return [
                 "coordinates" => [
                     'lat' => $custom['COORDS_LATITUDE'],
@@ -48,55 +65,22 @@ class FilterController extends Controller
         }
 
         foreach ($customs as $number => $custom) {
-            if ($form_model['main'] !== 1) {
+            if (substr($custom['CODE'], -3) == '000') {
+                $customs_coords['head'][] = getCustom($custom);
+            } else if (substr($custom['CODE'], 0, 5) == '10009') {
+                $customs_coords['excise'][] = getCustom($custom);
+            } else if (
+                substr($custom['CODE'], 0, 3) == '121'
+                || substr($custom['CODE'], 0, 3) == '122'
+                || substr($custom['CODE'], 0, 3) == '123'
+                || substr($custom['CODE'], 0, 3) == '124'
+                || substr($custom['CODE'], 0, 3) == '125'
+            ) {
+                $customs_coords['others'][] = getCustom($custom);
+            } else {
                 $customs_coords['main'][] = getCustom($custom);
             }
         }
-
-        return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
-
-        // return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
-
-        // $form_model_cache = Yii::$app->cache->get('filter_params');
-
-        // function getCustom($custom, $captions)
-        // {
-        //     if ($captions == 1) {
-        //         return [
-        //             "coordinates" => [
-        //                 'lat' => $custom['COORDS_LATITUDE'],
-        //                 'lon' => $custom['COORDS_LONGITUDE'],
-        //             ],
-        //             "properties" => [
-        //                 "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
-        //                 "balloonContentBody" => $custom['ADRTAM'],
-        //                 "balloonContentFooter" => $custom['TELEFON'],
-        //                 "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
-        //             ],
-        //         ];
-        //     } else {
-        //         return [
-        //             "coordinates" => [
-        //                 'lat' => $custom['COORDS_LATITUDE'],
-        //                 'lon' => $custom['COORDS_LONGITUDE'],
-        //             ],
-        //             "code" => $custom['CODE'],
-        //         ];
-        //     }
-        // }
-
-        // foreach ($customs as $number => $custom) {
-
-        //     if (substr($custom['CODE'], -3) == '000' && $form_model_cache['head'] != 1) {
-        //         $customs_coords['head'][] = getCustom($custom, $form_model['captions']);
-        //     } else if (substr($custom['CODE'], 0, 5) == '10009' && $form_model_cache['excise'] != 1) {
-        //         $customs_coords['excise'][] = getCustom($custom, $form_model['captions']);
-        //     } else if (substr($custom['CODE'], 0, 3) == '121' || substr($custom['CODE'], 0, 3) == '122' || substr($custom['CODE'], 0, 3) == '123' || substr($custom['CODE'], 0, 3) == '124' || substr($custom['CODE'], 0, 3) == '125' && $form_model_cache['others'] != 1) {
-        //         $customs_coords['others'][] = getCustom($custom, $form_model['captions']);
-        //     } else if ($form_model_cache['main'] !== 1) {
-        //         $customs_coords['main'][] = getCustom($custom, $form_model['captions']);
-        //     }
-        // }
 
         // Yii::$app->cache->set('filter_params', $form_model);
 
@@ -143,5 +127,6 @@ class FilterController extends Controller
         //         ];
         // }
 
+        return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
     }
 }
