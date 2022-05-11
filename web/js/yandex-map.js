@@ -52,9 +52,10 @@ function init () {
 
     // Карта коллекций
     var customsMap = {
-       'head': headCollection,
-       'excise': exciseCollection,
-       'others': othersCollection,
+        'main': mainCollection,
+        'head': headCollection,
+        'excise': exciseCollection,
+        'others': othersCollection,
     };
 
     // Карта состояний чекбоксов
@@ -72,12 +73,15 @@ function init () {
             data: data,
             success: function (response) {
                 let customsCoords = JSON.parse(response);
-                getCollectionCoords(customsCoords['main'], mainCollection);
-                myMap.geoObjects.add(mainCollection);
-            } 
+                for (let checkbox in data) {
+                    if (data[checkbox]) {
+                        getCollectionCoords(customsCoords[checkbox], customsMap[checkbox]);
+                        myMap.geoObjects.add(customsMap[checkbox]);
+                    }
+                } 
+        }
         });
  
-    
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
 
