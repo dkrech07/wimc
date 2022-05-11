@@ -50,86 +50,63 @@ function init () {
             preset: 'islands#yellowIcon'
         });
 
-    var data = {};
-    data['main'] = 1;
-    data['head'] = 0;
-    data['excise'] = 0;
-    data['others'] = 0;
+    // Карта коллекций
+    var customsMap = {
+       'head': headCollection,
+       'excise': exciseCollection,
+       'others': othersCollection,
+    };
+
+    // Карта состояний чекбоксов
+    var data = {
+        'main': 1,
+        'head': 0,
+        'excise': 0,
+        'others': 0,
+     };
+
     // Отрисовываю основные таможенные посты;
-    if (!mainCollection.getLength()) {
         $.ajax({
-            url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+            url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
             type: 'POST',
             data: data,
             success: function (response) {
                 let customsCoords = JSON.parse(response);
-                
                 getCollectionCoords(customsCoords['main'], mainCollection);
                 myMap.geoObjects.add(mainCollection);
-                
-                console.log(customsCoords);
-                console.log(data);
             } 
         });
-    }
+ 
     
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
-    // var data = {};
+
     checkboxes.forEach(function(checkbox, i) {
         checkbox.onchange = function() {
             checkboxes.forEach(function(checkbox){
                 data[checkbox.id] = checkbox.checked ? 1:0;
             });
-                $.ajax({
-                    url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
-                    type: 'POST',
-                    data: data,
-                    success: function (response) {
-                        console.log(response);
-    
+
+            $.ajax({
+                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                type: 'POST',
+                data: data,
+                success: function (response) {
+                    let customsCoords = JSON.parse(response);
+                    if (data[checkbox.id] == 1) {
                         let customsCoords = JSON.parse(response);
+                        getCollectionCoords(customsCoords[checkbox.id], customsMap[checkbox.id]);
+                        myMap.geoObjects.add(customsMap[checkbox.id]);
+                    } else {
+                        myMap.geoObjects.remove(customsMap[checkbox.id]);
+                    }
 
-                        console.log(customsCoords);
-                        console.log(data);
-
-                            // if (customsCoords['main'].length > 0) {
-                            //     getCollectionCoords(customsCoords['main'], mainCollection);
-                            //     myMap.geoObjects.add(mainCollection);
-                            // } else {
-                            //     myMap.geoObjects.removeAll(mainCollection);
-                            // }
-                    
-                            // if (customsCoords['head'].length > 0) {
-                            //     getCollectionCoords(customsCoords['head'], headCollection);
-                            //     myMap.geoObjects.add(headCollection);
-                            // } else if(data['head'] == 0) {
-                            //     myMap.geoObjects.remove(headCollection);
-                            // }
-    
-                            // if (customsCoords['excise'].length > 0) {
-                            //     getCollectionCoords(customsCoords['excise'], exciseCollection);
-                            //     myMap.geoObjects.add(exciseCollection);
-                            // } else if(data['excise'] == 0) {
-                            //     myMap.geoObjects.remove(exciseCollection);
-                            // }
-    
-                            // if (customsCoords['others'].length > 0) {
-                            //     getCollectionCoords(customsCoords['others'], othersCollection);
-                            //     myMap.geoObjects.add(othersCollection);
-                            // } else if(data['others'] == 0) {
-                            //     myMap.geoObjects.remove(othersCollection);
-                            // }
-                    
-    
-                            // objectManager.removeAll();
-                            // objectManager.add(response);
-                            // getCountsCount(response)
-                            // console.log(response);
-                        }
-                    });
-                }
-            });
+                    console.log(response);
+                    console.log(data);
+                    }
+                });
+        }
+    });
 
     
 
