@@ -68,7 +68,7 @@ function init () {
 
     // Отрисовываю основные таможенные посты;
         $.ajax({
-            url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+            url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
             type: 'POST',
             data: data,
             success: function (response) {
@@ -85,6 +85,8 @@ function init () {
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
 
+    console.log(checkboxes);
+
     checkboxes.forEach(function(checkbox, i) {
         checkbox.onchange = function() {
             checkboxes.forEach(function(checkbox){
@@ -92,7 +94,7 @@ function init () {
             });
 
             $.ajax({
-                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
                 type: 'POST',
                 data: data,
                 success: function (response) {
@@ -131,8 +133,8 @@ function init () {
     //     });
     // }
 });
-
 } // конец
+// $('#head').button('toggle');
 
 // objectManager = new ymaps.ObjectManager({
 //     // Чтобы метки начали кластеризоваться, выставляем опцию.

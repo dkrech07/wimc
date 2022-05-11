@@ -31,10 +31,9 @@ AppAsset::register($this);
         <?php
         NavBar::begin([
             'brandLabel' => Yii::$app->name,
-            'innerContainerOptions' => ['class' => 'container-fluid'],
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md navbar-dark bg-dark',
+                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
             ],
         ]);
         echo Nav::widget([
@@ -59,25 +58,8 @@ AppAsset::register($this);
         ?>
     </header>
 
-    <!-- <?php NavBar::begin([
-                'brandLabel' => 'NavBar Test',
-                'innerContainerOptions' => ['class' => 'container-fluid'],
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'navbar-inverse',
-                ],
-            ]);
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                ],
-            ]);
-            NavBar::end(); ?> -->
-
     <main role="main" class="flex-shrink-0">
-        <div class="container-fluid">
+        <div class="container">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>

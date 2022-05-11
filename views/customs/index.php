@@ -28,8 +28,8 @@ $this->title = 'Where is my customs?';
     'enableAjaxValidation' => true,
     'options' => [
         'autocomplete' => 'off',
-        'class' => 'row form-horizontal',
-        'style' => 'margin: 20px 0;',
+        'class' => 'row', //form-horizontal
+        'style' => 'margin-bottom: 10px;',
     ],
 ]); ?>
 
@@ -42,7 +42,7 @@ $this->title = 'Where is my customs?';
 <?= $form->field($searchCustomsModel, 'geo', [
     'template' => "{label}\n{input}",
     'options' => [
-        'style' => '',
+        // 'style' => 'padding-left: 0',
         'class' => 'col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8'
     ]
 ])->widget(
@@ -52,7 +52,7 @@ $this->title = 'Where is my customs?';
             'source' => new JsExpression('
             function (request, response) {
                 $.ajax({
-                    url: "http://localhost/wimc/web/autocomplete", // "/autocomplete" "http://localhost/wimc/web/autocomplete"
+                    url: "/autocomplete", // "/autocomplete" "http://localhost/wimc/web/autocomplete"
                     data: {
                         term: request.term
                     },
@@ -94,72 +94,105 @@ $this->title = 'Where is my customs?';
 
 
 <?= Html::submitInput('Найти таможни', [
-    'style' => 'margin-top: 30px;',
+    // 'style' => 'margin-top: 30px;',
     'class' => 'col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btn btn-primary'
 ]) ?>
 
 
 <?php ActiveForm::end(); ?>
 
+<!-- <input type="checkbox" class="btn-check btn-sm" id="btn-check-outlined" autocomplete="off">
+    <label class="btn btn-outline-danger" for="btn-check-outlined">Головные таможни</label><br>
+
+    <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+    <label class="btn btn-outline-warning" for="btn-check-outlined">Посты акцизной таможни</label><br>
+
+    <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btn-check-outlined">Прочие посты</label><br>
+
+    <input type="checkbox" class="btn-check " id="btn-check-outlined" autocomplete="off">
+    <label class="btn btn-outline-danger" for="btn-check-outlined">Подписи ко всем меткам</label><br> -->
+
+<?php $form = ActiveForm::begin([
+    'id' => 'tasks-form',
+    'enableAjaxValidation' => true,
+    'options' => [
+        'autocomplete' => 'off',
+        'class' => 'row', //form-horizontal
+        'style' => 'margin-bottom: 10px;',
+    ],
+]); ?>
+
+<?= $form->field($filterCustoms, 'head', [
+    'template' => "{input} {label} {error}",
+    'options' => [
+        // 'style' => 'margin: 0; padding: 0',
+        'class' => 'col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2'
+    ]
+])->checkbox([
+    'id' => 'head',
+    'class' => 'btn-check customs-checkbox',
+    //'name' => 'status'
+], false)->label($filterCustoms->head, [
+    'class' => 'btn btn-outline-danger',
+    'for' => 'head',
+]); ?>
+
+<?= $form->field($filterCustoms, 'excise', [
+    'template' => "{input} {label} {error}",
+    'options' => [
+        // 'style' => 'margin: 0; padding: 0',
+        'class' => 'col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2'
+    ]
+])->checkbox([
+    'id' => 'excise',
+    'class' => 'btn-check customs-checkbox',
+    //'name' => 'status'
+], false)->label($filterCustoms->head, [
+    'class' => 'btn btn-outline-warning',
+    //'for' => 'feed-status',
+]); ?>
+
+<?= $form->field($filterCustoms, 'others', [
+    'template' => "{input} {label} {error}",
+    'options' => [
+        // 'style' => 'margin: 0; padding: 0',
+        'class' => 'col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2'
+    ]
+])->checkbox([
+    'id' => 'others',
+    'class' => 'btn-check customs-checkbox',
+    //'name' => 'status'
+], false)->label($filterCustoms->head, [
+    'class' => 'btn btn-outline-primary',
+    //'for' => 'feed-status',
+]); ?>
+
+<?= $form->field($filterCustoms, 'captions', [
+    'template' => "{input} {label} {error}",
+    'options' => [
+        // 'style' => 'margin: 0; padding: 0',
+        'class' => 'col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2'
+    ]
+])->checkbox([
+    'id' => 'captions',
+    'class' => 'btn-check customs-checkbox',
+    //'name' => 'status'
+], false)->label($filterCustoms->head, [
+    'class' => 'btn btn-outline-danger',
+    //'for' => 'feed-status',
+]); ?>
+
+<?php ActiveForm::end(); ?>
+
 <div class='row' style="margin-bottom: 20px;">
-    <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
-    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-        <?php $form = ActiveForm::begin([
-            'id' => 'tasks-form',
-            'fieldConfig' => [
-                'template' => "{input}"
-            ]
-        ]); ?>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
 
-        <?= $form
-            ->field($filterCustoms, 'head', [
-                'template' => "{input}\n{label}",
-                'options' => [
-                    'style' => 'color: red;',
-                    // 'style' => 'margin-bottom: 20px;',
-                    'class' => 'customs-label'
-                ]
-            ])
-            ->checkbox(['id' => 'head', 'class' => 'customs-checkbox'], false); ?>
 
-        <?= $form
-            ->field($filterCustoms, 'excise', [
-                'template' => "{input}\n{label}",
-                'options' => [
-                    // 'style' => 'margin-bottom: 20px;',
-                    'style' => 'color: #cda20b;',
-                    'class' => 'customs-label'
-                ]
-            ])
-            ->checkbox(['id' => 'excise', 'class' => 'customs-checkbox'], false); ?>
-
-        <?= $form
-            ->field($filterCustoms, 'others', [
-                'template' => "{input}\n{label}",
-                'options' => [
-                    // 'style' => 'margin-bottom: 20px;',
-                    'style' => 'color: blue;',
-                    'class' => 'customs-label'
-                ]
-            ])
-            ->checkbox(['id' => 'others', 'class' => 'customs-checkbox'], false); ?>
-
-        <?= $form
-            ->field($filterCustoms, 'captions', [
-                'template' => "{input}\n{label}",
-                'options' => [
-                    // 'style' => 'margin-bottom: 20px;',
-                    'class' => 'customs-label'
-                ]
-            ])
-            ->checkbox(['id' => 'captions', 'class' => 'customs-checkbox'], false); ?>
-        <?php ActiveForm::end(); ?>
-
-        <div class="customs-count">
-            <span>Найдено таможенных постов:</span>
-            <b><span class="customs-number"></span></b>
-        </div>
-    </div>
+    <!-- <div class="customs-count">
+        <span>Найдено таможенных постов:</span>
+        <b><span class="customs-number"></span></b>
+    </div> -->
 </div>
 
 <!-- <div class="map">
