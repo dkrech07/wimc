@@ -113,8 +113,24 @@ function init () {
     });
 
     
+    // mainCollection.each(callback[, context])
 
-    
+    myMap.geoObjects.events.add('click', function (e) {
+    var code = e.get('target').properties;
+    console.log(code);
+    // var objectId = e.get('objectId'),
+    //     obj = objectManager.objects.getById(objectId);
+    // if (hasBalloonData(objectId)) {
+    //     objectManager.objects.balloon.open(objectId);
+    // } else {
+    //     obj.properties.balloonContent = "Идет загрузка данных...";
+    //     objectManager.objects.balloon.open(objectId);
+    //     loadBalloonData(objectId).then(function (data) {
+    //         obj.properties.balloonContent = data;
+    //         objectManager.objects.balloon.setData(obj);
+    //     });
+    // }
+});
 
 } // конец
 
