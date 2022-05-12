@@ -22,37 +22,37 @@ $this->registerJsFile('js/customs-filter.js');
 $this->title = 'Where is my customs?';
 ?>
 
+<div class="wrapper">
+    <?php $form = ActiveForm::begin([
+        'id' => 'search-customs',
+        'enableAjaxValidation' => true,
+        'options' => [
+            'autocomplete' => 'off',
+            'class' => 'row', //form-horizontal
+            'style' => 'margin-bottom: 10px;',
+        ],
+    ]); ?>
 
-<?php $form = ActiveForm::begin([
-    'id' => 'search-customs',
-    'enableAjaxValidation' => true,
-    'options' => [
-        'autocomplete' => 'off',
-        'class' => 'row', //form-horizontal
-        'style' => 'margin-bottom: 10px;',
-    ],
-]); ?>
+    <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
+    <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>
+    <?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lat']) ?>
+    <?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lon']) ?>
+    <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
 
-<?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
-<?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>
-<?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lat']) ?>
-<?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lon']) ?>
-<?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
-
-<?= $form->field($searchCustomsModel, 'geo', [
-    'template' => "{label}\n{input}",
-    'options' => [
-        // 'style' => 'padding-left: 0',
-        'class' => 'col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8'
-    ]
-])->widget(
-    AutoComplete::className(),
-    [
-        'clientOptions' => [
-            'source' => new JsExpression('
+    <?= $form->field($searchCustomsModel, 'geo', [
+        'template' => "{label}\n{input}",
+        'options' => [
+            // 'style' => 'padding-left: 0',
+            'class' => 'col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10'
+        ]
+    ])->widget(
+        AutoComplete::className(),
+        [
+            'clientOptions' => [
+                'source' => new JsExpression('
             function (request, response) {
                 $.ajax({
-                    url: "/autocomplete", // "/autocomplete" "http://localhost/wimc/web/autocomplete"
+                    url: "http://localhost/wimc/web/autocomplete", // "/autocomplete" "http://localhost/wimc/web/autocomplete"
                     data: {
                         term: request.term
                     },
@@ -72,7 +72,7 @@ $this->title = 'Where is my customs?';
                 });
             }
         '),
-            'select' => new JsExpression('
+                'select' => new JsExpression('
                 function (event, ui) {
                     this.value = ui.item.label;
                     let geo = ui.item.value;
@@ -83,24 +83,24 @@ $this->title = 'Where is my customs?';
                     event.preventDefault();
                 }
             '),
-        ],
-        'options' => [
-            'class' => 'form-control'
+            ],
+            'options' => [
+                'class' => 'form-control'
+            ]
         ]
-    ]
-);
-?>
+    );
+    ?>
 
 
 
-<?= Html::submitInput('Найти таможни', [
-    // 'style' => 'margin-top: 30px;',
-    'class' => 'col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btn btn-primary'
-]) ?>
+    <?= Html::submitInput('Найти таможни', [
+        'style' => 'margin-top: 30px;',
+        'class' => 'col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btn btn-primary'
+    ]) ?>
 
+    <?php ActiveForm::end(); ?>
 
-<?php ActiveForm::end(); ?>
-
+</div>
 <!-- <input type="checkbox" class="btn-check btn-sm" id="btn-check-outlined" autocomplete="off">
     <label class="btn btn-outline-danger" for="btn-check-outlined">Головные таможни</label><br>
 
@@ -113,88 +113,41 @@ $this->title = 'Where is my customs?';
     <input type="checkbox" class="btn-check " id="btn-check-outlined" autocomplete="off">
     <label class="btn btn-outline-danger" for="btn-check-outlined">Подписи ко всем меткам</label><br> -->
 
-<?php $form = ActiveForm::begin([
-    'id' => 'tasks-form',
-    'enableAjaxValidation' => true,
-    'options' => [
-        'autocomplete' => 'off',
-        'class' => 'row', //form-horizontal
-        'style' => 'margin-bottom: 10px;',
-    ],
-]); ?>
+<div class="wrapper">
+    <p>
+        Выберите тип таможенного поста:
+    </p>
+    <div class="btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-danger">
+            <input id="head" class="customs-checkbox" type="checkbox" autocomplete="off"> Главные
+        </label>
+        <label class="btn btn-outline-success">
+            <input id="excise" class="customs-checkbox" type="checkbox" autocomplete="off"> Акцизные
+        </label>
+        <label class="btn btn-outline-primary">
+            <input id="others" class="customs-checkbox" type="checkbox" autocomplete="off"> Прочие
+        </label>
+        <label class="btn btn-outline-dark">
+            <input id="captions" class="customs-checkbox" type="checkbox" autocomplete="off"> Все метки
+        </label>
+    </div>
+</div>
 
-<?= $form->field($filterCustoms, 'head', [
-    'template' => "{input} {label} {error}",
-    'options' => [
-        // 'style' => 'margin: 0; padding: 0',
-        'class' => 'col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2'
-    ]
-])->checkbox([
-    'id' => 'head',
-    'class' => 'btn-check customs-checkbox',
-    //'name' => 'status'
-], false)->label($filterCustoms->head, [
-    'class' => 'btn btn-outline-danger',
-    'for' => 'head',
-]); ?>
+<div class="wrapper">
+    <p>
+        Результат поиска на карте:
+    </p>
+    <div class='row' style="margin-bottom: 20px;">
 
-<?= $form->field($filterCustoms, 'excise', [
-    'template' => "{input} {label} {error}",
-    'options' => [
-        // 'style' => 'margin: 0; padding: 0',
-        'class' => 'col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2'
-    ]
-])->checkbox([
-    'id' => 'excise',
-    'class' => 'btn-check customs-checkbox',
-    //'name' => 'status'
-], false)->label($filterCustoms->head, [
-    'class' => 'btn btn-outline-warning',
-    //'for' => 'feed-status',
-]); ?>
-
-<?= $form->field($filterCustoms, 'others', [
-    'template' => "{input} {label} {error}",
-    'options' => [
-        // 'style' => 'margin: 0; padding: 0',
-        'class' => 'col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2'
-    ]
-])->checkbox([
-    'id' => 'others',
-    'class' => 'btn-check customs-checkbox',
-    //'name' => 'status'
-], false)->label($filterCustoms->head, [
-    'class' => 'btn btn-outline-primary',
-    //'for' => 'feed-status',
-]); ?>
-
-<?= $form->field($filterCustoms, 'captions', [
-    'template' => "{input} {label} {error}",
-    'options' => [
-        // 'style' => 'margin: 0; padding: 0',
-        'class' => 'col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2'
-    ]
-])->checkbox([
-    'id' => 'captions',
-    'class' => 'btn-check customs-checkbox',
-    //'name' => 'status'
-], false)->label($filterCustoms->head, [
-    'class' => 'btn btn-outline-danger',
-    //'for' => 'feed-status',
-]); ?>
-
-<?php ActiveForm::end(); ?>
-
-<div class='row' style="margin-bottom: 20px;">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
 
 
-    <!-- <div class="customs-count">
+        <!-- <div class="customs-count">
         <span>Найдено таможенных постов:</span>
         <b><span class="customs-number"></span></b>
     </div> -->
+    </div>
 </div>
-
 <!-- <div class="map">
     <div id="map" style="width: 1280px; height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
 </div> -->

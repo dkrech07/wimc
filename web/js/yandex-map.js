@@ -68,7 +68,7 @@ function init () {
 
     // Отрисовываю основные таможенные посты;
         $.ajax({
-            url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+            url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
             type: 'POST',
             data: data,
             success: function (response) {
@@ -94,7 +94,7 @@ function init () {
             });
 
             $.ajax({
-                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
                 type: 'POST',
                 data: data,
                 success: function (response) {
