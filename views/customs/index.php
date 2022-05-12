@@ -7,12 +7,10 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use app\assets\AutoCompleteAsset;
 use yii\jui\AutoComplete;
 use yii\web\JsExpression;
 
 AppAsset::register($this);
-AutoCompleteAsset::register($this);
 $apiKey = Yii::$app->params['geocoderApiKey'];
 $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_RU");
 $this->registerJsFile('js/yandex-map.js');
@@ -21,7 +19,6 @@ $this->registerJsFile('js/customs-filter.js');
 // $this->registerJsFile('/js/custom.js');
 $this->title = 'Where is my customs?';
 ?>
-
 <div class="wrapper">
     <?php $form = ActiveForm::begin([
         'id' => 'search-customs',
@@ -29,7 +26,7 @@ $this->title = 'Where is my customs?';
         'options' => [
             'autocomplete' => 'off',
             'class' => 'row', //form-horizontal
-            'style' => 'margin-bottom: 10px;',
+            // 'style' => 'margin-bottom: 10px;',
         ],
     ]); ?>
 
@@ -43,7 +40,7 @@ $this->title = 'Where is my customs?';
         'template' => "{label}\n{input}",
         'options' => [
             // 'style' => 'padding-left: 0',
-            'class' => 'col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10'
+            'class' => 'col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9'
         ]
     ])->widget(
         AutoComplete::className(),
@@ -95,7 +92,7 @@ $this->title = 'Where is my customs?';
 
     <?= Html::submitInput('Найти таможни', [
         'style' => 'margin-top: 30px;',
-        'class' => 'col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 btn btn-primary'
+        'class' => 'col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3' // btn btn-primary
     ]) ?>
 
     <?php ActiveForm::end(); ?>
@@ -114,8 +111,9 @@ $this->title = 'Where is my customs?';
     <label class="btn btn-outline-danger" for="btn-check-outlined">Подписи ко всем меткам</label><br> -->
 
 <div class="wrapper">
-    <p>
-        Выберите тип таможенного поста:
+    <p class="search-label">
+        <i class="bi bi-plus-square"></i>
+        Выберите дополнительные параметры:
     </p>
     <div class="btn-group-toggle" data-toggle="buttons">
         <label class="btn btn-outline-danger">
@@ -134,7 +132,8 @@ $this->title = 'Where is my customs?';
 </div>
 
 <div class="wrapper">
-    <p>
+    <p class="search-label">
+        <i class="bi bi-geo-alt-fill"></i>
         Результат поиска на карте:
     </p>
     <div class='row' style="margin-bottom: 20px;">

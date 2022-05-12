@@ -22,13 +22,9 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        // 'css/style.css',
-        // 'http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css',
+        "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css",
     ];
-    public $js = [
-        // 'https://code.jquery.com/jquery-3.5.1.min.js',
-        // '//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js',
-    ];
+    public $js = [];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap4\BootstrapAsset',
