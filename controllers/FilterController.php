@@ -61,6 +61,12 @@ class FilterController extends Controller
                     'lon' => $custom['COORDS_LONGITUDE'],
                 ],
                 "code" => $custom['CODE'],
+                "properties" => [
+                    "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
+                    "balloonContentBody" => $custom['ADRTAM'],
+                    "balloonContentFooter" => $custom['TELEFON'],
+                    "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
+                ],
             ];
         }
 

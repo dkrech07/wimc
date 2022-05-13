@@ -3,6 +3,10 @@ const yandexMap = document.querySelector('#map');
 function getCollectionCoords(customsCoords, collection) {
     customsCoords.forEach(custom => {
         collection.add(new ymaps.Placemark([custom['coordinates']['lat'], custom['coordinates']['lon']], {
+            balloonContentHeader: custom['properties']['balloonContentHeader'],
+            balloonContentBody: custom['properties']['balloonContentBody'],
+            balloonContentFooter: custom['properties']['balloonContentFooter'],
+            iconCaption: custom['properties']['iconCaption'],
         }));
     });
 }
@@ -31,20 +35,20 @@ function init () {
         searchControlProvider: 'yandex#search'
     }),
         mainCollection = new ymaps.GeoObjectCollection(null, { // Коллекция Основных таможенных постов;
-            preset: 'islands#greenStretchyIcon',
-            // iconColor: 'green'
+            // preset: 'islands#greenStretchyIcon',
+            iconColor: 'green'
         }),
         headCollection = new ymaps.GeoObjectCollection(null, { // Коллекция Головных таможенных постов;
-            preset: 'islands#redStretchyIcon',
-            // iconColor: 'red'
+            // preset: 'islands#redStretchyIcon',
+            iconColor: 'red'
         }),
         exciseCollection = new ymaps.GeoObjectCollection(null, { // Коллекция Акцизных таможенных постов;
-            preset: 'islands#yellowStretchyIcon',
-            // iconColor: 'yellow'
+            // preset: 'islands#yellowStretchyIcon',
+            iconColor: 'yellow'
         }),
         othersCollection = new ymaps.GeoObjectCollection(null, { // Коллекция Прочих таможенных постов;
-            preset: 'islands#blueStretchyIcon',
-            // iconColor: 'blue'
+            // preset: 'islands#blueStretchyIcon',
+            iconColor: 'blue'
         }),
         searchCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (одна пользовательская, вторая ближайшая);
             preset: 'islands#yellowIcon'
@@ -92,6 +96,10 @@ function init () {
             checkboxes.forEach(function(checkbox){
                 data[checkbox.id] = checkbox.checked ? 1:0;
             });
+
+            if (checkbox.id == 'captions') {
+                console.log('captions');
+            }
 
             $.ajax({
                 url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
