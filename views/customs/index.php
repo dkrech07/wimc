@@ -49,7 +49,7 @@ $this->title = 'Where is my customs?';
                 'source' => new JsExpression('
             function (request, response) {
                 $.ajax({
-                    url: "http://localhost/wimc/web/autocomplete", // "/autocomplete" "http://localhost/wimc/web/autocomplete"
+                    url: "/autocomplete", // "/autocomplete" "http://localhost/wimc/web/autocomplete"
                     data: {
                         term: request.term
                     },
@@ -119,7 +119,7 @@ $this->title = 'Where is my customs?';
         <label class="btn btn-outline-danger">
             <input id="head" class="customs-checkbox" type="checkbox" autocomplete="off"> Главные
         </label>
-        <label class="btn btn-outline-success">
+        <label class="btn btn-outline-warning">
             <input id="excise" class="customs-checkbox" type="checkbox" autocomplete="off"> Акцизные
         </label>
         <label class="btn btn-outline-primary">

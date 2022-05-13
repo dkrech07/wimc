@@ -1,13 +1,22 @@
 const yandexMap = document.querySelector('#map');
 
-function getCollectionCoords(customsCoords, collection) {
+function getCollectionCoords(customsCoords, collection, captions) {
     customsCoords.forEach(custom => {
-        collection.add(new ymaps.Placemark([custom['coordinates']['lat'], custom['coordinates']['lon']], {
-            balloonContentHeader: custom['properties']['balloonContentHeader'],
-            balloonContentBody: custom['properties']['balloonContentBody'],
-            balloonContentFooter: custom['properties']['balloonContentFooter'],
-            iconCaption: custom['properties']['iconCaption'],
-        }));
+        if (captions == 1) {
+            collection.add(new ymaps.Placemark([custom['coordinates']['lat'], custom['coordinates']['lon']], {
+                // balloonContentHeader: custom['properties']['balloonContentHeader'],
+                // balloonContentBody: custom['properties']['balloonContentBody'],
+                // balloonContentFooter: custom['properties']['balloonContentFooter'],
+                iconCaption: custom['properties']['iconCaption'],
+            }));
+        } else if (captions == 0) {
+            collection.add(new ymaps.Placemark([custom['coordinates']['lat'], custom['coordinates']['lon']], {
+                // balloonContentHeader: custom['properties']['balloonContentHeader'],
+                // balloonContentBody: custom['properties']['balloonContentBody'],
+                // balloonContentFooter: custom['properties']['balloonContentFooter'],
+                // iconCaption: custom['properties']['iconCaption'],
+            }));  
+        }
     });
 }
 
@@ -29,7 +38,7 @@ ymaps.ready(init);
 function init () {
     var myMap = new ymaps.Map('map', {
         center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-        zoom: 4,
+        zoom: 3,
         controls: []
     }, {
         searchControlProvider: 'yandex#search'
@@ -68,18 +77,19 @@ function init () {
         'head': 0,
         'excise': 0,
         'others': 0,
+        'captions': 0,
      };
 
     // Отрисовываю основные таможенные посты;
         $.ajax({
-            url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+            url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
             type: 'POST',
             data: data,
             success: function (response) {
                 let customsCoords = JSON.parse(response);
                 for (let checkbox in data) {
                     if (data[checkbox]) {
-                        getCollectionCoords(customsCoords[checkbox], customsMap[checkbox]);
+                        getCollectionCoords(customsCoords[checkbox], customsMap[checkbox], data['captions']);
                         myMap.geoObjects.add(customsMap[checkbox]);
                     }
                 } 
@@ -88,8 +98,8 @@ function init () {
  
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
-
-    console.log(checkboxes);
+    let captionsFlag = 0;
+    // console.log(checkboxes);
 
     checkboxes.forEach(function(checkbox, i) {
         checkbox.onchange = function() {
@@ -97,26 +107,58 @@ function init () {
                 data[checkbox.id] = checkbox.checked ? 1:0;
             });
 
-            if (checkbox.id == 'captions') {
-                console.log('captions');
-            }
+            // if (checkbox.id == 'captions') {
+            //     console.log(data[checkbox.id]);
+            // }
 
             $.ajax({
-                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
                 type: 'POST',
                 data: data,
                 success: function (response) {
                     let customsCoords = JSON.parse(response);
-                    if (data[checkbox.id] == 1) {
+                    if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
                         let customsCoords = JSON.parse(response);
-                        getCollectionCoords(customsCoords[checkbox.id], customsMap[checkbox.id]);
+                        getCollectionCoords(customsCoords[checkbox.id], customsMap[checkbox.id], data['captions']);
                         myMap.geoObjects.add(customsMap[checkbox.id]);
+                    } else if (checkbox.id == 'captions') {
+                        let customsCoords = JSON.parse(response);
+
+                        if (data[checkbox.id] != captionsFlag) {
+                            // myMap.geoObjects.removeAll();
+                            captionsFlag = data[checkbox.id];
+                        }
+
+                        if (mainCollection.getLength() > 0) {
+
+                            getCollectionCoords(customsCoords['main'], customsMap['main'], data['captions']);
+                            myMap.geoObjects.add(customsMap['main']);
+                        }
+                        if (headCollection.getLength() > 0) {
+                            myMap.geoObjects.remove(customsMap['head']);
+
+                            getCollectionCoords(customsCoords['head'], customsMap['head'], data['captions']);
+                            myMap.geoObjects.add(customsMap['head']);
+                        }
+                        if (exciseCollection.getLength() > 0) {
+                            myMap.geoObjects.remove(customsMap['excise']);
+
+                            getCollectionCoords(customsCoords['excise'], customsMap['excise'], data['captions']);
+                            myMap.geoObjects.add(customsMap['excise']);
+                        }
+                        if (othersCollection.getLength() > 0) {
+                            myMap.geoObjects.remove(customsMap['others']);
+
+                            getCollectionCoords(customsCoords['others'], customsMap['others'], data['captions']);
+                            myMap.geoObjects.add(customsMap['others']);
+                        }
+                        
                     } else {
                         myMap.geoObjects.remove(customsMap[checkbox.id]);
                     }
 
-                    console.log(response);
-                    console.log(data);
+                    // console.log(response);
+                    console.log(data['captions']);
                     }
                 });
         }
