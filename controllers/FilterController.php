@@ -37,8 +37,21 @@ class FilterController extends Controller
             'others' => [],
         ];
 
-        function getCustom($custom, $captions)
+        function getCustom($custom, $captions = null)
         {
+            return [
+                "coordinates" => [
+                    'lat' => $custom['COORDS_LATITUDE'],
+                    'lon' => $custom['COORDS_LONGITUDE'],
+                ],
+                "code" => $custom['CODE'],
+                "properties" => [
+                    "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
+                    "balloonContentBody" => $custom['ADRTAM'],
+                    "balloonContentFooter" => $custom['TELEFON'],
+                    "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
+                ],
+            ];
             // if ($captions == 1) {
             //     return [
             //         "coordinates" => [
@@ -57,29 +70,19 @@ class FilterController extends Controller
             // }
 
 
-            if ($captions == 1) {
-                return [
-                    "coordinates" => [
-                        'lat' => $custom['COORDS_LATITUDE'],
-                        'lon' => $custom['COORDS_LONGITUDE'],
-                    ],
-                    "code" => $custom['CODE'],
-                    "properties" => [
-                        "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
-                        "balloonContentBody" => $custom['ADRTAM'],
-                        "balloonContentFooter" => $custom['TELEFON'],
-                        "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
-                    ],
-                ];
-            } else {
-                return [
-                    "coordinates" => [
-                        'lat' => $custom['COORDS_LATITUDE'],
-                        'lon' => $custom['COORDS_LONGITUDE'],
-                    ],
-                    "code" => $custom['CODE'],
-                ];
-            }
+            // if ($captions == 1) {
+
+            // }
+
+            // else {
+            //     return [
+            //         "coordinates" => [
+            //             'lat' => $custom['COORDS_LATITUDE'],
+            //             'lon' => $custom['COORDS_LONGITUDE'],
+            //         ],
+            //         "code" => $custom['CODE'],
+            //     ];
+            // }
         }
 
         foreach ($customs as $number => $custom) {

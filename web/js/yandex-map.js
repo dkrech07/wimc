@@ -1,10 +1,10 @@
 const yandexMap = document.querySelector('#map');
 
-function getCollectionCoords(customsCoords, points) {
-    customsCoords.forEach(custom => {
-        points.push([custom['coordinates']['lat'], custom['coordinates']['lon']]);
-    });
-}
+// function getCollectionCoords(customsCoords, points) {
+//     customsCoords.forEach(custom => {
+//         points.push([custom['coordinates']['lat'], custom['coordinates']['lon']]);
+//     });
+// }
 
 function getCollection(myMap, customsParam, collection) {
     if (customsParam) {
@@ -100,10 +100,10 @@ function init () {
             success: function (response) {
                 let customsCoords = JSON.parse(response);
 
-                getCollectionCoords(customsCoords['main'], points['main']);
-                getCollectionCoords(customsCoords['head'], points['head']);
-                getCollectionCoords(customsCoords['excise'], points['excise']);
-                getCollectionCoords(customsCoords['others'], points['others']);
+                // getCollectionCoords(customsCoords['main'], points['main']);
+                // getCollectionCoords(customsCoords['head'], points['head']);
+                // getCollectionCoords(customsCoords['excise'], points['excise']);
+                // getCollectionCoords(customsCoords['others'], points['others']);
 
                 // console.log(mainPoints);
                 // console.log(headPoints);
@@ -118,19 +118,28 @@ function init () {
                 // } 
 
                 function getPoints(points, color) {
-                    if (points.length > 0) {
+                    // if (points.length > 0) {
                         for (var i = 0, len = points.length; i < len; i++) {
-                            geoObjects[i] = new ymaps.Placemark(points[i], {}, {
+                            console.log(points[i]);
+                            geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']], 
+                            {
+                                iconCaption: points[i]['properties']['iconCaption'],
+                                balloonContentHeader: points[i]['properties']['balloonContentHeader'],
+                                balloonContentBody: points[i]['properties']['balloonContentBody'],
+                                balloonContentFooter: points[i]['properties']['balloonContentFooter'],
+                            }, {
                                 iconColor: color,
                             });
                         }
-                    }
+                    // }
                 }
 
-                getPoints(points['main'], 'green');
-                getPoints(points['head'], 'red');
-                getPoints(points['excise'], 'yellow');
-                getPoints(points['others'], 'blue');
+
+                getPoints(customsCoords['main'], 'green');
+                getPoints(customsCoords['head'], 'red');
+                getPoints(customsCoords['others'], 'blue');
+                getPoints(customsCoords['excise'], 'yellow');
+
 
             
 
