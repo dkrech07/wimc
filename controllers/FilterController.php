@@ -23,71 +23,70 @@ class FilterController extends Controller
             $form_model->head = $data['head'];
             $form_model->excise = $data['excise'];
             $form_model->others = $data['others'];
-            // $form_model->captions = $data['captions'];
+            $form_model->captions = $data['captions'];
         }
 
         // $form_model_cache = Yii::$app->cache->get('filter_params');
 
         $customs = (new CustomsFilterService())->getFilteredCustoms($form_model);
 
-        // $customs_coords = [
-        //     'main' => [],
-        //     'head' => [],
-        //     'excise' => [],
-        //     'others' => [],
-        // ];
-
         $customs_coords = [
-            "type" => "FeatureCollection",
-            "features" => []
+            'main' => [],
+            'head' => [],
+            'excise' => [],
+            'others' => [],
         ];
 
-        // foreach ($customs as $number => $custom) {
-        // }
-
-        function getCustom($custom, $custom_type, $number, $captions = null)
+        function getCustom($custom, $captions)
         {
-            if ($custom_type == 'head') {
-                $pointColor = "islands#redIcon";
-            } else if ($custom_type == 'excise') {
-                $pointColor = "islands#yellowIcon";
-            } else if ($custom_type == 'others') {
-                $pointColor = "islands#blueIcon";
-            } else if ($custom_type == 'main') {
-                $pointColor = "islands#greenIcon";
-            }
+            // if ($captions == 1) {
+            //     return [
+            //         "coordinates" => [
+            //             'lat' => $custom['COORDS_LATITUDE'],
+            //             'lon' => $custom['COORDS_LONGITUDE'],
+            //         ],
+            //         "properties" => [
+            //             "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
+            //             "balloonContentBody" => $custom['ADRTAM'],
+            //             "balloonContentFooter" => $custom['TELEFON'],
+            //             "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
+            //         ],
+            //     ];
+            // } else {
 
-            return
-                [
-                    "type" => "Feature",
-                    "id" => $number,
-                    "geometry" => [
-                        "type" => "Point",
-                        "coordinates" => [
-                            $custom['COORDS_LATITUDE'], $custom['COORDS_LONGITUDE']
-                        ]
+            // }
+
+
+            if ($captions == 1) {
+                return [
+                    "coordinates" => [
+                        'lat' => $custom['COORDS_LATITUDE'],
+                        'lon' => $custom['COORDS_LONGITUDE'],
                     ],
+                    "code" => $custom['CODE'],
                     "properties" => [
                         "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
                         "balloonContentBody" => $custom['ADRTAM'],
                         "balloonContentFooter" => $custom['TELEFON'],
                         "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
-                        "preset" => "islands#greenDotIcon",
                     ],
-                    "options" => [
-                        "preset" => $pointColor,
-                    ]
                 ];
+            } else {
+                return [
+                    "coordinates" => [
+                        'lat' => $custom['COORDS_LATITUDE'],
+                        'lon' => $custom['COORDS_LONGITUDE'],
+                    ],
+                    "code" => $custom['CODE'],
+                ];
+            }
         }
-
 
         foreach ($customs as $number => $custom) {
             if (substr($custom['CODE'], -3) == '000') {
-                $custom_type = 'head';
-                $customs_coords['features'][] = getCustom($custom, $custom_type, $number); //$data['captions']
+                $customs_coords['head'][] = getCustom($custom, $data['captions']);
             } else if (substr($custom['CODE'], 0, 5) == '10009') {
-                $custom_type = 'excise';
-                $customs_coords['features'][] = getCustom($custom, $custom_type, $number); // $data['captions']
+                $customs_coords['excise'][] = getCustom($custom, $data['captions']);
             } else if (
                 substr($custom['CODE'], 0, 3) == '121'
                 || substr($custom['CODE'], 0, 3) == '122'
@@ -95,65 +94,11 @@ class FilterController extends Controller
                 || substr($custom['CODE'], 0, 3) == '124'
                 || substr($custom['CODE'], 0, 3) == '125'
             ) {
-                $custom_type = 'others';
-                $customs_coords['features'][] = getCustom($custom, $custom_type, $number); // $data['captions']
+                $customs_coords['others'][] = getCustom($custom, $data['captions']);
             } else {
-                $custom_type = 'main';
-                $customs_coords['features'][] = getCustom($custom, $custom_type, $number); // $data['captions']
+                $customs_coords['main'][] = getCustom($custom, $data['captions']);
             }
         }
-
-        return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
-    }
-}
-
-
-        // function getCustom($custom, $captions)
-        // {
-        // if ($captions == 1) {
-        //     return [
-        //         "coordinates" => [
-        //             'lat' => $custom['COORDS_LATITUDE'],
-        //             'lon' => $custom['COORDS_LONGITUDE'],
-        //         ],
-        //         "properties" => [
-        //             "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
-        //             "balloonContentBody" => $custom['ADRTAM'],
-        //             "balloonContentFooter" => $custom['TELEFON'],
-        //             "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
-        //         ],
-        //     ];
-        // } else {
-
-        // }
-
-
-        // if ($captions == 1) {
-        //     return [
-        //         "coordinates" => [
-        //             'lat' => $custom['COORDS_LATITUDE'],
-        //             'lon' => $custom['COORDS_LONGITUDE'],
-        //         ],
-        //         "code" => $custom['CODE'],
-        //         "properties" => [
-        //             "balloonContentHeader" => $custom['CODE'] . ' ' . $custom['NAMT'],
-        //             "balloonContentBody" => $custom['ADRTAM'],
-        //             "balloonContentFooter" => $custom['TELEFON'],
-        //             "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
-        //         ],
-        //     ];
-        // } else {
-        //     return [
-        //         "coordinates" => [
-        //             'lat' => $custom['COORDS_LATITUDE'],
-        //             'lon' => $custom['COORDS_LONGITUDE'],
-        //         ],
-        //         "code" => $custom['CODE'],
-        //     ];
-        // }
-        // }
-
-
 
         // Yii::$app->cache->set('filter_params', $form_model);
 
@@ -199,3 +144,7 @@ class FilterController extends Controller
         //             ],
         //         ];
         // }
+
+        return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
+    }
+}
