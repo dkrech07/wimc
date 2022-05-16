@@ -1,367 +1,159 @@
 const yandexMap = document.querySelector('#map');
 
-function getCollectionCoords(customsCoords, collection, captions) {
-    customsCoords.forEach(custom => {
-        if (captions == 1) {
-            collection.add(new ymaps.Placemark([custom['coordinates']['lat'], custom['coordinates']['lon']], {
-                // balloonContentHeader: custom['properties']['balloonContentHeader'],
-                // balloonContentBody: custom['properties']['balloonContentBody'],
-                // balloonContentFooter: custom['properties']['balloonContentFooter'],
-                iconCaption: custom['properties']['iconCaption'],
-            }));
-        } else if (captions == 0) {
-            collection.add(new ymaps.Placemark([custom['coordinates']['lat'], custom['coordinates']['lon']], {
-                // balloonContentHeader: custom['properties']['balloonContentHeader'],
-                // balloonContentBody: custom['properties']['balloonContentBody'],
-                // balloonContentFooter: custom['properties']['balloonContentFooter'],
-                // iconCaption: custom['properties']['iconCaption'],
-            }));  
-        }
-    });
-}
-
-function getCollection(myMap, customsParam, collection) {
-    if (customsParam) {
-        myMap.geoObjects.add(collection);
-    } else {
-        myMap.geoObjects.remove(collection);
-    }
-}
-
 if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
-    yandexMap.dataset.latitude = 57.76;
-    yandexMap.dataset.longitude = 77.64;
+    yandexMap.dataset.latitude = 55.76;
+    yandexMap.dataset.longitude = 37.64;
 }
 
 ymaps.ready(init);
 
 function init () {
     var myMap = new ymaps.Map('map', {
-        center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
-        zoom: 3,
-        controls: []
-    }, {
-        searchControlProvider: 'yandex#search'
-    }),
-        mainCollection = new ymaps.GeoObjectCollection(null, { // Коллекция Основных таможенных постов;
-            // preset: 'islands#greenStretchyIcon',
-            iconColor: 'green'
-        }),
-        headCollection = new ymaps.GeoObjectCollection(null, { // Коллекция Головных таможенных постов;
-            // preset: 'islands#redStretchyIcon',
-            iconColor: 'red'
-        }),
-        exciseCollection = new ymaps.GeoObjectCollection(null, { // Коллекция Акцизных таможенных постов;
-            // preset: 'islands#yellowStretchyIcon',
-            iconColor: 'yellow'
-        }),
-        othersCollection = new ymaps.GeoObjectCollection(null, { // Коллекция Прочих таможенных постов;
-            // preset: 'islands#blueStretchyIcon',
-            iconColor: 'blue'
-        }),
-        searchCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (одна пользовательская, вторая ближайшая);
-            preset: 'islands#yellowIcon'
-        });
-
-    // Карта коллекций
-    var customsMap = {
-        'main': mainCollection,
-        'head': headCollection,
-        'excise': exciseCollection,
-        'others': othersCollection,
-    };
-
-    // Карта состояний чекбоксов
-    var data = {
-        'main': 1,
-        'head': 0,
-        'excise': 0,
-        'others': 0,
-        'captions': 0,
-     };
-
-    // Отрисовываю основные таможенные посты;
-        $.ajax({
-            url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
-            type: 'POST',
-            data: data,
-            success: function (response) {
-                let customsCoords = JSON.parse(response);
-                for (let checkbox in data) {
-                    if (data[checkbox]) {
-                        getCollectionCoords(customsCoords[checkbox], customsMap[checkbox], data['captions']);
-                        myMap.geoObjects.add(customsMap[checkbox]);
-                    }
-                } 
-        }
-        });
- 
-    // Отрысовывает точки при фильтрации по типам постов;
-    let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
-    let captionsFlag = 0;
-    // console.log(checkboxes);
-
-    checkboxes.forEach(function(checkbox, i) {
-        checkbox.onchange = function() {
-            checkboxes.forEach(function(checkbox){
-                data[checkbox.id] = checkbox.checked ? 1:0;
-            });
-
-            // if (checkbox.id == 'captions') {
-            //     console.log(data[checkbox.id]);
-            // }
-
-            $.ajax({
-                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
-                type: 'POST',
-                data: data,
-                success: function (response) {
-                    let customsCoords = JSON.parse(response);
-                    if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
-                        let customsCoords = JSON.parse(response);
-                        getCollectionCoords(customsCoords[checkbox.id], customsMap[checkbox.id], data['captions']);
-                        myMap.geoObjects.add(customsMap[checkbox.id]);
-                    } else if (checkbox.id == 'captions') {
-                        let customsCoords = JSON.parse(response);
-
-                        if (data[checkbox.id] != captionsFlag) {
-                            // myMap.geoObjects.removeAll();
-                            captionsFlag = data[checkbox.id];
-                        }
-
-                        if (mainCollection.getLength() > 0) {
-
-                            getCollectionCoords(customsCoords['main'], customsMap['main'], data['captions']);
-                            myMap.geoObjects.add(customsMap['main']);
-                        }
-                        if (headCollection.getLength() > 0) {
-                            myMap.geoObjects.remove(customsMap['head']);
-
-                            getCollectionCoords(customsCoords['head'], customsMap['head'], data['captions']);
-                            myMap.geoObjects.add(customsMap['head']);
-                        }
-                        if (exciseCollection.getLength() > 0) {
-                            myMap.geoObjects.remove(customsMap['excise']);
-
-                            getCollectionCoords(customsCoords['excise'], customsMap['excise'], data['captions']);
-                            myMap.geoObjects.add(customsMap['excise']);
-                        }
-                        if (othersCollection.getLength() > 0) {
-                            myMap.geoObjects.remove(customsMap['others']);
-
-                            getCollectionCoords(customsCoords['others'], customsMap['others'], data['captions']);
-                            myMap.geoObjects.add(customsMap['others']);
-                        }
-                        
-                    } else {
-                        myMap.geoObjects.remove(customsMap[checkbox.id]);
-                    }
-
-                    // console.log(response);
-                    console.log(data['captions']);
-                    }
-                });
-        }
-    });
-
-    
-    // mainCollection.each(callback[, context])
-
-    myMap.geoObjects.events.add('click', function (e) {
-    var code = e.get('target').properties;
-    console.log(code);
-    // var objectId = e.get('objectId'),
-    //     obj = objectManager.objects.getById(objectId);
-    // if (hasBalloonData(objectId)) {
-    //     objectManager.objects.balloon.open(objectId);
-    // } else {
-    //     obj.properties.balloonContent = "Идет загрузка данных...";
-    //     objectManager.objects.balloon.open(objectId);
-    //     loadBalloonData(objectId).then(function (data) {
-    //         obj.properties.balloonContent = data;
-    //         objectManager.objects.balloon.setData(obj);
-    //     });
-    // }
-});
-} // конец
-// $('#head').button('toggle');
-
-// objectManager = new ymaps.ObjectManager({
-//     // Чтобы метки начали кластеризоваться, выставляем опцию.
-//     clusterize: true,
-//     // ObjectManager принимает те же опции, что и кластеризатор.
-//     minClusterSize: 8,
-//     gridSize: 16,
-//     clusterDisableClickZoom: true,
-//     groupByCoordinates: false,
-// });
-
-// getCountsCount(response); // Получаю количество отрисованных метов в отдельной функции
-
-// function getCountsCount (response) {
-//     let costomsObj = JSON.parse(response);
-
-//     var customsCountElement = document.querySelector('.customs-number');
-//     customsCountElement.textContent = costomsObj['customs_count'];
-// }
-
-        // if (customsCoords['main'].length > 0) {
-        //     customsCoords.forEach(custom => {
-        //         mainCollection.add(new ymaps.Placemark([custom['coordinates']['lat'], custom['coordinates']['lon']], {
-        //             // balloonContent: 'цвет <strong>носика Гены</strong>',
-        //             // hintContent: 'Ну давай уже тащи',
-        //             // iconContent: 'Я тащусь',
-        //             // iconCaption: custom['properties']['iconCaption'],
-        //             balloonContentHeader: custom['properties']['balloonContentHeader'],
-        //             balloonContentBody: custom['properties']['balloonContentBody'],
-        //             balloonContentFooter: custom['properties']['balloonContentFooter'],
-        //         }));
-        //     });
-            
-        // }
-    
-
+            // center: [55.76, 37.64],
         
+            center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
+            zoom: 5,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
 
-        // objectManager.add(response);
-
-        // objectManager.ObjectCollection(response);
-
-        // // headCollection.add(response);
-  
-
-    // Через коллекции можно задавать опции дочерним элементам.
-    // mainCollection.options.set('preset', 'islands#governmentCircleIcon');
-
-    //    // Отрысовывает точки при фильтрации по типам постов;
-    //    let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
-    //    var data = {};
-    //    checkboxes.forEach(function(checkbox, i) {
-    //        checkbox.onchange = function() {
-    //            checkboxes.forEach(function(checkbox){
-    //                data[checkbox.id] = checkbox.checked ? 1:0;
-    //            });
-   
-    //            $.ajax({
-    //                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
-    //                type: 'POST',
-    //                data: data,
-    //                success: function (response) {
-    //                    console.log(response);
-
-    //                    let customsCoords = JSON.parse(response);
-    //                    console.log(data);
-    //                    console.log(customsCoords);
-
-    //                    // if (customsCoords['main'].length > 0) {
-    //                    //     getCollectionCoords(customsCoords['main'], mainCollection);
-    //                    //     myMap.geoObjects.add(mainCollection);
-    //                    // } else {
-    //                    //     myMap.geoObjects.removeAll(mainCollection);
-    //                    // }
-               
-    //                    if (customsCoords['head'].length > 0) {
-    //                        getCollectionCoords(customsCoords['head'], headCollection);
-    //                        myMap.geoObjects.add(headCollection);
-    //                    } else if(data['head'] == 0) {
-    //                        myMap.geoObjects.remove(headCollection);
-    //                    }
-
-    //                    if (customsCoords['excise'].length > 0) {
-    //                        getCollectionCoords(customsCoords['excise'], exciseCollection);
-    //                        myMap.geoObjects.add(exciseCollection);
-    //                    } else if(data['excise'] == 0) {
-    //                        myMap.geoObjects.remove(exciseCollection);
-    //                    }
-
-    //                    if (customsCoords['others'].length > 0) {
-    //                        getCollectionCoords(customsCoords['others'], othersCollection);
-    //                        myMap.geoObjects.add(othersCollection);
-    //                    } else if(data['others'] == 0) {
-    //                        myMap.geoObjects.remove(othersCollection);
-    //                    }
-               
-
-    //                    // objectManager.removeAll();
-    //                    // objectManager.add(response);
-    //                    // getCountsCount(response)
-    //                    // console.log(response);
-    //                }
-    //            });
-    //        }
-    //    });
+        clusterer = new ymaps.Clusterer({
+            // Макет метки кластера pieChart.
+            clusterIconLayout: 'default#pieChart',
+            // Радиус диаграммы в пикселях.
+            clusterIconPieChartRadius: 25,
+            // Радиус центральной части макета.
+            clusterIconPieChartCoreRadius: 10,
+            // Ширина линий-разделителей секторов и внешней обводки диаграммы.
+            clusterIconPieChartStrokeWidth: 3,
+            // Определяет наличие поля balloon.
+            hasBalloon: false
+        }),
+        
+        objectManager = new ymaps.ObjectManager({
+            // Чтобы метки начали кластеризоваться, выставляем опцию.
+            clusterize: true,
+            // ObjectManager принимает те же опции, что и кластеризатор.
+            gridSize: 32,
+            clusterDisableClickZoom: true
+        });
 
     // Чтобы задать опции одиночным объектам и кластерам,
     // обратимся к дочерним коллекциям ObjectManager.
-    // objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-    // objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+    objectManager.objects.options.set('preset', 'islands#greenDotIcon');
+    objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+    myMap.geoObjects.add(objectManager);
+    
+    console.log(objectManager.objects.options);
+
+    // myMap.geoObjects.add(new ymaps.Placemark([55.642063, 37.656123], {
+    //     balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+    // }, {
+    //     preset: 'islands#icon',
+    //     iconColor: '#0095b6'
+    // }));
+
+    // myMap.geoObjects.add(new ymaps.Placemark(yandexMap.dataset.latitude, yandexMap.dataset.longitude, {
+    //                 balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+    //             }, {
+    //                 preset: 'islands#icon',
+    //                 iconColor: '#0095b6'
+    //             }));
+
+    var data = {
+        'main': 0,
+        'head': 1,
+        'excise': 1,
+        'others': 1,
+        'captions': 0,
+     };
+     
+    // $.ajax({
+    //     url: "http://localhost/wimc/web/checkbox"
+    // }).done(function(data) {
+    //     objectManager.add(data);
+    // });
+    
+    // Отрисовываю основные таможенные посты;
+    $.ajax({
+        url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+        type: 'POST',
+        data: data,
+        success: function (response) {
+            // let customsCoords = JSON.parse(response);
+            objectManager.add(response);
+            // console.log(response);
+            console.log(data);
+
+    }
+    });
+
+    // $.ajax({
+    //     url: "http://localhost/wimc/web/customs/search"
+    // }).done(function(data) {
+    //     console.log('Пришло от Яндекс Карт:');
+    //     // let geo = JSON.parse(data);
+
+    //     console.log(data);
+     
 
 
-    // console.log(objectManager.objects._objectsById);
-    // console.log(objectManager.objects._objectsById);
-    // Отприсовывает точки при загрузке страницы;
-
-// balloonContent: 'цвет <strong>носика Гены</strong>',
-// hintContent: 'Ну давай уже тащи',
-// iconContent: 'Я тащусь',
-// iconCaption: custom['properties']['iconCaption'],
-
+    //     // myMap.geoObjects.add(new ymaps.Placemark([geo['lat'], geo['lon']], {
+    //     //     balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+    //     // }, {
+    //     //     preset: 'islands#icon',
+    //     //     iconColor: 'red'
+    //     // }));
         
-// balloonContentHeader: custom['properties']['balloonContentHeader'],
-// balloonContentBody: custom['properties']['balloonContentBody'],
-// balloonContentFooter: custom['properties']['balloonContentFooter'],
+    // });
 
-// myMap.geoObjects.add(objectManager);
+    // let userPoint = document.querySelector('');
 
-// myMap.geoObjects.events.add('click', function (e) {
-//     var code = e.get('target').properties;
-//     console.log(code);
-//     // var objectId = e.get('objectId'),
-//     //     obj = objectManager.objects.getById(objectId);
-//     // if (hasBalloonData(objectId)) {
-//     //     objectManager.objects.balloon.open(objectId);
-//     // } else {
-//     //     obj.properties.balloonContent = "Идет загрузка данных...";
-//     //     objectManager.objects.balloon.open(objectId);
-//     //     loadBalloonData(objectId).then(function (data) {
-//     //         obj.properties.balloonContent = data;
-//     //         objectManager.objects.balloon.setData(obj);
-//     //     });
-//     // }
-// });
+    // $.ajax(
+    //     'http://localhost/wimc/web/customs/search',
+    //     {
+    //         success: function(data) {
+    //           alert('AJAX call was successful!');
+    //           alert('Data from the server' + data);
+    //         },
+    //         error: function() {
+    //           alert('There was some error performing the AJAX call!');
+    //         }
+    //      }
+    //   );
 
-//    // Отрисовывает точки при поиске обеъкта на карте;
-//    $('#search-customs').on('beforeSubmit', function(){
-//     var data = $(this).serialize();
-//     $.ajax({
-//     url: '/search', // 'http://localhost/wimc/web/search'
-//     type: 'POST',
-//     data: data,
-//     success: function(res){
-//         let geo = JSON.parse(res);
+    $('#search-customs').on('beforeSubmit', function(){
+        var data = $(this).serialize();
+        $.ajax({
+        url: 'http://localhost/wimc/web/customs/search',
+        type: 'POST',
+        data: data,
+        success: function(res){
+            let geo = JSON.parse(res);
 
-//         searchCollection.removeAll();
-//         searchCollection.add(new ymaps.Placemark([geo['latitude'], geo['longitude']], {
-//             balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
-//         }, {
-//             preset: 'islands#icon',
-//             iconColor: 'red'
-//         }));
-//         searchCollection.add(new ymaps.Placemark([geo['nearest_lat'], geo['nearest_lon']]));
-//         myMap.geoObjects.add(searchCollection);
+            myMap.geoObjects.add(new ymaps.Placemark([geo['latitude'], geo['longitude']], {
+                balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+            }, {
+                preset: 'islands#icon',
+                iconColor: 'red'
+            }));
 
-//         // Отцентруем карту по точке пользователя;
-//         // console.log('Новый центр карты:');
-//         // console.log([geo['latitude'], geo['longitude']]);
-//         myMap.setCenter([geo['latitude'], geo['longitude']]);
-        
-//         // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
-//         myMap.setBounds(searchCollection.getBounds()); 
-//         myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
-//     },
-//     error: function(){
-//     alert('Error!');
-//     }
-//     });
-//     return false;
-// });
+        myMap.setCenter([geo['latitude'], geo['longitude']]);
+        myMap.setZoom(14);
+
+        console.log('Ответ при отправке формы:');
+        console.log(res);
+        console.log('Точка');
+        console.log(geo['latitude']);
+        console.log(geo['longitude']);
+        },
+        error: function(){
+        alert('Error!');
+        }
+        });
+        return false;
+    });
+
+
+}
