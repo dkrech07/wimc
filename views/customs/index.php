@@ -25,7 +25,7 @@ $this->title = 'Where is my customs?';
         'enableAjaxValidation' => true,
         'options' => [
             'autocomplete' => 'off',
-            'class' => 'row', //form-horizontal
+            'class' => 'search-label row', //form-horizontal
             // 'style' => 'margin-bottom: 10px;',
         ],
     ]); ?>
@@ -39,7 +39,7 @@ $this->title = 'Where is my customs?';
     <?= $form->field($searchCustomsModel, 'geo', [
         'template' => "{label}\n{input}",
         'options' => [
-            // 'style' => 'padding-left: 0',
+            'style' => 'margin-bottom: 10px;',
             'class' => 'col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9'
         ]
     ])->widget(
@@ -95,6 +95,30 @@ $this->title = 'Where is my customs?';
         'class' => 'col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3' // btn btn-primary
     ]) ?>
 
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <p class="filter-label">
+            Дополнительно показать:
+        </p>
+        <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-primary filter-btn head">
+                <i class="bi bi-geo-alt-fill"></i>
+                <input id="head" class="customs-checkbox" type="checkbox" autocomplete="off"> Головные
+            </label>
+            <label class="btn btn-outline-primary filter-btn excise">
+                <i class="bi bi-geo-alt-fill"></i>
+                <input id="excise" class="customs-checkbox" type="checkbox" autocomplete="off"> Акцизные
+            </label>
+            <label class="btn btn-outline-primary filter-btn others">
+                <i class="bi bi-geo-alt-fill"></i>
+                <input id="others" class="customs-checkbox" type="checkbox" autocomplete="off"> Специальные
+            </label>
+            <label class="btn btn-outline-primary filter-btn captions">
+                <i class="bi bi-chat-left-text"></i>
+                <input id="captions" class="customs-checkbox" type="checkbox" autocomplete="off"> Подписи ко всем меткам
+            </label>
+        </div>
+    </div>
+
     <?php ActiveForm::end(); ?>
 
 </div>
@@ -110,35 +134,17 @@ $this->title = 'Where is my customs?';
     <input type="checkbox" class="btn-check " id="btn-check-outlined" autocomplete="off">
     <label class="btn btn-outline-danger" for="btn-check-outlined">Подписи ко всем меткам</label><br> -->
 
-<div class="wrapper">
-    <p class="search-label">
-        <i class="bi bi-plus-square"></i>
-        Выберите дополнительные параметры:
-    </p>
-    <div class="btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-outline-danger">
-            <input id="head" class="customs-checkbox" type="checkbox" autocomplete="off"> Главные
-        </label>
-        <label class="btn btn-outline-warning">
-            <input id="excise" class="customs-checkbox" type="checkbox" autocomplete="off"> Акцизные
-        </label>
-        <label class="btn btn-outline-primary">
-            <input id="others" class="customs-checkbox" type="checkbox" autocomplete="off"> Прочие
-        </label>
-        <label class="btn btn-outline-dark">
-            <input id="captions" class="customs-checkbox" type="checkbox" autocomplete="off"> Все метки
-        </label>
-    </div>
-</div>
+
 
 <div class="wrapper">
-    <p class="search-label">
-        <i class="bi bi-geo-alt-fill"></i>
+    <p class="map-label">
         Результат поиска на карте:
     </p>
     <div class='row' style="margin-bottom: 20px;">
 
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>"></div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>">
+            <button type="button" class="zoom-out btn btn-light"><i class="bi bi-arrow-counterclockwise"></i></button>
+        </div>
 
 
         <!-- <div class="customs-count">

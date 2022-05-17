@@ -1,10 +1,27 @@
+// Start
 const yandexMap = document.querySelector('#map');
+var zoomOutButtonElement = document.querySelector('.zoom-out');
 
-// function getCollectionCoords(customsCoords, points) {
-//     customsCoords.forEach(custom => {
-//         points.push([custom['coordinates']['lat'], custom['coordinates']['lon']]);
-//     });
-// }
+function getPoints(geoObjects, points, color) {
+    // if (points.length > 0) {
+        for (var i = 0, len = points.length; i < len; i++) {
+            geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']], 
+            {
+                iconCaption: points[i]['properties']['iconCaption'],
+                balloonContentHeader: points[i]['properties']['balloonContentHeader'],
+                balloonContentBody: points[i]['properties']['balloonContentBody'],
+                balloonContentFooter: points[i]['properties']['balloonContentFooter'],
+            }, {
+                iconColor: color,
+
+                // Устаналиваем данные, которые будут отображаться в балуне.
+                // balloonContentHeader: 'Метка №' + (i + 1),
+                // // balloonContentBody: getContentBody(i),
+                // balloonContentFooter: 'Мацуо Басё'
+            });
+        }
+    // }
+}
 
 function getCollection(myMap, customsParam, collection) {
     if (customsParam) {
@@ -25,29 +42,209 @@ function init () {
     var myMap = new ymaps.Map('map', {
         center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
         zoom: 3,
-        controls: []
+        controls: ['searchControl', 'zoomControl'] // , 'routeButtonControl'
     }, {
         searchControlProvider: 'yandex#search',
     }),
     clusterer = new ymaps.Clusterer({
-        // Макет метки кластера pieChart.
+        clusterBalloonLeftColumnWidth: 225,
+        // Размер ячейки кластеризации в пикселях. Значение должно быть равно 2^n;
+        // gridSize: 50, 
+        // Флаг наличия у кластеризатора поля .hint;
+        // hasHint: true,
+        // Минимальное количество объектов, образующих кластер;
+        minClusterSize: 5,
+        // Флаг, запрещающий увеличение коэффициента масштабирования карты при клике на кластер;
+        disableClickZoom: false,
+
+     
+
+        // Группировка точек в кластеры по координатам;
+        groupByCoordinates: false,
+        // Макет метки кластера pieChart;
         clusterIconLayout: 'default#pieChart',
-        // Радиус диаграммы в пикселях.
+        // Радиус диаграммы в пикселях;
         clusterIconPieChartRadius: 25,
-        // Радиус центральной части макета.
+        // Радиус центральной части макета;
         clusterIconPieChartCoreRadius: 10,
-        // Ширина линий-разделителей секторов и внешней обводки диаграммы.
+        // Ширина линий-разделителей секторов и внешней обводки диаграммы;
         clusterIconPieChartStrokeWidth: 3,
-        // Определяет наличие поля balloon.
-        hasBalloon: false
+        // Определяет наличие поля balloon;
+        hasBalloon: true,
+        // Скрывать иконку при открытии балуна;
+        hideIconOnBalloonOpen: false,
+
+      
+        // clusterDisableClickZoom: true,
+        // clusterOpenBalloonOnClick: true,
     }),
+    // Объект с точками (разделенными по типу на массивы);
         points = {
             'main': [],
             'head': [],
             'excise': [],
             'others': [],
         },
-        geoObjects = [];
+        geoObjects = {
+            'main': [],
+            'head': [],
+            'excise': [],
+            'others': [],
+        };
+
+    // Карта состояний чекбоксов;
+    var data = {
+        'main': 1,
+        'head': 0,
+        'excise': 0,
+        'others': 0,
+        'captions': 0,
+     };
+
+     // Карта цветов меток;
+     var pointsColors = {
+        'main': '#00AA00',
+        'head': '#FF0000',
+        'excise': '#0000FF',
+        'others': '#E8B000',
+     };
+
+  // Отрисовываю основные таможенные посты;
+  $.ajax({
+    url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+    type: 'POST',
+    data: data,
+    success: function (response) {
+        let customsCoords = JSON.parse(response);
+
+        getPoints(geoObjects['main'], customsCoords['main'], 'green');
+        // getPoints(geoObjects, customsCoords['head'], 'red');
+        // getPoints(geoObjects, customsCoords['others'], 'blue');
+        // getPoints(geoObjects, customsCoords['excise'], 'yellow');
+
+        clusterer.add(geoObjects['main']);
+        myMap.geoObjects.add(clusterer);
+
+        myMap.setBounds(clusterer.getBounds(), {
+            checkZoomRange: true
+        });
+
+}
+});
+
+    // Отрысовывает точки при фильтрации по типам постов;
+    let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
+    let captionsFlag = 0;
+    console.log(checkboxes);
+
+    checkboxes.forEach(function(checkbox, i) {
+        checkbox.onchange = function() {
+            checkboxes.forEach(function(checkbox){
+                data[checkbox.id] = checkbox.checked ? 1:0;
+            });
+
+            if (checkbox.id == 'captions') {
+                console.log(data[checkbox.id]);
+            }
+
+            $.ajax({
+                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                type: 'POST',
+                data: data,
+                success: function (response) {
+                    console.log(data[checkbox.id]);
+                    if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
+                        let customsCoords = JSON.parse(response);
+
+                        getPoints(geoObjects[checkbox.id], customsCoords[checkbox.id], pointsColors[checkbox.id]);
+
+                        clusterer.add(geoObjects[checkbox.id]);
+                        myMap.geoObjects.add(clusterer);
+                    } else  {
+                        clusterer.remove(geoObjects[checkbox.id]);
+                    }
+
+
+           
+
+
+                    // getPoints(geoObjects, customsCoords['head'], 'red');
+                    // getPoints(geoObjects, customsCoords['others'], 'blue');
+                    // getPoints(geoObjects, customsCoords['excise'], 'yellow');
+
+                    console.log(response);
+                    console.log(data);
+                }
+            });
+        }
+    });
+
+    zoomOutButtonElement.addEventListener('click', (evt)=>{
+        myMap.setCenter([57.76, 77.64]);
+        myMap.setBounds(clusterer.getBounds()); 
+    });
+
+} 
+
+
+// End
+
+// if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
+//     let customsCoords = JSON.parse(response);
+//     getCollectionCoords(customsCoords[checkbox.id], customsMap[checkbox.id], data['captions']);
+//     myMap.geoObjects.add(customsMap[checkbox.id]);
+// } else if (checkbox.id == 'captions') {
+//     let customsCoords = JSON.parse(response);
+
+//     if (data[checkbox.id] != captionsFlag) {
+//         // myMap.geoObjects.removeAll();
+//         captionsFlag = data[checkbox.id];
+//     }
+
+//     if (mainPoints.getLength() > 0) {
+
+//         getCollectionCoords(customsCoords['main'], customsMap['main'], data['captions']);
+//         myMap.geoObjects.add(customsMap['main']);
+//     }
+//     if (headPoints.getLength() > 0) {
+//         myMap.geoObjects.remove(customsMap['head']);
+
+//         getCollectionCoords(customsCoords['head'], customsMap['head'], data['captions']);
+//         myMap.geoObjects.add(customsMap['head']);
+//     }
+//     if (excisePoints.getLength() > 0) {
+//         myMap.geoObjects.remove(customsMap['excise']);
+
+//         getCollectionCoords(customsCoords['excise'], customsMap['excise'], data['captions']);
+//         myMap.geoObjects.add(customsMap['excise']);
+//     }
+//     if (othersPoints.getLength() > 0) {
+//         myMap.geoObjects.remove(customsMap['others']);
+
+//         getCollectionCoords(customsCoords['others'], customsMap['others'], data['captions']);
+//         myMap.geoObjects.add(customsMap['others']);
+//     }
+    
+// } else {
+//     myMap.geoObjects.remove(customsMap[checkbox.id]);
+// }
+
+        // getCollectionCoords(customsCoords['main'], points['main']);
+        // getCollectionCoords(customsCoords['head'], points['head']);
+        // getCollectionCoords(customsCoords['excise'], points['excise']);
+        // getCollectionCoords(customsCoords['others'], points['others']);
+
+        // console.log(mainPoints);
+        // console.log(headPoints);
+        // console.log(excisePoints);
+        // console.log(othersPoints);
+
+        // for (let checkbox in data) {
+        //     if (data[checkbox]) {
+        //         getCollectionCoords(customsCoords[checkbox], customsMap[checkbox], data['captions']);
+        //         myMap.geoObjects.add(customsMap[checkbox]);
+        //     }
+        // } 
 
         // new ymaps.GeoObjectCollection(null, { // Коллекция Основных таможенных постов;
         //     // preset: 'islands#greenStretchyIcon',
@@ -83,163 +280,17 @@ function init () {
     //     'others': othersPoints,
     // };
 
-    // Карта состояний чекбоксов
-    var data = {
-        'main': 0,
-        'head': 1,
-        'excise': 1,
-        'others': 1,
-        'captions': 0,
-     };
+  
 
-    // Отрисовываю основные таможенные посты;
-        $.ajax({
-            url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
-            type: 'POST',
-            data: data,
-            success: function (response) {
-                let customsCoords = JSON.parse(response);
-
-                // getCollectionCoords(customsCoords['main'], points['main']);
-                // getCollectionCoords(customsCoords['head'], points['head']);
-                // getCollectionCoords(customsCoords['excise'], points['excise']);
-                // getCollectionCoords(customsCoords['others'], points['others']);
-
-                // console.log(mainPoints);
-                // console.log(headPoints);
-                // console.log(excisePoints);
-                // console.log(othersPoints);
-
-                // for (let checkbox in data) {
-                //     if (data[checkbox]) {
-                //         getCollectionCoords(customsCoords[checkbox], customsMap[checkbox], data['captions']);
-                //         myMap.geoObjects.add(customsMap[checkbox]);
-                //     }
-                // } 
-
-                function getPoints(points, color) {
-                    // if (points.length > 0) {
-                        for (var i = 0, len = points.length; i < len; i++) {
-                            console.log(points[i]);
-                            geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']], 
-                            {
-                                iconCaption: points[i]['properties']['iconCaption'],
-                                balloonContentHeader: points[i]['properties']['balloonContentHeader'],
-                                balloonContentBody: points[i]['properties']['balloonContentBody'],
-                                balloonContentFooter: points[i]['properties']['balloonContentFooter'],
-                            }, {
-                                iconColor: color,
-                            });
-                        }
-                    // }
-                }
-
-
-                getPoints(customsCoords['main'], 'green');
-                getPoints(customsCoords['head'], 'red');
-                getPoints(customsCoords['others'], 'blue');
-                getPoints(customsCoords['excise'], 'yellow');
-
-
-            
-
-                clusterer.add(geoObjects);
-                myMap.geoObjects.add(clusterer);
-
-                // myMap.setBounds(clusterer.getBounds(), {
-                //     checkZoomRange: true
-                // });
-        }
-        });
+  
+        // function getCollectionCoords(customsCoords, points) {
+//     customsCoords.forEach(custom => {
+//         points.push([custom['coordinates']['lat'], custom['coordinates']['lon']]);
+//     });
+// }
  
-    // Отрысовывает точки при фильтрации по типам постов;
-    // let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
-    // let captionsFlag = 0;
-    // console.log(checkboxes);
 
-    // checkboxes.forEach(function(checkbox, i) {
-    //     checkbox.onchange = function() {
-    //         checkboxes.forEach(function(checkbox){
-    //             data[checkbox.id] = checkbox.checked ? 1:0;
-    //         });
 
-            // if (checkbox.id == 'captions') {
-            //     console.log(data[checkbox.id]);
-            // }
-
-            // $.ajax({
-            //     url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
-            //     type: 'POST',
-            //     data: data,
-            //     success: function (response) {
-            //         let customsCoords = JSON.parse(response);
-            //         if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
-            //             let customsCoords = JSON.parse(response);
-            //             getCollectionCoords(customsCoords[checkbox.id], customsMap[checkbox.id], data['captions']);
-            //             myMap.geoObjects.add(customsMap[checkbox.id]);
-            //         } else if (checkbox.id == 'captions') {
-            //             let customsCoords = JSON.parse(response);
-
-            //             if (data[checkbox.id] != captionsFlag) {
-            //                 // myMap.geoObjects.removeAll();
-            //                 captionsFlag = data[checkbox.id];
-            //             }
-
-            //             if (mainPoints.getLength() > 0) {
-
-            //                 getCollectionCoords(customsCoords['main'], customsMap['main'], data['captions']);
-            //                 myMap.geoObjects.add(customsMap['main']);
-            //             }
-            //             if (headPoints.getLength() > 0) {
-            //                 myMap.geoObjects.remove(customsMap['head']);
-
-            //                 getCollectionCoords(customsCoords['head'], customsMap['head'], data['captions']);
-            //                 myMap.geoObjects.add(customsMap['head']);
-            //             }
-            //             if (excisePoints.getLength() > 0) {
-            //                 myMap.geoObjects.remove(customsMap['excise']);
-
-            //                 getCollectionCoords(customsCoords['excise'], customsMap['excise'], data['captions']);
-            //                 myMap.geoObjects.add(customsMap['excise']);
-            //             }
-            //             if (othersPoints.getLength() > 0) {
-            //                 myMap.geoObjects.remove(customsMap['others']);
-
-            //                 getCollectionCoords(customsCoords['others'], customsMap['others'], data['captions']);
-            //                 myMap.geoObjects.add(customsMap['others']);
-            //             }
-                        
-            //         } else {
-            //             myMap.geoObjects.remove(customsMap[checkbox.id]);
-            //         }
-
-            //         // console.log(response);
-            //         console.log(data['captions']);
-            //         }
-            // });
-    //     }
-    // });
-
-    
-    // mainPoints.each(callback[, context])
-
-    myMap.geoObjects.events.add('click', function (e) {
-    var code = e.get('target').properties;
-    console.log(code);
-    // var objectId = e.get('objectId'),
-    //     obj = objectManager.objects.getById(objectId);
-    // if (hasBalloonData(objectId)) {
-    //     objectManager.objects.balloon.open(objectId);
-    // } else {
-    //     obj.properties.balloonContent = "Идет загрузка данных...";
-    //     objectManager.objects.balloon.open(objectId);
-    //     loadBalloonData(objectId).then(function (data) {
-    //         obj.properties.balloonContent = data;
-    //         objectManager.objects.balloon.setData(obj);
-    //     });
-    // }
-});
-} // конец
 
 
 
