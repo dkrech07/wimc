@@ -2,23 +2,40 @@
 const yandexMap = document.querySelector('#map');
 var zoomOutButtonElement = document.querySelector('.zoom-out');
 
-function getPoints(geoObjects, points, color) {
+function getPoints(geoObjects, points, color, captions) {
     // if (points.length > 0) {
         for (var i = 0, len = points.length; i < len; i++) {
-            geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']], 
-            {
-                iconCaption: points[i]['properties']['iconCaption'],
-                balloonContentHeader: points[i]['properties']['balloonContentHeader'],
-                balloonContentBody: points[i]['properties']['balloonContentBody'],
-                balloonContentFooter: points[i]['properties']['balloonContentFooter'],
-            }, {
-                iconColor: color,
+            if (captions == 1) {
+                geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']], 
+                {
+                    iconCaption: points[i]['properties']['iconCaption'],
+                    balloonContentHeader: points[i]['properties']['balloonContentHeader'],
+                    balloonContentBody: points[i]['properties']['balloonContentBody'],
+                    balloonContentFooter: points[i]['properties']['balloonContentFooter'],
+                }, {
+                    iconColor: color,
+    
+                    // Устаналиваем данные, которые будут отображаться в балуне.
+                    // balloonContentHeader: 'Метка №' + (i + 1),
+                    // // balloonContentBody: getContentBody(i),
+                    // balloonContentFooter: 'Мацуо Басё'
+                });
+            } else {
+                geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']], 
+                {
+                    balloonContentHeader: points[i]['properties']['balloonContentHeader'],
+                    balloonContentBody: points[i]['properties']['balloonContentBody'],
+                    balloonContentFooter: points[i]['properties']['balloonContentFooter'],
+                }, {
+                    iconColor: color,
+    
+                    // Устаналиваем данные, которые будут отображаться в балуне.
+                    // balloonContentHeader: 'Метка №' + (i + 1),
+                    // // balloonContentBody: getContentBody(i),
+                    // balloonContentFooter: 'Мацуо Басё'
+                });
+            }
 
-                // Устаналиваем данные, которые будут отображаться в балуне.
-                // balloonContentHeader: 'Метка №' + (i + 1),
-                // // balloonContentBody: getContentBody(i),
-                // balloonContentFooter: 'Мацуо Басё'
-            });
         }
     // }
 }
@@ -117,7 +134,7 @@ function init () {
     success: function (response) {
         let customsCoords = JSON.parse(response);
 
-        getPoints(geoObjects['main'], customsCoords['main'], 'green');
+        getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
         // getPoints(geoObjects, customsCoords['head'], 'red');
         // getPoints(geoObjects, customsCoords['others'], 'blue');
         // getPoints(geoObjects, customsCoords['excise'], 'yellow');
@@ -136,7 +153,7 @@ function init () {
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
     let captionsFlag = 0;
     console.log(checkboxes);
-
+    
     checkboxes.forEach(function(checkbox, i) {
         checkbox.onchange = function() {
             checkboxes.forEach(function(checkbox){
@@ -152,15 +169,67 @@ function init () {
                 type: 'POST',
                 data: data,
                 success: function (response) {
+                    let customsCoords = JSON.parse(response);
+
                     console.log(data[checkbox.id]);
                     if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
-                        let customsCoords = JSON.parse(response);
 
                         getPoints(geoObjects[checkbox.id], customsCoords[checkbox.id], pointsColors[checkbox.id]);
 
                         clusterer.add(geoObjects[checkbox.id]);
                         myMap.geoObjects.add(clusterer);
-                    } else  {
+                    } else if (checkbox.id == 'captions') { 
+                        // if (data['captions'] == 1) {
+                            console.log(customsCoords);
+
+                            clusterer.removeAll();
+
+                            if (data['main'] == 1) {
+                                getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
+                                clusterer.add(geoObjects['main']);
+                            }
+
+                            if (data['head'] == 1) {
+                                getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
+                                clusterer.add(geoObjects['head']);
+                            }
+
+                            if (data['excise'] == 1) {
+                                getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
+                                clusterer.add(geoObjects['excise']);
+                            }
+
+                            if (data['others'] == 1) {
+                                getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
+                                clusterer.add(geoObjects['others']);
+                            }
+
+                            myMap.geoObjects.add(clusterer);
+                            
+                        // } 
+                        // else {
+                        //     clusterer.removeAll();
+
+                        //     getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
+                        //     getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
+                        //     getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
+                        //     getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
+
+                        //     clusterer.add(geoObjects['main']);
+                        //     clusterer.add(geoObjects['head']);
+                        //     clusterer.add(geoObjects['excise']);
+                        //     clusterer.add(geoObjects['others']);
+
+                        //     myMap.geoObjects.add(clusterer);
+                        // }
+                        // if ()
+
+                        // captionsFlag = data[checkbox.id];
+                        // if (geoObjects['head'].length > 0) {
+
+                        // }
+                    }
+                    else {
                         clusterer.remove(geoObjects[checkbox.id]);
                     }
 
@@ -196,10 +265,10 @@ function init () {
 // } else if (checkbox.id == 'captions') {
 //     let customsCoords = JSON.parse(response);
 
-//     if (data[checkbox.id] != captionsFlag) {
-//         // myMap.geoObjects.removeAll();
-//         captionsFlag = data[checkbox.id];
-//     }
+    // if (data[checkbox.id] != captionsFlag) {
+    //     // myMap.geoObjects.removeAll();
+    //     captionsFlag = data[checkbox.id];
+    // }
 
 //     if (mainPoints.getLength() > 0) {
 
