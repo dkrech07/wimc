@@ -130,6 +130,7 @@ body {
 .filter-btn {
     border: 1px solid #000000;
     border-radius: 20px;
+    text-transform: none;
 }
 
 .filter-btn.head {
@@ -201,24 +202,25 @@ body {
 
 .zoom-out {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 60px;
+    left: 20px;
     z-index: 20;
+    border-radius: 5px;
 }
 
-/* .zoom-out.btn-light:not(:disabled):not(.disabled):active, 
+.zoom-out.btn-light:not(:disabled):not(.disabled):active, 
 .zoom-out.btn-light:not(:disabled):not(.disabled).active, 
 .show > .zoom-out.btn-light.dropdown-toggle {
     color: #fff;
-    background-color: none;
+    background-color: #ffffff;
     border-color: none;
-} */
+}
 
-/* .zoom-out.btn-light.focus {
+.zoom-out.btn-light.focus,
+.zoom-out.btn-light:hover,
+.zoom-out.btn-light:focus:not(:focus-visible)
+ {
     box-shadow: none;
+    background-color: #ffffff;
  }
  
-.zoom-out.btn-light:hover {
-     background: transparent;
-     text-decoration: underline;
- } */

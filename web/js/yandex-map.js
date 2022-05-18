@@ -3,7 +3,6 @@ const yandexMap = document.querySelector('#map');
 var zoomOutButtonElement = document.querySelector('.zoom-out');
 
 function getPoints(geoObjects, points, color, captions) {
-    // if (points.length > 0) {
         for (var i = 0, len = points.length; i < len; i++) {
             if (captions == 1) {
                 geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']], 
@@ -14,11 +13,8 @@ function getPoints(geoObjects, points, color, captions) {
                     balloonContentFooter: points[i]['properties']['balloonContentFooter'],
                 }, {
                     iconColor: color,
-    
-                    // Устаналиваем данные, которые будут отображаться в балуне.
-                    // balloonContentHeader: 'Метка №' + (i + 1),
-                    // // balloonContentBody: getContentBody(i),
-                    // balloonContentFooter: 'Мацуо Басё'
+                    hideIconOnBalloonOpen: false,
+                    balloonOffset: [3, -25],
                 });
             } else {
                 geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']], 
@@ -28,16 +24,12 @@ function getPoints(geoObjects, points, color, captions) {
                     balloonContentFooter: points[i]['properties']['balloonContentFooter'],
                 }, {
                     iconColor: color,
-    
-                    // Устаналиваем данные, которые будут отображаться в балуне.
-                    // balloonContentHeader: 'Метка №' + (i + 1),
-                    // // balloonContentBody: getContentBody(i),
-                    // balloonContentFooter: 'Мацуо Басё'
+                    hideIconOnBalloonOpen: false,
+                    balloonOffset: [3, -25],
                 });
             }
 
         }
-    // }
 }
 
 function getCollection(myMap, customsParam, collection) {
@@ -49,8 +41,10 @@ function getCollection(myMap, customsParam, collection) {
 }
 
 if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
-    yandexMap.dataset.latitude = 57.76;
-    yandexMap.dataset.longitude = 77.64;
+    // yandexMap.dataset.latitude = 57.76;
+    // yandexMap.dataset.longitude = 77.64;
+    yandexMap.dataset.latitude = 56.865294;
+    yandexMap.dataset.longitude = 60.592588;
 }
 
 ymaps.ready(init);
@@ -59,7 +53,7 @@ function init () {
     var myMap = new ymaps.Map('map', {
         center: [yandexMap.dataset.latitude, yandexMap.dataset.longitude],
         zoom: 3,
-        controls: ['searchControl', 'zoomControl'] // , 'routeButtonControl'
+        controls: ['zoomControl'] // , 'routeButtonControl' 'searchControl', 
     }, {
         searchControlProvider: 'yandex#search',
     }),
@@ -92,8 +86,8 @@ function init () {
         hideIconOnBalloonOpen: false,
 
       
-        // clusterDisableClickZoom: true,
-        // clusterOpenBalloonOnClick: true,
+        clusterDisableClickZoom: true,
+        clusterOpenBalloonOnClick: false,
     }),
     // Объект с точками (разделенными по типу на массивы);
         points = {
@@ -112,9 +106,9 @@ function init () {
     // Карта состояний чекбоксов;
     var data = {
         'main': 1,
-        'head': 0,
-        'excise': 0,
-        'others': 0,
+        'head': 1,
+        'excise': 1,
+        'others': 1,
         'captions': 0,
      };
 
@@ -135,11 +129,17 @@ function init () {
         let customsCoords = JSON.parse(response);
 
         getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
-        // getPoints(geoObjects, customsCoords['head'], 'red');
-        // getPoints(geoObjects, customsCoords['others'], 'blue');
-        // getPoints(geoObjects, customsCoords['excise'], 'yellow');
+
+        getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
+        getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
+        getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
 
         clusterer.add(geoObjects['main']);
+
+        clusterer.add(geoObjects['head']);
+        clusterer.add(geoObjects['others']);
+        clusterer.add(geoObjects['excise']);
+
         myMap.geoObjects.add(clusterer);
 
         myMap.setBounds(clusterer.getBounds(), {
@@ -151,18 +151,12 @@ function init () {
 
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
-    let captionsFlag = 0;
-    console.log(checkboxes);
     
     checkboxes.forEach(function(checkbox, i) {
         checkbox.onchange = function() {
             checkboxes.forEach(function(checkbox){
                 data[checkbox.id] = checkbox.checked ? 1:0;
             });
-
-            if (checkbox.id == 'captions') {
-                console.log(data[checkbox.id]);
-            }
 
             $.ajax({
                 url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
@@ -171,17 +165,13 @@ function init () {
                 success: function (response) {
                     let customsCoords = JSON.parse(response);
 
-                    console.log(data[checkbox.id]);
                     if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
 
-                        getPoints(geoObjects[checkbox.id], customsCoords[checkbox.id], pointsColors[checkbox.id]);
+                        getPoints(geoObjects[checkbox.id], customsCoords[checkbox.id], pointsColors[checkbox.id], data['captions']);
 
                         clusterer.add(geoObjects[checkbox.id]);
                         myMap.geoObjects.add(clusterer);
-                    } else if (checkbox.id == 'captions') { 
-                        // if (data['captions'] == 1) {
-                            console.log(customsCoords);
-
+                    } else if (checkbox.id == 'captions') {
                             clusterer.removeAll();
 
                             if (data['main'] == 1) {
@@ -205,58 +195,62 @@ function init () {
                             }
 
                             myMap.geoObjects.add(clusterer);
-                            
-                        // } 
-                        // else {
-                        //     clusterer.removeAll();
-
-                        //     getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
-                        //     getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
-                        //     getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
-                        //     getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
-
-                        //     clusterer.add(geoObjects['main']);
-                        //     clusterer.add(geoObjects['head']);
-                        //     clusterer.add(geoObjects['excise']);
-                        //     clusterer.add(geoObjects['others']);
-
-                        //     myMap.geoObjects.add(clusterer);
-                        // }
-                        // if ()
-
-                        // captionsFlag = data[checkbox.id];
-                        // if (geoObjects['head'].length > 0) {
-
-                        // }
-                    }
-                    else {
+                    } else {
                         clusterer.remove(geoObjects[checkbox.id]);
                     }
-
-
-           
-
-
-                    // getPoints(geoObjects, customsCoords['head'], 'red');
-                    // getPoints(geoObjects, customsCoords['others'], 'blue');
-                    // getPoints(geoObjects, customsCoords['excise'], 'yellow');
-
-                    console.log(response);
-                    console.log(data);
                 }
             });
         }
     });
 
+    function checkClusterPoints() {
+        clusterer.events.add('click', function (e) {
+            // получаем ссылку на объект, по которому кликнули
+            var cluster = e.get('target');
+            if (cluster.options._name == 'cluster') {
+                var clusterPoints = cluster.getGeoObjects();
+
+                var pointsCoordinates = []; // список всех точек координат кластера;
+                clusterPoints.forEach(point => {
+                    pointsCoordinates.push(point.geometry._coordinates);
+                });
+
+                for(var i = 0; i < pointsCoordinates.length; i++){
+                    currentPoint = pointsCoordinates[i];
+                    for(var j = 0; j < pointsCoordinates.length; j++){
+                        checkPoint = pointsCoordinates[j];
+
+                        if (currentPoint[0] != checkPoint[0] || currentPoint[1] != checkPoint[1]) {
+                            myMap.setCenter(pointsCoordinates[0]);
+                            myMap.setBounds(cluster.getBounds()); 
+                            return;
+                        }
+                    }
+                // console.log(currentPoint);
+                console.log(checkPoint);
+
+                }
+                clusterer.balloon.open(cluster);
+
+            }            
+        });
+    }
+    
+    checkClusterPoints();
+    
     zoomOutButtonElement.addEventListener('click', (evt)=>{
         myMap.setCenter([57.76, 77.64]);
         myMap.setBounds(clusterer.getBounds()); 
     });
-
-} 
-
-
+}
 // End
+
+
+
+
+
+
+
 
 // if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
 //     let customsCoords = JSON.parse(response);
