@@ -41,10 +41,8 @@ function getCollection(myMap, customsParam, collection) {
 }
 
 if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
-    // yandexMap.dataset.latitude = 57.76;
-    // yandexMap.dataset.longitude = 77.64;
-    yandexMap.dataset.latitude = 56.865294;
-    yandexMap.dataset.longitude = 60.592588;
+    yandexMap.dataset.latitude = 57.76;
+    yandexMap.dataset.longitude = 77.64;
 }
 
 ymaps.ready(init);
@@ -130,15 +128,15 @@ function init () {
 
         getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
 
-        getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
-        getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
-        getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
+        // getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
+        // getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
+        // getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
 
         clusterer.add(geoObjects['main']);
 
-        clusterer.add(geoObjects['head']);
-        clusterer.add(geoObjects['others']);
-        clusterer.add(geoObjects['excise']);
+        // clusterer.add(geoObjects['head']);
+        // clusterer.add(geoObjects['others']);
+        // clusterer.add(geoObjects['excise']);
 
         myMap.geoObjects.add(clusterer);
 

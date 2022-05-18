@@ -102,19 +102,19 @@ $this->title = 'Where is my customs?';
         <div class="btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-outline-primary filter-btn head">
                 <i class="bi bi-geo-alt-fill"></i>
-                <input id="head" class="customs-checkbox" type="checkbox" autocomplete="off"> Головные
+                <input id="head" class="customs-checkbox" type="checkbox" autocomplete="off"> <span>Головные</span>
             </label>
             <label class="btn btn-outline-primary filter-btn excise">
                 <i class="bi bi-geo-alt-fill"></i>
-                <input id="excise" class="customs-checkbox" type="checkbox" autocomplete="off"> Акцизные
+                <input id="excise" class="customs-checkbox" type="checkbox" autocomplete="off"> <span>Акцизные</span>
             </label>
             <label class="btn btn-outline-primary filter-btn others">
                 <i class="bi bi-geo-alt-fill"></i>
-                <input id="others" class="customs-checkbox" type="checkbox" autocomplete="off"> Специальные
+                <input id="others" class="customs-checkbox" type="checkbox" autocomplete="off"> <span>Специальные</span>
             </label>
             <label class="btn btn-outline-primary filter-btn captions">
                 <i class="bi bi-chat-left-text"></i>
-                <input id="captions" class="customs-checkbox" type="checkbox" autocomplete="off"> Подписи ко всем меткам
+                <input id="captions" class="customs-checkbox" type="checkbox" autocomplete="off"> <span>Подписи ко всем меткам</span>
             </label>
         </div>
     </div>
@@ -142,7 +142,7 @@ $this->title = 'Where is my customs?';
     </p>
     <div class='row' style="margin-bottom: 20px;">
 
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%; min-height: 568px" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%;" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>">
             <button type="button" class="zoom-out btn btn-light"><i class="bi bi-arrow-counterclockwise"></i></button>
         </div>
 
