@@ -55,8 +55,11 @@ function init () {
     }, {
         searchControlProvider: 'yandex#search',
     }),
+    searchCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (одна пользовательская, вторая ближайшая);
+        preset: 'islands#yellowIcon'
+    }),
     clusterer = new ymaps.Clusterer({
-        clusterBalloonLeftColumnWidth: 225,
+        // clusterBalloonLeftColumnWidth: 225,
         // Размер ячейки кластеризации в пикселях. Значение должно быть равно 2^n;
         // gridSize: 50, 
         // Флаг наличия у кластеризатора поля .hint;
@@ -143,7 +146,6 @@ function init () {
         myMap.setBounds(clusterer.getBounds(), {
             checkZoomRange: true
         });
-
 }
 });
 
@@ -240,6 +242,33 @@ function init () {
         myMap.setCenter([57.76, 77.64]);
         myMap.setBounds(clusterer.getBounds()); 
     });
+
+
+         // Отрисовывает точки при поиске обеъкта на карте;
+         $('#search-customs').on('beforeSubmit', function(){
+            var data = $(this).serialize();
+    
+            $.ajax({
+                url: 'http://localhost/wimc/web/search', // '/search' 'http://localhost/wimc/web/search'
+                type: 'POST',
+                data: data,
+                success: function (response) {
+                    var userCoords = JSON.parse(response);
+
+
+                    searchCollection.removeAll();
+                    // geoObjects.add(new ymaps.Placemark([userCoords['latitude'], userCoords['longitude']], {
+                    //     balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
+                    // }, {
+                    //     preset: 'islands#icon',
+                    //     iconColor: 'red'
+                    // }));
+                    searchCollection.add(new ymaps.Placemark([userCoords['latitude'], userCoords['latitude']]));
+        
+                    myMap.geoObjects.add(searchCollection);
+                }
+            });
+        });
 }
 // End
 

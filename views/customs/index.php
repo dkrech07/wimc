@@ -14,9 +14,7 @@ AppAsset::register($this);
 $apiKey = Yii::$app->params['geocoderApiKey'];
 $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_RU");
 $this->registerJsFile('js/yandex-map.js');
-$this->registerJsFile('js/customs-filter.js');
 
-// $this->registerJsFile('/js/custom.js');
 $this->title = 'Where is my customs?';
 ?>
 <div class="wrapper">
@@ -26,7 +24,7 @@ $this->title = 'Where is my customs?';
         'options' => [
             'autocomplete' => 'off',
             'class' => 'search-label row', //form-horizontal
-            // 'style' => 'margin-bottom: 10px;',
+            'style' => 'margin-bottom: 10px;',
         ],
     ]); ?>
 
@@ -39,7 +37,7 @@ $this->title = 'Where is my customs?';
     <?= $form->field($searchCustomsModel, 'geo', [
         'template' => "{label}\n{input}",
         'options' => [
-            'style' => 'margin-bottom: 10px;',
+            // 'style' => 'margin-bottom: 10px;',
             'class' => 'col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9'
         ]
     ])->widget(
@@ -55,7 +53,7 @@ $this->title = 'Where is my customs?';
                     },
                     dataType: "json",
                     success: function(data) {
-                        console.log(data);
+                        // console.log(data);
                         response($.map(data, function (geo) {
                             return {
                                 label: geo.display_name,
@@ -91,10 +89,13 @@ $this->title = 'Where is my customs?';
 
 
     <?= Html::submitInput('Найти таможни', [
-        'style' => 'margin-top: 30px;',
-        'class' => 'col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3' // btn btn-primary
+        // 'style' => 'margin-top: 30px;',
+        'class' => 'search-btn btn btn-outline-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2' // btn btn-primary
     ]) ?>
 
+
+
+    <?php ActiveForm::end(); ?>
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <p class="filter-label">
             Дополнительно показать:
@@ -118,9 +119,6 @@ $this->title = 'Where is my customs?';
             </label>
         </div>
     </div>
-
-    <?php ActiveForm::end(); ?>
-
 </div>
 <!-- <input type="checkbox" class="btn-check btn-sm" id="btn-check-outlined" autocomplete="off">
     <label class="btn btn-outline-danger" for="btn-check-outlined">Головные таможни</label><br>

@@ -235,6 +235,11 @@ body {
         text-align: center;
     }
 
+    /* .filter-btn.btn-outline-primary.focus,
+    .filter-btn.btn-outline-primary:hover {
+        text-decoration: none;
+    } */
+
     .btn-group-toggle {
         text-align: center;
     }
@@ -265,3 +270,18 @@ body {
         min-height: 300px
     }
   }
+
+.search-btn {
+    margin: 0;
+    padding: 0;
+    margin-top: 34px;
+}
+
+/* .ui-autocomplete-input {
+    width: 100px;
+} */
+
+.ui-menu-item-wrapper {
+    width: 980px;
+    font-size: 14px;
+}
