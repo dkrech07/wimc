@@ -11,7 +11,10 @@ class SearchCustoms extends Model
     public $longitude;
     public $nearest_lat;
     public $nearest_lon;
+    public $nearest_code;
     public $distance;
+    public $filter;
+
     // public $head;
     // public $excise;
     // public $others;
@@ -21,7 +24,7 @@ class SearchCustoms extends Model
     {
         return [
             [['geo'], 'required'],
-            [['geo', 'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'distance'], 'string'],
+            [['geo', 'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'nearest_code', 'distance', 'filter'], 'string'],
             // [['head', 'excise', 'others', 'captions'], 'boolean'],
         ];
     }

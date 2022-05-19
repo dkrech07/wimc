@@ -9,13 +9,18 @@ use app\models\FilterCustoms;
 // use app\models\TasksSearchForm;
 // use yii\db\Expression;
 
+// Чтобы исключить попадание постов в разные группы, условие такое.
+// 1. Головные - сюда включаются посты, код которых заканчивается на *****000, за исключением постов, начинающихся на 10009*** и 121-125*****.
+// 2. Акцизные - сюда включаются посты, код которых начинается на 10009***. Так и есть сейчас.
+// 3. Специальные - сюда включаются посты, код которых начинается на 121-125*****. Так и есть сейчас.
+
 class CustomsFilterService
 {
     public function getFilteredCustoms(FilterCustoms $form_model) //: object
     {
         $sql = "SELECT * FROM customs";
 
-        $without_head_query = "SUBSTRING(CODE, -3) NOT IN (000)";
+        $without_head_query = "SUBSTRING(CODE, -3) NOT IN (000) AND SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
         $without_excise_query = "SUBSTRING(CODE, 1, 5) NOT IN (10009)";
         $without_others_query = "SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
 

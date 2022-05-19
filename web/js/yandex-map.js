@@ -65,7 +65,7 @@ function init () {
         // Флаг наличия у кластеризатора поля .hint;
         // hasHint: true,
         // Минимальное количество объектов, образующих кластер;
-        minClusterSize: 5,
+        minClusterSize: 2,
         // Флаг, запрещающий увеличение коэффициента масштабирования карты при клике на кластер;
         disableClickZoom: false,
 
@@ -107,9 +107,9 @@ function init () {
     // Карта состояний чекбоксов;
     var data = {
         'main': 1,
-        'head': 1,
-        'excise': 1,
-        'others': 1,
+        'head': 0,
+        'excise': 0,
+        'others': 0,
         'captions': 0,
      };
 
@@ -142,6 +142,7 @@ function init () {
         // clusterer.add(geoObjects['excise']);
 
         myMap.geoObjects.add(clusterer);
+        console.log(myMap.geoObjects);
 
         myMap.setBounds(clusterer.getBounds(), {
             checkZoomRange: true
@@ -227,7 +228,7 @@ function init () {
                         }
                     }
                 // console.log(currentPoint);
-                console.log(checkPoint);
+                // console.log(checkPoint);
 
                 }
                 clusterer.balloon.open(cluster);
@@ -244,31 +245,92 @@ function init () {
     });
 
 
-         // Отрисовывает точки при поиске обеъкта на карте;
-         $('#search-customs').on('beforeSubmit', function(){
-            var data = $(this).serialize();
-    
-            $.ajax({
-                url: 'http://localhost/wimc/web/search', // '/search' 'http://localhost/wimc/web/search'
-                type: 'POST',
-                data: data,
-                success: function (response) {
-                    var userCoords = JSON.parse(response);
+   // Отрисовывает точки при поиске обеъкта на карте;
+   $('#search-customs').on('beforeSubmit', function(){
+        data['latitude'] = this['SearchCustoms[latitude]'].value;
+        data['longitude'] = this['SearchCustoms[longitude]'].value;
+        data['nearest_lat'] = this['SearchCustoms[nearest_lat]'].value;
+        data['nearest_lon'] = this['SearchCustoms[nearest_lon]'].value;
+        data['distance'] = this['SearchCustoms[distance]'].value;
+        data['geo'] = this['SearchCustoms[geo]'].value;
 
+        $.ajax({
+        url: 'http://localhost/wimc/web/search', // 'http://localhost/wimc/web/search'
+        type: 'POST',
+        data: data,
+        success: function(response){
+            let searchData = JSON.parse(response);
+            console.log(response);
 
-                    searchCollection.removeAll();
-                    // geoObjects.add(new ymaps.Placemark([userCoords['latitude'], userCoords['longitude']], {
-                    //     balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
-                    // }, {
-                    //     preset: 'islands#icon',
-                    //     iconColor: 'red'
-                    // }));
-                    searchCollection.add(new ymaps.Placemark([userCoords['latitude'], userCoords['latitude']]));
-        
-                    myMap.geoObjects.add(searchCollection);
-                }
-            });
+            searchCollection.removeAll();
+            
+            searchCollection.add(new ymaps.Placemark([searchData['latitude'], searchData['longitude']], {
+                balloonContentHeader: 'Вы искали:',
+                balloonContentBody: searchData['geo'],
+                balloonContentFooter: 'Координаты точки: ' + searchData['latitude'] + ', ' + searchData['longitude'],
+                iconCaption: 'Ваша точка',
+            }, {
+                preset: 'islands#pinkDotIcon',
+                iconColor: 'red',
+            }));
+
+            // clusterer.removeAll();
+
+                // customsCoords.forEach(custom => {
+                //     points.push([custom['coordinates']['lat'], custom['coordinates']['lon']]);
+                // });
+
+            // if (data['head'] == 1) {
+            //     getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
+            //     clusterer.add(geoObjects['head']);
+            // }
+
+            // if (data['excise'] == 1) {
+            //     getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
+            //     clusterer.add(geoObjects['excise']);
+            // }
+
+            // if (data['others'] == 1) {
+            //     getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
+            //     clusterer.add(geoObjects['others']);
+            // }
+
+            searchCollection.add(new ymaps.Placemark([searchData['nearest_lat'], searchData['nearest_lon']]));
+
+            // if (data['main'] == 1) {
+            //     geoObjects['main'].forEach(item => {
+            //         if (searchData['nearest_lat'] == item.geometry._coordinates[0] && searchData['nearest_lon'] == item.geometry._coordinates[1]) {
+            //             // searchCollection.add(item);
+                        
+            //             console.log('Найдено совпадение!');
+            //             console.log(item);
+            //             console.log(item.options._options.iconColor = '#000000');
+            //         }
+            //         // console.log(item);
+            //         // console.log(item.geometry._coordinates);
+            //     });
+            //     // getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
+            //     // clusterer.add(geoObjects['main']);
+            // }
+
+            myMap.geoObjects.add(searchCollection);
+
+            // // Отцентруем карту по точке пользователя;
+            // // console.log('Новый центр карты:');
+            // // console.log([geo['latitude'], geo['longitude']]);
+            // myMap.setCenter([geo['latitude'], geo['longitude']]);
+            
+            // // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
+            myMap.setBounds(searchCollection.getBounds()); 
+            myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
+        },
+        error: function(){
+        alert('Error!');
+        }
         });
+        return false;
+    });
+
 }
 // End
 

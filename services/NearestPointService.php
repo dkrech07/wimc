@@ -15,20 +15,21 @@ class NearestPointService
         return $distance;
     }
 
-    public function getNearestPoint($x, $y)
+    public function getNearestPoint($x, $y, $filter_model)
     {
         $current_point = [
             "x" => $x,
             "y" => $y,
         ];
 
-        $form_model = new FilterCustoms();
-        $customs = (new CustomsFilterService())->getFilteredCustoms($form_model);
+        // $form_model = new FilterCustoms();
+        $customs = (new CustomsFilterService())->getFilteredCustoms($filter_model);
         $customs_points = [];
         foreach ($customs as $number => $custom) {
             $customs_points[] = [
                 "x" => $custom['COORDS_LATITUDE'],
                 "y" => $custom['COORDS_LONGITUDE'],
+                "code" => $custom['CODE'],
             ];
         }
 
