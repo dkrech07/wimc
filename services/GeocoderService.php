@@ -34,8 +34,30 @@ class GeocoderService
         // FeatureCollection
         $result = [];
         foreach ($responseData as $item) {
+
+            // $geocode = trim(",", $geocode);
+
+            $geocode_array = explode(" ", $geocode);
+            $geocode_array_search = [];
+            foreach ($geocode_array as $code) {
+                $geocode_array_search[] = str_replace(",", '', $code);
+            }
+
+            $display_name = explode(",", $item->display_name);
+            $display_name_reversed = array_reverse($display_name);
+            $display_name_reversed[0] = str_replace(" ", '', $display_name_reversed[0]);
+
+            // foreach ($geocode_array_search as $geocode_search_item) {
+
+            //     foreach ($display_name_reversed as $revesed_number => $reversed_item) {
+            //         if ($geocode_search_item == $reversed_item) {
+            //             $display_name_reversed[$revesed_number] = '<b>' . $reversed_item . '</b>';
+            //         }
+            //     }
+            // }
+
             $result[] = [
-                'display_name' => $item->display_name,
+                'display_name' => $display_name_reversed, //$item->display_name,
                 'lat' => $item->lat,
                 'lon' => $item->lon,
             ];

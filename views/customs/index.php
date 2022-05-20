@@ -38,7 +38,7 @@ $this->title = 'Where is my customs?';
         'template' => "{label}\n{input}",
         'options' => [
             // 'style' => 'margin-bottom: 10px;',
-            'class' => 'col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9'
+            'class' => 'col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9',
         ]
     ])->widget(
         AutoComplete::className(),
@@ -53,9 +53,8 @@ $this->title = 'Where is my customs?';
                     },
                     dataType: "json",
                     success: function(data) {
-                        // console.log(data);
                         response($.map(data, function (geo) {
-                            return {
+                            return {                                
                                 label: geo.display_name,
                                 value: [geo.lat, geo.lon]
                             };
@@ -79,9 +78,27 @@ $this->title = 'Where is my customs?';
                 }
             '),
             ],
+            'attribute' => 'color',
             'options' => [
-                'class' => 'form-control'
-            ]
+                // 'autoFill' => true, //autocomplete-input-bg-arrow
+                'class' => 'form-control',
+                'minLength' => '3',
+                'maxlength' => '50',
+                'placeholder' => 'Например, Смоленск, Лавочкина, 54',
+            ],
+            // 'options' =>
+            // [
+            //     'placeholder' => 'Floor',
+            //     'class' => 'form-control autocomplete-input-bg-arrow ',
+
+            //     'onclick' => "(function ( ) {
+            //           $( '#customer-floor' ).autocomplete( 'search', '' );
+            //                     })();",
+
+            //     'onfocus' => "(function ( ) {
+            //           $( '#customer-floor' ).autocomplete( 'search', '' );
+            //                     })();",
+            // ],
         ]
     );
     ?>

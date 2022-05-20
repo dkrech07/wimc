@@ -324,9 +324,9 @@ function init () {
             myMap.setBounds(searchCollection.getBounds()); 
             myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
         },
-        error: function(){
-        alert('Error!');
-        }
+            error: function(){
+                alert('Error!');
+            }
         });
         return false;
     });
