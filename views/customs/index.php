@@ -59,6 +59,10 @@ $this->title = 'Where is my customs?';
                                 value: [geo.lat, geo.lon]
                             };
                         }));
+
+                        var searchResultsContainer = document.querySelector(".ui-menu");
+                        var searchResulesElements = searchResultsContainer.querySelectorAll(".ui-menu-item > div");
+                        console.log(searchResulesElements);
                     },
                     error: function () {
                         response([]);

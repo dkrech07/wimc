@@ -330,7 +330,6 @@ function init () {
         });
         return false;
     });
-
 }
 // End
 
