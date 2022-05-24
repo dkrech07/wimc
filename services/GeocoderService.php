@@ -35,26 +35,58 @@ class GeocoderService
         $result = [];
         foreach ($responseData as $item) {
 
-            // $geocode = trim(",", $geocode);
+            // Разделяю адрес по запятым и сохраняю слова в массив;
+            $display_name = explode(",", $item->display_name);
 
-            $geocode_array = explode(" ", $geocode);
-            $geocode_array_search = [];
-            foreach ($geocode_array as $code) {
-                $geocode_array_search[] = str_replace(",", '', $code);
+            // Удаляю пробелы вначале слов (для сравнения в будущем);
+            foreach ($display_name as $display_name_nubmer => $display_name_item) {
+                $display_name[$display_name_nubmer] = ltrim($display_name_item);
             }
 
-            $display_name = explode(",", $item->display_name);
+            // Разворачиваю массив (чтобы страна, город и т.д. были вначале);
             $display_name_reversed = array_reverse($display_name);
-            $display_name_reversed[0] = str_replace(" ", '', $display_name_reversed[0]);
 
-            foreach ($geocode_array_search as $geocode_search_item) {
+            // Разделаю элементы массива с адресами на массивы со словами (по пробелу);
+            foreach ($display_name_reversed as $display_name_reversed_number => $display_name_reversed_item) {
+                $display_name_item_array = explode(" ", $display_name_reversed_item);
+                $display_name_reversed[$display_name_reversed_number] = $display_name_item_array;
+            }
 
-                foreach ($display_name_reversed as $revesed_number => $reversed_item) {
-                    if ($geocode_search_item == $reversed_item) {
-                        $display_name_reversed[$revesed_number] = '<b>' . $reversed_item . '</b>';
+            // Разделяю запрос пользователя по пробелам и сохраняю слова в массив;
+            $geocode_array = explode(" ", $geocode);
+
+            // Удаляю пробелы из слов запроса пользователя запятые (для сравнения в будущем);
+            foreach ($geocode_array as $geocode_array_number => $geocode_array_item) {
+                $geocode_array[$geocode_array_number] = str_replace(",", '', $geocode_array_item);
+            }
+
+            foreach ($geocode_array as $geocode_array_number => $geocode_array_item) {
+                foreach ($display_name_reversed as $display_name_reversed_number => $display_name_reversed_item) {
+                    foreach ($display_name_reversed_item as $display_number => $display_item) {
+                        if ($display_item == $geocode_array_item) {
+                            $display_name_reversed[$display_name_reversed_number][$display_number] = "<b class='search-mark'>" . $display_item . "</b>";
+                        }
                     }
+
+                    // $display_name_reversed[$display_name_reversed_number] = 'ok';
+                    // foreach ($display_name_reversed_item as $number => $item) {
+                    //         if ($item == $geocode_array_item) {
+                    //             $display_name_reversed['display_name'][$display_name_reversed_number][$number] = '<b>' . $item . '</b>';
+                    //         }
+                    // }
                 }
             }
+
+            // // $geocode = trim(",", $geocode);
+
+            // $geocode_array_search = [];
+            // foreach ($geocode_array as $code) {
+            //     $geocode_array_search[] = str_replace(",", '', $code);
+            // }
+
+            // $display_name_reversed[0] = str_replace(" ", '', $display_name_reversed[0]);
+
+
 
             $result[] = [
                 'display_name' => $display_name_reversed, //$item->display_name,

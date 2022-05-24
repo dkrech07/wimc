@@ -277,6 +277,10 @@ body {
     margin-top: 34px;
 }
 
+.search-mark {
+    color: green !important;
+}
+
 /* .ui-autocomplete-input {
     width: 100px;
 } */
