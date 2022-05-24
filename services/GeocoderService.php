@@ -47,14 +47,14 @@ class GeocoderService
             $display_name_reversed = array_reverse($display_name);
             $display_name_reversed[0] = str_replace(" ", '', $display_name_reversed[0]);
 
-            // foreach ($geocode_array_search as $geocode_search_item) {
+            foreach ($geocode_array_search as $geocode_search_item) {
 
-            //     foreach ($display_name_reversed as $revesed_number => $reversed_item) {
-            //         if ($geocode_search_item == $reversed_item) {
-            //             $display_name_reversed[$revesed_number] = '<b>' . $reversed_item . '</b>';
-            //         }
-            //     }
-            // }
+                foreach ($display_name_reversed as $revesed_number => $reversed_item) {
+                    if ($geocode_search_item == $reversed_item) {
+                        $display_name_reversed[$revesed_number] = '<b>' . $reversed_item . '</b>';
+                    }
+                }
+            }
 
             $result[] = [
                 'display_name' => $display_name_reversed, //$item->display_name,

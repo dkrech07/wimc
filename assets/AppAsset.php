@@ -23,8 +23,15 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css",
+        "http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css",
     ];
-    public $js = [];
+    public $js = [
+        'https://code.jquery.com/jquery-3.6.0.js',
+        'https://code.jquery.com/ui/1.13.1/jquery-ui.js',
+        'js/autocomplete.js',
+        'js/jquery.ui.autocomplete.html.js',
+        // 'js/yandex-map.js',
+    ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap4\BootstrapAsset',
