@@ -11,6 +11,7 @@ use yii\web\JsExpression;
 AppAsset::register($this);
 $apiKey = Yii::$app->params['geocoderApiKey'];
 $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_RU");
+$this->registerJsFile('js/yandex-map.js');
 
 $this->title = 'Where is my customs?';
 ?>
@@ -82,5 +83,23 @@ $this->title = 'Where is my customs?';
                 <input id="captions" class="customs-checkbox" type="checkbox" autocomplete="off"> <span>Подписи ко всем меткам</span>
             </label>
         </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <p class="map-label">
+        Результат поиска на карте:
+    </p>
+    <div class='row' style="margin-bottom: 20px;">
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%;" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>">
+            <button type="button" class="zoom-out btn btn-light"><i class="bi bi-arrow-counterclockwise"></i></button>
+        </div>
+
+
+        <!-- <div class="customs-count">
+        <span>Найдено таможенных постов:</span>
+        <b><span class="customs-number"></span></b>
+    </div> -->
     </div>
 </div>
