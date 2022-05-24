@@ -6,7 +6,7 @@ use yii\base\Model;
 
 class SearchCustoms extends Model
 {
-    public $geo;
+    public $autocomplete;
     public $latitude;
     public $longitude;
     public $nearest_lat;
@@ -23,8 +23,8 @@ class SearchCustoms extends Model
     public function rules()
     {
         return [
-            [['geo'], 'required'],
-            [['geo', 'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'nearest_code', 'distance', 'filter'], 'string'],
+            [['autocomplete'], 'required'],
+            [['autocomplete', 'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'nearest_code', 'distance', 'filter'], 'string'],
             // [['head', 'excise', 'others', 'captions'], 'boolean'],
         ];
     }
@@ -32,7 +32,7 @@ class SearchCustoms extends Model
     public function attributeLabels()
     {
         return [
-            'geo' => 'Введите адрес, и сервис найдет ближайшие таможенные посты',
+            'autocomplete' => 'Введите адрес, и сервис найдет ближайшие таможенные посты',
             // 'head' => 'Головные таможни',
             // 'excise' => 'Посты Акцизной таможни',
             // 'others' => 'Прочие посты (экспертные, оперативные и т.п. 121-125***',

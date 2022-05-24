@@ -1,7 +1,7 @@
 $(function() {
 
 // Single Select
- $("#autocomplete").autocomplete({
+ $("#searchcustoms-autocomplete").autocomplete({
     source: function(request, response) {
 
      // Fetch data
