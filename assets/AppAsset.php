@@ -26,11 +26,12 @@ class AppAsset extends AssetBundle
         "//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css",
     ];
     public $js = [
-        'https://code.jquery.com/jquery-3.6.0.js',
+        // 'https://code.jquery.com/jquery-3.6.0.js',
         'https://code.jquery.com/ui/1.13.1/jquery-ui.js',
-        'js/autocomplete.js',
         'js/jquery.ui.autocomplete.html.js',
-        // 'js/yandex-map.js',
+        'js/autocomplete.js',
+        'js/yandex-map.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

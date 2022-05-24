@@ -252,9 +252,7 @@ function init () {
         data['nearest_lat'] = this['SearchCustoms[nearest_lat]'].value;
         data['nearest_lon'] = this['SearchCustoms[nearest_lon]'].value;
         data['distance'] = this['SearchCustoms[distance]'].value;
-        data['autocomplete'] = this['SearchCustoms[autocomplete]'].value;
-
-        console.log(data);
+        data['geo'] = this['SearchCustoms[geo]'].value;
 
         $.ajax({
         url: 'http://localhost/wimc/web/search', // 'http://localhost/wimc/web/search'

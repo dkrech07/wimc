@@ -11,7 +11,6 @@ use yii\web\JsExpression;
 AppAsset::register($this);
 $apiKey = Yii::$app->params['geocoderApiKey'];
 $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_RU");
-$this->registerJsFile('js/yandex-map.js');
 
 $this->title = 'Where is my customs?';
 ?>

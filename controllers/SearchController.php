@@ -38,7 +38,7 @@ class SearchController extends Controller
 
             $form_model->latitude = $data['latitude'];
             $form_model->longitude = $data['longitude'];
-            $form_model->geo = $data['geo'];
+            $form_model->autocomplete = $data['autocomplete'];
 
             $nearest_point = (new NearestPointService())->getNearestPoint($form_model->latitude, $form_model->longitude, $filter_model);
 

@@ -40,6 +40,13 @@ class GeocoderService
             // Разворачиваю массив (чтобы страна, город и т.д. были вначале);
             $display_name_reversed = array_reverse($display_name);
 
+            $display_name_clean = [
+                'formatted' => $display_name_reversed,
+                'clean' => $display_name_reversed
+            ];
+
+
+
             // Разделяю запрос пользователя по пробелам и сохраняю слова в массив;
             $geocode_array = explode(" ", $geocode);
 
@@ -49,18 +56,18 @@ class GeocoderService
             }
 
             foreach ($geocode_array as $geocode_array_number => $geocode_array_item) {
-                foreach ($display_name_reversed as $display_name_reversed_number => $display_name_reversed_item) {
-                    $text = $display_name_reversed_item;
+                foreach ($display_name_clean['formatted'] as $display_name_clean_number => $display_name_clean_item) {
+                    $text = $display_name_clean_item;
                     $search = $geocode_array_item;
                     $pattern = '|([^ ]*' . $search . '[^ .,:;]*)|is';
                     $replace = '<span style="color: green">\\1</span>';
                     $text = preg_replace($pattern, $replace, $text);
-                    $display_name_reversed[$display_name_reversed_number] = $text;
+                    $display_name_clean['formatted'][$display_name_clean_number] = $text;
                 }
             }
 
             $result[] = [
-                'display_name' => $display_name_reversed, //$item->display_name,
+                'display_name' => $display_name_clean, //$item->display_name,
                 'lat' => $item->lat,
                 'lon' => $item->lon,
             ];

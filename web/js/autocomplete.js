@@ -16,22 +16,43 @@ $(function() {
     
         response($.map(data, function (geo) {
             return {                                
-                label: geo.display_name,
-                value: [geo.lat, geo.lon]
+                label: geo.display_name['formatted'],
+                value: [geo.lat, geo.lon, geo.display_name['clean']]
             };
         }));
     //    response(data);
-       console.log(data);
+      //  console.log(data);
 
       }
      });
     },
-    // select: function (event, ui) {
-    //    // Set selection
-    //    $('#autocomplete').val(ui.item.label); // display the selected text
-    //    $('#selectuser_id').val(ui.item.value); // save selected id to input
-    //    return false;
-    // },
+    select: function (event, ui) {
+      // let geo = ui.item.value;
+
+      $("#latitude").val(ui.item.value[0]);
+      $("#longitude").val(ui.item.value[1]);
+      $("#searchcustoms-autocomplete").val(ui.item.value[2]);
+
+
+      // this.value = ui.item.label;
+
+
+      // console.log(this.value);
+      console.log(ui.item.value);
+
+
+
+      
+  
+      event.preventDefault();
+
+
+
+      //  // Set selection
+      //  $('#autocomplete').val(ui.item.label); // display the selected text
+      //  $('#selectuser_id').val(ui.item.value); // save selected id to input
+      //  return false;
+    },
     // focus: function(event, ui){
     //    $("#autocomplete").val(ui.item.label);
     //    $("#selectuser_id").val(ui.item.value);
