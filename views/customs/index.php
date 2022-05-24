@@ -43,7 +43,7 @@ $this->title = 'Where is my customs?';
         'template' => '{label}{input}',
         'options' => [
             'style' => 'margin-bottom: 10px;',
-            'class' => 'col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9',
+            'class' => 'col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12',
         ]
     ])
         ->input([
@@ -53,10 +53,17 @@ $this->title = 'Where is my customs?';
         ])
     ?>
 
-    <?= Html::submitInput('Найти таможни', [
-        // 'style' => 'margin-top: 30px;',
-        'class' => 'search-btn btn btn-outline-primary col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2' // btn btn-primary
-    ]) ?>
+    <button type="submit" class="search-btn btn btn-outline-primary">
+        <i class="bi bi-search"></i>
+    </button>
+
+    <!-- <?= Html::submitInput('', [
+                // 'style' => 'margin-top: 30px;',
+                'class' => 'search-btn btn btn-outline-primary' // btn btn-primary
+            ]) ?> -->
+
+
+
 
     <?php ActiveForm::end(); ?>
 

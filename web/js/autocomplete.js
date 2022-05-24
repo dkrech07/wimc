@@ -1,30 +1,30 @@
-$(function() {
+$(function () {
 
-// Single Select
- $("#searchcustoms-autocomplete").autocomplete({
-    source: function(request, response) {
+  // Single Select
+  $("#searchcustoms-autocomplete").autocomplete({
+    source: function (request, response) {
 
-     // Fetch data
-     $.ajax({
-      url: "http://localhost/wimc/web/autocomplete",
-    //   type: 'post',
-      dataType: "json",
-      data: {
-        term: request.term
-      },
-      success: function(data) {
-    
-        response($.map(data, function (geo) {
-            return {                                
-                label: geo.display_name['formatted'],
-                value: [geo.lat, geo.lon, geo.display_name['clean']]
+      // Fetch data
+      $.ajax({
+        url: "/autocomplete",
+        //   type: 'post',
+        dataType: "json",
+        data: {
+          term: request.term
+        },
+        success: function (data) {
+
+          response($.map(data, function (geo) {
+            return {
+              label: geo.display_name['formatted'],
+              value: [geo.lat, geo.lon, geo.display_name['clean']]
             };
-        }));
-    //    response(data);
-      //  console.log(data);
+          }));
+          //    response(data);
+          //  console.log(data);
 
-      }
-     });
+        }
+      });
     },
     select: function (event, ui) {
       // let geo = ui.item.value;
@@ -42,8 +42,8 @@ $(function() {
 
 
 
-      
-  
+
+
       event.preventDefault();
 
 
@@ -58,11 +58,11 @@ $(function() {
     //    $("#selectuser_id").val(ui.item.value);
     //    return false;
     //  },
-   }).data("ui-autocomplete")._renderItem = function (ul, item) {
+  }).data("ui-autocomplete")._renderItem = function (ul, item) {
     return $("<li></li>")
-        .data("item.autocomplete", item)
-        .append("<a>" + item.label + "</a>")
-        .appendTo(ul);
-};
+      .data("item.autocomplete", item)
+      .append("<a>" + item.label + "</a>")
+      .appendTo(ul);
+  };
 
 });

@@ -104,7 +104,7 @@ body {
     padding: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 
@@ -113,6 +113,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
+    position: relative;
 }
 
 .filter-label {
@@ -153,33 +154,33 @@ body {
     color: #363636;
 }
 
-.head.btn-outline-primary:not(:disabled):not(.disabled):active, 
-.head.btn-outline-primary:not(:disabled):not(.disabled).active, 
-.show > .head.btn-outline-primary.dropdown-toggle {
+.head.btn-outline-primary:not(:disabled):not(.disabled):active,
+.head.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.head.btn-outline-primary.dropdown-toggle {
     color: #fff;
     background-color: #FF0000;
     border-color: #FF0000;
 }
 
-.excise.btn-outline-primary:not(:disabled):not(.disabled):active, 
-.excise.btn-outline-primary:not(:disabled):not(.disabled).active, 
-.show > .excise.btn-outline-primary.dropdown-toggle {
+.excise.btn-outline-primary:not(:disabled):not(.disabled):active,
+.excise.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.excise.btn-outline-primary.dropdown-toggle {
     color: #fff;
     background-color: #0000FF;
     border-color: #0000FF;
 }
 
-.others.btn-outline-primary:not(:disabled):not(.disabled):active, 
-.others.btn-outline-primary:not(:disabled):not(.disabled).active, 
-.show > .others.btn-outline-primary.dropdown-toggle {
+.others.btn-outline-primary:not(:disabled):not(.disabled):active,
+.others.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.others.btn-outline-primary.dropdown-toggle {
     color: #fff;
     background-color: #E8B000;
     border-color: #E8B000;
 }
 
-.captions.btn-outline-primary:not(:disabled):not(.disabled):active, 
-.captions.btn-outline-primary:not(:disabled):not(.disabled).active, 
-.show > .captions.btn-outline-primary.dropdown-toggle {
+.captions.btn-outline-primary:not(:disabled):not(.disabled):active,
+.captions.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.captions.btn-outline-primary.dropdown-toggle {
     color: #fff;
     background-color: #363636;
     border-color: #363636;
@@ -187,7 +188,7 @@ body {
 
 
 .filter-btn.btn-outline-primary.focus {
-   box-shadow: none;
+    box-shadow: none;
 }
 
 .filter-btn.btn-outline-primary:hover {
@@ -209,9 +210,9 @@ body {
     border-radius: 5px;
 }
 
-.zoom-out.btn-light:not(:disabled):not(.disabled):active, 
-.zoom-out.btn-light:not(:disabled):not(.disabled).active, 
-.show > .zoom-out.btn-light.dropdown-toggle {
+.zoom-out.btn-light:not(:disabled):not(.disabled):active,
+.zoom-out.btn-light:not(:disabled):not(.disabled).active,
+.show>.zoom-out.btn-light.dropdown-toggle {
     color: #fff;
     background-color: #ffffff;
     border-color: none;
@@ -219,14 +220,13 @@ body {
 
 .zoom-out.btn-light.focus,
 .zoom-out.btn-light:hover,
-.zoom-out.btn-light:focus:not(:focus-visible)
- {
+.zoom-out.btn-light:focus:not(:focus-visible) {
     box-shadow: none;
     background-color: #ffffff;
- }
- 
+}
 
- @media screen and (max-width:800px) {
+
+@media screen and (max-width:800px) {
     .filter-label {
         font-size: 14px;
         margin-bottom: 5px;
@@ -256,11 +256,11 @@ body {
 
     .filter-btn:last-child span {
         display: none;
-      }
+    }
 
     .filter-btn:last-child:after {
         content: 'Подписи';
-      }
+    }
 
     .filter-btn i {
         display: none;
@@ -269,12 +269,14 @@ body {
     #map {
         min-height: 300px
     }
-  }
+}
 
 .search-btn {
-    margin: 0;
-    padding: 0;
-    margin-top: 34px;
+    position: absolute;
+    bottom: 13px;
+    right: 17px;
+    /* margin: 5px;
+    padding: 5px; */
 }
 
 .search-mark {
