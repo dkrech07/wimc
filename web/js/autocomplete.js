@@ -6,7 +6,7 @@ $(function () {
 
       // Fetch data
       $.ajax({
-        url: "/autocomplete",
+        url: "http://localhost/wimc/web/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
         //   type: 'post',
         dataType: "json",
         data: {
@@ -21,7 +21,7 @@ $(function () {
             };
           }));
           //    response(data);
-          //  console.log(data);
+           console.log(data);
 
         }
       });

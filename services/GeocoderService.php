@@ -40,34 +40,53 @@ class GeocoderService
             // Разворачиваю массив (чтобы страна, город и т.д. были вначале);
             $display_name_reversed = array_reverse($display_name);
 
-            $display_name_clean = [
-                'formatted' => $display_name_reversed,
-                'clean' => $display_name_reversed
-            ];
+            // Сохраняю чистый массив;
+            $name_clean = $display_name_reversed;
 
+            // Сохраняю массив для проверки;
+            $name_formatted = $display_name_reversed;
 
+            foreach ($name_formatted as $name_formatted_number => $name_formatted_item) {
+                $name_formatted[$name_formatted_number] = explode(" ", trim($name_formatted_item));
+            }
 
             // Разделяю запрос пользователя по пробелам и сохраняю слова в массив;
             $geocode_array = explode(" ", $geocode);
 
-            // Удаляю пробелы из слов запроса пользователя запятые (для сравнения в будущем);
+            // Удаляю запятые из слов запроса пользователя запятые (для сравнения в будущем);
             foreach ($geocode_array as $geocode_array_number => $geocode_array_item) {
                 $geocode_array[$geocode_array_number] = str_replace(",", '', $geocode_array_item);
             }
 
+            // Ищу совпадения;
             foreach ($geocode_array as $geocode_array_number => $geocode_array_item) {
-                foreach ($display_name_clean['formatted'] as $display_name_clean_number => $display_name_clean_item) {
-                    $text = $display_name_clean_item;
-                    $search = $geocode_array_item;
-                    $pattern = '|([^ ]*' . $search . '[^ .,:;]*)|is';
-                    $replace = '<span style="color: green">\\1</span>';
-                    $text = preg_replace($pattern, $replace, $text);
-                    $display_name_clean['formatted'][$display_name_clean_number] = $text;
+                foreach ($name_formatted as $name_formatted_number => $name_formatted_item) {
+                    foreach ($name_formatted_item as $formatted_number => $formatted_item) {
+                        if (mb_strtolower($geocode_array_item, 'UTF-8') == mb_strtolower($formatted_item, 'UTF-8')) {
+                            $name_formatted[$name_formatted_number][$formatted_number] = '<span style="font-weight: bold; color: green">' . $formatted_item . '</span>';
+                        }
+                    }
                 }
             }
 
+            $name_text = '';
+
+            foreach ($name_formatted as $name_formatted_number => $name_formatted_item) {
+
+                $name_formatted[$name_formatted_number] = implode(", ", $name_formatted_item);
+                // foreach($name_formatted_item as $formatted_number => $formatted_item) {
+
+                // }
+
+            }
+
+            $display_name = [
+                'formatted' => $name_formatted,
+                'clean' => $name_clean,
+            ];
+
             $result[] = [
-                'display_name' => $display_name_clean, //$item->display_name,
+                'display_name' => $display_name, //$item->display_name, $display_name_clean
                 'lat' => $item->lat,
                 'lon' => $item->lon,
             ];
