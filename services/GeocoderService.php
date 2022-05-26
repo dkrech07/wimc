@@ -73,7 +73,11 @@ class GeocoderService
 
             foreach ($name_formatted as $name_formatted_number => $name_formatted_item) {
 
-                $name_formatted[$name_formatted_number] = implode(", ", $name_formatted_item);
+                $name_formatted[$name_formatted_number] = implode(" ", $name_formatted_item);
+
+                if ($name_formatted_number > 0) {
+                    $name_formatted[$name_formatted_number] = ' ' . $name_formatted[$name_formatted_number];
+                }
                 // foreach($name_formatted_item as $formatted_number => $formatted_item) {
 
                 // }

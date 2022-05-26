@@ -1,5 +1,19 @@
 $(function () {
 
+  var searchInputElement = document.querySelector('#searchcustoms-autocomplete');
+
+
+  searchInputElement.addEventListener('click', evt => {
+    var searchListElement = document.querySelector('#ui-id-1');
+
+    if (searchListElement) {
+      searchListElement.style.display = 'block';
+      // console.log(searchListElement);
+      // "width: 1384.41px; top: 153px; left: 406.5px; display: none;
+    }
+
+  });
+
   // Single Select
   $("#searchcustoms-autocomplete").autocomplete({
     source: function (request, response) {
@@ -54,9 +68,10 @@ $(function () {
       //  return false;
     },
     // focus: function(event, ui){
-    //    $("#autocomplete").val(ui.item.label);
-    //    $("#selectuser_id").val(ui.item.value);
-    //    return false;
+    //   // console.log(ui);
+    //   //  $("#autocomplete").val(ui.item.label);
+    //   //  $("#selectuser_id").val(ui.item.value);
+    //   //  return false;
     //  },
   }).data("ui-autocomplete")._renderItem = function (ul, item) {
     return $("<li></li>")
