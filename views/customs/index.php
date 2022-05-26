@@ -40,7 +40,7 @@ $this->title = 'Where is my customs?';
     <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
 
     <?= $form->field($searchCustomsModel, 'autocomplete', [
-        'template' => '{label}{input}',
+        'template' => '<i class="bi bi-search"></i> {label}{input}',
         'options' => [
             'style' => 'margin-bottom: 10px;',
             'class' => 'col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12',
@@ -55,6 +55,7 @@ $this->title = 'Where is my customs?';
 
     <button type="submit" class="search-btn btn btn-outline-primary">
         <i class="bi bi-search"></i>
+        <span class="search-btn-title">Поиск</span>
     </button>
 
     <!-- <?= Html::submitInput('', [
@@ -94,6 +95,7 @@ $this->title = 'Where is my customs?';
 
 <div class="wrapper">
     <p class="map-label">
+        <i class="bi bi-geo-alt"></i>
         Результат поиска на карте:
     </p>
     <div class='row' style="margin-bottom: 20px;">

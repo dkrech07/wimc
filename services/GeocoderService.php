@@ -63,7 +63,7 @@ class GeocoderService
                 foreach ($name_formatted as $name_formatted_number => $name_formatted_item) {
                     foreach ($name_formatted_item as $formatted_number => $formatted_item) {
                         if (mb_strtolower($geocode_array_item, 'UTF-8') == mb_strtolower($formatted_item, 'UTF-8')) {
-                            $name_formatted[$name_formatted_number][$formatted_number] = '<span style="font-weight: bold; color: green">' . $formatted_item . '</span>';
+                            $name_formatted[$name_formatted_number][$formatted_number] = '<span style="font-weight: bold; color: #28a745">' . $formatted_item . '</span>';
                         }
                     }
                 }
