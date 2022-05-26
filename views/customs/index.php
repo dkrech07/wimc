@@ -54,9 +54,9 @@ $this->title = 'Where is my customs?';
         ])
     ?>
 
-    <i class="clear-btn bi bi-x"></i>
+    <i class="clear-btn bi bi-x-circle"></i>
 
-    <button type="submit" class="search-btn btn btn-outline-primary">
+    <button type="submit" class="search-btn btn btn-primary">
         <i class="bi bi-search"></i>
         <span class="search-btn-title">Поиск</span>
     </button>

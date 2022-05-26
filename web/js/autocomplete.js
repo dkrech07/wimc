@@ -5,6 +5,7 @@ $(function () {
   var searchInputElement = document.querySelector('#autocomplete');
   var clearBtnElement = document.querySelector('.clear-btn');
 
+  console.log(searchInputElement.offsetWidth);
   // clearBtnElement.style.display = 'block';
 
   clearBtnElement.addEventListener('click', evt => {
@@ -16,21 +17,28 @@ $(function () {
     }
 
     clearBtnElement.style.display = 'none';  
-
   });
 
   searchInputElement.addEventListener('click', evt => {
     var searchListElement = document.querySelector('#ui-id-1');
 
+    searchListElement.style.width = searchInputElement.offsetWidth + 'px';
+    console.log(searchListElement.offsetWidth);
+    console.log(searchListElement.style.width);
 
     if (searchListElement && searchInputElement.value) {
+      // searchListElement.style.width = searchInputElement.offsetWidth;
+      // searchListElement.offsetWidth = searchInputElement.offsetWidth;
+
       searchListElement.style.display = 'block';
     }
   });
 
   searchInputElement.addEventListener('input', evt => {
    
-    if (searchInputElement.value) {
+    if (searchInputElement.value == '') {
+      clearBtnElement.style.display = 'none';  
+    } else if (searchInputElement.value) {
       clearBtnElement.style.display = 'block';  
     } 
     
@@ -61,7 +69,8 @@ $(function () {
           }));
           //    response(data);
           //  console.log(data);
-
+          var searchListElement = document.querySelector('#ui-id-1');
+          searchListElement.style.width = searchInputElement.offsetWidth + 'px';
         }
       });
     },
@@ -70,7 +79,7 @@ $(function () {
 
       $("#latitude").val(ui.item.value[0]);
       $("#longitude").val(ui.item.value[1]);
-      $("#searchcustoms-autocomplete").val(ui.item.value[2]);
+      $("#autocomplete").val(ui.item.value[2]);
 
 
       // this.value = ui.item.label;
@@ -101,7 +110,7 @@ $(function () {
   }).data("ui-autocomplete")._renderItem = function (ul, item) {
     return $("<li></li>")
       .data("item.autocomplete", item)
-      .append("<a>" + item.label + "</a>")
+      .append("<span>" + item.label + "</span>")
       .appendTo(ul);
   };
 
