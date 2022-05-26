@@ -292,6 +292,18 @@ body {
     padding-right: 100px;
 }
 
+.clear-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 100px;
+    padding: 10px;
+    display: none;
+}
+
+.clear-btn:hover {
+    cursor: pointer;
+}
+
 /* .ui-menu-item-wrapper {
     width: 980px;
     font-size: 14px;

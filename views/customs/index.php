@@ -46,25 +46,20 @@ $this->title = 'Where is my customs?';
             'class' => 'col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12',
         ]
     ])
-        ->input([
+        ->textInput([
             'class' => 'form-control',
             'required' => true,
-            'id' => 'autocomplete'
+            'id' => 'autocomplete',
+            'placeholder' => "Например, Смоленск, Лавочника, 54",
         ])
     ?>
+
+    <i class="clear-btn bi bi-x"></i>
 
     <button type="submit" class="search-btn btn btn-outline-primary">
         <i class="bi bi-search"></i>
         <span class="search-btn-title">Поиск</span>
     </button>
-
-    <!-- <?= Html::submitInput('', [
-                // 'style' => 'margin-top: 30px;',
-                'class' => 'search-btn btn btn-outline-primary' // btn btn-primary
-            ]) ?> -->
-
-
-
 
     <?php ActiveForm::end(); ?>
 
