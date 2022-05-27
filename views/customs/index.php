@@ -106,3 +106,13 @@ $this->title = 'Where is my customs?';
     </div> -->
     </div>
 </div>
+
+<!-- <div class="wrapper">
+    <p class="map-label">
+        <i class="bi bi-clock-history"></i>
+        Другие пользователи искали ранее:
+    </p>
+
+
+
+</div> -->

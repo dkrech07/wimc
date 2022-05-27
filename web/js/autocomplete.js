@@ -3,9 +3,8 @@ $(function () {
   var searchFlag;
 
   var searchInputElement = document.querySelector('#autocomplete');
-  var clearBtnElement = document.querySelector('.clear-btn');
+  var clearBtnElement = document.querySelector('.clear-btn');  
 
-  console.log(searchInputElement.offsetWidth);
   // clearBtnElement.style.display = 'block';
 
   clearBtnElement.addEventListener('click', evt => {
@@ -23,8 +22,6 @@ $(function () {
     var searchListElement = document.querySelector('#ui-id-1');
 
     searchListElement.style.width = searchInputElement.offsetWidth + 'px';
-    console.log(searchListElement.offsetWidth);
-    console.log(searchListElement.style.width);
 
     if (searchListElement && searchInputElement.value) {
       // searchListElement.style.width = searchInputElement.offsetWidth;
@@ -43,9 +40,6 @@ $(function () {
     } 
     
   });
-
-
-
 
   // Single Select
   $("#autocomplete").autocomplete({
