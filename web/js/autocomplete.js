@@ -1,6 +1,7 @@
 $(function () {
 
   var searchFlag;
+  const LIST_PADDING = 12;
 
   var searchInputElement = document.querySelector('#autocomplete');
   var clearBtnElement = document.querySelector('.clear-btn');  
@@ -62,9 +63,15 @@ $(function () {
             };
           }));
           //    response(data);
-          //  console.log(data);
+           console.log(data);
           var searchListElement = document.querySelector('#ui-id-1');
           searchListElement.style.width = searchInputElement.offsetWidth + 'px';
+
+          // var searchElements = searchListElement.querySelectorAll('.ui-menu-item');
+          // searchElements.forEach(item => {
+          //   item.style.width = searchInputElement.offsetWidth - LIST_PADDING + 'px'
+          // });
+          // console.log(searchElements);
         }
       });
     },
