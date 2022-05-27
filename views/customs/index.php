@@ -42,7 +42,7 @@ $this->title = 'Where is my customs?';
     <?= $form->field($searchCustomsModel, 'autocomplete', [
         'template' => '<i class="bi bi-search"></i> {label}{input}',
         'options' => [
-            'style' => 'margin-bottom: 10px;',
+            // 'style' => 'margin-bottom: 10px;',
             'class' => 'col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12',
         ]
     ])
@@ -63,7 +63,7 @@ $this->title = 'Where is my customs?';
 
     <?php ActiveForm::end(); ?>
 
-    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="add-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <p class="filter-label">
             Дополнительно показать:
         </p>
