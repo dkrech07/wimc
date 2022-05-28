@@ -4,7 +4,7 @@ $(function () {
   const LIST_PADDING = 12;
 
   var searchInputElement = document.querySelector('#autocomplete');
-  var clearBtnElement = document.querySelector('.clear-btn');  
+  var clearBtnElement = document.querySelector('.clear-btn');
 
   // clearBtnElement.style.display = 'block';
 
@@ -16,7 +16,7 @@ $(function () {
       searchListElement.style.display = 'none';
     }
 
-    clearBtnElement.style.display = 'none';  
+    clearBtnElement.style.display = 'none';
   });
 
   searchInputElement.addEventListener('click', evt => {
@@ -25,21 +25,18 @@ $(function () {
     searchListElement.style.width = searchInputElement.offsetWidth + 'px';
 
     if (searchListElement && searchInputElement.value) {
-      // searchListElement.style.width = searchInputElement.offsetWidth;
-      // searchListElement.offsetWidth = searchInputElement.offsetWidth;
-
       searchListElement.style.display = 'block';
     }
   });
 
   searchInputElement.addEventListener('input', evt => {
-   
+
     if (searchInputElement.value == '') {
-      clearBtnElement.style.display = 'none';  
+      clearBtnElement.style.display = 'none';
     } else if (searchInputElement.value) {
-      clearBtnElement.style.display = 'block';  
-    } 
-    
+      clearBtnElement.style.display = 'block';
+    }
+
   });
 
   // Single Select
@@ -48,7 +45,7 @@ $(function () {
 
       // Fetch data
       $.ajax({
-        url: "http://localhost/wimc/web/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
+        url: "/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
         //   type: 'post',
         dataType: "json",
         data: {
@@ -63,9 +60,13 @@ $(function () {
             };
           }));
           //    response(data);
-           console.log(data);
+          console.log(data);
           var searchListElement = document.querySelector('#ui-id-1');
           searchListElement.style.width = searchInputElement.offsetWidth + 'px';
+          searchListElement.style.top = $('#ui-id-1').offset()['top'] + 2 + 'px';
+
+
+          // searchListElement.style.top += '151px';
 
           // var searchElements = searchListElement.querySelectorAll('.ui-menu-item');
           // searchElements.forEach(item => {
