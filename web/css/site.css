@@ -84,6 +84,8 @@ a.desc:after {
     outline: none;
 }
 
+/* Start */
+
 .customs-label {
     font-size: 14px;
 }
@@ -311,7 +313,11 @@ body {
     cursor: pointer;
 }
 
-.ui-menu.ui-autocomplete {
+/* .ui-menu.ui-autocomplete {
+    margin-top: 5px;
+}*/
+
+#ui-id-1 {
     margin-top: 5px;
 }
 
@@ -351,6 +357,8 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+/* End */
 
 /* .search-label {
     margin-bottom: 0;

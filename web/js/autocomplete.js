@@ -6,6 +6,8 @@ $(function () {
   var searchInputElement = document.querySelector('#autocomplete');
   var clearBtnElement = document.querySelector('.clear-btn');
 
+  // console.log(searchInputElement.pageY);
+
   // clearBtnElement.style.display = 'block';
 
   clearBtnElement.addEventListener('click', evt => {
@@ -52,19 +54,38 @@ $(function () {
           term: request.term
         },
         success: function (data) {
-
           response($.map(data, function (geo) {
-            return {
-              label: geo.display_name['formatted'],
-              value: [geo.lat, geo.lon, geo.display_name['clean']]
-            };
+            if (data.length == 0) {
+              return {
+                label: 'No matches found',
+                value: request.term
+              };
+            } else {
+              return {
+                label: geo.display_name['formatted'],
+                value: [geo.lat, geo.lon, geo.display_name['clean']]
+              };
+            }
+
           }));
+
+
           //    response(data);
+          console.log(data.length);
           console.log(data);
           var searchListElement = document.querySelector('#ui-id-1');
           searchListElement.style.width = searchInputElement.offsetWidth + 'px';
           searchListElement.style.top = $('#ui-id-1').offset()['top'] + 2 + 'px';
 
+          searchListElement.style.left = '50%';
+          searchListElement.style.marginLeft = -searchInputElement.offsetWidth / 2 + 'px';
+
+          // searchListElement.style = 'margin-left: -' + searchListElement.style.width + 'px';
+
+          // searchListElement.style.left = $('#autocomplete').offset()['left'];
+
+          // searchListElement.style.left = $('#autocomplete').offset()['left'];
+          // console.log($('#autocomplete').offset());
 
           // searchListElement.style.top += '151px';
 
