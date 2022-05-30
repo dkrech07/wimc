@@ -199,6 +199,8 @@ body {
 .filter-btn.btn-outline-primary:hover {
     background: transparent;
     text-decoration: underline;
+    box-shadow: -5px 10px 10px rgb(109, 106, 104);
+
 }
 
 #map {
