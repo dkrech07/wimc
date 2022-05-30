@@ -335,6 +335,8 @@ body {
     font-weight: normal !important;
     color: #000 !important;
     text-decoration: none !important;
+    box-shadow: 4px 4px 4px rgb(232 176 0);
+
 }
 
 .ui-menu-item-wrapper {
@@ -357,6 +359,24 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.input-alert {
+    border: 1px solid red;
+}
+
+/* .help-block {
+    position: absolute;
+    background-color: #ffffff;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+} */
+
+/* .has-error {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+} */
 
 /* End */
 

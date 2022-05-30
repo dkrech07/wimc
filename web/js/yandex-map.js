@@ -123,7 +123,7 @@ function init () {
 
   // Отрисовываю основные таможенные посты;
   $.ajax({
-    url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+    url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
     type: 'POST',
     data: data,
     success: function (response) {
@@ -160,7 +160,7 @@ function init () {
             });
 
             $.ajax({
-                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
                 type: 'POST',
                 data: data,
                 success: function (response) {
@@ -256,8 +256,22 @@ function init () {
 
         console.log(data);
 
+        // console.log('ok');
+        // var searchInputElement = document.querySelector('#autocomplete');
+        // var latitudeInputElement = document.querySelector('#latitude');
+        // var longitudeInputElement = document.querySelector('#longitude');
+        // function getError (input) {
+        //     input.classList.forEach(classItem => {
+        //         if (classItem == 'has-error') {
+        //             searchInputElement.classList.add('input-alert');
+        //         }
+        //     });
+        // }
+
+        // getError(latitudeInputElement);
+
         $.ajax({
-        url: '/search', // 'http://localhost/wimc/web/search'
+        url: 'http://localhost/wimc/web/search', // 'http://localhost/wimc/web/search'
         type: 'POST',
         data: data,
         success: function(response){
@@ -326,9 +340,9 @@ function init () {
             myMap.setBounds(searchCollection.getBounds()); 
             myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
         },
-            error: function(){
-                alert('Error!');
-            }
+            // error: function(){
+            //     alert('Error!');
+            // }
         });
         return false;
     });

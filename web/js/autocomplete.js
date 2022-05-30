@@ -4,11 +4,11 @@ $(function () {
   const LIST_PADDING = 12;
 
   var searchInputElement = document.querySelector('#autocomplete');
+
+  var latitudeInputElement = document.querySelector('#latitude');
+  var longitudeInputElement = document.querySelector('#longitude');
+
   var clearBtnElement = document.querySelector('.clear-btn');
-
-  // console.log(searchInputElement.pageY);
-
-  // clearBtnElement.style.display = 'block';
 
   clearBtnElement.addEventListener('click', evt => {
     searchInputElement.value = '';
@@ -33,6 +33,9 @@ $(function () {
 
   searchInputElement.addEventListener('input', evt => {
 
+    latitudeInputElement.value = null;
+    longitudeInputElement.value = null;
+
     if (searchInputElement.value == '') {
       clearBtnElement.style.display = 'none';
     } else if (searchInputElement.value) {
@@ -47,82 +50,71 @@ $(function () {
 
       // Fetch data
       $.ajax({
-        url: "/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
+        url: "http://localhost/wimc/web/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
         //   type: 'post',
         dataType: "json",
         data: {
           term: request.term
         },
         success: function (data) {
-          response($.map(data, function (geo) {
-            if (data.length == 0) {
-              return {
-                label: 'No matches found',
-                value: request.term
-              };
-            } else {
+          if(!data.length){
+                var result = [
+                  {
+                    label: '<i>Ничего не нашлось... Попробуйте изменить или дополнить запрос</i>', 
+                    value: [null, null, null]
+                  }
+                    // { label: 'По запросу ' + '<b>' + request.term + '</b>' + ' не найдено результатов', value: ''}
+                ]; 
+                
+                response(result);
+
+                console.log(result);
+
+          } else {
+            response($.map(data, function (geo) {
+              console.log(data);
+  
               return {
                 label: geo.display_name['formatted'],
                 value: [geo.lat, geo.lon, geo.display_name['clean']]
-              };
-            }
+              };          
+            }));
+          }
 
-          }));
-
-
-          //    response(data);
-          console.log(data.length);
-          console.log(data);
           var searchListElement = document.querySelector('#ui-id-1');
           searchListElement.style.width = searchInputElement.offsetWidth + 'px';
           searchListElement.style.top = $('#ui-id-1').offset()['top'] + 2 + 'px';
-
           searchListElement.style.left = '50%';
           searchListElement.style.marginLeft = -searchInputElement.offsetWidth / 2 + 'px';
 
-          // searchListElement.style = 'margin-left: -' + searchListElement.style.width + 'px';
-
-          // searchListElement.style.left = $('#autocomplete').offset()['left'];
-
-          // searchListElement.style.left = $('#autocomplete').offset()['left'];
-          // console.log($('#autocomplete').offset());
-
-          // searchListElement.style.top += '151px';
-
           // var searchElements = searchListElement.querySelectorAll('.ui-menu-item');
-          // searchElements.forEach(item => {
-          //   item.style.width = searchInputElement.offsetWidth - LIST_PADDING + 'px'
+          // searchElements.forEach(element => {
+          //   element.addEventListener('mouseover', evt => {
+          //     element.classList.forEach(item => {
+
+          //       if (item == 'ui-state-active') {
+          //         element.classList.remove('ui-state-active');
+          //       } else {
+          //         element.classList.add('ui-state-active');
+          //       }
+                
+          //     });
+        
+          //   });
           // });
-          // console.log(searchElements);
         }
       });
     },
     select: function (event, ui) {
-      // let geo = ui.item.value;
 
-      $("#latitude").val(ui.item.value[0]);
-      $("#longitude").val(ui.item.value[1]);
-      $("#autocomplete").val(ui.item.value[2]);
-
-
-      // this.value = ui.item.label;
-
-
-      // console.log(this.value);
-      // console.log(ui.item.value);
-
-
-
-
-
+      if (ui.item.value[2]) {
+        $("#latitude").val(ui.item.value[0]);
+        $("#longitude").val(ui.item.value[1]);
+        $("#autocomplete").val(ui.item.value[2]);
+      }
+      
+      console.log(ui.item.value);
       event.preventDefault();
-
-
-
-      //  // Set selection
-      //  $('#autocomplete').val(ui.item.label); // display the selected text
-      //  $('#selectuser_id').val(ui.item.value); // save selected id to input
-      //  return false;
     },
     // focus: function(event, ui){
     //   // console.log(ui);
@@ -131,6 +123,7 @@ $(function () {
     //   //  return false;
     //  },
   }).data("ui-autocomplete")._renderItem = function (ul, item) {
+
     return $("<li></li>")
       .data("item.autocomplete", item)
       .append("<span>" + item.label + "</span>")

@@ -25,6 +25,10 @@ $this->title = 'Where is my customs?';
 <div class="wrapper">
     <?php $form = ActiveForm::begin([
         'id' => 'search-customs',
+
+        // 'encodeErrorSummary' => true,
+        // 'errorSummaryCssClass' => 'help-block',
+
         'enableAjaxValidation' => true,
         'options' => [
             'autocomplete' => 'off',
@@ -33,8 +37,8 @@ $this->title = 'Where is my customs?';
         ],
     ]); ?>
 
-    <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
-    <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>
+    <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['required' => true, 'id' => 'latitude']) ?>
+    <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['required' => true, 'id' => 'longitude']) ?>
     <?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lat']) ?>
     <?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lon']) ?>
     <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
@@ -51,6 +55,7 @@ $this->title = 'Where is my customs?';
             'required' => true,
             'id' => 'autocomplete',
             'placeholder' => "Например, Смоленск, Лавочника, 54",
+            'message' => 'This login has already been taken.',
         ])
     ?>
 
