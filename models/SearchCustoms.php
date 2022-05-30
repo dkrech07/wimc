@@ -23,7 +23,7 @@ class SearchCustoms extends Model
     public function rules()
     {
         return [
-            [['autocomplete', 'latitude', 'longitude'], 'required', 'message' => 'Выберите адрес из выпадающего списка'],
+            [['autocomplete'], 'required'], //, 'latitude', 'longitude'
             [['autocomplete', 'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'nearest_code', 'distance', 'filter'], 'string'],
             // [['head', 'excise', 'others', 'captions'], 'boolean'],
         ];

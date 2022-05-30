@@ -34,22 +34,32 @@ class SearchController extends Controller
             $form_model->longitude = $data['longitude'];
             $form_model->autocomplete = $data['autocomplete'];
 
-            if ($form_model->validate()) {
-                $filter_model->main = $data['main'];
-                $filter_model->head = $data['head'];
-                $filter_model->excise = $data['excise'];
-                $filter_model->others = $data['others'];
-                $filter_model->captions = $data['captions'];
 
-                $nearest_point = (new NearestPointService())->getNearestPoint($form_model->latitude, $form_model->longitude, $filter_model);
-
-                $form_model->nearest_lat = $nearest_point['nearestPoint']['x'];
-                $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
-                $form_model->distance = $nearest_point['distance'] * 100000;
-                $form_model->nearest_code = $nearest_point['nearestPoint']['code'];
-
+            if (!$data['latitude'] || !$data['longitude']) {
+                $form_model = null;
                 return json_encode($form_model, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
             }
+
+            // if (!$form_model->validate()) {
+            //     $errors = $form_model->getErrors();
+
+            //     return json_encode($errors, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
+            // }
+
+            $filter_model->main = $data['main'];
+            $filter_model->head = $data['head'];
+            $filter_model->excise = $data['excise'];
+            $filter_model->others = $data['others'];
+            $filter_model->captions = $data['captions'];
+
+            $nearest_point = (new NearestPointService())->getNearestPoint($form_model->latitude, $form_model->longitude, $filter_model);
+
+            $form_model->nearest_lat = $nearest_point['nearestPoint']['x'];
+            $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
+            $form_model->distance = $nearest_point['distance'] * 100000;
+            $form_model->nearest_code = $nearest_point['nearestPoint']['code'];
+
+            return json_encode($form_model, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
         }
     }
 }

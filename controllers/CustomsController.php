@@ -16,6 +16,7 @@ class CustomsController extends Controller
     {
         $searchCustomsModel = new SearchCustoms();
         $filterCustoms = new filterCustoms();
+        $form_model = new SearchCustoms();
 
         if (Yii::$app->request->isPost) {
             $searchCustomsModel->load(Yii::$app->request->post());

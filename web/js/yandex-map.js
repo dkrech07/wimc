@@ -244,6 +244,24 @@ function init () {
         myMap.setBounds(clusterer.getBounds()); 
     });
 
+    // var searchBtn = document.querySelector('.search-btn');
+
+    // searchBtn.addEventListener('click', evt => {
+    //     var searchInputElement = document.querySelector('#autocomplete');
+    //     var latElement = document.querySelector('.field-latitude');
+
+    //     latElement.classList.forEach(item => {
+    //         if (item == 'has-error') {
+    //             searchInputElement.classList.add('input-alert');
+    //         }
+    //     });
+    //     console.log(latElement.classList);
+
+
+    // var searchInputElement = document.querySelector('#autocomplete')
+    // searchInputElement.classList.add('input-alert');
+
+    // });
 
    // Отрисовывает точки при поиске обеъкта на карте;
    $('#search-customs').on('beforeSubmit', function(){
@@ -254,9 +272,9 @@ function init () {
         data['distance'] = this['SearchCustoms[distance]'].value;
         data['autocomplete'] = this['SearchCustoms[autocomplete]'].value;
 
-        console.log(data);
+        // console.log(data);
+        console.log('okkkkkkkkkkkkkk');
 
-        // console.log('ok');
         // var searchInputElement = document.querySelector('#autocomplete');
         // var latitudeInputElement = document.querySelector('#latitude');
         // var longitudeInputElement = document.querySelector('#longitude');
@@ -276,7 +294,17 @@ function init () {
         data: data,
         success: function(response){
             let searchData = JSON.parse(response);
-            console.log(response);
+
+            var searchInputElement = document.querySelector('#autocomplete');
+
+            if (!searchData) {
+                searchInputElement.classList.add('input-alert');
+                return;
+            } else {
+                if (searchInputElement.classList.contains('input-alert')) {
+                    searchInputElement.classList.remove('input-alert');
+                }
+            }
 
             searchCollection.removeAll();
             
@@ -347,6 +375,7 @@ function init () {
         return false;
     });
 }
+
 // End
 
 

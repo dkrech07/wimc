@@ -134,6 +134,8 @@ body {
     border: 1px solid #000000;
     border-radius: 15px;
     text-transform: none;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
+    margin-right: 10px;
     /* padding: 9px 15px; */
 }
 
@@ -202,7 +204,7 @@ body {
 #map {
     position: relative;
     z-index: 10;
-    min-height: 568px
+    min-height: 568px;
 }
 
 .zoom-out {
@@ -279,6 +281,8 @@ body {
     bottom: 0px;
     right: 15px;
     padding: 9px 15px;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
+
     /* margin: 5px;*/
 }
 
@@ -299,6 +303,8 @@ body {
 .ui-autocomplete-input {
     border-radius: 15px;
     padding-right: 125px;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
+
 }
 
 .clear-btn {
@@ -361,7 +367,7 @@ body {
 }
 
 .input-alert {
-    border: 1px solid red;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
 }
 
 /* .help-block {
