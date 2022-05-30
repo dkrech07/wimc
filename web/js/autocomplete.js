@@ -50,40 +50,40 @@ $(function () {
 
       // Fetch data
       $.ajax({
-        url: "http://localhost/wimc/web/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
+        url: "/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
         //   type: 'post',
         dataType: "json",
         data: {
           term: request.term
         },
         success: function (data) {
-          if(!data.length){
-                var result = [
-                  {
-                    label: '<i>Ничего не нашлось... Попробуйте изменить или дополнить запрос</i>', 
-                    value: [null, null, null]
-                  }
-                    // { label: 'По запросу ' + '<b>' + request.term + '</b>' + ' не найдено результатов', value: ''}
-                ]; 
-                
-                response(result);
+          if (!data.length) {
+            var result = [
+              {
+                label: '<i style="color: #6c757d">Ничего не нашлось... Попробуйте изменить или дополнить запрос</i>',
+                value: [null, null, null]
+              }
+              // { label: 'По запросу ' + '<b>' + request.term + '</b>' + ' не найдено результатов', value: ''}
+            ];
 
-                console.log(result);
+            response(result);
+
+            console.log(result);
 
           } else {
             response($.map(data, function (geo) {
               console.log(data);
-  
+
               return {
                 label: geo.display_name['formatted'],
                 value: [geo.lat, geo.lon, geo.display_name['clean']]
-              };          
+              };
             }));
           }
 
           var searchListElement = document.querySelector('#ui-id-1');
           searchListElement.style.width = searchInputElement.offsetWidth + 'px';
-          searchListElement.style.top = $('#ui-id-1').offset()['top'] + 2 + 'px';
+          searchListElement.style.top = $('#ui-id-1').offset()['top'] - 2 + 'px';
           searchListElement.style.left = '50%';
           searchListElement.style.marginLeft = -searchInputElement.offsetWidth / 2 + 'px';
 
@@ -97,9 +97,9 @@ $(function () {
           //       } else {
           //         element.classList.add('ui-state-active');
           //       }
-                
+
           //     });
-        
+
           //   });
           // });
         }
@@ -112,7 +112,7 @@ $(function () {
         $("#longitude").val(ui.item.value[1]);
         $("#autocomplete").val(ui.item.value[2]);
       }
-      
+
       console.log(ui.item.value);
       event.preventDefault();
     },

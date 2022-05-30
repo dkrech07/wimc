@@ -123,7 +123,7 @@ function init () {
 
   // Отрисовываю основные таможенные посты;
   $.ajax({
-    url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+    url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
     type: 'POST',
     data: data,
     success: function (response) {
@@ -160,7 +160,7 @@ function init () {
             });
 
             $.ajax({
-                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
                 type: 'POST',
                 data: data,
                 success: function (response) {
@@ -289,7 +289,7 @@ function init () {
         // getError(latitudeInputElement);
 
         $.ajax({
-        url: 'http://localhost/wimc/web/search', // 'http://localhost/wimc/web/search'
+        url: '/search', // 'http://localhost/wimc/web/search'
         type: 'POST',
         data: data,
         success: function(response){
