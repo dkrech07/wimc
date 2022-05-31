@@ -44,18 +44,19 @@ $this->title = 'Where is my customs?';
     <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
 
     <?= $form->field($searchCustomsModel, 'autocomplete', [
-        'template' => '<i class="bi bi-search"></i> {label}{input}',
+        'template' => '{label}{input}',
         'options' => [
             // 'style' => 'margin-bottom: 10px;',
             'class' => 'col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12',
         ]
     ])
         ->textInput([
+            'label' => '<i class="bi bi-search"></i>',
             'class' => 'form-control',
             'required' => true,
             'id' => 'autocomplete',
             'placeholder' => "Например, Смоленск, Лавочника, 54",
-        ])
+        ])->label('<i class="bi bi-search"></i> ВВЕДИТЕ АДРЕС, И СЕРВИС НАЙДЕТ БЛИЖАЙШИЕ ТАМОЖЕННЫЕ ПОСТЫ', []);
     ?>
 
     <i class="clear-btn bi bi-x-circle"></i>

@@ -4,6 +4,7 @@ $(function () {
   const LIST_PADDING = 12;
 
   var searchInputElement = document.querySelector('#autocomplete');
+  var searchBtn = document.querySelector('.search-btn');
 
   var latitudeInputElement = document.querySelector('#latitude');
   var longitudeInputElement = document.querySelector('#longitude');
@@ -21,15 +22,32 @@ $(function () {
     clearBtnElement.style.display = 'none';
   });
 
-  searchInputElement.addEventListener('click', evt => {
+  // searchInputElement.addEventListener('focus', evt => {
+    // searchBtn.style.boxShadow = 'none';
+    // console.log('boxShadow = none');
+  // });
+
+  $('#autocomplete').on('focus', function() {
+    searchBtn.style.boxShadow = 'none';
+
     var searchListElement = document.querySelector('#ui-id-1');
-
     searchListElement.style.width = searchInputElement.offsetWidth + 'px';
-
     if (searchListElement && searchInputElement.value) {
       searchListElement.style.display = 'block';
     }
   });
+
+  $('#autocomplete').on('blur', function() {
+    searchBtn.style.boxShadow = '4px 4px 4px rgb(109, 106, 104)';
+  });
+
+  // searchInputElement.addEventListener('click', evt => {
+  //   var searchListElement = document.querySelector('#ui-id-1');
+  //   searchListElement.style.width = searchInputElement.offsetWidth + 'px';
+  //   if (searchListElement && searchInputElement.value) {
+  //     searchListElement.style.display = 'block';
+  //   }
+  // });
 
   searchInputElement.addEventListener('input', evt => {
 
@@ -50,7 +68,7 @@ $(function () {
 
       // Fetch data
       $.ajax({
-        url: "/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
+        url: "http://localhost/wimc/web/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
         //   type: 'post',
         dataType: "json",
         data: {
@@ -105,6 +123,7 @@ $(function () {
         }
       });
     },
+    minLength: 3,
     select: function (event, ui) {
 
       if (ui.item.value[2]) {

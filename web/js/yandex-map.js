@@ -68,9 +68,6 @@ function init () {
         minClusterSize: 2,
         // Флаг, запрещающий увеличение коэффициента масштабирования карты при клике на кластер;
         disableClickZoom: false,
-
-     
-
         // Группировка точек в кластеры по координатам;
         groupByCoordinates: false,
         // Макет метки кластера pieChart;
@@ -85,8 +82,6 @@ function init () {
         hasBalloon: true,
         // Скрывать иконку при открытии балуна;
         hideIconOnBalloonOpen: false,
-
-      
         clusterDisableClickZoom: true,
         clusterOpenBalloonOnClick: false,
     }),
@@ -123,27 +118,15 @@ function init () {
 
   // Отрисовываю основные таможенные посты;
   $.ajax({
-    url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+    url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
     type: 'POST',
     data: data,
     success: function (response) {
         let customsCoords = JSON.parse(response);
-
         getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
-
-        // getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
-        // getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
-        // getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
-
         clusterer.add(geoObjects['main']);
-
-        // clusterer.add(geoObjects['head']);
-        // clusterer.add(geoObjects['others']);
-        // clusterer.add(geoObjects['excise']);
-
         myMap.geoObjects.add(clusterer);
         console.log(myMap.geoObjects);
-
         myMap.setBounds(clusterer.getBounds(), {
             checkZoomRange: true
         });
@@ -152,15 +135,30 @@ function init () {
 
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
-    
+
+    let toggleGroupList = document.querySelector('.btn-group-toggle');
+    let labelElements = toggleGroupList.querySelectorAll('label');
+
     checkboxes.forEach(function(checkbox, i) {
         checkbox.onchange = function() {
             checkboxes.forEach(function(checkbox){
                 data[checkbox.id] = checkbox.checked ? 1:0;
+
+                // checkbox.style.boxShadow = 'none';
+
+                // lableElements[i].style.boxShadow = 'none';
             });
 
+            console.log(labelElements[i]);
+            if (checkbox.checked == 1) {
+                labelElements[i].style.boxShadow = 'none';
+            } else {
+                labelElements[i].style.boxShadow = '4px 4px 4px rgb(109, 106, 104)';
+            }
+
+
             $.ajax({
-                url: '/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
                 type: 'POST',
                 data: data,
                 success: function (response) {
@@ -227,9 +225,6 @@ function init () {
                             return;
                         }
                     }
-                // console.log(currentPoint);
-                // console.log(checkPoint);
-
                 }
                 clusterer.balloon.open(cluster);
 
@@ -272,24 +267,8 @@ function init () {
         data['distance'] = this['SearchCustoms[distance]'].value;
         data['autocomplete'] = this['SearchCustoms[autocomplete]'].value;
 
-        // console.log(data);
-        console.log('okkkkkkkkkkkkkk');
-
-        // var searchInputElement = document.querySelector('#autocomplete');
-        // var latitudeInputElement = document.querySelector('#latitude');
-        // var longitudeInputElement = document.querySelector('#longitude');
-        // function getError (input) {
-        //     input.classList.forEach(classItem => {
-        //         if (classItem == 'has-error') {
-        //             searchInputElement.classList.add('input-alert');
-        //         }
-        //     });
-        // }
-
-        // getError(latitudeInputElement);
-
         $.ajax({
-        url: '/search', // 'http://localhost/wimc/web/search'
+        url: 'http://localhost/wimc/web/search', // 'http://localhost/wimc/web/search'
         type: 'POST',
         data: data,
         success: function(response){
@@ -318,44 +297,7 @@ function init () {
                 iconColor: 'red',
             }));
 
-            // clusterer.removeAll();
-
-                // customsCoords.forEach(custom => {
-                //     points.push([custom['coordinates']['lat'], custom['coordinates']['lon']]);
-                // });
-
-            // if (data['head'] == 1) {
-            //     getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
-            //     clusterer.add(geoObjects['head']);
-            // }
-
-            // if (data['excise'] == 1) {
-            //     getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
-            //     clusterer.add(geoObjects['excise']);
-            // }
-
-            // if (data['others'] == 1) {
-            //     getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
-            //     clusterer.add(geoObjects['others']);
-            // }
-
             searchCollection.add(new ymaps.Placemark([searchData['nearest_lat'], searchData['nearest_lon']]));
-
-            // if (data['main'] == 1) {
-            //     geoObjects['main'].forEach(item => {
-            //         if (searchData['nearest_lat'] == item.geometry._coordinates[0] && searchData['nearest_lon'] == item.geometry._coordinates[1]) {
-            //             // searchCollection.add(item);
-                        
-            //             console.log('Найдено совпадение!');
-            //             console.log(item);
-            //             console.log(item.options._options.iconColor = '#000000');
-            //         }
-            //         // console.log(item);
-            //         // console.log(item.geometry._coordinates);
-            //     });
-            //     // getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
-            //     // clusterer.add(geoObjects['main']);
-            // }
 
             myMap.geoObjects.add(searchCollection);
 

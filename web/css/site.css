@@ -144,6 +144,10 @@ body {
     color: #FF0000;
 }
 
+/* .filter-btn:hover {
+    box-shadow: -4px 4px 4px rgb(109, 106, 104);
+} */
+
 .filter-btn.excise {
     border-color: #0000FF;
     color: #0000FF;
@@ -198,8 +202,8 @@ body {
 
 .filter-btn.btn-outline-primary:hover {
     background: transparent;
-    text-decoration: underline;
-    box-shadow: -5px 10px 10px rgb(109, 106, 104);
+    /* text-decoration: underline; */
+    /* box-shadow: -5px 10px 10px rgb(109, 106, 104); */
 
 }
 
@@ -232,8 +236,20 @@ body {
     background-color: #ffffff;
 }
 
+.add-block {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 @media screen and (max-width:800px) {
+    .add-block  {
+        margin: 0;
+        padding: 0;
+    }
+
     .filter-label {
         font-size: 14px;
         margin-bottom: 5px;
@@ -253,12 +269,12 @@ body {
 
     .filter-btn {
         padding: 0;
-        padding: 10px 5px;
-        width: 22%;
+        padding: 6px 2px;
+        width: 23%;
         text-align: center;
         font-size: 10px;
-        margin-left: 5px;
-
+        margin: 0;
+        /* margin-right: 10px; */
     }
 
     .filter-btn:last-child span {
@@ -287,8 +303,7 @@ body {
 }
 
 /* .search-btn:hover {
-    background-color: #ffffff;
-    color: #007bff;
+    box-shadow: -5px 8px 8px rgb(109, 106, 104);
 } */
 
 .search-mark {
@@ -305,6 +320,10 @@ body {
     padding-right: 125px;
     box-shadow: 4px 4px 4px rgb(109, 106, 104);
 }
+
+/* .ui-autocomplete-input:hover {
+    box-shadow: -5px 8px 8px rgb(109, 106, 104);
+} */
 
 .clear-btn {
     position: absolute;
@@ -386,17 +405,14 @@ body {
     text-decoration: none !important;
 }
 
-.add-block {
-    margin: 0;
-    padding: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .input-alert {
     box-shadow: 4px 4px 4px rgb(219, 69, 31);
 }
 
+.bi-search {
+    display: inline-block !important;
+    position: relative;
+}
 /* .help-block {
     position: absolute;
     background-color: #ffffff;
