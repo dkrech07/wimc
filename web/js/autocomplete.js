@@ -37,9 +37,9 @@ $(function () {
     }
   });
 
-  $('#autocomplete').on('blur', function() {
-    searchBtn.style.boxShadow = '4px 4px 4px rgb(109, 106, 104)';
-  });
+  // $('#autocomplete').on('blur', function() {
+  //   searchBtn.style.boxShadow = '4px 4px 4px rgb(109, 106, 104)';
+  // });
 
   // searchInputElement.addEventListener('click', evt => {
   //   var searchListElement = document.querySelector('#ui-id-1');
@@ -101,9 +101,12 @@ $(function () {
 
           var searchListElement = document.querySelector('#ui-id-1');
           searchListElement.style.width = searchInputElement.offsetWidth + 'px';
-          searchListElement.style.top = $('#ui-id-1').offset()['top'] - 2 + 'px';
+          searchListElement.style.top = $('#autocomplete').offset()['top'] + 36 + 'px';
           searchListElement.style.left = '50%';
           searchListElement.style.marginLeft = -searchInputElement.offsetWidth / 2 + 'px';
+
+          console.log($('#ui-id-1').offset()['top']);
+          console.log($('#autocomplete').offset()['top']);
 
           // var searchElements = searchListElement.querySelectorAll('.ui-menu-item');
           // searchElements.forEach(element => {
@@ -132,7 +135,7 @@ $(function () {
         $("#autocomplete").val(ui.item.value[2]);
       }
 
-      console.log(ui.item.value);
+      // console.log(ui.item.value);
       event.preventDefault();
     },
     // focus: function(event, ui){

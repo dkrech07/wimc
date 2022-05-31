@@ -52,7 +52,7 @@ $this->title = 'Where is my customs?';
     ])
         ->textInput([
             'label' => '<i class="bi bi-search"></i>',
-            'class' => 'form-control',
+            'class' => 'form-control input-shadow',
             'required' => true,
             'id' => 'autocomplete',
             'placeholder' => "Например, Смоленск, Лавочника, 54",

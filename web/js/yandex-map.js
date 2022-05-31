@@ -273,17 +273,56 @@ function init () {
         data: data,
         success: function(response){
             let searchData = JSON.parse(response);
-
             var searchInputElement = document.querySelector('#autocomplete');
 
             if (!searchData) {
+                searchInputElement.classList.remove('input-shadow');
                 searchInputElement.classList.add('input-alert');
+
+                var searchListElement = document.querySelector('#ui-id-1');
+                searchListElement.style.width = searchInputElement.offsetWidth + 'px';
+                searchListElement.style.top = $('#autocomplete').offset()['top'] + 36 + 'px';
+                searchListElement.style.left = '50%';
+                searchListElement.style.marginLeft = -searchInputElement.offsetWidth / 2 + 'px';
+
+                
+                searchListElement.style.display = 'block';
+                while (searchListElement.firstChild) {
+                    searchListElement.removeChild(searchListElement.firstChild);
+                }
+                var noResultsElement = document.createElement('li');
+                noResultsElement.className = "no-results-item"; //ui-menu-item
+                noResultsElement.innerHTML = "<span tabindex='-1' class='no-results ui-menu-item-wrapper'><i style='color: #6c757d'>Ничего не нашлось... Попробуйте изменить или дополнить запрос</i></span>";
+                searchListElement.append(noResultsElement);
+
+                document.addEventListener('click', evt => {
+                    // evt.preventDefault();
+                    // noResultsElement.remove();
+                    if (searchListElement && evt.target.id !== 'autocomplete') {
+                        searchListElement.style.display = 'none';
+                    }
+
+                    console.log(evt.target.id);
+                });
+
+                // $('#autocomplete').on('click', function() {
+                //     // searchBtn.style.boxShadow = 'none';
+                
+                //     var searchListElement = document.querySelector('#ui-id-1');
+                //     searchListElement.style.width = searchInputElement.offsetWidth + 'px';
+                //     if (searchListElement && searchInputElement.value) {
+                //       searchListElement.style.display = 'block';
+                //     }
+                //   });
                 return;
             } else {
                 if (searchInputElement.classList.contains('input-alert')) {
                     searchInputElement.classList.remove('input-alert');
+                    searchInputElement.classList.add('input-shadow');
                 }
             }
+
+            
 
             searchCollection.removeAll();
             
