@@ -23,11 +23,11 @@ $(function () {
   });
 
   // searchInputElement.addEventListener('focus', evt => {
-    // searchBtn.style.boxShadow = 'none';
-    // console.log('boxShadow = none');
+  // searchBtn.style.boxShadow = 'none';
+  // console.log('boxShadow = none');
   // });
 
-  $('#autocomplete').on('focus', function() {
+  $('#autocomplete').on('focus', function () {
     // searchBtn.style.boxShadow = 'none';
 
     var searchListElement = document.querySelector('#ui-id-1');
@@ -70,7 +70,9 @@ $(function () {
 
       // Fetch data
       $.ajax({
-        url: "http://localhost/wimc/web/autocomplete", // 'http://localhost/wimc/web/autocomplete' /autocomplete
+        url: '/autocomplete',
+        // url: '/web/autocomplete', 
+        // url: 'http://localhost/wimc/web/autocomplete', 
         //   type: 'post',
         dataType: "json",
         data: {

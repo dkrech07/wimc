@@ -118,7 +118,9 @@ function init () {
 
   // Отрисовываю основные таможенные посты;
   $.ajax({
-    url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+    url: '/checkbox', 
+    //   url: '/web/checkbox', 
+    //   url: 'http://localhost/wimc/web/checkbox', 
     type: 'POST',
     data: data,
     success: function (response) {
@@ -158,7 +160,9 @@ function init () {
 
 
             $.ajax({
-                url: 'http://localhost/wimc/web/checkbox', // '/checkbox' 'http://localhost/wimc/web/checkbox'
+                url: '/checkbox', 
+                //   url: '/web/checkbox', 
+                //   url: 'http://localhost/wimc/web/checkbox', 
                 type: 'POST',
                 data: data,
                 success: function (response) {
@@ -268,7 +272,9 @@ function init () {
         data['autocomplete'] = this['SearchCustoms[autocomplete]'].value;
 
         $.ajax({
-        url: 'http://localhost/wimc/web/search', // 'http://localhost/wimc/web/search'
+            url: '/search', 
+            // url: '/web/search', 
+            // url: 'http://localhost/wimc/web/search', 
         type: 'POST',
         data: data,
         success: function(response){
