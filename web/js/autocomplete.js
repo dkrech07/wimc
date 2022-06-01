@@ -4,7 +4,7 @@ $(function () {
   const LIST_PADDING = 12;
 
   var searchInputElement = document.querySelector('#autocomplete');
-  var searchBtn = document.querySelector('.search-btn');
+  // var searchBtn = document.querySelector('.search-btn');
 
   var latitudeInputElement = document.querySelector('#latitude');
   var longitudeInputElement = document.querySelector('#longitude');
@@ -28,7 +28,7 @@ $(function () {
   // });
 
   $('#autocomplete').on('focus', function() {
-    searchBtn.style.boxShadow = 'none';
+    // searchBtn.style.boxShadow = 'none';
 
     var searchListElement = document.querySelector('#ui-id-1');
     searchListElement.style.width = searchInputElement.offsetWidth + 'px';
@@ -50,6 +50,8 @@ $(function () {
   // });
 
   searchInputElement.addEventListener('input', evt => {
+    searchInputElement.classList.remove('input-alert');
+    searchInputElement.classList.add('input-shadow');
 
     latitudeInputElement.value = null;
     longitudeInputElement.value = null;

@@ -93,8 +93,12 @@ a.desc:after {
 #map>ymaps {
     border-radius: 5px;
     overflow: hidden;
+    /* box-shadow: 4px 4px 4px rgb(109, 106, 104); */
+
 }
 
+/* #map {
+} */
 /* custom styles */
 
 body {
@@ -108,6 +112,8 @@ body {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    /* box-shadow: 4px 4px 4px rgb(109, 106, 104); */
+
 }
 
 .search-label,
@@ -200,11 +206,32 @@ body {
     box-shadow: none;
 }
 
-.filter-btn.btn-outline-primary:hover {
+/* .filter-btn.btn-outline-primary:hover {
     background: transparent;
-    /* text-decoration: underline; */
-    /* box-shadow: -5px 10px 10px rgb(109, 106, 104); */
+} */
 
+.filter-btn.head:hover,
+.filter-btn.excise:hover,
+.filter-btn.others:hover,
+.filter-btn.captions:hover {
+    opacity: 0.6;
+    color: #ffffff;
+}
+
+.filter-btn.head:hover {
+    background-color: #FF0000;
+}
+
+.filter-btn.excise:hover {
+    background-color: #0000FF;
+}
+
+.filter-btn.others:hover {
+    background-color: #E8B000;
+}
+
+.filter-btn.captions:hover {
+    background-color: #363636;
 }
 
 #map {
@@ -423,6 +450,65 @@ body {
     display: inline-block !important;
     position: relative;
 }
+
+/**
+ * Icon
+ */
+
+ .icon {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /**
+   * The "shine" element
+   */
+  
+  .icon:after {
+      content: "";
+      height: 200%;
+      left: -230%;
+      opacity: 0;
+      position: absolute;
+      top: -20%;
+      transform: rotate(-30deg);
+      width: 500%;
+    
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+      /* rgba(215, 216, 219, 0.13) 0%,
+      rgba(2, 0, 97, 0.13) 77%,
+      rgba(141, 1, 1, 0.5) 92%,
+      rgba(158, 1, 1, 0) 100% */
+    );
+  }
+  
+  /* Hover state - trigger effect */
+  
+  .icon:hover:after {
+      left: -50%;
+      opacity: 1;
+      top: -50%;
+      transition-duration: 0.7s, 0.7s, 0.15s;
+      transition-property: left, top, opacity;
+      transition-timing-function: ease;
+  }
+  
+  /* Active state */
+  
+  .icon:active:after {
+    opacity: 0;
+  }
+
+
+
+
+
 /* .help-block {
     position: absolute;
     background-color: #ffffff;

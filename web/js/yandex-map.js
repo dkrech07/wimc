@@ -301,8 +301,6 @@ function init () {
                     if (searchListElement && evt.target.id !== 'autocomplete') {
                         searchListElement.style.display = 'none';
                     }
-
-                    console.log(evt.target.id);
                 });
 
                 // $('#autocomplete').on('click', function() {
