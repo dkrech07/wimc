@@ -50,6 +50,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '/' => '/customs/index',
+                'grundmaster' => '/grundmaster/index',
                 'checkbox' => 'filter/checkbox',
                 'autocomplete' => 'search/autocomplete',
                 'search' => 'search/search',
