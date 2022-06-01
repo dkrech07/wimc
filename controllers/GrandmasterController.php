@@ -6,6 +6,7 @@ use Yii;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
 use yii\web\Controller;
+use app\models\LoginForm;
 use app\models\SearchCustoms;
 use app\models\FilterCustoms;
 
@@ -15,25 +16,26 @@ class GrandmasterController extends Controller
 
     public function actionIndex()
     {
-        // $searchCustomsModel = new SearchCustoms();
-        // $filterCustoms = new filterCustoms();
-        // $form_model = new SearchCustoms();
 
-        // if (Yii::$app->request->isPost) {
-        //     $searchCustomsModel->load(Yii::$app->request->post());
+        $loginForm = new LoginForm();
 
-        //     if (Yii::$app->request->isAjax) {
-        //         Yii::$app->response->format = Response::FORMAT_JSON;
-        //         return ActiveForm::validate($searchCustomsModel);
-        //     }
+        if (Yii::$app->request->getIsPost()) {
+            $loginForm->load(\Yii::$app->request->post());
 
-        //     if ($searchCustomsModel->validate()) {
-        //     }
-        // }
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ActiveForm::validate($loginForm);
+            }
 
+            if ($loginForm->validate()) {
+                $user = $loginForm->getUser();
+                Yii::$app->user->login($user);
+
+                $this->redirect('/tasks/index');
+            }
+        }
         return $this->render('index', [
-            // 'searchCustomsModel' => $searchCustomsModel,
-            // 'filterCustoms' => $filterCustoms,
+            'loginForm' => $loginForm
         ]);
     }
 }

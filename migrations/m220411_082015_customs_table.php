@@ -29,12 +29,17 @@ class m220411_082015_customs_table extends Migration
             'COORDS_LONGITUDE' => $this->string(256)->notNull(),
         ]);
 
-        $this->createTable('{{%history}}', [
+        $this->createTable('{{%history_geocoder}}', [
             'ID' => $this->primaryKey(),
             'HISTORY_DT_ADD' => $this->dateTime()->notNull(),
             'REQUEST_TEXT_GEOCODER' => $this->string(256)->null(), // Текст запроса для геокодера OpenMaps (из автокоплита);
-            'REQUEST_TEXT_SEARCH' => $this->string(256)->null(), // Текст запроса для поиска ближайшей точки (из поля поиска по сабмиту);
             'RESPONSE_TEXT_GEOCODER' => $this->string(256)->null(), // Ответ геокодера OpenMaps;
+        ]);
+
+        $this->createTable('{{%history_search}}', [
+            'ID' => $this->primaryKey(),
+            'HISTORY_DT_ADD' => $this->dateTime()->notNull(),
+            'REQUEST_TEXT_SEARCH' => $this->string(256)->null(), // Текст запроса для поиска ближайшей точки (из поля поиска по сабмиту);
             'RESPONSE_TEXT_SEARCH' => $this->string(256)->null(), // Ответ сервера при попытке найти ближайший таможенный пост;
         ]);
 
@@ -51,18 +56,18 @@ class m220411_082015_customs_table extends Migration
         $this->createTable('{{%pages}}', [
             'ID' => $this->primaryKey(),
             'PAGE_DT_ADD' => $this->dateTime()->notNull(),
-            'PAGE_NAME' => $this->dateTime()->notNull(),
-            'PAGE_CONTENT' => $this->integer()->notNull(),
+            'PAGE_NAME' => $this->string(256)->notNull(),
+            'PAGE_CONTENT' => $this->string(256)->null(),
             'PAGE_URL' => $this->string(256)->notNull()->unique(),
-            'PAGE_USER_CHANGE' => $this->dateTime()->notNull(),
+            'PAGE_USER_CHANGE' => $this->string(256)->notNull(),
         ]);
 
-        $this->createTable('{{%questions-form}}', [
+        $this->createTable('{{%questions_form}}', [
             'ID' => $this->primaryKey(),
             'QUESTION_DT_ADD' => $this->dateTime()->notNull(),
-            'USER_NAME' => $this->dateTime()->notNull(),
-            'USER_EMAIL' => $this->dateTime()->notNull(),
-            'FORM_CONTENT' => $this->integer()->notNull(),
+            'USER_NAME' => $this->string(256)->notNull(),
+            'USER_EMAIL' => $this->string(256)->notNull(),
+            'FORM_CONTENT' => $this->string(256)->notNull(),
         ]);
     }
 
@@ -72,6 +77,9 @@ class m220411_082015_customs_table extends Migration
     public function safeDown()
     {
         $this->dropTable('{{%customs}}');
-        $this->dropTable('{{%users}}');
+        $this->dropTable('{{%history_geocoder}}');
+        $this->dropTable('{{%history_search}}');
+        $this->dropTable('{{%pages}}');
+        $this->dropTable('{{%questions_form}}');
     }
 }
