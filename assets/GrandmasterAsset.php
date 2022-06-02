@@ -28,7 +28,7 @@ class GrandmasterAsset extends AssetBundle
         // 'https://code.jquery.com/ui/1.13.1/jquery-ui.js',
     ];
     public $depends = [
-        // 'yii\web\YiiAsset',
-        // 'yii\bootstrap4\BootstrapAsset',
+        'yii\web\YiiAsset',
+        'yii\bootstrap4\BootstrapAsset',
     ];
 }

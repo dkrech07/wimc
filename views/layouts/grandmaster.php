@@ -69,38 +69,40 @@ GrandmasterAsset::register($this);
             ]) ?>
             <?= Alert::widget() ?>
             <div class="row">
-                <ul class="left-menu col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <!-- <?= Menu::widget([
-                                'items' => [
-                                    ['label' => 'Список пользователей', 'url' => ['/site/logout']],
-                                    ['label' => 'Список постов', 'url' => ['user/edit', 'page' => 'profile']],
-                                    ['label' => 'Редактирование страниц', 'url' => ['/']],
-                                    ['label' => 'Статистика', 'url' => ['/site/logout']]
-                                ],
-                                'itemOptions' => ['class' => 'menu-item'],
-                                'linkTemplate' => '<a href="{url}" class="link">{label}</a>',
-                                // 'options' => ['class' => 'left-menu']
-                            ]); ?> -->
+                <ul class="wrapper left-menu col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <?php
+                    $items = [
+                        ['label' => 'Список постов', 'url' => ['/grandmaster/customs']],
+                        ['label' => 'Cписок пользователей', 'url' => ['/grandmaster/users']],
+                        ['label' => 'Статистика', 'url' => ['/grandmaster/statistics']],
+                        ['label' => 'Сообщения', 'url' => ['/grandmaster/messages']],
+                        [
+                            'label' => 'Редактирование страниц',
+                            'url' => ['pages'],
+                            'options' => ['class' => 'dropdown'],
+                            'template' => '<a href="{url}" class="url-class">{label}</a>',
+                            'items' => [
+                                ['label' => 'Карта СВХ', 'url' => ['/pages/svh-map']],
+                                ['label' => 'Справочник постов', 'url' => ['/pages/customs-directory']],
+                                ['label' => 'Как это работает', 'url' => ['']],
+                                ['label' => 'О проекте', 'url' => ['']],
+                                ['label' => 'Связаться с нами', 'url' => ['']],
+                                ['label' => 'Cookie', 'url' => ['']],
+
+                            ]
+                        ],
+                    ];
+                    ?>
 
                     <?= Menu::widget([
-                        'items' => [
-                            ['label' => 'Главная', 'url' => ['site/index']],
-                            ['label' => 'О компании', 'url' => ['site/about']],
-                            [
-                                'label' => 'Услуги',
-                                'url' => ['services/index'],
-                                'options' => ['class' => 'dropdown'],
-                                'template' => '<a href="{url}" class="url-class">{label}</a>',
-                                'items' => [
-                                    ['label' => 'Юридические услуги', 'url' => ['services/juridical-services']],
-                                    ['label' => 'Оценочные услуги', 'url' => ['services/valuation-services']],
-                                ]
-                            ],
-                            ['label' => 'Контакты', 'url' => ['site/contacts']]
-
-                        ],
-                        'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
-                    ]); ?>
+                        'items' => $items,
+                        'activeCssClass' => 'list-item--active',
+                        'itemOptions' => ['class' => 'list-item'],
+                        'labelTemplate' => '<a class="link link--nav">{label}</a>',
+                        'linkTemplate' => '<a href="{url}" class="link link--nav">{label}</a>',
+                        'options' => ['class' => 'nav-list']
+                    ]);
+                    ?>
                 </ul>
                 <?= $content ?>
             </div>

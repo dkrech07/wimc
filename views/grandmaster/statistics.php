@@ -15,6 +15,6 @@ $this->title = 'Grandmaster - Admin';
 
 
 
-<div class="wrapper content-block col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9">
-
+<div class="wrapper content-block col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+    <p>Статистика поиска</p>
 </div>

@@ -70,9 +70,9 @@ $(function () {
 
       // Fetch data
       $.ajax({
-        // url: '/autocomplete',
+        url: '/autocomplete',
         // url: '/web/autocomplete', 
-        url: 'http://localhost/wimc/web/autocomplete', 
+        // url: 'http://localhost/wimc/web/autocomplete', 
         //   type: 'post',
         dataType: "json",
         data: {

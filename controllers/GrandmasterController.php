@@ -69,7 +69,7 @@ class GrandmasterController extends Controller
             if ($loginForm->validate()) {
                 $user = $loginForm->getUser();
                 Yii::$app->user->login($user);
-                $this->redirect('http://localhost/wimc/web/grandmaster/admin');
+                $this->redirect('grandmaster/admin');
             }
         }
         return $this->render('index', [
@@ -80,26 +80,55 @@ class GrandmasterController extends Controller
     public function actionAdmin()
     {
         $this->layout = 'grandmaster';
-        // print('<br>');
-        // print('<br>');
-        // print('<br>');
-        // print('<br>');
-        // print('<br>');
-        // print('<br>');
-        // print_r((new HelperService())->checkAuthorization());
-        // print_r((new HelperService())->checkAuthorization());
-        // print($action->id);
-
         return $this->render('admin', [
+            // 'loginForm' => $loginForm
+        ]);
+    }
+
+    public function actionCustoms()
+    {
+        $this->layout = 'grandmaster';
+        return $this->render('customs', [
+            // 'loginForm' => $loginForm
+        ]);
+    }
+
+    public function actionUsers()
+    {
+        $this->layout = 'grandmaster';
+        return $this->render('users', [
+            // 'loginForm' => $loginForm
+        ]);
+    }
+
+    public function actionStatistics()
+    {
+        $this->layout = 'grandmaster';
+        return $this->render('statistics', [
+            // 'loginForm' => $loginForm
+        ]);
+    }
+
+    public function actionMessages()
+    {
+        $this->layout = 'grandmaster';
+        return $this->render('messages', [
             // 'loginForm' => $loginForm
         ]);
     }
 
     public function beforeAction($action)
     {
+        if ($action->id === 'index') {
+            if ((new HelperService())->checkAuthorization() !== null) {
+                $this->redirect('/grandmaster/admin');
+                return false;
+            }
+        }
+
         if ($action->id === 'admin') {
             if ((new HelperService())->checkAuthorization() === null) {
-                $this->redirect('http://localhost/wimc/web/grandmaster');
+                $this->redirect('/grandmaster');
                 return false;
             }
         }

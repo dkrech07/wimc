@@ -521,10 +521,53 @@ body {
     position: absolute;
 }
 
+/* .menu-wrapper {
+    margin: 0 auto;
+} */
+
+/* .content-wrapper {
+
+}
+
 .left-menu,
 .content-block {
-border: 1px solid #363636;
+
+} */
+
+/* .left-menu {
+    width: 30%;
 }
+
+.content-block {
+    width: 65%;
+} */
+
+.left-menu {
+    border-right: 20px solid #f5f5f5;
+}
+
+/* .left-menu::after {
+    padding: 20px;
+} */
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-list .list-item a,
+.nav-list .dropdown a {
+    color: #000000;
+}
+
+.list-item,
+.dropdown {
+    padding: 5px;
+}
+
+
+
 /**
  * Icon
  */
