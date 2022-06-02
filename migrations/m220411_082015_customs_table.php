@@ -30,44 +30,44 @@ class m220411_082015_customs_table extends Migration
         ]);
 
         $this->createTable('{{%history_geocoder}}', [
-            'ID' => $this->primaryKey(),
-            'HISTORY_DT_ADD' => $this->dateTime()->notNull(),
-            'REQUEST_TEXT_GEOCODER' => $this->string(256)->null(), // Текст запроса для геокодера OpenMaps (из автокоплита);
-            'RESPONSE_TEXT_GEOCODER' => $this->string(256)->null(), // Ответ геокодера OpenMaps;
+            'id' => $this->primaryKey(),
+            'history_dt_add_geocoder' => $this->dateTime()->notNull(),
+            'request_text_geocoder' => $this->string(256)->null(), // Текст запроса для геокодера OpenMaps (из автокоплита); 
+            'response_text_geocoder' => $this->string(256)->null(), // Ответ геокодера OpenMaps; 
         ]);
 
         $this->createTable('{{%history_search}}', [
-            'ID' => $this->primaryKey(),
-            'HISTORY_DT_ADD' => $this->dateTime()->notNull(),
-            'REQUEST_TEXT_SEARCH' => $this->string(256)->null(), // Текст запроса для поиска ближайшей точки (из поля поиска по сабмиту);
-            'RESPONSE_TEXT_SEARCH' => $this->string(256)->null(), // Ответ сервера при попытке найти ближайший таможенный пост;
+            'id' => $this->primaryKey(),
+            'history_dt_add_search' => $this->dateTime()->notNull(),
+            'request_text_search' => $this->string(256)->null(), // Текст запроса для поиска ближайшей точки (из поля поиска по сабмиту);
+            'response_text_search' => $this->string(256)->null(), // Ответ сервера при попытке найти ближайший таможенный пост;
         ]);
 
         $this->createTable('{{%users}}', [
-            'ID' => $this->primaryKey(),
-            'USER_DT_ADD' => $this->dateTime()->notNull(),
-            'ROLE' => $this->integer()->notNull(),
-            'LOGIN' => $this->string(128)->notNull()->unique(),
-            'EMAIL' => $this->string(128)->notNull()->unique(),
-            'NAME' => $this->string(128)->notNull(),
-            'PASSWORD' => $this->string(64)->notNull(),
+            'id' => $this->primaryKey(),
+            'user_dt_add' => $this->dateTime()->notNull(),
+            'role' => $this->integer()->notNull(),
+            'login' => $this->string(128)->notNull()->unique(),
+            'email' => $this->string(128)->notNull()->unique(),
+            'name' => $this->string(128)->notNull(),
+            'password' => $this->string(64)->notNull(),
         ]);
 
         $this->createTable('{{%pages}}', [
-            'ID' => $this->primaryKey(),
-            'PAGE_DT_ADD' => $this->dateTime()->notNull(),
-            'PAGE_NAME' => $this->string(256)->notNull(),
-            'PAGE_CONTENT' => $this->string(256)->null(),
-            'PAGE_URL' => $this->string(256)->notNull()->unique(),
-            'PAGE_USER_CHANGE' => $this->string(256)->notNull(),
+            'id' => $this->primaryKey(),
+            'page_dt_add' => $this->dateTime()->notNull(),
+            'page_name' => $this->string(256)->notNull(),
+            'page_content' => $this->string(256)->null(),
+            'page_url' => $this->string(256)->notNull()->unique(),
+            'page_user_change' => $this->string(256)->notNull(),
         ]);
 
         $this->createTable('{{%questions_form}}', [
-            'ID' => $this->primaryKey(),
-            'QUESTION_DT_ADD' => $this->dateTime()->notNull(),
-            'USER_NAME' => $this->string(256)->notNull(),
-            'USER_EMAIL' => $this->string(256)->notNull(),
-            'FORM_CONTENT' => $this->string(256)->notNull(),
+            'id' => $this->primaryKey(),
+            'question_dt_add' => $this->dateTime()->notNull(),
+            'user_name' => $this->string(256)->notNull(),
+            'user_email' => $this->string(256)->notNull(),
+            'form_content' => $this->string(256)->notNull(),
         ]);
     }
 

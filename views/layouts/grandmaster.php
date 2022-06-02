@@ -3,14 +3,15 @@
 /** @var yii\web\View $this */
 /** @var string $content */
 
-use app\assets\AppAsset;
+use app\assets\GrandmasterAsset;
 use app\widgets\Alert;
 use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\widgets\Menu;
 
-AppAsset::register($this);
+GrandmasterAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -39,7 +40,10 @@ AppAsset::register($this);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav'],
             'items' => [
-                ['label' => 'Перейти на сайт', 'url' => ['/customs/index']],
+                // ['label' => 'Перейти на сайт', 'url' => ['/customs/index']],
+                ['label' => 'Grandmaster', 'url' => ['/grandmaster/index']],
+                ['label' => 'Выход', 'url' => ['/site/logout']]
+
                 // ['label' => 'About', 'url' => ['/site/about']],
                 // ['label' => 'Contact', 'url' => ['/site/contact']],
                 // Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]
@@ -64,7 +68,42 @@ AppAsset::register($this);
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
             <?= Alert::widget() ?>
-            <?= $content ?>
+            <div class="row">
+                <ul class="left-menu col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <!-- <?= Menu::widget([
+                                'items' => [
+                                    ['label' => 'Список пользователей', 'url' => ['/site/logout']],
+                                    ['label' => 'Список постов', 'url' => ['user/edit', 'page' => 'profile']],
+                                    ['label' => 'Редактирование страниц', 'url' => ['/']],
+                                    ['label' => 'Статистика', 'url' => ['/site/logout']]
+                                ],
+                                'itemOptions' => ['class' => 'menu-item'],
+                                'linkTemplate' => '<a href="{url}" class="link">{label}</a>',
+                                // 'options' => ['class' => 'left-menu']
+                            ]); ?> -->
+
+                    <?= Menu::widget([
+                        'items' => [
+                            ['label' => 'Главная', 'url' => ['site/index']],
+                            ['label' => 'О компании', 'url' => ['site/about']],
+                            [
+                                'label' => 'Услуги',
+                                'url' => ['services/index'],
+                                'options' => ['class' => 'dropdown'],
+                                'template' => '<a href="{url}" class="url-class">{label}</a>',
+                                'items' => [
+                                    ['label' => 'Юридические услуги', 'url' => ['services/juridical-services']],
+                                    ['label' => 'Оценочные услуги', 'url' => ['services/valuation-services']],
+                                ]
+                            ],
+                            ['label' => 'Контакты', 'url' => ['site/contacts']]
+
+                        ],
+                        'submenuTemplate' => "\n<ul class='dropdown-menu' role='menu'>\n{items}\n</ul>\n",
+                    ]); ?>
+                </ul>
+                <?= $content ?>
+            </div>
         </div>
     </main>
 

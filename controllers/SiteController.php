@@ -3,126 +3,116 @@
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
+use app\models\RegistrationForm;
+use app\models\Cities;
+use app\services\UserService;
+use app\services\AuthService;
 use yii\web\Controller;
-use yii\web\Response;
-use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
+use TaskForce\utils\CustomHelpers;
+use yii\filters\AccessControl;
+use yii\helpers\ArrayHelper;
 
 class SiteController extends Controller
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
-
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
-
-    /**
-     * Login action.
-     *
-     * @return Response|string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
     public function actionLogout()
     {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
+        \Yii::$app->user->logout();
+        // return $this->goHome();
+        $this->redirect('http://localhost/wimc/web/grandmaster');
     }
 
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
+    // public function behaviors()
+    // {
+    //     return [
+    //         'access' => [
+    //             'class' => AccessControl::class,
+    //             'only' => ['registration'],
+    //             'rules' => [
+    //                 [
+    //                     'allow' => true,
+    //                     'actions' => ['registration'],
+    //                     'matchCallback' => function ($rule, $action) {
+    //                         return CustomHelpers::checkAuthorization() === null;
+    //                     }
+    //                 ]
+    //             ]
+    //         ]
+    //     ];
+    // }
 
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
+    // public function actions()
+    // {
+    //     return [
+    //         'auth' => [
+    //             'class' => 'yii\authclient\AuthAction',
+    //             'successCallback' => [$this, 'onAuthSuccess'],
+    //         ],
+    //     ];
+    // }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
+    // public function onAuthSuccess($client)
+    // {
+    //     $attributes = $client->getUserAttributes();
+    //     $sourceId = ArrayHelper::getValue($attributes, 'id');
+    //     $source = $client->getId();
+
+    //     $auth = (new AuthService())->findAuthUser($source, $sourceId);
+    //     if (isset($auth)) {
+    //         Yii::$app->user->login($auth->user);
+    //         return $this->goHome();
+    //     }
+
+    //     $email = ArrayHelper::getValue($attributes, 'email');
+    //     if (isset($email)) {
+    //         $user = (new UserService())->findUserByEmail($email);
+    //         if (isset($user)) {
+    //             (new AuthService())->saveAuthUser($user->id, $source, $sourceId);
+    //             Yii::$app->user->login($user);
+    //         } else {
+    //             $user = (new UserService())->saveNewVkProfile($attributes);
+    //             (new AuthService())->saveAuthUser($user->id, $source, $sourceId);
+    //             Yii::$app->user->login($user);
+    //         }
+    //         return $this->goHome();
+    //     }
+    // }
+
+
+    // public function actionRegistration()
+    // {
+    //     $RegistrationModel = new RegistrationForm();
+
+    //     $cities = Cities::find()
+    //         ->select(['id', 'city'])
+    //         ->indexBy('id')
+    //         ->asArray()
+    //         ->all();
+
+    //     if (Yii::$app->request->getIsPost()) {
+    //         $RegistrationModel->load(Yii::$app->request->post());
+
+    //         if ($RegistrationModel->validate()) {
+    //             (new UserService())->saveNewUserProfile($RegistrationModel);
+
+    //             $user = $RegistrationModel->getUser();
+    //             Yii::$app->user->login($user);
+    //             $this->redirect('/tasks/index');
+    //         }
+    //     }
+    //     return $this->render('registration', [
+    //         'model' => $RegistrationModel,
+    //         'cities' => $cities,
+    //     ]);
+    // }
+
+    // public function beforeAction($action)
+    // {
+    //     if ($action->id === 'registration') {
+    //         if (CustomHelpers::checkAuthorization() !== null) {
+    //             $this->redirect('/tasks/index');
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
 }

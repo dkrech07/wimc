@@ -51,6 +51,7 @@ $config = [
             'rules' => [
                 '/' => '/customs/index',
                 'grundmaster' => '/grundmaster/index',
+                'admin' => '/grundmaster/admin',
                 'checkbox' => 'filter/checkbox',
                 'autocomplete' => 'search/autocomplete',
                 'search' => 'search/search',

@@ -22,7 +22,7 @@ class LoginForm extends Model
     public function getUser()
     {
         if ($this->_user === null) {
-            $this->_user = User::findOne(['email' => $this->email]);
+            $this->_user = User::findOne(['login' => $this->login]);
         }
 
         return $this->_user;
@@ -34,7 +34,7 @@ class LoginForm extends Model
             $user = $this->getUser();
 
             if (!$user || !\Yii::$app->security->validatePassword($this->password, $user->password)) {
-                $this->addError($attribute, 'Неправильный email или пароль');
+                $this->addError($attribute, 'Неправильный логин или пароль');
             }
         }
     }

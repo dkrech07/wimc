@@ -7,13 +7,13 @@ use Yii;
 /**
  * This is the model class for table "users".
  *
- * @property int $ID
- * @property string $USER_DT_ADD
- * @property int $ROLE
- * @property string $LOGIN
- * @property string $EMAIL
- * @property string $NAME
- * @property string $PASSWORD
+ * @property int $id
+ * @property string $user_dt_add
+ * @property int $role
+ * @property string $login
+ * @property string $email
+ * @property string $name
+ * @property string $password
  */
 class Users extends \yii\db\ActiveRecord
 {
@@ -31,13 +31,13 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['USER_DT_ADD', 'ROLE', 'LOGIN', 'EMAIL', 'NAME', 'PASSWORD'], 'required'],
-            [['USER_DT_ADD'], 'safe'],
-            [['ROLE'], 'integer'],
-            [['LOGIN', 'EMAIL', 'NAME'], 'string', 'max' => 128],
-            [['PASSWORD'], 'string', 'max' => 64],
-            [['LOGIN'], 'unique'],
-            [['EMAIL'], 'unique'],
+            [['user_dt_add', 'role', 'login', 'email', 'name', 'password'], 'required'],
+            [['user_dt_add'], 'safe'],
+            [['role'], 'integer'],
+            [['login', 'email', 'name'], 'string', 'max' => 128],
+            [['password'], 'string', 'max' => 64],
+            [['login'], 'unique'],
+            [['email'], 'unique'],
         ];
     }
 
@@ -47,13 +47,13 @@ class Users extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'USER_DT_ADD' => 'User Dt Add',
-            'ROLE' => 'Role',
-            'LOGIN' => 'Login',
-            'EMAIL' => 'Email',
-            'NAME' => 'Name',
-            'PASSWORD' => 'Password',
+            'id' => 'ID',
+            'user_dt_add' => 'User Dt Add',
+            'role' => 'Role',
+            'login' => 'Login',
+            'email' => 'Email',
+            'name' => 'Name',
+            'password' => 'Password',
         ];
     }
 }
