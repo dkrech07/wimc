@@ -22,10 +22,11 @@ class GrandmasterAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        // "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css",
+        "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css",
     ];
     public $js = [
-        // 'https://code.jquery.com/ui/1.13.1/jquery-ui.js',
+        // 'https://code.jquery.com/ui/1.13.1/jquery-ui.js', 
+        'js/grandmaster.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

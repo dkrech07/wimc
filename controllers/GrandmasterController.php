@@ -9,7 +9,11 @@ use yii\widgets\ActiveForm;
 use yii\web\Controller;
 use app\models\LoginForm;
 use yii\filters\AccessControl;
+use yii\data\ActiveDataProvider;
 use app\services\HelperService;
+use app\services\GrandmasterService;
+use app\models\CustomEditForm;
+use app\models\Customs;
 
 use app\models\SearchCustoms;
 use app\models\FilterCustoms;
@@ -88,8 +92,38 @@ class GrandmasterController extends Controller
     public function actionCustoms()
     {
         $this->layout = 'grandmaster';
+
+
+
+
+        $customEditFormModel = new CustomEditForm();
+        if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
+            $request = Yii::$app->request;
+            $data = $request->post();
+            return json_encode((new GrandmasterService())->editCustom($data['ID']), JSON_UNESCAPED_UNICODE);
+        }
+
+
+        $query = (new GrandmasterService())->getСustoms();
+
+        // !isset($query) && $query = Customs::find();
+        // $categories = Categories::find()->all();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 5,
+            ],
+            // 'sort' => [
+            //     'defaultOrder' => [
+            //         'ID' => SORT_DESC,
+            //     ]
+            // ],
+        ]);
+
         return $this->render('customs', [
-            // 'loginForm' => $loginForm
+            'dataProvider' => $dataProvider,
+            'customEditFormModel' => $customEditFormModel
         ]);
     }
 

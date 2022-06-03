@@ -542,9 +542,9 @@ body {
     width: 65%;
 } */
 
-.left-menu {
+/* .left-menu {
     border-right: 20px solid #f5f5f5;
-}
+} */
 
 /* .left-menu::after {
     padding: 20px;
@@ -566,6 +566,283 @@ body {
     padding: 5px;
 }
 
+.container-wrapper {
+    padding: 30px;
+    padding-top: 0;
+}
+
+
+
+.list-item--active a {
+    text-decoration: underline;
+    text-decoration-color: #007bff;
+}
+
+.customs-head,
+.custom-item {
+    text-align: center;
+    font-size: 12px;
+    background: #ffffff;
+    border: 5px solid #efefef;
+    /* padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%; */
+    /* border-left: 1px solid red; */
+}
+
+.custom-param {
+    border-right: 2px solid #efefef;
+}
+
+.custom-item:hover {
+    color: #007bff;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.custom-item:hover .edit {
+    color: #212529;
+    background-color: #ffffff;
+    /* cursor: pointer; */
+}
+
+.custom-item .edit:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.pagination-list .pagination-item {
+    display: inline-block;
+}
+
+.pagination-item a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 27px;
+    text-align: center;
+    border: 1px solid #363636;
+    vertical-align: middle;
+    color: #363636;
+}
+
+.pagination-item.mark {
+    background-color: transparent;
+}
+
+.pagination-item a:hover {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.pagination-item.pagination-item--active a {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.pagination-item.mark a {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.pagination-item.mark a {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.pagination-item.mark:first-child a {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.pagination-item.mark a {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+}
+
+.pagination-item.mark:hover a {
+    background-color: transparent;
+    border-color: #007bff;
+}
+
+.custom-edit {
+    position: absolute;
+    background-color: #ffffff;
+    width: 70%;
+    height: 100%;
+    top: 5%;
+    left: 50%;
+    margin-left: -35%;
+    padding: 20px;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
+    display: none;
+    z-index: 10;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between
+}
+
+.custom-edit .close-btn {
+    font-size: 24px;
+}
+
+/* #custom-edit {
+    display: flex;
+} */
+
+#custom-edit .form-group {
+    width: 40%;
+    display: inline-block;
+}
+
+#custom-edit .form-group:nth-child(2n) {
+    margin-right: 10%;
+}
+
+/* .custom-edit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: 1;
+    display: none;
+
+} */
+
+/* .body-wrapper {
+    background-color: red;
+    z-index: 11;
+    position: relative;
+
+}
+
+.wrapper {
+    z-index: 4;
+    position: relative;
+} */
+
+/* #custom-edit h3,
+#custom-edit .close-btn {
+    display: inline-block;
+    vertical-align: middle;
+} */
+
+
+
+
+
+/* 
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+} */
+
+/* .pagination-item mark {} */
+
+/* .custom-param {
+
+
+    /* box-shadow: 4px 4px 4px rgb(109, 106, 104); */
+
+
+
+
+/* .custom-item .id {
+    width: 40px;
+    background-color: red;
+}
+
+.custom-item .code {
+    width: 80px;
+    background-color: red;
+}
+
+.custom-item .namt {
+    width: 220px;
+    background-color: red;
+    overflow: hidden;
+}
+
+.custom-item .okpo {
+    width: 120px;
+    background-color: red;
+}
+
+.custom-item .ogrn {
+    width: 120px;
+    background-color: red;
+}
+
+.custom-item .inn {
+    width: 120px;
+    background-color: red;
+}
+
+.custom-item .name_all {
+    width: 220px;
+    background-color: red;
+    overflow: hidden;
+}
+
+.custom-item .adrtam {
+    width: 80px;
+    background-color: red;
+}
+
+.custom-item .prosf {
+    width: 80px;
+    background-color: red;
+}
+
+.custom-item .telefon {
+    width: 80px;
+    background-color: red;
+}
+
+.custom-item .fax {
+    width: 80px;
+    background-color: red;
+}
+
+.custom-item .email {
+    width: 80px;
+    background-color: red;
+}
+
+.custom-item .coords_latitude {
+    width: 80px;
+    background-color: red;
+}
+
+.custom-item .coords_longitude {
+    width: 80px;
+    background-color: red;
+} */
+
+
+
+/* .list-item--active a:hover {
+    text-decoration: none;
+    text-decoration-style: dotted;
+    text-decoration-color: #007bff;
+    border-bottom: 1px solid #007bff;
+} */
 
 
 /**

@@ -34,7 +34,7 @@ GrandmasterAsset::register($this);
             // 'brandLabel' => Yii::$app->name,
             // 'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+                'class' => 'navbar navbar-expand-md navbar-dark bg-dark', //fixed-top
             ],
         ]);
         echo Nav::widget([
@@ -63,13 +63,13 @@ GrandmasterAsset::register($this);
     </header>
 
     <main role="main" class="flex-shrink-0">
-        <div class="container">
+        <div class="container-fluid container-wrapper">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
             <?= Alert::widget() ?>
             <div class="row">
-                <ul class="wrapper left-menu col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <ul class="wrapper left-menu col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     <?php
                     $items = [
                         ['label' => 'Список постов', 'url' => ['/grandmaster/customs']],
