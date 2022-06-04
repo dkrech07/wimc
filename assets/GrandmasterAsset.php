@@ -26,7 +26,8 @@ class GrandmasterAsset extends AssetBundle
     ];
     public $js = [
         // 'https://code.jquery.com/ui/1.13.1/jquery-ui.js', 
-        'js/grandmaster.js',
+        'js/grandmaster-customs.js',
+        'js/grandmaster-pages.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

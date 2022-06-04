@@ -39,26 +39,27 @@ $this->title = 'Grandmaster - Customs';
 
         </thead>
 
-        <div class="pagination-wrapper">
-            <?= ListView::widget([
-                'dataProvider' => $dataProvider,
-                'itemView' => '_custom_item',
-                'pager' => [
-                    'prevPageLabel' => '',
-                    'nextPageLabel' => '',
-                    'pageCssClass' => 'pagination-item',
-                    'prevPageCssClass' => 'pagination-item mark',
-                    'nextPageCssClass' => 'pagination-item mark',
-                    'activePageCssClass' => 'pagination-item--active',
-                    'options' => ['class' => 'pagination-list'],
-                    'linkOptions' => ['class' => 'link link--page'],
-                    'options' => [
-                        'class' => 'pagination-list',
-                    ],
-                ],
-            ]) ?>
-        </div>
+        <!-- <div class="pagination-wrapper"> -->
+        <?= ListView::widget([
+            'dataProvider' => $dataProvider,
+            'itemView' => '_custom_item',
+            'pager' => [
+                'prevPageLabel' => '',
+                'nextPageLabel' => '',
+                'pageCssClass' => 'pagination-item',
+                'prevPageCssClass' => 'pagination-item mark',
+                'nextPageCssClass' => 'pagination-item mark',
+                'activePageCssClass' => 'pagination-item--active',
+                'options' => ['class' => 'pagination-list'],
+                // 'linkOptions' => ['class' => 'link link--page'],
+                // 'options' => [
+                //     'class' => 'pagination-list',
+                // ],
+            ],
+        ]) ?>
+        <!-- </div> -->
     </table>
 </div>
 
 <?= ModalForm::widget(['formType' => 'CustomEditForm', 'formModel' => $customEditFormModel]) ?>
+<?= ModalForm::widget(['formType' => 'CustomViewForm', 'formModel' => $customEditFormModel]) ?>

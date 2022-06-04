@@ -31,14 +31,8 @@ use yii\widgets\ActiveForm;
 
     <div class="submit-btn form-group">
         <button type="submit" class="modal-button accept-button">Сохранить</button>
-        <button type="button" class="modal-button close-button" data-dismiss="modal">Отмена</button>
+        <button type="button" class="modal-button cancel-button">Отмена</button>
     </div>
-    <!-- 
-    <button type="submit" class="search-btn btn btn-primary">
-        <i class="bi bi-search"></i>
-        <span class="search-btn-title">Поиск</span>
-    </button> -->
-
 
     <?php ActiveForm::end(); ?>
 

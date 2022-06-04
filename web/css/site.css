@@ -550,6 +550,15 @@ body {
     padding: 20px;
 } */
 
+/* .list-item:hover {
+    cursor: pointer;
+} */
+
+/* .nav-list .dropdown a:hover {
+    cursor: ;
+    text-decoration: none;
+} */
+
 .nav-list {
     margin: 0;
     padding: 0;
@@ -557,12 +566,12 @@ body {
 }
 
 .nav-list .list-item a,
-.nav-list .dropdown a {
+.nav-list .pages-dropdown a {
     color: #000000;
 }
 
 .list-item,
-.dropdown {
+.pages-dropdown {
     padding: 5px;
 }
 
@@ -674,7 +683,8 @@ body {
     border-color: #007bff;
 }
 
-.custom-edit {
+.custom-edit,
+.custom-view {
     position: absolute;
     background-color: #ffffff;
     width: 70%;
@@ -695,12 +705,14 @@ body {
     justify-content: space-between
 }
 
-.custom-edit .close-btn {
+.custom-edit .close-btn,
+.custom-view .close-btn {
     font-size: 24px;
     cursor: pointer;
 }
 
-.custom-edit .close-btn:hover {
+.custom-edit .close-btn:hover,
+.custom-view .close-btn:hover {
     color: #007bff;
 }
 
@@ -708,17 +720,31 @@ body {
     display: flex;
 } */
 
-#custom-edit .form-group {
+#custom-edit .form-group,
+#custom-view .form-group,
+#page-edit .form-group {
     width: 40%;
     display: inline-block;
 }
 
-#custom-edit .form-group:nth-child(2n) {
+#custom-edit .form-group:nth-child(2n),
+#custom-view .form-group:nth-child(2n),
+#page-edit .form-group:nth-child(2n) {
     margin-right: 10%;
 }
 
+#page-edit .form-group:nth-child(6),
+#page-edit .form-group:last-child {
+    width: 90%;
+    display: block;
+    margin-bottom: 30px;
+}
+
 #custom-edit .accept-button,
-#custom-edit .close-button {
+#custom-edit .cancel-button,
+#custom-view .cancel-button,
+#page-edit .accept-button,
+#page-edit .cancel-button {
     margin: 0;
     padding: 0;
     padding: 3px 10px;
@@ -730,15 +756,24 @@ body {
     text-align: right; */
 }
 
-#custom-edit .accept-button {
+#custom-edit .accept-button,
+#page-edit .accept-button {
     background-color: #007bff;
     color: #ffffff;
 }
 
-#custom-edit .close-button {
+#custom-edit .cancel-button,
+#custom-view .cancel-button,
+#page-edit .cancel-button {
     background-color: #ffffff;
     color: #007bff;
 }
+
+.pagination-list {
+    padding: 0;
+}
+
+
 
 /* .custom-edit {
     position: absolute;

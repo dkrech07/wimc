@@ -22,5 +22,5 @@ use TaskForce\utils\NounPluralConverter;
     <td class="custom-param email"><?= Html::encode($model->EMAIL); ?></td>
     <td class="custom-param coords_latitude"><?= Html::encode($model->COORDS_LATITUDE); ?></td>
     <td class="custom-param coords_longitude"><?= Html::encode($model->COORDS_LONGITUDE); ?></td>
-    <td id='<?= Html::encode($model->ID); ?>' class="custom-param edit"><i class="bi bi-pencil-square"></i></td>
+    <td id='<?= Html::encode($model->ID); ?>' class="custom-param edit edit-param"><i class="edit-param bi bi-pencil-square"></i></td>
 </tr>

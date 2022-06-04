@@ -2,26 +2,19 @@
 
 namespace app\models;
 
-use Yii;
+use yii\base\Model;
 
-/**
- * This is the model class for table "pages".
- *
- * @property int $id
- * @property string $page_dt_add
- * @property string $page_name
- * @property string|null $page_content
- * @property string $page_url
- * @property string $page_user_change
- */
-class Pages extends \yii\db\ActiveRecord
+class PageEditFormModel extends Model
 {
-    /**
-     * {@inheritdoc}
-     */
+    public $page_dt_add;
+    public $page_name;
+    public $page_content;
+    public $page_url;
+    public $page_user_change;
+
     public static function tableName()
     {
-        return 'pages';
+        return 'pageEditForm';
     }
 
     /**
@@ -44,11 +37,11 @@ class Pages extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'page_dt_add' => 'Page Dt Add',
-            'page_name' => 'Page Name',
-            'page_content' => 'Page Content',
-            'page_url' => 'Page Url',
-            'page_user_change' => 'Page User Change',
+            'page_dt_add' => 'Дата и время изменения страницы:',
+            'page_name' => 'Название страницы:',
+            'page_content' => 'Контент страницы:',
+            'page_url' => 'URL страницы:',
+            'page_user_change' => 'Пользователь вносивший изменения:',
         ];
     }
 }

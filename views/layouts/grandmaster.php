@@ -79,7 +79,7 @@ GrandmasterAsset::register($this);
                         [
                             'label' => 'Редактирование страниц',
                             'url' => ['pages'],
-                            'options' => ['class' => 'dropdown'],
+                            'options' => ['class' => 'pages-dropdown'],
                             'template' => '<a href="{url}" class="url-class">{label}</a>',
                             'items' => [
                                 ['label' => 'Карта СВХ', 'url' => ['/pages/svh-map']],
@@ -87,7 +87,7 @@ GrandmasterAsset::register($this);
                                 ['label' => 'Как это работает', 'url' => ['']],
                                 ['label' => 'О проекте', 'url' => ['']],
                                 ['label' => 'Связаться с нами', 'url' => ['']],
-                                ['label' => 'Cookie', 'url' => ['']],
+                                ['label' => 'Cookie', 'url' => ['/grandmaster/pages/cookie']],
 
                             ]
                         ],

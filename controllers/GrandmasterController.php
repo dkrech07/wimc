@@ -13,6 +13,7 @@ use yii\data\ActiveDataProvider;
 use app\services\HelperService;
 use app\services\GrandmasterService;
 use app\models\CustomEditForm;
+use app\models\PageEditFormModel;
 use app\models\Customs;
 
 use app\models\SearchCustoms;
@@ -111,12 +112,7 @@ class GrandmasterController extends Controller
 
             if ($customEditFormModel->validate()) {
                 (new GrandmasterService())->editCustom($customEditFormModel);
-                // $this->redirect(['tasks/view', 'id' => $taskId]);
-                // return $this->refresh();
-
-                // $customEditFormModel
-                // $taskId = $tasksService->createTask($addTaskFormModel);
-                // $this->redirect(['tasks/view', 'id' => $taskId]);
+                return $this->refresh();
             }
         }
 
@@ -165,6 +161,17 @@ class GrandmasterController extends Controller
         $this->layout = 'grandmaster';
         return $this->render('messages', [
             // 'loginForm' => $loginForm
+        ]);
+    }
+
+    public function actionPages()
+    {
+
+        $pageEditFormModel = new PageEditFormModel();
+
+        $this->layout = 'grandmaster';
+        return $this->render('pages', [
+            'pageEditFormModel' => $pageEditFormModel
         ]);
     }
 
