@@ -9,7 +9,7 @@ use app\models\CustomEditForm;
 
 class GrandmasterService
 {
-    public function editCustom($data)
+    public function getEditCustom($data)
     {
         $customEditFormModel = new CustomEditForm;
 
@@ -17,6 +17,7 @@ class GrandmasterService
             ->where(['ID' => $data])
             ->one();
 
+        $customEditFormModel->ID = $editCustom->ID;
         $customEditFormModel->CODE = $editCustom->CODE;
         $customEditFormModel->NAMT = $editCustom->NAMT;
         $customEditFormModel->OKPO = $editCustom->OKPO;
@@ -32,6 +33,38 @@ class GrandmasterService
         $customEditFormModel->COORDS_LONGITUDE = $editCustom->COORDS_LONGITUDE;
 
         return $customEditFormModel;
+    }
+
+    public function editCustom(CustomEditForm $customEditFormModel)
+    {
+        $editCustom = Customs::find()
+            ->where(['ID' => $customEditFormModel->ID])
+            ->one();
+
+        $editCustom->CODE = $customEditFormModel->CODE;
+        $editCustom->NAMT = $customEditFormModel->NAMT;
+        $editCustom->OKPO = $customEditFormModel->OKPO;
+        $editCustom->OGRN = $customEditFormModel->OGRN;
+        $editCustom->INN = $customEditFormModel->INN;
+        $editCustom->NAME_ALL = $customEditFormModel->NAME_ALL;
+        $editCustom->ADRTAM = $customEditFormModel->ADRTAM;
+        $editCustom->PROSF = $customEditFormModel->PROSF;
+        $editCustom->TELEFON = $customEditFormModel->TELEFON;
+        $editCustom->FAX = $customEditFormModel->FAX;
+        $editCustom->EMAIL = $customEditFormModel->EMAIL;
+        $editCustom->COORDS_LATITUDE = $customEditFormModel->COORDS_LATITUDE;
+        $editCustom->COORDS_LONGITUDE = $customEditFormModel->COORDS_LONGITUDE;
+
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            $editCustom->save();
+            $transaction->commit();
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            throw $e;
+        } catch (\Throwable $e) {
+            $transaction->rollBack();
+        }
     }
 
 

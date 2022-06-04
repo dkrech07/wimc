@@ -678,14 +678,16 @@ body {
     position: absolute;
     background-color: #ffffff;
     width: 70%;
-    height: 100%;
-    top: 5%;
+    /* height: 100%; */
+    height: 750px;
+    top: 3%;
     left: 50%;
     margin-left: -35%;
     padding: 20px;
     box-shadow: 4px 4px 4px rgb(109, 106, 104);
     display: none;
     z-index: 10;
+    /* overflow-y: scroll; */
 }
 
 .form-header {
@@ -695,6 +697,11 @@ body {
 
 .custom-edit .close-btn {
     font-size: 24px;
+    cursor: pointer;
+}
+
+.custom-edit .close-btn:hover {
+    color: #007bff;
 }
 
 /* #custom-edit {
@@ -708,6 +715,29 @@ body {
 
 #custom-edit .form-group:nth-child(2n) {
     margin-right: 10%;
+}
+
+#custom-edit .accept-button,
+#custom-edit .close-button {
+    margin: 0;
+    padding: 0;
+    padding: 3px 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-color: #007bff;
+    border-radius: 5px;
+    /* width: 70%;
+    text-align: right; */
+}
+
+#custom-edit .accept-button {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+#custom-edit .close-button {
+    background-color: #ffffff;
+    color: #007bff;
 }
 
 /* .custom-edit {

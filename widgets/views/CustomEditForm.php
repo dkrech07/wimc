@@ -14,6 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(['id' => 'custom-edit']); ?>
 
+    <?= $form->field($formModel, 'ID')->textInput(['readonly' => true]) ?>
     <?= $form->field($formModel, 'CODE')->textInput() ?>
     <?= $form->field($formModel, 'NAMT')->textInput() ?>
     <?= $form->field($formModel, 'OKPO')->textInput() ?>
@@ -28,10 +29,15 @@ use yii\widgets\ActiveForm;
     <?= $form->field($formModel, 'COORDS_LATITUDE')->textInput() ?>
     <?= $form->field($formModel, 'COORDS_LONGITUDE')->textInput() ?>
 
-    <div class="form-group">
-        <button type="submit" class="modal-button" form="modal-form" name="finished" value="finished">Сохранить</button>
+    <div class="submit-btn form-group">
+        <button type="submit" class="modal-button accept-button">Сохранить</button>
         <button type="button" class="modal-button close-button" data-dismiss="modal">Отмена</button>
     </div>
+    <!-- 
+    <button type="submit" class="search-btn btn btn-primary">
+        <i class="bi bi-search"></i>
+        <span class="search-btn-title">Поиск</span>
+    </button> -->
 
 
     <?php ActiveForm::end(); ?>

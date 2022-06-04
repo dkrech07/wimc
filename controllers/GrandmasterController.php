@@ -93,14 +93,31 @@ class GrandmasterController extends Controller
     {
         $this->layout = 'grandmaster';
 
-
-
-
         $customEditFormModel = new CustomEditForm();
+
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
             $request = Yii::$app->request;
             $data = $request->post();
-            return json_encode((new GrandmasterService())->editCustom($data['ID']), JSON_UNESCAPED_UNICODE);
+            return json_encode((new GrandmasterService())->getEditCustom($data['ID']), JSON_UNESCAPED_UNICODE);
+        }
+
+        if (Yii::$app->request->isPost) {
+            $customEditFormModel->load(Yii::$app->request->post());
+
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ActiveForm::validate($customEditFormModel);
+            }
+
+            if ($customEditFormModel->validate()) {
+                (new GrandmasterService())->editCustom($customEditFormModel);
+                // $this->redirect(['tasks/view', 'id' => $taskId]);
+                // return $this->refresh();
+
+                // $customEditFormModel
+                // $taskId = $tasksService->createTask($addTaskFormModel);
+                // $this->redirect(['tasks/view', 'id' => $taskId]);
+            }
         }
 
 

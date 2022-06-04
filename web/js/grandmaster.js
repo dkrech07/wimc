@@ -36,6 +36,7 @@ editList.forEach(editElement => {
                 let customEdit = JSON.parse(response);
                 // var customEditFormInputList = customEditForm.querySelectorAll('input');
 
+                customEditForm.querySelector('#customeditform-id').value = customEdit['ID'];
                 customEditForm.querySelector('#customeditform-code').value = customEdit['CODE'];
                 customEditForm.querySelector('#customeditform-namt').value = customEdit['NAMT'];
                 customEditForm.querySelector('#customeditform-okpo').value = customEdit['OKPO'];

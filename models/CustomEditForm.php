@@ -24,6 +24,7 @@ use yii\base\Model;
  */
 class CustomEditForm extends Model
 {
+    public $ID;
     public $CODE;
     public $NAMT;
     public $OKPO;
@@ -46,7 +47,7 @@ class CustomEditForm extends Model
         return [
             // [['CODE', 'NAMT', 'OKPO', 'OGRN', 'INN', 'NAME_ALL', 'ADRTAM', 'PROSF', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'required'],
             // [['CODE', 'OKPO', 'OGRN', 'INN', 'PROSF'], 'integer'],
-            [['CODE', 'NAMT', 'OKPO', 'OGRN', 'INN', 'NAME_ALL', 'ADRTAM', 'PROSF', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'string', 'max' => 256],
+            [['ID', 'CODE', 'NAMT', 'OKPO', 'OGRN', 'INN', 'NAME_ALL', 'ADRTAM', 'PROSF', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'string', 'max' => 256],
         ];
     }
 
@@ -56,7 +57,7 @@ class CustomEditForm extends Model
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
+            'ID' => 'ID (задается автоматически)',
             'CODE' => 'Code',
             'NAMT' => 'Namt',
             'OKPO' => 'Okpo',
