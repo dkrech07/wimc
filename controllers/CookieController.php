@@ -14,13 +14,15 @@ class CookieController extends Controller
 {
     public function actionIndex()
     {
-        $PagesModel = new Pages();
+        // $PagesModel = new Pages();
 
-        $cookiePageContent = Pages::find()
+        $pageCookie = Pages::find()
             ->where(['page_url' => 'cookie'])
             ->one();
 
-        if (!$cookiePageContent) {
+        $cookiePageContent = $pageCookie->page_content;
+
+        if (!$pageCookie->page_content) {
             $cookiePageContent = 'Тут пока ничего нет';
         }
         // $searchCustomsModel = new SearchCustoms();

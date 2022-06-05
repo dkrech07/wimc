@@ -15,4 +15,4 @@ AppAsset::register($this);
 // }
 ?>
 
-<?php $cookiePageContent ?>
+<?php print($cookiePageContent) ?>

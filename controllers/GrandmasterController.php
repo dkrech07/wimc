@@ -174,38 +174,36 @@ class GrandmasterController extends Controller
         $pageEditFormModel = new PageEditFormModel();
 
         if (Yii::$app->request->getIsPost()) {
+
             $pageEditFormModel->load(Yii::$app->request->post());
 
-            print_r(Yii::$app->request->post());
-            print('<br>');
-            print('<br>');
-            print('<br>');
+            // print_r($pageEditFormModel);
+            // print('<br>');
+            // print('<br>');
+            // print('<br>');
+            // print('<br>');
+            // print('<br>');
+            // print_r(Yii::$app->request->post());
+            // exit;
+            if (Yii::$app->request->isAjax) {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ActiveForm::validate($pageEditFormModel);
+            }
 
-            print_r($pageEditFormModel);
+            if ($pageEditFormModel->validate()) {
+                // print_r($pageEditFormModel);
+                // print('<br>');
+                // print('<br>');
+                // print('<br>');
+                // print('<br>');
+                // print('<br>');
+                // print_r(Yii::$app->request->post());
+                // exit;
 
-            exit;
-            (new GrandmasterService())->editPage($pageEditFormModel);
-            return $this->refresh();
+                (new GrandmasterService())->editPage($pageEditFormModel);
+                return $this->refresh();
+            }
         }
-
-        // if (Yii::$app->request->isPost) {
-        //     $pageEditFormModel->load(Yii::$app->request->post());
-
-        //     if (Yii::$app->request->isAjax) {
-        //         Yii::$app->response->format = Response::FORMAT_JSON;
-
-        //         return ActiveForm::validate($pageEditFormModel);
-        //     }
-
-        //     if ($pageEditFormModel->validate()) {
-        //         (new GrandmasterService())->editPage($pageEditFormModel);
-        //         return $this->refresh();
-
-        //         // print_r($pageEditFormModel);s
-        //         // $taskId = $tasksService->createTask($addTaskFormModel);
-        //         // $this->redirect(['tasks/view', 'id' => $taskId]);
-        //     }
-        // }
 
         return $this->render('pages', [
             'pageFormModel' => $pageFormModel
