@@ -3,6 +3,7 @@
 namespace app\services;
 
 use Yii;
+use yii\db\Expression;
 use app\models\User;
 
 class HelperService
@@ -17,5 +18,12 @@ class HelperService
         }
 
         return User::findIdentity(Yii::$app->user->getId());
+    }
+
+    public static function getCurrentDate(): string
+    {
+        $expression = new Expression('NOW()');
+        $now = (new \yii\db\Query)->select($expression)->scalar();
+        return $now;
     }
 }

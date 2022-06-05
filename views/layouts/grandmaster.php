@@ -82,12 +82,11 @@ GrandmasterAsset::register($this);
                             'options' => ['class' => 'pages-dropdown'],
                             'template' => '<a href="{url}" class="url-class">{label}</a>',
                             'items' => [
-                                ['label' => 'Карта СВХ', 'url' => ['/pages/svh-map']],
-                                ['label' => 'Справочник постов', 'url' => ['/pages/customs-directory']],
-                                ['label' => 'Как это работает', 'url' => ['']],
-                                ['label' => 'О проекте', 'url' => ['']],
-                                ['label' => 'Связаться с нами', 'url' => ['']],
-                                ['label' => 'Cookie', 'url' => ['/grandmaster/pages/cookie']],
+                                ['label' => 'Карта СВХ', 'url' => ['/grandmaster/pages/?id=whs']],
+                                ['label' => 'Справочник постов', 'url' => ['/grandmaster/pages/?id=customs-list']],
+                                ['label' => 'Как это работает', 'url' => ['/grandmaster/pages/?id=about']],
+                                ['label' => 'Связаться с нами', 'url' => ['/grandmaster/pages/?id=contacts']],
+                                ['label' => 'Cookie', 'url' => ['/grandmaster/pages/?id=cookie']],
 
                             ]
                         ],

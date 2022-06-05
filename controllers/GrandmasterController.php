@@ -14,6 +14,8 @@ use app\services\HelperService;
 use app\services\GrandmasterService;
 use app\models\CustomEditForm;
 use app\models\PageEditFormModel;
+use app\models\Pages;
+
 use app\models\Customs;
 
 use app\models\SearchCustoms;
@@ -164,14 +166,49 @@ class GrandmasterController extends Controller
         ]);
     }
 
-    public function actionPages()
+    public function actionPages($id)
     {
+        $this->layout = 'grandmaster';
 
+        $pageFormModel = (new GrandmasterService())->getEditPage($id);
         $pageEditFormModel = new PageEditFormModel();
 
-        $this->layout = 'grandmaster';
+        if (Yii::$app->request->getIsPost()) {
+            $pageEditFormModel->load(Yii::$app->request->post());
+
+            print_r(Yii::$app->request->post());
+            print('<br>');
+            print('<br>');
+            print('<br>');
+
+            print_r($pageEditFormModel);
+
+            exit;
+            (new GrandmasterService())->editPage($pageEditFormModel);
+            return $this->refresh();
+        }
+
+        // if (Yii::$app->request->isPost) {
+        //     $pageEditFormModel->load(Yii::$app->request->post());
+
+        //     if (Yii::$app->request->isAjax) {
+        //         Yii::$app->response->format = Response::FORMAT_JSON;
+
+        //         return ActiveForm::validate($pageEditFormModel);
+        //     }
+
+        //     if ($pageEditFormModel->validate()) {
+        //         (new GrandmasterService())->editPage($pageEditFormModel);
+        //         return $this->refresh();
+
+        //         // print_r($pageEditFormModel);s
+        //         // $taskId = $tasksService->createTask($addTaskFormModel);
+        //         // $this->redirect(['tasks/view', 'id' => $taskId]);
+        //     }
+        // }
+
         return $this->render('pages', [
-            'pageEditFormModel' => $pageEditFormModel
+            'pageFormModel' => $pageFormModel
         ]);
     }
 

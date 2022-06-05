@@ -6,9 +6,42 @@ use Yii;
 use app\models\User;
 use app\models\Customs;
 use app\models\CustomEditForm;
+use app\models\Pages;
+use app\models\PageEditFormModel;
+use app\services\HelperService;
 
 class GrandmasterService
 {
+    public function getEditPage($id)
+    {
+        return Pages::find()
+            ->where(['page_url' => $id])
+            ->one();
+    }
+
+    public function editPage(PageEditFormModel $PageEditFormModel)
+    {
+        $editPage = Pages::find()
+            ->where(['id' => $PageEditFormModel->id])
+            ->one();
+
+        $editPage->page_dt_add = (new HelperService())->getCurrentDate();
+        $editPage->page_name = $PageEditFormModel->page_name;
+        $editPage->page_content = $PageEditFormModel->page_content;
+        $editPage->page_user_change = $PageEditFormModel->page_user_change;
+
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            $editPage->save();
+            $transaction->commit();
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            throw $e;
+        } catch (\Throwable $e) {
+            $transaction->rollBack();
+        }
+    }
+
     public function getEditCustom($data)
     {
         $customEditFormModel = new CustomEditForm;
