@@ -12,7 +12,7 @@ return [
         'page_dt_add' => '2000-01-01 00:00:00',
         'page_name' => 'Справочник постов',
         'page_content' => 'Text here',
-        'page_url' => 'customs-list',
+        'page_url' => 'customs_list',
         'page_user_change' => 'admin',
     ],
     'pages2' => [

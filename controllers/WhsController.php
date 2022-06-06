@@ -10,14 +10,14 @@ use app\models\Pages;
 use app\models\FilterCustoms;
 
 
-class CookieController extends Controller
+class WhsController extends Controller
 {
     public function actionIndex()
     {
         // $PagesModel = new Pages();
 
         $page = Pages::find()
-            ->where(['page_url' => 'cookie'])
+            ->where(['page_url' => 'whs'])
             ->one();
 
         $pageTitle = $page->page_name;

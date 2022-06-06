@@ -39,19 +39,9 @@ AppAsset::register($this);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav'],
             'items' => [
-                ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
-                ['label' => 'Contact', 'url' => ['/site/contact']],
-                // Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]
-                // ) : ('<li>'
-                //     . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
-                //     . Html::submitButton(
-                //         'Logout (' . Yii::$app->user->identity->username . ')',
-                //         ['class' => 'btn btn-link logout']
-                //     )
-                //     . Html::endForm()
-                //     . '</li>'
-                // )
+                ['label' => 'Карта СВХ', 'url' => ['/whs']],
+                ['label' => 'Справочник постов', 'url' => ['/customs_list']],
+                ['label' => 'Как это работает', 'url' => ['/about']],
             ],
         ]);
         NavBar::end();
@@ -70,8 +60,12 @@ AppAsset::register($this);
 
     <footer class="footer mt-auto py-3 text-muted">
         <div class="container">
-            <p class="float-left">&copy; My Company <?= date('Y') ?></p>
-            <p class="float-right"><?= Yii::powered() ?></p>
+            <p class="float-left">&copy; MyCustoms <?= date('Y') ?></p>
+            <p class="float-right">
+                <a href="/form">Связаться с нами</a>
+                <a href="/about">О проекте</a>
+                <a href="/cookie">Куки</a>
+            </p>
         </div>
     </footer>
 

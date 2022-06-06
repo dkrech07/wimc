@@ -177,29 +177,12 @@ class GrandmasterController extends Controller
 
             $pageEditFormModel->load(Yii::$app->request->post());
 
-            // print_r($pageEditFormModel);
-            // print('<br>');
-            // print('<br>');
-            // print('<br>');
-            // print('<br>');
-            // print('<br>');
-            // print_r(Yii::$app->request->post());
-            // exit;
             if (Yii::$app->request->isAjax) {
                 Yii::$app->response->format = Response::FORMAT_JSON;
                 return ActiveForm::validate($pageEditFormModel);
             }
 
             if ($pageEditFormModel->validate()) {
-                // print_r($pageEditFormModel);
-                // print('<br>');
-                // print('<br>');
-                // print('<br>');
-                // print('<br>');
-                // print('<br>');
-                // print_r(Yii::$app->request->post());
-                // exit;
-
                 (new GrandmasterService())->editPage($pageEditFormModel);
                 return $this->refresh();
             }
