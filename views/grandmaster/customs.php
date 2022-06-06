@@ -15,10 +15,15 @@ GrandmasterAsset::register($this);
 $this->title = 'Grandmaster - Customs';
 ?>
 
-
-
 <div class="content-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+
+    <div class="customs-edit-group form-group">
+        <button type="button" class="modal-button all-customs-button">Показать все посты</button>
+        <button type="button" class="modal-button add-new-custom-button">Добавить новый поист</button>
+    </div>
+
     <h2 class="grandmaster-title">Список таможенных постов:</h2>
+
     <table class="customs-table">
         <thead class="customs-head">
             <td class="custom-param id">ID</td>

@@ -580,12 +580,14 @@ body {
     padding-top: 0;
 }
 
-
-
 .list-item--active a {
     text-decoration: underline;
     text-decoration-color: #007bff;
 }
+
+/* .customs-table {
+    margin-top: 100px;
+} */
 
 .customs-head,
 .custom-item {
@@ -593,6 +595,8 @@ body {
     font-size: 12px;
     background: #ffffff;
     border: 5px solid #efefef;
+    /* width: 50px; */
+    /* width: 10%; */
     /* padding: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -773,6 +777,44 @@ body {
     padding: 0;
 }
 
+/* .customs-edit-group {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
+} */
+
+/* .customs-edit-group .all-customs-button,
+.customs-edit-group .add-new-custom-button {
+    position: relative;
+    top: 25%;
+}
+
+.customs-edit-group .all-customs-button {
+    left: 60%;
+}
+
+.customs-edit-group .add-new-custom-button {
+    left: 35%;
+} */
+
+/* .list-view,
+.pagination-list {
+    position: fixed;
+}
+
+.list-view {
+    top: 9%;
+    left: 20%;
+}
+
+.pagination-list {
+    top: 12%;
+    left: 20%;
+
+} */
 
 
 /* .custom-edit {
