@@ -57,7 +57,7 @@ class m220411_082015_customs_table extends Migration
             'id' => $this->primaryKey(),
             'page_dt_add' => $this->dateTime()->notNull(),
             'page_name' => $this->string(256)->notNull(),
-            'page_content' => $this->string(256)->null(),
+            'page_content' => $this->string()->null(),
             'page_url' => $this->string(256)->notNull()->unique(),
             'page_user_change' => $this->string(256)->notNull(),
         ]);
@@ -65,7 +65,7 @@ class m220411_082015_customs_table extends Migration
         $this->createTable('{{%questions_form}}', [
             'id' => $this->primaryKey(),
             'question_dt_add' => $this->dateTime()->notNull(),
-            'user_name' => $this->string(256)->notNull(),
+            'user_name' => $this->string(512)->notNull(),
             'user_email' => $this->string(256)->notNull(),
             'form_content' => $this->string(256)->notNull(),
         ]);

@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use mihaildev\ckeditor\CKEditor;
+use mihaildev\elfinder\ElFinder;
 
 ?>
 
@@ -22,12 +24,25 @@ use yii\widgets\ActiveForm;
     ]); ?>
 
 
+
     <?= $form->field($pageFormModel, 'id')->textInput(['readonly' => true]) ?>
     <?= $form->field($pageFormModel, 'page_dt_add')->textInput(['readonly' => true]) ?>
     <?= $form->field($pageFormModel, 'page_url')->textInput(['readonly' => true]) ?>
     <?= $form->field($pageFormModel, 'page_user_change')->textInput(['readonly' => true]) ?>
     <?= $form->field($pageFormModel, 'page_name')->textInput() ?>
-    <?= $form->field($pageFormModel, 'page_content')->textarea() ?>
+
+    <?=
+    $form->field($pageFormModel, 'page_content')->widget(CKEditor::className(), [
+        'editorOptions' => [
+            ElFinder::ckeditorOptions('elfinder', []),
+            'editorOptions' => [
+                // разработанны стандартные настройки basic, standard, full
+                'preset' => 'full',
+                'inline' => false, // по умолчанию false
+            ],
+        ]
+    ]);
+    ?>
 
     <div class="submit-btn form-group">
         <button type="submit" class="modal-button accept-button">Сохранить</button>
