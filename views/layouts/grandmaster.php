@@ -83,7 +83,7 @@ GrandmasterAsset::register($this);
                             'template' => '<a href="{url}" class="url-class">{label}</a>',
                             'items' => [
                                 ['label' => 'Карта СВХ', 'url' => ['/grandmaster/pages/?id=whs']],
-                                ['label' => 'Справочник постов', 'url' => ['/grandmaster/pages/?id=customs-list']],
+                                ['label' => 'Справочник постов', 'url' => ['/grandmaster/pages/?id=customs_list']],
                                 ['label' => 'Как это работает', 'url' => ['/grandmaster/pages/?id=about']],
                                 ['label' => 'Связаться с нами', 'url' => ['/grandmaster/pages/?id=contacts']],
                                 ['label' => 'Cookie', 'url' => ['/grandmaster/pages/?id=cookie']],

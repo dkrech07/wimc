@@ -166,31 +166,37 @@ class GrandmasterController extends Controller
         ]);
     }
 
-    public function actionPages($id)
+    public function actionPages($id = null)
     {
         $this->layout = 'grandmaster';
 
-        $pageFormModel = (new GrandmasterService())->getEditPage($id);
-        $pageEditFormModel = new PageEditFormModel();
+        if (!$id) {
+            return $this->render('allpages', [
+                // 'pageFormModel' => $pageFormModel
+            ]);
+        } else {
+            $pageFormModel = (new GrandmasterService())->getEditPage($id);
+            $pageEditFormModel = new PageEditFormModel();
 
-        if (Yii::$app->request->getIsPost()) {
+            if (Yii::$app->request->getIsPost()) {
 
-            $pageEditFormModel->load(Yii::$app->request->post());
+                $pageEditFormModel->load(Yii::$app->request->post());
 
-            if (Yii::$app->request->isAjax) {
-                Yii::$app->response->format = Response::FORMAT_JSON;
-                return ActiveForm::validate($pageEditFormModel);
+                if (Yii::$app->request->isAjax) {
+                    Yii::$app->response->format = Response::FORMAT_JSON;
+                    return ActiveForm::validate($pageEditFormModel);
+                }
+
+                if ($pageEditFormModel->validate()) {
+                    (new GrandmasterService())->editPage($pageEditFormModel);
+                    return $this->refresh();
+                }
             }
 
-            if ($pageEditFormModel->validate()) {
-                (new GrandmasterService())->editPage($pageEditFormModel);
-                return $this->refresh();
-            }
+            return $this->render('pages', [
+                'pageFormModel' => $pageFormModel
+            ]);
         }
-
-        return $this->render('pages', [
-            'pageFormModel' => $pageFormModel
-        ]);
     }
 
     public function beforeAction($action)
