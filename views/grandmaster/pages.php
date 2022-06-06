@@ -30,17 +30,8 @@ use mihaildev\elfinder\ElFinder;
     <?= $form->field($pageFormModel, 'page_url')->textInput(['readonly' => true]) ?>
     <?= $form->field($pageFormModel, 'page_user_change')->textInput(['readonly' => true]) ?>
     <?= $form->field($pageFormModel, 'page_name')->textInput() ?>
-
-    <?=
-    $form->field($pageFormModel, 'page_content')->widget(CKEditor::className(), [
-        'editorOptions' => [
-            ElFinder::ckeditorOptions('elfinder', []),
-            'editorOptions' => [
-                // разработанны стандартные настройки basic, standard, full
-                'preset' => 'full',
-                'inline' => false, // по умолчанию false
-            ],
-        ]
+    <?= $form->field($pageFormModel, 'page_content')->widget(CKEditor::className(), [
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder', []),
     ]);
     ?>
 
@@ -48,8 +39,6 @@ use mihaildev\elfinder\ElFinder;
         <button type="submit" class="modal-button accept-button">Сохранить</button>
         <button type="button" class="modal-button cancel-button">Отмена</button>
     </div>
-
-
 
     <?php ActiveForm::end(); ?>
 

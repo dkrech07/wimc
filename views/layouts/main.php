@@ -62,7 +62,7 @@ AppAsset::register($this);
         <div class="container">
             <p class="float-left">&copy; MyCustoms <?= date('Y') ?></p>
             <p class="float-right">
-                <a href="/form">Связаться с нами</a>
+                <a href="/contacts">Связаться с нами</a>
                 <a href="/about">О проекте</a>
                 <a href="/cookie">Куки</a>
             </p>
