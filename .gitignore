@@ -33,4 +33,8 @@ tests/_support/_generated
 /.vagrant
 
 #db
-/config/db.php
+config/db.php
+
+#uploads
+web/uploads/global*
+!web/uploads/global .gitkeep
