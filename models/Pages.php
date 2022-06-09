@@ -32,7 +32,7 @@ class Pages extends \yii\db\ActiveRecord
         return [
             [['page_dt_add', 'page_name', 'page_url', 'page_user_change'], 'required'],
             [['page_dt_add'], 'safe'],
-            [['page_name', 'page_content', 'page_url', 'page_user_change'], 'string', 'max' => 256],
+            [['page_name', 'page_content', 'page_url', 'page_user_change'], 'string'],
             [['page_url'], 'unique'],
         ];
     }

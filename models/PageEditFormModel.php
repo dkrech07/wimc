@@ -17,9 +17,6 @@ class PageEditFormModel extends Model
     {
         return [
             [['id', 'page_dt_add', 'page_name', 'page_url', 'page_user_change', 'page_content'], 'string'],
-            // [['page_dt_add'], 'safe'],
-            // [['page_name', 'page_content', 'page_url', 'page_user_change'], 'string', 'max' => 256],
-            // [['page_url'], 'unique'],
         ];
     }
 

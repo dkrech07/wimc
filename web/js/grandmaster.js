@@ -69,6 +69,9 @@ editList.forEach(editElement => {
             type: 'POST',
             data: data,
             success: function (response) {
+                console.log('response');
+
+                console.log(response);
                 customEditForm.style.display = 'block';
                 var customEdit = JSON.parse(response);
                 customEditForm.querySelector('#customeditform-id').value = customEdit['ID'];
@@ -101,3 +104,85 @@ editList.forEach(editElement => {
         });
     });
 });
+
+$(document).ready(function() {
+
+var start_pos=$('.customs-menu').offset().top;
+var start_pos=$('.pagination-list').offset().top;
+var start_pos=$('.edit-buttons').offset().top;
+
+ $(window).scroll(function(){
+  if ($(window).scrollTop()>=start_pos) {
+      if ($('.customs-menu').hasClass()==false) $('.customs-menu').addClass('customs-menu-fixed');
+      if ($('.pagination-list').hasClass()==false) $('.pagination-list').addClass('pagination-list-fixed');
+      if ($('.edit-buttons').hasClass()==false) $('.edit-buttons').addClass('edit-buttons-fixed');
+
+  }
+  else { $('.customs-menu').removeClass('customs-menu-fixed');
+  $('.pagination-list').removeClass('pagination-list-fixed');
+  $('.edit-buttons').removeClass('edit-buttons-fixed');
+  }
+ 
+ });
+
+});
+
+var allCustomsBtn = document.querySelector('.all-customs-button');
+var addNewCustomBtn = document.querySelector('.add-new-custom-button');
+
+allCustomsBtn.addEventListener('click', evt => {
+    var data = {
+        'allCustomsBtn': 1
+    };
+
+    $.ajax({
+        url: '/grandmaster/customs',
+        //   url: '/web//grandmaster/customs', 
+        //   url: 'http://localhost/wimc/web/grandmaster/customs', 
+        type: 'POST',
+        data: data,
+        success: function (response) {
+            console.log(response);
+            // let customsCoords = JSON.parse(response);
+
+        }
+    });
+});
+
+var customsSearchForm = document.querySelector('#custom-edit');
+var customsSearchButton = customsSearchForm.querySelector('.custom-search-button');
+
+customsSearchButton.addEventListener('click', evt => {
+    evt.preventDefault();
+
+    var searchCodeInputElement = customsSearchForm.querySelector('#customsearchform-code'); 
+    var searchNameInputElement = customsSearchForm.querySelector('#customsearchform-namt'); 
+
+    var data = {
+        'CODE' : searchCodeInputElement.value,
+        'NAME': searchNameInputElement.value,
+    }
+
+    $.ajax({
+        url: '/grandmaster/customs',
+        //   url: '/web//grandmaster/customs', 
+        //   url: 'http://localhost/wimc/web/grandmaster/customs', 
+        type: 'POST',
+        data: data,
+        success: function (response) {
+            console.log(response);
+            // let customsCoords = JSON.parse(response);
+
+        }
+    });
+});
+// $(document).ready(function() {
+// var start_pos=$('.stick_menu').offset().top;
+//  $(window).scroll(function(){
+//   if ($(window).scrollTop()>=start_pos) {
+//         if ($('.relative_menu').hasClass()==false) $('.relative_menu').removeClass('relative');
+//       if ($('.stick_menu').hasClass()==false) $('.stick_menu').addClass('fixed');
+//   }
+//   else $('.stick_menu').removeClass('fixed');
+//  });
+// });

@@ -8,6 +8,7 @@ use app\models\Customs;
 use app\models\CustomEditForm;
 use app\models\Pages;
 use app\models\PageEditFormModel;
+use app\models\CustomSearchForm;
 use app\services\HelperService;
 
 class GrandmasterService
@@ -135,5 +136,33 @@ class GrandmasterService
         // }
 
         return $query;
+    }
+
+    public function getSearchCusom(CustomSearchForm $customSearchFormModel)
+    {
+
+        // $search_keys = [];
+        trim($customSearchFormModel->CODE);
+        trim($customSearchFormModel->NAMET);
+
+        // User::find()->andWhere(['like', 'username', '89'])->all();
+        // SQL: `username` LIKE '89'
+
+        if ($customSearchFormModel->CODE && $customSearchFormModel->NAMET) {
+            // return "SELECT * FROM customs WHERE CODE LIKE " . $code . " AND NAMET LIKE " . $name;
+            return Customs::find()->andWhere(['like', 'CODE', $customSearchFormModel->CODE]);
+        } else if ($customSearchFormModel->CODE) {
+            // return "SELECT * FROM customs WHERE CODE LIKE " . $code;
+            return Customs::find()->andWhere(['like', 'CODE', $customSearchFormModel->CODE]);
+        } else if ($customSearchFormModel->NAMET) {
+            // return "SELECT * FROM customs WHERE NAMET LIKE " . $name;
+            return Customs::find()->andWhere(['like', 'NAMET', $customSearchFormModel->NAMET]);
+        }
+
+
+        // $sql = "SELECT * FROM customs";
+
+        // SELECT * FROM gifs // WHERE name LIKE 'рыб%'
+
     }
 }

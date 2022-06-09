@@ -14,7 +14,7 @@ use app\services\HelperService;
 use app\services\GrandmasterService;
 use app\models\CustomEditForm;
 use app\models\PageEditFormModel;
-use app\models\Pages;
+use app\models\CustomSearchForm;
 
 use app\models\Customs;
 
@@ -94,14 +94,75 @@ class GrandmasterController extends Controller
 
     public function actionCustoms()
     {
+
+        //trash-start
+
+        // $pageSize = 50;
+        // if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
+        //     $request = Yii::$app->request;
+        //     $data = $request->post();
+        // $pagination = [
+        //     'pageSize' => 50,
+        // ];
+
+        // if (key($data) == 'allCustomsBtn') {
+        //     if ($data['allCustomsBtn'] == 1) {
+        //         $pagination = false;
+        //         return json_encode(($data), JSON_UNESCAPED_UNICODE);
+
+        //         // return $this->refresh();
+        //     } else {
+        //         $pagination = true;
+        //     }
+        // }
+
+        // if (\Yii::$app->request->isAjax) {
+        //     if (key($data) == 'allCustomsBtn') {
+        //         if ($data['allCustomsBtn'] == 1) {
+        //             $pagination = false;
+        //             return json_encode(($data), JSON_UNESCAPED_UNICODE);
+
+        //             // return $this->refresh();
+        //         }
+        //     }
+        // } else {
+        // $pagination = [
+        //     'pageSize' => 50,
+        // ];
+        // }
+
+        // 'pagination' => $pagination,
+        // 'sort' => [
+        //     'defaultOrder' => [
+        //         'ID' => SORT_DESC,
+        //     ]
+        // ],
+
+        // trash-end
+
+
         $this->layout = 'grandmaster';
 
         $customEditFormModel = new CustomEditForm();
+        $customSearchFormModel = new CustomSearchForm();
 
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
             $request = Yii::$app->request;
             $data = $request->post();
-            return json_encode((new GrandmasterService())->getEditCustom($data['ID']), JSON_UNESCAPED_UNICODE);
+
+            // Если пришел ID, отдаю найденный пост для просмотра/редактирования
+            if (key($data) == 'ID') {
+                return json_encode((new GrandmasterService())->getEditCustom($data['ID']), JSON_UNESCAPED_UNICODE);
+            }
+
+            // Если пришли параметры CODE или NAME, отдаю результат поиска
+            if (key($data) == 'CODE' || key($data) == 'NAME') {
+
+                $customSearchFormModel->CODE = $data['CODE'];
+                $customSearchFormModel->NAMET = $data['NAME'];
+
+                $query = (new GrandmasterService())->getSearchCusom($customSearchFormModel);
+            }
         }
 
         if (Yii::$app->request->isPost) {
@@ -118,27 +179,21 @@ class GrandmasterController extends Controller
             }
         }
 
-
-        $query = (new GrandmasterService())->getСustoms();
-
-        // !isset($query) && $query = Customs::find();
-        // $categories = Categories::find()->all();
+        !isset($query) && $query = (new GrandmasterService())->getСustoms();
+        // print_r($query);
+        // exit;
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
                 'pageSize' => 50,
             ],
-            // 'sort' => [
-            //     'defaultOrder' => [
-            //         'ID' => SORT_DESC,
-            //     ]
-            // ],
         ]);
 
         return $this->render('customs', [
             'dataProvider' => $dataProvider,
-            'customEditFormModel' => $customEditFormModel
+            'customEditFormModel' => $customEditFormModel,
+            'customSearchFormModel' => $customSearchFormModel,
         ]);
     }
 

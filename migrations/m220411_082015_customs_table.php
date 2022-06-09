@@ -56,10 +56,10 @@ class m220411_082015_customs_table extends Migration
         $this->createTable('{{%pages}}', [
             'id' => $this->primaryKey(),
             'page_dt_add' => $this->dateTime()->notNull(),
-            'page_name' => $this->string(256)->notNull(),
+            'page_name' => $this->string()->notNull(),
             'page_content' => $this->string()->null(),
-            'page_url' => $this->string(256)->notNull()->unique(),
-            'page_user_change' => $this->string(256)->notNull(),
+            'page_url' => $this->string()->notNull()->unique(),
+            'page_user_change' => $this->string()->notNull(),
         ]);
 
         $this->createTable('{{%questions_form}}', [

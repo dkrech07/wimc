@@ -689,11 +689,11 @@ body {
 
 .custom-edit,
 .custom-view {
-    position: absolute;
+    position: fixed;
     background-color: #ffffff;
     width: 70%;
     /* height: 100%; */
-    height: 750px;
+    height: 800px;
     top: 3%;
     left: 50%;
     margin-left: -35%;
@@ -701,7 +701,6 @@ body {
     box-shadow: 4px 4px 4px rgb(109, 106, 104);
     display: none;
     z-index: 10;
-    /* overflow-y: scroll; */
 }
 
 .form-header {
@@ -777,6 +776,147 @@ body {
     padding: 0;
 }
 
+.customs-menu {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    height: 165px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.pagination-list {
+    position: absolute;
+    top: 70px;
+    padding: 10px;
+}
+
+.edit-buttons .all-customs-button,
+.edit-buttons .add-new-custom-button {
+    border-color: #007bff;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    /* right: 100px; */
+    /* margin-right: 25px; */
+}
+
+.customs-menu-fixed {
+    top: 0;
+    position: fixed;
+}
+
+.pagination-list-fixed {
+    position: fixed;
+    top: 25px;
+}
+
+.edit-buttons {
+    position: absolute;
+    top: 75px;
+    margin-left: 450px;
+}
+
+.edit-buttons-fixed {
+    position: fixed;
+    top: 30px;
+}
+
+#custom-edit {
+    position: absolute;
+    top: 120px;
+    margin-left: 450px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+#custom-edit .form-group.field-customsearchform-code,
+#custom-edit .form-group.field-customsearchform-namt {
+    margin: 0;
+    margin-right: 20px;
+    padding: 0;
+    width: 400px;
+}
+
+.custom-search-button {
+    position: absolute;
+    top: 30px;
+    right: -100px;
+    border-color: #007bff;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 5px;
+    width: 100px;
+}
+/* .fixed {
+    position: fixed;
+    top: 0px;
+} */
+
+/* .relative {
+    position: relative;
+    top: -40px;
+} */
+
+/* .customs-edit-group {
+    position: relative;
+    z-index: 10;
+    top: 0px;
+    width: 100%;
+    height: 75px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
+    display: none;
+}  */
+
+/* .title-list {
+    /* top: 10px; */
+    /* width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+} */ 
+
+/* .pagination-list {
+    top: 25px;
+} */
+
+
+
+
+/* .pagination-list {
+    padding: 0;
+} */
+
+/* .customs-edit-group {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
+
+  } */
+
+/* .customs-edit-group .all-customs-button,
+.customs-edit-group .add-new-custom-button {
+    margin-left: 30px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+    border-radius: 5px;
+}  */
+
+/* .edit-buttons {
+    position: relative;
+    top: 30px;
+    left: 800px;
+} */
+
+/* .pagination-list {
+ 
+    position: relative;
+} */
+
 /* .customs-edit-group {
     position: fixed;
     width: 100%;
@@ -786,11 +926,7 @@ body {
     box-shadow: 4px 4px 4px rgb(109, 106, 104);
 } */
 
-/* .customs-edit-group .all-customs-button,
-.customs-edit-group .add-new-custom-button {
-    position: relative;
-    top: 25%;
-}
+/* 
 
 .customs-edit-group .all-customs-button {
     left: 60%;
@@ -845,10 +981,6 @@ body {
     vertical-align: middle;
 } */
 
-
-
-
-
 /* 
 .up {
     transform: rotate(-135deg);
@@ -866,9 +998,6 @@ body {
 
 
     /* box-shadow: 4px 4px 4px rgb(109, 106, 104); */
-
-
-
 
 /* .custom-item .id {
     width: 40px;
@@ -955,12 +1084,6 @@ body {
 /**
  * Icon
  */
-
-
-
-
-
-
 
 /* .help-block {
     position: absolute;

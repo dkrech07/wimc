@@ -17,10 +17,9 @@ $this->title = 'Grandmaster - Customs';
 
 <div class="content-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
 
-    <div class="customs-edit-group form-group">
-        <button type="button" class="modal-button all-customs-button">Показать все посты</button>
-        <button type="button" class="modal-button add-new-custom-button">Добавить новый поист</button>
-    </div>
+    <!-- <div class="stick_menu customs-edit-group">
+  
+    </div> -->
 
     <h2 class="grandmaster-title">Список таможенных постов:</h2>
 
@@ -48,6 +47,9 @@ $this->title = 'Grandmaster - Customs';
         <?= ListView::widget([
             'dataProvider' => $dataProvider,
             'itemView' => '_custom_item',
+            'options' => [ // настройка атрибутов для внешнего контейнера списка
+                'class' => 'title-list customs-menu', // класс блока div
+            ],
             'pager' => [
                 'prevPageLabel' => '',
                 'nextPageLabel' => '',
@@ -64,6 +66,24 @@ $this->title = 'Grandmaster - Customs';
         ]) ?>
         <!-- </div> -->
     </table>
+
+    <div class="edit-buttons">
+        <button type="button" class="modal-button all-customs-button">Показать все посты</button>
+        <button type="button" class="modal-button add-new-custom-button">Добавить новый поист</button>
+    </div>
+
+
+    <div class="cusom-search">
+        <?php $form = ActiveForm::begin(['id' => 'custom-edit']); ?>
+
+        <?= $form->field($customSearchFormModel, 'CODE')->textInput() ?>
+        <?= $form->field($customSearchFormModel, 'NAMT')->textInput() ?>
+
+        <div class="submit-btn form-group">
+            <button type="submit" class="modal-button custom-search-button">Найти</button>
+        </div>
+        <?php ActiveForm::end(); ?>
+    </div>
 </div>
 
 <?= ModalForm::widget(['formType' => 'CustomEditForm', 'formModel' => $customEditFormModel]) ?>
