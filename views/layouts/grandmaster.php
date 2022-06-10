@@ -12,6 +12,11 @@ use yii\bootstrap4\NavBar;
 use yii\widgets\Menu;
 
 GrandmasterAsset::register($this);
+
+$user = '';
+if (isset(Yii::$app->user->identity->login)) {
+    $user = Yii::$app->user->identity->login;
+}
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -42,8 +47,8 @@ GrandmasterAsset::register($this);
             'items' => [
                 // ['label' => 'Перейти на сайт', 'url' => ['/customs/index']],
                 ['label' => 'Grandmaster', 'url' => ['/grandmaster/index']],
-                ['label' => 'Выход', 'url' => ['/site/logout']]
-
+                ['label' => 'Выход', 'url' => ['/site/logout']],
+                '<li class="user-item">Пользователь: ' . $user . '</li>',
                 // ['label' => 'About', 'url' => ['/site/about']],
                 // ['label' => 'Contact', 'url' => ['/site/contact']],
                 // Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]

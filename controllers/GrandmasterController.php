@@ -92,7 +92,7 @@ class GrandmasterController extends Controller
         ]);
     }
 
-    public function actionCustoms()
+    public function actionCustoms($id = null)
     {
 
         //trash-start
@@ -140,13 +140,14 @@ class GrandmasterController extends Controller
 
         // trash-end
 
-
         $this->layout = 'grandmaster';
 
         $customEditFormModel = new CustomEditForm();
         $customSearchFormModel = new CustomSearchForm();
 
-        if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
+        //&& \Yii::$app->request->post()
+
+        if (\Yii::$app->request->isAjax) {
             $request = Yii::$app->request;
             $data = $request->post();
 
@@ -156,12 +157,23 @@ class GrandmasterController extends Controller
             }
 
             // Если пришли параметры CODE или NAME, отдаю результат поиска
-            if (key($data) == 'CODE' || key($data) == 'NAME') {
+            if (key($data) == 'CODE' || key($data) == 'NAMT') {
+
+                // print_r($data);
+                // exit;
 
                 $customSearchFormModel->CODE = $data['CODE'];
-                $customSearchFormModel->NAMET = $data['NAME'];
+                $customSearchFormModel->NAMT = $data['NAMT'];
 
-                $query = (new GrandmasterService())->getSearchCusom($customSearchFormModel);
+                // return $this->redirect('customs?=search');
+
+                // return $this->render('customs', [
+                //     'dataProvider' => $dataProvider,
+                //     'customEditFormModel' => $customEditFormModel,
+                //     'customSearchFormModel' => $customSearchFormModel,
+                // ]);
+
+                // return json_encode($query, JSON_UNESCAPED_UNICODE);
             }
         }
 
@@ -263,7 +275,7 @@ class GrandmasterController extends Controller
             }
         }
 
-        if ($action->id === 'admin') {
+        if ($action->id !== 'index') {
             if ((new HelperService())->checkAuthorization() === null) {
                 $this->redirect('/grandmaster');
                 return false;

@@ -110,17 +110,20 @@ $(document).ready(function() {
 var start_pos=$('.customs-menu').offset().top;
 var start_pos=$('.pagination-list').offset().top;
 var start_pos=$('.edit-buttons').offset().top;
+var start_pos=$('.cusom-search').offset().top;
 
  $(window).scroll(function(){
   if ($(window).scrollTop()>=start_pos) {
       if ($('.customs-menu').hasClass()==false) $('.customs-menu').addClass('customs-menu-fixed');
       if ($('.pagination-list').hasClass()==false) $('.pagination-list').addClass('pagination-list-fixed');
       if ($('.edit-buttons').hasClass()==false) $('.edit-buttons').addClass('edit-buttons-fixed');
-
+      if ($('.cusom-search').hasClass()==false) $('.cusom-search').addClass('cusom-search-fixed');
   }
   else { $('.customs-menu').removeClass('customs-menu-fixed');
   $('.pagination-list').removeClass('pagination-list-fixed');
   $('.edit-buttons').removeClass('edit-buttons-fixed');
+  $('.cusom-search').removeClass('cusom-search-fixed');
+
   }
  
  });
@@ -160,7 +163,7 @@ customsSearchButton.addEventListener('click', evt => {
 
     var data = {
         'CODE' : searchCodeInputElement.value,
-        'NAME': searchNameInputElement.value,
+        'NAMT': searchNameInputElement.value,
     }
 
     $.ajax({

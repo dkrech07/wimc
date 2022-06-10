@@ -822,7 +822,7 @@ body {
     top: 30px;
 }
 
-#custom-edit {
+.cusom-search {
     position: absolute;
     top: 120px;
     margin-left: 450px;
@@ -830,6 +830,11 @@ body {
     padding: 0;
     margin-left: 20px;
 }
+
+.cusom-search-fixed {
+    position: fixed;
+    top: 75px;
+} 
 
 #custom-edit .form-group.field-customsearchform-code,
 #custom-edit .form-group.field-customsearchform-namt {
@@ -849,7 +854,37 @@ body {
     color: #ffffff;
     padding: 5px;
     width: 100px;
+} 
+
+/* .cusom-search {
+
 }
+
+
+
+/* #custom-edit {
+    position: absolute;
+    top: 120px;
+    margin-left: 450px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.custom-edit-fixed {
+    position: fixed;
+    top: 30px;
+}
+
+*/
+
+
+
+.user-item {
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+}
+
 /* .fixed {
     position: fixed;
     top: 0px;
