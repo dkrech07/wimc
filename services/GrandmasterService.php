@@ -152,17 +152,14 @@ class GrandmasterService
         // trim($customSearchFormModel->CODE);
         // trim($customSearchFormModel->NAMT);
 
-        // User::find()->andWhere(['like', 'username', '89'])->all();
-        // SQL: `username` LIKE '89'
 
         if ($customSearchFormModel->CODE && $customSearchFormModel->NAMT) {
-            // return "SELECT * FROM customs WHERE CODE LIKE " . $code . " AND NAMET LIKE " . $name;
-            return Customs::find()->where(['like', 'CODE', $customSearchFormModel->CODE]);
+            return Customs::find()
+                ->where(['like', 'CODE', $customSearchFormModel->CODE])
+                ->andWhere(['like', 'NAMT', $customSearchFormModel->NAMT]);
         } else if ($customSearchFormModel->CODE) {
-            // return "SELECT * FROM customs WHERE CODE LIKE " . $code;
             return Customs::find()->where(['like', 'CODE', $customSearchFormModel->CODE]);
         } else if ($customSearchFormModel->NAMT) {
-            // return "SELECT * FROM customs WHERE NAMET LIKE " . $name;
             return Customs::find()->where(['like', 'NAMT', $customSearchFormModel->NAMT]);
         } else {
             return Customs::find();

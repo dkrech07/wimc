@@ -92,7 +92,7 @@ class GrandmasterController extends Controller
         ]);
     }
 
-    public function actionCustoms($code = null, $namt = null)
+    public function actionCustoms($CODE = null, $NAMT = null)
     {
         $this->layout = 'grandmaster';
 
@@ -107,14 +107,10 @@ class GrandmasterController extends Controller
             if (key($data) == 'ID') {
                 return json_encode((new GrandmasterService())->getEditCustom($data['ID']), JSON_UNESCAPED_UNICODE);
             }
-
-            if (key($data) == 'CODE' || key($data) == 'NAMT') {
-                $this->redirect('customs?code=' . $data['CODE'] . '&namt=' . $data['NAMT']);
-            }
         }
 
-        $customSearchFormModel->CODE = $code;
-        $customSearchFormModel->NAMT = $namt;
+        $customSearchFormModel->CODE = $CODE;
+        $customSearchFormModel->NAMT = $NAMT;
 
         $query = (new GrandmasterService())->getSearchCusom($customSearchFormModel);
 
@@ -133,12 +129,15 @@ class GrandmasterController extends Controller
             }
         }
 
-        // !isset($query) && $query = (new GrandmasterService())->getСustoms();
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
                 'pageSize' => 50,
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'ID' => SORT_DESC,
+                ]
             ],
         ]);
 

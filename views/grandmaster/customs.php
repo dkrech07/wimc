@@ -74,11 +74,17 @@ $this->title = 'Grandmaster - Customs';
     </div>
 
 
-    <div class="cusom-search">
-        <?php $form = ActiveForm::begin(['id' => 'custom-edit']); ?>
+    <div class="custom-search">
+        <?php $form = ActiveForm::begin([
+            'id' => 'custom-search',
+            'action' => 'customs',
+            'method' => 'get',
+            'enableClientValidation' => false,
+            'enableAjaxValidation' => false
+        ]); ?>
 
-        <?= $form->field($customSearchFormModel, 'CODE')->textInput() ?>
-        <?= $form->field($customSearchFormModel, 'NAMT')->textInput() ?>
+        <?= $form->field($customSearchFormModel, 'CODE')->textInput(['placeholder' => 'CODE', 'size' => 25, 'name' => 'CODE']) ?>
+        <?= $form->field($customSearchFormModel, 'NAMT')->textInput(['placeholder' => 'NAMT', 'size' => 50, 'name' => 'NAMT']) ?>
 
         <div class="submit-btn form-group">
             <button type="submit" class="modal-button custom-search-button">Найти</button>
