@@ -157,13 +157,15 @@ class GrandmasterService
 
         if ($customSearchFormModel->CODE && $customSearchFormModel->NAMT) {
             // return "SELECT * FROM customs WHERE CODE LIKE " . $code . " AND NAMET LIKE " . $name;
-            return Customs::find()->andWhere(['like', 'CODE', $customSearchFormModel->CODE]);
+            return Customs::find()->where(['like', 'CODE', $customSearchFormModel->CODE]);
         } else if ($customSearchFormModel->CODE) {
             // return "SELECT * FROM customs WHERE CODE LIKE " . $code;
-            return Customs::find()->andWhere(['like', 'CODE', $customSearchFormModel->CODE]);
+            return Customs::find()->where(['like', 'CODE', $customSearchFormModel->CODE]);
         } else if ($customSearchFormModel->NAMT) {
             // return "SELECT * FROM customs WHERE NAMET LIKE " . $name;
-            return Customs::find()->andWhere(['like', 'NAMT', $customSearchFormModel->NAMT]);
+            return Customs::find()->where(['like', 'NAMT', $customSearchFormModel->NAMT]);
+        } else {
+            return Customs::find();
         }
 
 

@@ -11,6 +11,8 @@ use app\widgets\ModalForm;
 // use yii\jui\AutoComplete;
 // use yii\web\JsExpression;
 
+// print_r($customSearchFormModel);
+
 GrandmasterAsset::register($this);
 $this->title = 'Grandmaster - Customs';
 ?>
@@ -22,7 +24,6 @@ $this->title = 'Grandmaster - Customs';
     </div> -->
 
     <h2 class="grandmaster-title">Список таможенных постов:</h2>
-
     <table class="customs-table">
         <thead class="customs-head">
             <td class="custom-param id">ID</td>

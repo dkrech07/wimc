@@ -92,90 +92,24 @@ class GrandmasterController extends Controller
         ]);
     }
 
-    public function actionCustoms($id = null)
+    public function actionCustoms($code = null, $namt = null)
     {
-
-        //trash-start
-
-        // $pageSize = 50;
-        // if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
-        //     $request = Yii::$app->request;
-        //     $data = $request->post();
-        // $pagination = [
-        //     'pageSize' => 50,
-        // ];
-
-        // if (key($data) == 'allCustomsBtn') {
-        //     if ($data['allCustomsBtn'] == 1) {
-        //         $pagination = false;
-        //         return json_encode(($data), JSON_UNESCAPED_UNICODE);
-
-        //         // return $this->refresh();
-        //     } else {
-        //         $pagination = true;
-        //     }
-        // }
-
-        // if (\Yii::$app->request->isAjax) {
-        //     if (key($data) == 'allCustomsBtn') {
-        //         if ($data['allCustomsBtn'] == 1) {
-        //             $pagination = false;
-        //             return json_encode(($data), JSON_UNESCAPED_UNICODE);
-
-        //             // return $this->refresh();
-        //         }
-        //     }
-        // } else {
-        // $pagination = [
-        //     'pageSize' => 50,
-        // ];
-        // }
-
-        // 'pagination' => $pagination,
-        // 'sort' => [
-        //     'defaultOrder' => [
-        //         'ID' => SORT_DESC,
-        //     ]
-        // ],
-
-        // trash-end
-
         $this->layout = 'grandmaster';
 
         $customEditFormModel = new CustomEditForm();
         $customSearchFormModel = new CustomSearchForm();
 
-        //&& \Yii::$app->request->post()
-
-        if (\Yii::$app->request->isAjax) {
+        if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
             $request = Yii::$app->request;
             $data = $request->post();
-
-            // Если пришел ID, отдаю найденный пост для просмотра/редактирования
-            if (key($data) == 'ID') {
-                return json_encode((new GrandmasterService())->getEditCustom($data['ID']), JSON_UNESCAPED_UNICODE);
-            }
-
-            // Если пришли параметры CODE или NAME, отдаю результат поиска
-            if (key($data) == 'CODE' || key($data) == 'NAMT') {
-
-                // print_r($data);
-                // exit;
-
-                $customSearchFormModel->CODE = $data['CODE'];
-                $customSearchFormModel->NAMT = $data['NAMT'];
-
-                // return $this->redirect('customs?=search');
-
-                // return $this->render('customs', [
-                //     'dataProvider' => $dataProvider,
-                //     'customEditFormModel' => $customEditFormModel,
-                //     'customSearchFormModel' => $customSearchFormModel,
-                // ]);
-
-                // return json_encode($query, JSON_UNESCAPED_UNICODE);
-            }
+            $this->redirect('customs?code=' . $data['CODE'] . '&namt=' . $data['NAMT']);
         }
+
+        $customSearchFormModel->CODE = $code;
+        $customSearchFormModel->NAMT = $namt;
+
+        $query = (new GrandmasterService())->getSearchCusom($customSearchFormModel);
+
 
         if (Yii::$app->request->isPost) {
             $customEditFormModel->load(Yii::$app->request->post());
@@ -191,9 +125,7 @@ class GrandmasterController extends Controller
             }
         }
 
-        !isset($query) && $query = (new GrandmasterService())->getСustoms();
-        // print_r($query);
-        // exit;
+        // !isset($query) && $query = (new GrandmasterService())->getСustoms();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
