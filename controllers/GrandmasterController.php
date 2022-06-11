@@ -102,7 +102,15 @@ class GrandmasterController extends Controller
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
             $request = Yii::$app->request;
             $data = $request->post();
-            $this->redirect('customs?code=' . $data['CODE'] . '&namt=' . $data['NAMT']);
+
+            // Если пришел ID, отдаю найденный пост для просмотра/редактирования
+            if (key($data) == 'ID') {
+                return json_encode((new GrandmasterService())->getEditCustom($data['ID']), JSON_UNESCAPED_UNICODE);
+            }
+
+            if (key($data) == 'CODE' || key($data) == 'NAMT') {
+                $this->redirect('customs?code=' . $data['CODE'] . '&namt=' . $data['NAMT']);
+            }
         }
 
         $customSearchFormModel->CODE = $code;

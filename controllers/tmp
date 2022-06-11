@@ -1,29 +1,26 @@
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
-            $request = Yii::$app->request;
-            $data = $request->post();
-
-            // Если пришел ID, отдаю найденный пост для просмотра/редактирования
-            if (key($data) == 'ID') {
-                return json_encode((new GrandmasterService())->getEditCustom($data['ID']), JSON_UNESCAPED_UNICODE);
-            }
-
-            // Если пришли параметры CODE или NAME, отдаю результат поиска
-            if (key($data) == 'CODE' || key($data) == 'NAMT') {
-                // $this->refresh();
-
-                $customSearchFormModel->CODE = $data['CODE'];
-                $customSearchFormModel->NAMT = $data['NAMT'];
+        $request = Yii::$app->request;
+        $data = $request->post();
 
 
 
-                // return $this->redirect('search');
+        // Если пришли параметры CODE или NAME, отдаю результат поиска
 
-                // return $this->render('customs', [
-                //     'dataProvider' => $dataProvider,
-                //     'customEditFormModel' => $customEditFormModel,
-                //     'customSearchFormModel' => $customSearchFormModel,
-                // ]);
+        // $this->refresh();
 
-                // return json_encode($query, JSON_UNESCAPED_UNICODE);
-            }
+        $customSearchFormModel->CODE = $data['CODE'];
+        $customSearchFormModel->NAMT = $data['NAMT'];
+
+
+
+        // return $this->redirect('search');
+
+        // return $this->render('customs', [
+        // 'dataProvider' => $dataProvider,
+        // 'customEditFormModel' => $customEditFormModel,
+        // 'customSearchFormModel' => $customSearchFormModel,
+        // ]);
+
+        // return json_encode($query, JSON_UNESCAPED_UNICODE);
+        }
         }
