@@ -279,6 +279,9 @@ function init () {
         data: data,
         success: function(response){
             let searchData = JSON.parse(response);
+
+            console.log(searchData); // вывожу в консоль результат поиска точки
+            
             var searchInputElement = document.querySelector('#autocomplete');
 
             if (!searchData) {

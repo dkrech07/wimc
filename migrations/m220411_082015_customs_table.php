@@ -39,8 +39,14 @@ class m220411_082015_customs_table extends Migration
         $this->createTable('{{%history_search}}', [
             'id' => $this->primaryKey(),
             'history_dt_add_search' => $this->dateTime()->notNull(),
-            'request_text_search' => $this->string(256)->null(), // Текст запроса для поиска ближайшей точки (из поля поиска по сабмиту);
-            'response_text_search' => $this->string(256)->null(), // Ответ сервера при попытке найти ближайший таможенный пост;
+            'history_text_search' => $this->string(256)->null(),
+            'history_latitude' => $this->string(256)->null(),
+            'history_longitude' => $this->string(256)->null(),
+            'history_nearest_lat' => $this->string(256)->null(),
+            'history_nearest_lon' => $this->string(256)->null(),
+            'history_nearest_code' => $this->string(256)->null(),
+            'history_distance' => $this->string(256)->null(),
+            'history_filter' => $this->string(256)->null()
         ]);
 
         $this->createTable('{{%users}}', [

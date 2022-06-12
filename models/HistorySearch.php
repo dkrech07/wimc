@@ -7,10 +7,16 @@ use Yii;
 /**
  * This is the model class for table "history_search".
  *
- * @property int $ID
- * @property string $HISTORY_DT_ADD
- * @property string|null $REQUEST_TEXT_SEARCH
- * @property string|null $RESPONSE_TEXT_SEARCH
+ * @property int $id
+ * @property string $history_dt_add_search
+ * @property string|null $history_text_search
+ * @property string|null $history_latitude
+ * @property string|null $history_longitude
+ * @property string|null $history_nearest_lat
+ * @property string|null $history_nearest_lon
+ * @property string|null $history_nearest_code
+ * @property string|null $history_distance
+ * @property string|null $history_filter
  */
 class HistorySearch extends \yii\db\ActiveRecord
 {
@@ -28,9 +34,9 @@ class HistorySearch extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['HISTORY_DT_ADD'], 'required'],
-            [['HISTORY_DT_ADD'], 'safe'],
-            [['REQUEST_TEXT_SEARCH', 'RESPONSE_TEXT_SEARCH'], 'string', 'max' => 256],
+            [['history_dt_add_search'], 'required'],
+            [['history_dt_add_search'], 'safe'],
+            [['history_text_search', 'history_latitude', 'history_longitude', 'history_nearest_lat', 'history_nearest_lon', 'history_nearest_code', 'history_distance', 'history_filter'], 'string'],
         ];
     }
 
@@ -40,10 +46,16 @@ class HistorySearch extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'HISTORY_DT_ADD' => 'History Dt Add',
-            'REQUEST_TEXT_SEARCH' => 'Request Text Search',
-            'RESPONSE_TEXT_SEARCH' => 'Response Text Search',
+            'id' => 'ID',
+            'history_dt_add_search' => 'History Dt Add Search',
+            'history_text_search' => 'History Text Search',
+            'history_latitude' => 'History Latitude',
+            'history_longitude' => 'History Longitude',
+            'history_nearest_lat' => 'History Nearest Lat',
+            'history_nearest_lon' => 'History Nearest Lon',
+            'history_nearest_code' => 'History Nearest Code',
+            'history_distance' => 'History Distance',
+            'history_filter' => 'History Filter',
         ];
     }
 }

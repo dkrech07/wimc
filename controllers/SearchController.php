@@ -7,6 +7,7 @@ use yii\web\Controller;
 use app\models\SearchCustoms;
 use app\services\GeocoderService;
 use app\services\NearestPointService;
+use app\services\LogService;
 use app\models\FilterCustoms;
 
 class SearchController extends Controller
@@ -34,7 +35,6 @@ class SearchController extends Controller
             $form_model->longitude = $data['longitude'];
             $form_model->autocomplete = $data['autocomplete'];
 
-
             if (!$data['latitude'] || !$data['longitude']) {
                 $form_model = null;
                 return json_encode($form_model, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
@@ -58,6 +58,8 @@ class SearchController extends Controller
             $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
             $form_model->distance = $nearest_point['distance'] * 100000;
             $form_model->nearest_code = $nearest_point['nearestPoint']['code'];
+
+            (new LogService())->logSearch($form_model);
 
             return json_encode($form_model, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
         }
