@@ -157,16 +157,17 @@ class GrandmasterController extends Controller
         ]);
     }
 
-    public function actionStatistics()
+    public function actionStatistics($id = null)
     {
 
         $this->layout = 'grandmaster';
 
 
-        $query = HistorySearch::find();
-        // ->where(['ID' => $customEditFormModel->ID])
-        // ->one();
-
+        if ($id == 'search') {
+            $query = HistorySearch::find();
+        } else {
+            $query = HistorySearch::find();
+        }
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -182,12 +183,6 @@ class GrandmasterController extends Controller
 
         return $this->render('statistics', [
             'dataProvider' => $dataProvider,
-        ]);
-
-
-        $this->layout = 'grandmaster';
-        return $this->render('statistics', [
-            // 'loginForm' => $loginForm
         ]);
     }
 

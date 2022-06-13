@@ -79,7 +79,7 @@ if (isset(Yii::$app->user->identity->login)) {
                     $items = [
                         ['label' => 'Список постов', 'url' => ['/grandmaster/customs']],
                         ['label' => 'Cписок пользователей', 'url' => ['/grandmaster/users']],
-                        ['label' => 'Статистика', 'url' => ['/grandmaster/statistics']],
+                        ['label' => 'Статистика', 'url' => ['/grandmaster/statistics?id=search']],
                         ['label' => 'Сообщения', 'url' => ['/grandmaster/messages']],
                         [
                             'label' => 'Редактирование страниц',
