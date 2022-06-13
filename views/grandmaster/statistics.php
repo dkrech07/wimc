@@ -23,7 +23,7 @@ $this->title = 'Grandmaster - Statistics';
             'dataProvider' => $dataProvider,
             'itemView' => '_statistics_item',
             'options' => [ // настройка атрибутов для внешнего контейнера списка
-                'class' => 'title-list customs-menu', // класс блока div
+                'class' => 'title-list statistics-menu', // класс блока div
             ],
             'pager' => [
                 'prevPageLabel' => '',
