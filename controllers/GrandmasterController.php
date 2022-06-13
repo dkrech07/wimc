@@ -15,6 +15,7 @@ use app\services\GrandmasterService;
 use app\models\CustomEditForm;
 use app\models\PageEditFormModel;
 use app\models\CustomSearchForm;
+use app\models\HistorySearch;
 
 use app\models\Customs;
 
@@ -158,6 +159,32 @@ class GrandmasterController extends Controller
 
     public function actionStatistics()
     {
+
+        $this->layout = 'grandmaster';
+
+
+        $query = HistorySearch::find();
+        // ->where(['ID' => $customEditFormModel->ID])
+        // ->one();
+
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 50,
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,
+                ]
+            ],
+        ]);
+
+        return $this->render('statistics', [
+            'dataProvider' => $dataProvider,
+        ]);
+
+
         $this->layout = 'grandmaster';
         return $this->render('statistics', [
             // 'loginForm' => $loginForm

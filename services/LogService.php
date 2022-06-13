@@ -26,19 +26,8 @@ class LogService
         $historySearch->history_nearest_lat = $form_model->nearest_lat;
         $historySearch->history_nearest_lon = $form_model->nearest_lon;
         $historySearch->history_nearest_code = $form_model->nearest_code;
-        // $historySearch->history_distance = $form_model->distance;
-        // $historySearch->history_filter = $form_model->filter;
-
-        // 'history_dt_add_search' => $this->dateTime()->notNull(),
-        // 'history_text_search' => $this->string(256)->null(),
-        // 'history_latitude' => $this->string(256)->null(),
-        // 'history_longitude' => $this->string(256)->null(),
-        // 'history_nearest_lat' => $this->string(256)->null(),
-        // 'history_nearest_lon' => $this->string(256)->null(),
-        // 'history_nearest_code' => $this->string(256)->null(),
-        // 'history_distance' => $this->string(256)->null(),
-        // 'history_filter' => $this->string(256)->null()
-
+        $historySearch->history_distance = strval($form_model->distance);
+        $historySearch->history_filter = $form_model->filter;
 
         $transaction = Yii::$app->db->beginTransaction();
         try {

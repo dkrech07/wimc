@@ -590,7 +590,8 @@ body {
 } */
 
 .customs-head,
-.custom-item {
+.custom-item,
+.statistics_item {
     text-align: center;
     font-size: 12px;
     background: #ffffff;

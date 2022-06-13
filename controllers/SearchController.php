@@ -54,6 +54,7 @@ class SearchController extends Controller
 
             $nearest_point = (new NearestPointService())->getNearestPoint($form_model->latitude, $form_model->longitude, $filter_model);
 
+            $form_model->filter = implode(', ', [$data['main'], $data['head'], $data['excise'], $data['others'], $data['captions']]);
             $form_model->nearest_lat = $nearest_point['nearestPoint']['x'];
             $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
             $form_model->distance = $nearest_point['distance'] * 100000;
