@@ -19,6 +19,19 @@ $this->title = 'Grandmaster - Statistics';
     <p>Статистика поиска</p>
 
     <table class="customs-table">
+        <thead class="customs-head">
+            <td class="custom-param id">ID</td>
+            <td class="custom-param code">Дата/время запроса</td>
+            <td class="custom-param namt">Текст запроса</td>
+            <td class="custom-param okpo">Широта найденной точки</td>
+            <td class="custom-param ogrn">Долгота найденной точки</td>
+            <td class="custom-param inn">Широта ближайшей таможи</td>
+            <td class="custom-param name_all">Долгота ближайшей таможи</td>
+            <td class="custom-param adrtam">Код ближайшей таможи</td>
+            <td class="custom-param prosf">Расстояние до ближайшей таможни</td>
+            <td class="custom-param telefon">Параметры фильтра (все/гол/акц/проч/метки)</td>
+        </thead>
+
         <?= ListView::widget([
             'dataProvider' => $dataProvider,
             'itemView' => '_statistics_item',
