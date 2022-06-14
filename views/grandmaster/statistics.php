@@ -20,33 +20,33 @@ $this->title = 'Grandmaster - Statistics';
 
 
 
-<div class="wrapper content-block col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+<div class="content-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
     <table class="customs-table">
         <?php if ($statisticsItem == '_search_item') : ?>
             <h2>Статистика поиска</h2>
             <p>Записывается при клике на кнопку "Поиск"</p>
 
             <thead class="customs-head">
-                <td class="custom-param id">ID</td>
-                <td class="custom-param code">Дата/время запроса</td>
-                <td class="custom-param namt">Текст запроса</td>
-                <td class="custom-param okpo">Широта найденной точки</td>
-                <td class="custom-param ogrn">Долгота найденной точки</td>
-                <td class="custom-param inn">Широта ближайшей таможи</td>
-                <td class="custom-param name_all">Долгота ближайшей таможи</td>
-                <td class="custom-param adrtam">Код ближайшей таможи</td>
-                <td class="custom-param prosf">Расстояние до ближайшей таможни</td>
-                <td class="custom-param telefon">Параметры фильтра (все/гол/акц/проч/метки)</td>
+                <td class="search-param">ID</td>
+                <td class="search-param">Дата/время запроса</td>
+                <td class="search-param">Текст запроса</td>
+                <td class="search-param">Широта найденной точки</td>
+                <td class="search-param">Долгота найденной точки</td>
+                <td class="search-param">Широта ближайшей таможи</td>
+                <td class="search-param">Долгота ближайшей таможи</td>
+                <td class="search-param">Код ближайшей таможи</td>
+                <td class="search-param">Расстояние до ближайшей таможни</td>
+                <td class="search-param">Параметры фильтра (все/гол/акц/проч/метки)</td>
             </thead>
 
         <?php else : ?>
             <h2>Статистика геокодера</h2>
             <p>Записывается при вводе запроса в строке поиска</p>
             <thead class="customs-head">
-                <td class="custom-param id">ID</td>
-                <td class="custom-param code">Дата/время запроса</td>
-                <td class="custom-param namt">Текст запроса</td>
-                <td class="custom-param okpo">Количество найденных вариантов адреса</td>
+                <td class="search-param">ID</td>
+                <td class="search-param">Дата/время запроса</td>
+                <td class="search-param">Текст запроса</td>
+                <td class="search-param">Количество найденных вариантов адреса</td>
             </thead>
 
         <?php endif; ?>
