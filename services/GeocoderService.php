@@ -8,6 +8,7 @@ use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Exception\ServerException;
 use GuzzleHttp\Psr7\Request;
+use app\services\LogService;
 
 class GeocoderService
 {
@@ -96,12 +97,15 @@ class GeocoderService
             ];
         }
 
+
         // mb_strtolower($display_name_reversed_item, 'UTF-8');
 
         // print_r($responseData);
         // print_r($responseData[3]);
         // print_r($responseData[10]->lat);
         // print_r($responseData[10]->lon);
+
+        (new LogService())->logGeocoder($geocode, $result);
 
         return json_encode($result, JSON_UNESCAPED_UNICODE);
 

@@ -7,10 +7,10 @@ use Yii;
 /**
  * This is the model class for table "history_geocoder".
  *
- * @property int $ID
- * @property string $HISTORY_DT_ADD
- * @property string|null $REQUEST_TEXT_GEOCODER
- * @property string|null $RESPONSE_TEXT_GEOCODER
+ * @property int $id
+ * @property string $history_dt_add_geocoder
+ * @property string|null $request_text_geocoder
+ * @property string|null $response_text_geocoder
  */
 class HistoryGeocoder extends \yii\db\ActiveRecord
 {
@@ -28,9 +28,9 @@ class HistoryGeocoder extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['HISTORY_DT_ADD'], 'required'],
-            [['HISTORY_DT_ADD'], 'safe'],
-            [['REQUEST_TEXT_GEOCODER', 'RESPONSE_TEXT_GEOCODER'], 'string', 'max' => 256],
+            [['history_dt_add_geocoder'], 'required'],
+            [['history_dt_add_geocoder'], 'safe'],
+            [['request_text_geocoder', 'response_text_geocoder'], 'string', 'max' => 256],
         ];
     }
 
@@ -40,10 +40,10 @@ class HistoryGeocoder extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'HISTORY_DT_ADD' => 'History Dt Add',
-            'REQUEST_TEXT_GEOCODER' => 'Request Text Geocoder',
-            'RESPONSE_TEXT_GEOCODER' => 'Response Text Geocoder',
+            'id' => 'ID',
+            'history_dt_add_geocoder' => 'History Dt Add',
+            'request_text_geocoder' => 'Request Text Geocoder',
+            'response_text_geocoder' => 'Response Text Geocoder',
         ];
     }
 }

@@ -21,40 +21,22 @@ $this->title = 'Grandmaster - Statistics';
 
 
 <div class="wrapper content-block col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-    <ul class="wrapper left-menu col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-        <?php
-        $items = [
-            ['label' => 'Список постов', 'url' => ['/grandmaster/customs']],
-            ['label' => 'Cписок пользователей', 'url' => ['/grandmaster/users']],
-            ['label' => 'Статистика', 'url' => ['/grandmaster/statistics?id=search']],
-            ['label' => 'Сообщения', 'url' => ['/grandmaster/messages']],
-            [
-                'label' => 'Редактирование страниц',
-                'url' => ['pages'],
-                'options' => ['class' => 'pages-dropdown'],
-                'template' => '<a href="{url}" class="url-class">{label}</a>',
-                'items' => [
-                    ['label' => 'Карта СВХ', 'url' => ['/grandmaster/pages/?id=whs']],
-                    ['label' => 'Справочник постов', 'url' => ['/grandmaster/pages/?id=customs_list']],
-                    ['label' => 'Как это работает', 'url' => ['/grandmaster/pages/?id=about']],
-                    ['label' => 'Связаться с нами', 'url' => ['/grandmaster/pages/?id=contacts']],
-                    ['label' => 'Cookie', 'url' => ['/grandmaster/pages/?id=cookie']],
+    <?php
+    $items = [
+        ['label' => 'Статистика поиска (при клике на кнопку "Поиск")', 'url' => ['/grandmaster/statistics?id=geocoder']],
+        ['label' => 'Статистика геокодера (при вводе значеня в поле "Поиск")', 'url' => ['/grandmaster/statistics?id=search']],
+    ];
+    ?>
 
-                ]
-            ],
-        ];
-        ?>
-
-        <?= Menu::widget([
-            'items' => $items,
-            'activeCssClass' => 'list-item--active',
-            'itemOptions' => ['class' => 'list-item'],
-            'labelTemplate' => '<a class="link link--nav">{label}</a>',
-            'linkTemplate' => '<a href="{url}" class="link link--nav">{label}</a>',
-            'options' => ['class' => 'nav-list']
-        ]);
-        ?>
-    </ul>
+    <?= Menu::widget([
+        'items' => $items,
+        'activeCssClass' => 'list-item--active',
+        'itemOptions' => ['class' => 'list-item'],
+        'labelTemplate' => '<a class="link link--nav">{label}</a>',
+        'linkTemplate' => '<a href="{url}" class="link link--nav">{label}</a>',
+        'options' => ['class' => 'nav-list']
+    ]);
+    ?>
 
     <p>Статистика поиска</p>
 

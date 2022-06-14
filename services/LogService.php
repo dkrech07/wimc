@@ -4,17 +4,30 @@ namespace app\services;
 
 use Yii;
 use app\models\HistorySearch;
+use app\models\HistoryGeocoder;
 use app\services\HelperService;
 
 class LogService
 {
-    function logGeocoderAdd()
+    function logGeocoder($geocode, $search_result)
     {
-        // $geocode - запрос из поиска
-        //  'display_name' => $display_name, //$item->display_name, $display_name_clean
-        // 'lat' => $item->lat,
-        // 'lon' => $item->lon,
+        $historyGeocoder = new HistoryGeocoder();
+        $historyGeocoder->history_dt_add_geocoder = (new HelperService())->getCurrentDate();
+        $historyGeocoder->request_text_geocoder = $geocode;
+        // $historyGeocoder->response_text_geocoder = $search_result;
+
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            $historyGeocoder->save();
+            $transaction->commit();
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            throw $e;
+        } catch (\Throwable $e) {
+            $transaction->rollBack();
+        }
     }
+
     function logSearch($form_model)
     {
         $historySearch = new HistorySearch();
