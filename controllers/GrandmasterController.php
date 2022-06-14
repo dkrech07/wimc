@@ -16,6 +16,7 @@ use app\models\CustomEditForm;
 use app\models\PageEditFormModel;
 use app\models\CustomSearchForm;
 use app\models\HistorySearch;
+use app\models\HistoryGeocoder;
 
 use app\models\Customs;
 
@@ -157,7 +158,7 @@ class GrandmasterController extends Controller
         ]);
     }
 
-    public function actionStatistics($id = null)
+    public function actionStatistics($id = 'search')
     {
 
         $this->layout = 'grandmaster';
@@ -165,8 +166,10 @@ class GrandmasterController extends Controller
 
         if ($id == 'search') {
             $query = HistorySearch::find();
+            $statisticsItem = '_search_item';
         } else {
-            $query = HistorySearch::find();
+            $query = HistoryGeocoder::find();
+            $statisticsItem = '_geocoder_item';
         }
 
         $dataProvider = new ActiveDataProvider([
@@ -182,6 +185,7 @@ class GrandmasterController extends Controller
         ]);
 
         return $this->render('statistics', [
+            'statisticsItem' => $statisticsItem,
             'dataProvider' => $dataProvider,
         ]);
     }

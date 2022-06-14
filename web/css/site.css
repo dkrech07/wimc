@@ -858,6 +858,10 @@ body {
     width: 100px;
 }
 
+.list-item--active {
+    text-decoration: underline;
+}
+
 /* .cusom-search {
 
 }

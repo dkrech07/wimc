@@ -9,12 +9,12 @@ use app\services\HelperService;
 
 class LogService
 {
-    function logGeocoder($geocode, $search_result)
+    function logGeocoder($geocode, $geocoderCount)
     {
         $historyGeocoder = new HistoryGeocoder();
         $historyGeocoder->history_dt_add_geocoder = (new HelperService())->getCurrentDate();
         $historyGeocoder->request_text_geocoder = $geocode;
-        // $historyGeocoder->response_text_geocoder = $search_result;
+        $historyGeocoder->response_text_geocoder = strval($geocoderCount);
 
         $transaction = Yii::$app->db->beginTransaction();
         try {

@@ -32,6 +32,7 @@ class GeocoderService
         // $responseData = json_encode($content);
 
         // FeatureCollection
+        $logResult = [];
         $result = [];
         foreach ($responseData as $item) {
 
@@ -95,9 +96,17 @@ class GeocoderService
                 'lat' => $item->lat,
                 'lon' => $item->lon,
             ];
+
+
+
+            $logResult[] = implode(',', $display_name['clean']);
         }
 
 
+        $geocoderCount = 0;
+        if (isset($result[0]['display_name'])) {
+            $geocoderCount = count($result);
+        }
         // mb_strtolower($display_name_reversed_item, 'UTF-8');
 
         // print_r($responseData);
@@ -105,7 +114,7 @@ class GeocoderService
         // print_r($responseData[10]->lat);
         // print_r($responseData[10]->lon);
 
-        (new LogService())->logGeocoder($geocode, $result);
+        (new LogService())->logGeocoder($geocode, $geocoderCount);
 
         return json_encode($result, JSON_UNESCAPED_UNICODE);
 

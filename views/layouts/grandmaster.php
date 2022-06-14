@@ -79,11 +79,24 @@ if (isset(Yii::$app->user->identity->login)) {
                     $items = [
                         ['label' => 'Список постов', 'url' => ['/grandmaster/customs']],
                         ['label' => 'Cписок пользователей', 'url' => ['/grandmaster/users']],
-                        ['label' => 'Статистика', 'url' => ['/grandmaster/statistics?id=search']],
+                        // ['label' => 'Статистика', 'url' => ['/grandmaster/statistics?id=search']],
+                        // ['label' => 'Статистика поиска (при клике на кнопку "Поиск")', 'url' => ['/grandmaster/statistics?id=search']],
+                        // ['label' => 'Статистика геокодера (при вводе значеня в поле "Поиск")', 'url' => ['/grandmaster/statistics?id=geocoder']],
+
+                        [
+                            'label' => 'Статистика',
+                            'url' => ['statistics'],
+                            'options' => ['class' => 'pages-dropdown'],
+                            'template' => '<a href="{url}" class="url-class">{label}</a>',
+                            'items' => [
+                                ['label' => 'Статистика поиска', 'url' => ['/grandmaster/statistics?id=search']],
+                                ['label' => 'Статистика геокодера', 'url' => ['/grandmaster/statistics?id=geocoder']],
+                            ]
+                        ],
+
                         ['label' => 'Сообщения', 'url' => ['/grandmaster/messages']],
                         [
-                            'label' => 'Редактирование страниц',
-                            'url' => ['pages'],
+                            'label' => 'Редактирование страниц', 'url' => ['pages'],
                             'options' => ['class' => 'pages-dropdown'],
                             'template' => '<a href="{url}" class="url-class">{label}</a>',
                             'items' => [
