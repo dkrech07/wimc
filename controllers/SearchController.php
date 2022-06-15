@@ -22,10 +22,7 @@ class SearchController extends Controller
     public function actionSearch()
     {
         $form_model = new SearchCustoms();
-
         $filter_model = new FilterCustoms();
-
-
 
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
             $request = Yii::$app->request;

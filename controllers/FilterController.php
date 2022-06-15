@@ -6,6 +6,8 @@ use Yii;
 use yii\web\Controller;
 use app\services\CustomsFilterService;
 use app\models\FilterCustoms;
+use app\services\LogService;
+use app\models\HistoryIp;
 
 class FilterController extends Controller
 {
@@ -24,6 +26,8 @@ class FilterController extends Controller
             $form_model->excise = $data['excise'];
             $form_model->others = $data['others'];
             $form_model->captions = $data['captions'];
+
+            (new LogService())->logIP(Yii::$app->request->userIP);
         }
 
         // $form_model_cache = Yii::$app->cache->get('filter_params');

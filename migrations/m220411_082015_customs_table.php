@@ -49,6 +49,12 @@ class m220411_082015_customs_table extends Migration
             'history_filter' => $this->string(256)->null()
         ]);
 
+        $this->createTable('{{%history_ip}}', [
+            'id' => $this->primaryKey(),
+            'history_dt_add_ip' => $this->dateTime()->notNull(),
+            'history_ip' => $this->string(256)->null(),
+        ]);
+
         $this->createTable('{{%users}}', [
             'id' => $this->primaryKey(),
             'user_dt_add' => $this->dateTime()->notNull(),

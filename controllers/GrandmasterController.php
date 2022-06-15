@@ -17,7 +17,7 @@ use app\models\PageEditFormModel;
 use app\models\CustomSearchForm;
 use app\models\HistorySearch;
 use app\models\HistoryGeocoder;
-use app\models\HistoryIP;
+use app\models\HistoryIp;
 
 use app\models\Customs;
 
@@ -176,7 +176,7 @@ class GrandmasterController extends Controller
             $query = HistoryGeocoder::find();
             $statisticsItem = '_geocoder_item';
         } else if ($id == 'ip') {
-            $query = HistoryIP::find();
+            $query = HistoryIp::find();
             $statisticsItem = '_ip_item';
         }
 

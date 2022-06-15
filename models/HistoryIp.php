@@ -5,14 +5,13 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "history_geocoder".
+ * This is the model class for table "history_ip".
  *
  * @property int $id
- * @property string $history_dt_add_geocoder
- * @property string|null $request_text_geocoder
- * @property string|null $response_text_geocoder
+ * @property string $history_dt_add_ip
+ * @property string|null $history_ip
  */
-class HistoryIP extends \yii\db\ActiveRecord
+class HistoryIp extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -29,6 +28,7 @@ class HistoryIP extends \yii\db\ActiveRecord
     {
         return [
             [['history_dt_add_ip'], 'required'],
+            [['history_dt_add_ip'], 'safe'],
             [['history_ip'], 'string', 'max' => 256],
         ];
     }
@@ -40,8 +40,8 @@ class HistoryIP extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'history_dt_add_ip' => 'Dt Add',
-            'history_ip' => 'ip',
+            'history_dt_add_ip' => 'History Dt Add Ip',
+            'history_ip' => 'History Ip',
         ];
     }
 }
