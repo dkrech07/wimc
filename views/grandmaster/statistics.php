@@ -44,13 +44,19 @@ $this->title = 'Grandmaster - Statistics';
             <p>Записывается при вводе запроса в строке поиска</p>
             <thead class="customs-head">
                 <td class="search-param">ID</td>
-                <td class="search-param">Дата/Время открытия Главной страницы</td>
-                <td class="search-param">IP-адрес пользователя</td>
+                <td class="search-param">Дата/время запроса</td>
+                <td class="search-param">Текст запроса</td>
+                <td class="search-param">Количество найденных вариантов адреса</td>
             </thead>
 
         <?php else : ?>
-
-
+            <h2>Статистика посещаемости</h2>
+            <p>Записывается при заходе пользователя на Главную страницу</p>
+            <thead class="customs-head">
+                <td class="search-param">ID</td>
+                <td class="search-param">Дата/Время открытия Главной страницы</td>
+                <td class="search-param">IP-адрес пользователя</td>
+            </thead>
 
         <?php endif; ?>
 
