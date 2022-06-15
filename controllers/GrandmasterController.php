@@ -17,6 +17,7 @@ use app\models\PageEditFormModel;
 use app\models\CustomSearchForm;
 use app\models\HistorySearch;
 use app\models\HistoryGeocoder;
+use app\models\HistoryIP;
 
 use app\models\Customs;
 
@@ -94,7 +95,7 @@ class GrandmasterController extends Controller
         ]);
     }
 
-    public function actionCustoms($CODE = null, $NAMT = null)
+    public function actionCustoms($ALL = null, $CODE = null, $NAMT = null)
     {
         $this->layout = 'grandmaster';
 
@@ -131,11 +132,15 @@ class GrandmasterController extends Controller
             }
         }
 
+        if ($ALL === 'all') {
+            $pagination = false;
+        } else {
+            $pagination = ['pageSize' => 50];
+        }
+
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'pagination' => [
-                'pageSize' => 50,
-            ],
+            'pagination' => $pagination,
             'sort' => [
                 'defaultOrder' => [
                     'ID' => SORT_DESC,
@@ -167,9 +172,12 @@ class GrandmasterController extends Controller
         if ($id == 'search') {
             $query = HistorySearch::find();
             $statisticsItem = '_search_item';
-        } else {
+        } else if ($id == 'geocoder') {
             $query = HistoryGeocoder::find();
             $statisticsItem = '_geocoder_item';
+        } else if ($id == 'ip') {
+            $query = HistoryIP::find();
+            $statisticsItem = '_ip_item';
         }
 
         $dataProvider = new ActiveDataProvider([

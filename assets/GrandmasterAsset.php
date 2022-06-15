@@ -22,6 +22,7 @@ class GrandmasterAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'css/grandmaster.css',
         "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css",
     ];
     public $js = [

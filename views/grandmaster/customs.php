@@ -69,7 +69,8 @@ $this->title = 'Grandmaster - Customs';
     </table>
 
     <div class="edit-buttons">
-        <button type="button" class="modal-button all-customs-button">Показать все посты</button>
+        <!-- <button type="button" class="modal-button all-customs-button">Показать все посты</button> -->
+        <a class="modal-button all-customs-button" href="/grandmaster/customs?ALL=all">Показать все посты</a>
         <button type="button" class="modal-button add-new-custom-button">Добавить новый поист</button>
     </div>
 

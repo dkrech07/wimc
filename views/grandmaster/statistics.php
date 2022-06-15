@@ -39,7 +39,7 @@ $this->title = 'Grandmaster - Statistics';
                 <td class="search-param">Параметры фильтра (все/гол/акц/проч/метки)</td>
             </thead>
 
-        <?php else : ?>
+        <?php elseif ($statisticsItem == '_geocoder_item') : ?>
             <h2>Статистика геокодера</h2>
             <p>Записывается при вводе запроса в строке поиска</p>
             <thead class="customs-head">
@@ -48,6 +48,10 @@ $this->title = 'Grandmaster - Statistics';
                 <td class="search-param">Текст запроса</td>
                 <td class="search-param">Количество найденных вариантов адреса</td>
             </thead>
+
+        <?php else : ?>
+
+
 
         <?php endif; ?>
 

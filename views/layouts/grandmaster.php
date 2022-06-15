@@ -91,6 +91,7 @@ if (isset(Yii::$app->user->identity->login)) {
                             'items' => [
                                 ['label' => 'Статистика поиска', 'url' => ['/grandmaster/statistics?id=search']],
                                 ['label' => 'Статистика геокодера', 'url' => ['/grandmaster/statistics?id=geocoder']],
+                                // ['label' => 'Статистика посещаемости', 'url' => ['/grandmaster/statistics?id=ip']],
                             ]
                         ],
 

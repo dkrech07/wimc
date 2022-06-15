@@ -105,31 +105,31 @@ editList.forEach(editElement => {
     });
 });
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-    var start_pos = $('.customs-menu').offset().top;
-    var start_pos = $('.pagination-list').offset().top;
-    var start_pos = $('.edit-buttons').offset().top;
-    var start_pos = $('.custom-search').offset().top;
+//     var start_pos = $('.customs-menu').offset().top;
+//     var start_pos = $('.pagination-list').offset().top;
+//     var start_pos = $('.edit-buttons').offset().top;
+//     var start_pos = $('.custom-search').offset().top;
 
-    $(window).scroll(function () {
-        if ($(window).scrollTop() >= start_pos) {
-            if ($('.customs-menu').hasClass() == false) $('.customs-menu').addClass('customs-menu-fixed');
-            if ($('.pagination-list').hasClass() == false) $('.pagination-list').addClass('pagination-list-fixed');
-            if ($('.edit-buttons').hasClass() == false) $('.edit-buttons').addClass('edit-buttons-fixed');
-            if ($('.custom-search').hasClass() == false) $('.custom-search').addClass('custom-search-fixed');
-        }
-        else {
-            $('.customs-menu').removeClass('customs-menu-fixed');
-            $('.pagination-list').removeClass('pagination-list-fixed');
-            $('.edit-buttons').removeClass('edit-buttons-fixed');
-            $('.custom-search').removeClass('custom-search-fixed');
+//     $(window).scroll(function () {
+//         if ($(window).scrollTop() >= start_pos) {
+//             if ($('.customs-menu').hasClass() == false) $('.customs-menu').addClass('customs-menu-fixed');
+//             if ($('.pagination-list').hasClass() == false) $('.pagination-list').addClass('pagination-list-fixed');
+//             if ($('.edit-buttons').hasClass() == false) $('.edit-buttons').addClass('edit-buttons-fixed');
+//             if ($('.custom-search').hasClass() == false) $('.custom-search').addClass('custom-search-fixed');
+//         }
+//         else {
+//             $('.customs-menu').removeClass('customs-menu-fixed');
+//             $('.pagination-list').removeClass('pagination-list-fixed');
+//             $('.edit-buttons').removeClass('edit-buttons-fixed');
+//             $('.custom-search').removeClass('custom-search-fixed');
 
-        }
+//         }
 
-    });
+//     });
 
-});
+// });
 
 
 
