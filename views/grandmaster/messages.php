@@ -3,6 +3,7 @@
 use app\assets\GrandmasterAsset;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\widgets\ListView;
 
 // use yii\helpers\Url;
 // use yii\helpers\ArrayHelper;
@@ -17,4 +18,30 @@ $this->title = 'Grandmaster - Admin';
 
 <div class="wrapper content-block col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
     <p>Сообщения из формы</p>
+
+    <table class="customs-table">
+
+        <?= ListView::widget([
+            'dataProvider' => $dataProvider,
+            'itemView' => '_messages_item',
+            'options' => [ // настройка атрибутов для внешнего контейнера списка
+                'class' => 'title-list statistics-menu', // класс блока div
+            ],
+            'pager' => [
+                'prevPageLabel' => '',
+                'nextPageLabel' => '',
+                'pageCssClass' => 'pagination-item',
+                'prevPageCssClass' => 'pagination-item mark',
+                'nextPageCssClass' => 'pagination-item mark',
+                'activePageCssClass' => 'pagination-item--active',
+                'options' => ['class' => 'pagination-list'],
+                // 'linkOptions' => ['class' => 'link link--page'],
+                // 'options' => [
+                //     'class' => 'pagination-list',
+                // ],
+            ],
+        ]) ?>
+
+    </table>
+
 </div>

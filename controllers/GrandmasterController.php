@@ -18,11 +18,14 @@ use app\models\CustomSearchForm;
 use app\models\HistorySearch;
 use app\models\HistoryGeocoder;
 use app\models\HistoryIp;
+use app\models\Questions;
 
 use app\models\Customs;
 
 use app\models\SearchCustoms;
 use app\models\FilterCustoms;
+use app\services\QuestionService;
+use Symfony\Component\Console\Question\Question;
 
 class GrandmasterController extends Controller
 {
@@ -200,9 +203,24 @@ class GrandmasterController extends Controller
 
     public function actionMessages()
     {
+        $query = Questions::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 50,
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,
+                ]
+            ],
+        ]);
+
+
         $this->layout = 'grandmaster';
         return $this->render('messages', [
-            // 'loginForm' => $loginForm
+            'dataProvider' => $dataProvider
         ]);
     }
 

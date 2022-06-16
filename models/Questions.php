@@ -2,28 +2,25 @@
 
 namespace app\models;
 
-use yii\base\Model;
+use Yii;
 
 /**
- * This is the model class for table "questions_form".
+ * This is the model class for table "questions".
  *
  * @property int $id
+ * @property string $question_dt_add
  * @property string $user_name
  * @property string $user_email
  * @property string $form_content
  */
-class QuestionsForm extends Model
+class Questions extends \yii\db\ActiveRecord
 {
-    public $user_name;
-    public $user_email;
-    public $form_content;
-
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'questions_form';
+        return 'questions';
     }
 
     /**
@@ -32,13 +29,10 @@ class QuestionsForm extends Model
     public function rules()
     {
         return [
-            [['user_name', 'user_email', 'form_content'], 'required'],
+            [['question_dt_add', 'user_name', 'user_email', 'form_content'], 'required'],
+            [['question_dt_add'], 'safe'],
             [['user_name', 'user_email'], 'string', 'max' => 256],
             [['form_content'], 'string', 'max' => 10000],
-
-            // загрузка файла
-            // капча
-            // соглашение на обработку персональных данных
         ];
     }
 
@@ -49,6 +43,7 @@ class QuestionsForm extends Model
     {
         return [
             'id' => 'ID',
+            'question_dt_add' => 'Question Dt Add',
             'user_name' => 'Ваше имя',
             'user_email' => 'Email',
             'form_content' => 'Текст сообщения',
