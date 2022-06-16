@@ -74,12 +74,12 @@ class m220411_082015_customs_table extends Migration
             'page_user_change' => $this->string()->notNull(),
         ]);
 
-        $this->createTable('{{%questions_form}}', [
+        $this->createTable('{{%questions}}', [
             'id' => $this->primaryKey(),
             'question_dt_add' => $this->dateTime()->notNull(),
-            'user_name' => $this->string(512)->null(),
+            'user_name' => $this->string(256)->null(),
             'user_email' => $this->string(256)->notNull(),
-            'form_content' => $this->string(256)->notNull(),
+            'form_content' => $this->string()->notNull(),
         ]);
     }
 
