@@ -54,6 +54,10 @@ class ContactsController extends Controller
             'pageContent' => $pageContent,
             'questionsFormModel' => $questionsFormModel,
             'formSent' => $formSent,
+            // 'captcha' => [
+            //     'class' => 'yii\captcha\CaptchaAction',
+            //     'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            // ],
         ]);
     }
 }

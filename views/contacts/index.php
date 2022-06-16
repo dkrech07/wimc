@@ -7,6 +7,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use yii\jui\AutoComplete;
 use yii\web\JsExpression;
+use yii\captcha\Captcha;
 
 AppAsset::register($this);
 
@@ -31,6 +32,8 @@ $this->title = $pageTitle;
         <?= $form->field($questionsFormModel, 'user_name', ['template' => '{label}{input}'])->textInput(['id' => 'user_name']) ?>
         <?= $form->field($questionsFormModel, 'user_email', ['template' => '{label}{input}'])->textInput(['id' => 'user_email']) ?>
         <?= $form->field($questionsFormModel, 'form_content', ['template' => '{label}{input}'])->textInput(['id' => 'form_content']) ?>
+
+        <!-- <?= $form->field($questionsFormModel, 'verifyCode')->widget(Captcha::className()) ?> -->
 
         <?= Html::submitInput('Отправить сообщение', [
             // 'style' => 'margin-top: 30px;',
