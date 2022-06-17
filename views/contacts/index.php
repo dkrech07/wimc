@@ -29,20 +29,20 @@ $this->title = $pageTitle;
             ],
         ]); ?>
 
-        <?= $form->field($questionsFormModel, 'form_content', ['template' => '{label}{input}'])->textarea(['id' => 'form_content', 'rows' => '10']) ?>
+        <?= $form->field($questionsFormModel, 'form_content', ['template' => '{label}{input}{error}'])->textarea(['id' => 'form_content', 'rows' => '10']) ?>
 
         <div class="letters-counter">
             <span class='letters-number'>0</span><span>/1000</span>
         </div>
 
-        <?= $form->field($questionsFormModel, 'user_name', ['template' => '{label}{input}'])->textInput(['id' => 'user_name']) ?>
+        <?= $form->field($questionsFormModel, 'user_name', ['template' => '{label}{input}{error}'])->textInput(['id' => 'user_name']) ?>
 
         <div class="need-answer-group col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <input class="need-answer" type="checkbox" id="need-answer" name="need-answer">
             <label class="need-answer" for="need-answer">Требуется ответ</label>
         </div>
 
-        <?= $form->field($questionsFormModel, 'user_email', ['template' => '{label}{input}'])->textInput(['id' => 'user_email']) ?>
+        <?= $form->field($questionsFormModel, 'user_email', ['template' => '{label}{input}{error}'])->textInput(['id' => 'user_email']) ?>
 
         <?= $form->field($questionsFormModel, 'verifyCode')->widget(Captcha::className(), [
             'captchaAction' => '/contacts/captcha',

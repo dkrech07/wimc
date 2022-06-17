@@ -516,6 +516,11 @@ body {
 .field-user_email {
     display: none;
 }
+
+.help-block {
+    font-size: 12px;
+    color: #FF0000;
+}
 /* .question-form {
     margin: 0 auto;
 }

@@ -32,7 +32,7 @@ class Questions extends \yii\db\ActiveRecord
             [['question_dt_add', 'user_name', 'form_content'], 'required'],
             [['question_dt_add'], 'safe'],
             [['user_name', 'user_email'], 'string', 'max' => 256],
-            [['form_content'], 'string', 'max' => 10000],
+            [['form_content'], 'string', 'max' => 1000],
         ];
     }
 

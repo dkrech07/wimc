@@ -377,6 +377,7 @@ if (questionFormElement) {
     var formContentElement = questionFormElement.querySelector('#form_content');
     var needAnswerElement = questionFormElement.querySelector('#need-answer');
     var formEmailElement = questionFormElement.querySelector('.field-user_email');
+    formEmailElement.value = 'Ответ не требуется';
 
     // formEmailElement.style = "display: none;"
 
@@ -384,10 +385,11 @@ if (questionFormElement) {
         var check = needAnswerElement.checked ? 1:0;
         if (check === 1) {
             formEmailElement.style = "display: block;"
+            formEmailElement.setAttribute("required", true);
         } else {
             formEmailElement.style = "display: none;"
+            formEmailElement.setAttribute("required", false);
         }
-        console.log(check);
     });
 
     formContentElement.addEventListener('input', evt => {

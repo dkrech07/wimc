@@ -21,8 +21,13 @@ class QuestionService
 
         $question->question_dt_add = (new HelperService())->getCurrentDate();
         $question->user_name = $QuestionsFormModel->user_name;
-        $question->user_email = $QuestionsFormModel->user_email;
         $question->form_content = $QuestionsFormModel->form_content;
+
+        if ($QuestionsFormModel->user_email) {
+            $question->user_email = $QuestionsFormModel->user_email;
+        } else {
+            $question->user_email = 'Ответ не требуется';
+        }
 
         $transaction = Yii::$app->db->beginTransaction();
         try {

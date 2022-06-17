@@ -35,7 +35,7 @@ class QuestionsForm extends Model
         return [
             [['user_name', 'form_content', 'verifyCode'], 'required'],
             [['user_name', 'user_email'], 'string', 'max' => 256],
-            [['form_content'], 'string', 'max' => 10000],
+            [['form_content'], 'string', 'max' => 1000],
             ['verifyCode', 'captcha', 'captchaAction' => '/contacts/captcha'],
             // загрузка файла
             // капча
