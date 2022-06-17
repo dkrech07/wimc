@@ -1,6 +1,8 @@
 // Start
 const yandexMap = document.querySelector('#map');
-var zoomOutButtonElement = document.querySelector('.zoom-out');
+
+if (yandexMap) {
+    var zoomOutButtonElement = document.querySelector('.zoom-out');
 
 function getPoints(geoObjects, points, color, captions) {
         for (var i = 0, len = points.length; i < len; i++) {
@@ -365,6 +367,32 @@ function init () {
 }
 
 // End
+}
+
+var questionFormElement = document.querySelector('#question-form');
+
+if (questionFormElement) {
+    var lettersCounterElement = questionFormElement.querySelector('.letters-counter');
+    var lettersNumberElement = questionFormElement.querySelector('.letters-number');
+    var formContentElement = questionFormElement.querySelector('#form_content');
+
+    formContentElement.addEventListener('input', evt => {
+        lettersNumberElement.textContent = formContentElement.value.length;
+
+        if (formContentElement.value.length > 1000) {
+            lettersCounterElement.style.color='red';
+        } else {
+            lettersCounterElement.style.color='black';
+
+        }
+      });
+    
+    // lettersNumberElement.value = textInputElement.value;
+    // console.log('ok');
+}
+
+
+
 
 
 

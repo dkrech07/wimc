@@ -31,8 +31,11 @@ $this->title = $pageTitle;
 
         <?= $form->field($questionsFormModel, 'user_name', ['template' => '{label}{input}'])->textInput(['id' => 'user_name']) ?>
         <?= $form->field($questionsFormModel, 'user_email', ['template' => '{label}{input}'])->textInput(['id' => 'user_email']) ?>
-        <?= $form->field($questionsFormModel, 'form_content', ['template' => '{label}{input}'])->textInput(['id' => 'form_content']) ?>
+        <?= $form->field($questionsFormModel, 'form_content', ['template' => '{label}{input}'])->textarea(['id' => 'form_content', 'rows' => '10']) ?>
 
+        <div class="letters-counter">
+            <span class='letters-number'>0</span><span>/1000</span>
+        </div>
         <!-- <?= $form->field($questionsFormModel, 'verifyCode')->widget(Captcha::className()) ?> -->
 
         <?= Html::submitInput('Отправить сообщение', [

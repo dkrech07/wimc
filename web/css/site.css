@@ -493,6 +493,14 @@ body {
     text-decoration: none !important;
 }
 
+.letters-counter {
+    margin: 0;
+    padding: 0;
+    margin-top: -10px;
+    font-size: 12px;
+    text-align: right;
+}
+
 /* .question-form {
     margin: 0 auto;
 }
