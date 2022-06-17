@@ -375,6 +375,20 @@ if (questionFormElement) {
     var lettersCounterElement = questionFormElement.querySelector('.letters-counter');
     var lettersNumberElement = questionFormElement.querySelector('.letters-number');
     var formContentElement = questionFormElement.querySelector('#form_content');
+    var needAnswerElement = questionFormElement.querySelector('#need-answer');
+    var formEmailElement = questionFormElement.querySelector('.field-user_email');
+
+    // formEmailElement.style = "display: none;"
+
+    needAnswerElement.addEventListener('click', evt => {
+        var check = needAnswerElement.checked ? 1:0;
+        if (check === 1) {
+            formEmailElement.style = "display: block;"
+        } else {
+            formEmailElement.style = "display: none;"
+        }
+        console.log(check);
+    });
 
     formContentElement.addEventListener('input', evt => {
         lettersNumberElement.textContent = formContentElement.value.length;

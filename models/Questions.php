@@ -29,7 +29,7 @@ class Questions extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['question_dt_add', 'user_name', 'user_email', 'form_content'], 'required'],
+            [['question_dt_add', 'user_name', 'form_content'], 'required'],
             [['question_dt_add'], 'safe'],
             [['user_name', 'user_email'], 'string', 'max' => 256],
             [['form_content'], 'string', 'max' => 10000],

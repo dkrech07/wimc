@@ -501,6 +501,21 @@ body {
     text-align: right;
 }
 
+.need-answer-group {
+    margin: 0;
+    padding: 0;
+    padding-left: 1px;
+    padding-bottom: 10px;
+}
+
+.need-answer:hover,
+.need-answer-group:hover {
+    cursor: pointer;
+}
+
+.field-user_email {
+    display: none;
+}
 /* .question-form {
     margin: 0 auto;
 }

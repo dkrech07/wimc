@@ -13,6 +13,20 @@ use app\services\QuestionService;
 
 class ContactsController extends Controller
 {
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+            'captcha' => [
+                // 'class' => 'yii\captcha\CaptchaAction',
+                'class' => 'app\services\NumericCaptcha',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
+        ];
+    }
+
     public function actionIndex()
     {
         $PagesModel = new Pages();
@@ -54,10 +68,6 @@ class ContactsController extends Controller
             'pageContent' => $pageContent,
             'questionsFormModel' => $questionsFormModel,
             'formSent' => $formSent,
-            // 'captcha' => [
-            //     'class' => 'yii\captcha\CaptchaAction',
-            //     'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            // ],
         ]);
     }
 }

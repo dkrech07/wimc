@@ -33,10 +33,10 @@ class QuestionsForm extends Model
     public function rules()
     {
         return [
-            [['user_name', 'user_email', 'form_content'], 'required'],
+            [['user_name', 'form_content', 'verifyCode'], 'required'],
             [['user_name', 'user_email'], 'string', 'max' => 256],
             [['form_content'], 'string', 'max' => 10000],
-            // ['verifyCode', 'captcha'],
+            ['verifyCode', 'captcha', 'captchaAction' => '/contacts/captcha'],
             // загрузка файла
             // капча
             // соглашение на обработку персональных данных
@@ -53,6 +53,7 @@ class QuestionsForm extends Model
             'user_name' => 'Ваше имя',
             'user_email' => 'Email',
             'form_content' => 'Текст сообщения',
+            'verifyCode' => 'Подтвердите, что вы не бот',
         ];
     }
 }
