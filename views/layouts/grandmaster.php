@@ -101,6 +101,7 @@ if (isset(Yii::$app->user->identity->login)) {
                             'options' => ['class' => 'pages-dropdown'],
                             'template' => '<a href="{url}" class="url-class">{label}</a>',
                             'items' => [
+                                ['label' => 'Главная страница', 'url' => ['/grandmaster/pages/?id=main']],
                                 ['label' => 'Карта СВХ', 'url' => ['/grandmaster/pages/?id=whs']],
                                 ['label' => 'Справочник постов', 'url' => ['/grandmaster/pages/?id=customs_list']],
                                 ['label' => 'Как это работает', 'url' => ['/grandmaster/pages/?id=about']],

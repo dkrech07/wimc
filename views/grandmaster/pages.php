@@ -15,14 +15,10 @@ use mihaildev\elfinder\ElFinder;
 
     <?php $form = ActiveForm::begin([
         'id' => 'page-edit',
-
         // 'encodeErrorSummary' => true,
         // 'errorSummaryCssClass' => 'help-block',
-
         // 'enableAjaxValidation' => true,
-
     ]); ?>
-
 
 
     <?= $form->field($pageFormModel, 'id')->textInput(['readonly' => true]) ?>
@@ -30,6 +26,7 @@ use mihaildev\elfinder\ElFinder;
     <?= $form->field($pageFormModel, 'page_url')->textInput(['readonly' => true]) ?>
     <?= $form->field($pageFormModel, 'page_user_change')->textInput(['readonly' => true]) ?>
     <?= $form->field($pageFormModel, 'page_name')->textInput() ?>
+    <?= $form->field($pageFormModel, 'page_meta_description')->textInput() ?>
     <?= $form->field($pageFormModel, 'page_content')->widget(CKEditor::className(), [
         'editorOptions' => ElFinder::ckeditorOptions('elfinder', []),
     ]);

@@ -2,19 +2,20 @@
 
 use app\assets\AppAsset;
 use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper;
-use yii\jui\AutoComplete;
-use yii\web\JsExpression;
 use yii\captcha\Captcha;
+// use yii\helpers\ArrayHelper;
+// use yii\jui\AutoComplete;
+// use yii\web\JsExpression;
+// use yii\helpers\Url;
 
 AppAsset::register($this);
 
-$this->title = $pageTitle;
+$this->title = $page->page_name;
+$this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_description]);
 ?>
 
-<h2><?php print($pageTitle) ?></h2>
+<h2><?php print($page->page_name) ?></h2>
 
 <?php if ($formSent == false) : ?>
 
@@ -63,4 +64,4 @@ $this->title = $pageTitle;
 
 <?php endif; ?>
 
-<?php print($pageContent) ?>
+<?php print($page->page_content) ?>

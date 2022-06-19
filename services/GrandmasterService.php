@@ -24,6 +24,7 @@ class GrandmasterService
         $pageEditFormModel->id = $editPage->id;
         $pageEditFormModel->page_dt_add = $editPage->page_dt_add;
         $pageEditFormModel->page_name = $editPage->page_name;
+        $pageEditFormModel->page_meta_description = $editPage->page_meta_description;
         $pageEditFormModel->page_content = $editPage->page_content;
         $pageEditFormModel->page_user_change = $editPage->page_user_change;
         $pageEditFormModel->page_url = $editPage->page_url;
@@ -39,6 +40,7 @@ class GrandmasterService
 
         $editPage->page_dt_add = (new HelperService())->getCurrentDate();
         $editPage->page_name = $pageEditFormModel->page_name;
+        $editPage->page_meta_description = $pageEditFormModel->page_meta_description;
         $editPage->page_content = $pageEditFormModel->page_content;
         $editPage->page_user_change = Yii::$app->user->identity->login;
         $editPage->page_url = $pageEditFormModel->page_url;

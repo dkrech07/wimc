@@ -10,8 +10,9 @@ use yii\web\JsExpression;
 
 AppAsset::register($this);
 
-$this->title = $pageTitle;
+$this->title = $page->page_name;
+$this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_description]);
 ?>
 
-<h2><?php print($pageTitle) ?></h2>
-<?php print($pageContent) ?>
+<h2><?php print($page->page_name) ?></h2>
+<?php print($page->page_content) ?>

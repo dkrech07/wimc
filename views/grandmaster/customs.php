@@ -41,10 +41,9 @@ $this->title = 'Grandmaster - Customs';
             <td class="custom-param coords_latitude">LATITUDE</td>
             <td class="custom-param coords_longitude">LONGITUDE</td>
             <td class="custom-param edit">ACTION</td>
-
         </thead>
 
-        <!-- <div class="pagination-wrapper"> -->
+
         <?= ListView::widget([
             'dataProvider' => $dataProvider,
             'itemView' => '_custom_item',
@@ -65,7 +64,6 @@ $this->title = 'Grandmaster - Customs';
                 // ],
             ],
         ]) ?>
-        <!-- </div> -->
     </table>
 
     <div class="edit-buttons">

@@ -36,4 +36,11 @@ return [
         'page_url' => 'cookie',
         'page_user_change' => 'admin',
     ],
+    'pages5' => [
+        'page_dt_add' => '2000-01-01 00:00:00',
+        'page_name' => 'My Customs',
+        'page_content' => 'Text here',
+        'page_url' => 'main',
+        'page_user_change' => 'admin',
+    ],
 ];

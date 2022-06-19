@@ -30,10 +30,6 @@ yii migrate
 php yii fixture "Customs, Pages"
 
 
-
-
-
-
 Дополнительно:
 
 1. Генерация тестовых данных:

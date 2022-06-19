@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 use yii\web\Controller;
 use app\models\SearchCustoms;
 use app\models\FilterCustoms;
-
+use app\models\Pages;
 
 class CustomsController extends Controller
 {
@@ -16,7 +16,10 @@ class CustomsController extends Controller
     {
         $searchCustomsModel = new SearchCustoms();
         $filterCustoms = new filterCustoms();
-        $form_model = new SearchCustoms();
+
+        $page = Pages::find()
+            ->where(['page_url' => 'main'])
+            ->one();
 
         if (Yii::$app->request->isPost) {
             $searchCustomsModel->load(Yii::$app->request->post());
@@ -33,6 +36,7 @@ class CustomsController extends Controller
         return $this->render('index', [
             'searchCustomsModel' => $searchCustomsModel,
             'filterCustoms' => $filterCustoms,
+            'page' => $page,
         ]);
     }
 }

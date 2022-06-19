@@ -69,6 +69,7 @@ class m220411_082015_customs_table extends Migration
             'id' => $this->primaryKey(),
             'page_dt_add' => $this->dateTime()->notNull(),
             'page_name' => $this->string()->notNull(),
+            'page_meta_description' => $this->string()->null(),
             'page_content' => $this->string()->null(),
             'page_url' => $this->string()->notNull()->unique(),
             'page_user_change' => $this->string()->notNull(),
@@ -79,6 +80,7 @@ class m220411_082015_customs_table extends Migration
             'question_dt_add' => $this->dateTime()->notNull(),
             'user_name' => $this->string(256)->null(),
             'user_email' => $this->string(256)->notNull(),
+            'user_ip' => $this->string(256)->null(),
             'form_content' => $this->string()->notNull(),
         ]);
     }

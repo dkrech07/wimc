@@ -12,15 +12,11 @@ AppAsset::register($this);
 $apiKey = Yii::$app->params['geocoderApiKey'];
 $this->registerJsFile("https://api-maps.yandex.ru/2.1/?apikey={$apiKey}&lang=ru_RU");
 
-$this->title = 'Where is my customs?';
+$this->title = $page->page_name;
+$this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_description]);
 ?>
 
-<!-- <form>
-    <div class="ui-widget">
-        <label for="autocomplete">Укажите адрес: </label>
-        <input id="autocomplete" />
-    </div>
-</form> -->
+<?php print($page->page_content) ?>
 
 <div class="wrapper">
     <?php $form = ActiveForm::begin([
@@ -99,26 +95,8 @@ $this->title = 'Where is my customs?';
         Результат поиска на карте:
     </p>
     <div class='row' style="margin-bottom: 20px;">
-
-        <!-- <div class="map-wrapper"> -->
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="map" style="width: 100%;" data-latitude="<?= $searchCustomsModel->latitude ?>" data-longitude="<?= $searchCustomsModel->longitude ?>">
             <button type="button" class="zoom-out btn btn-light"><i class="bi bi-arrow-counterclockwise"></i></button>
         </div>
-        <!-- </div> -->
-
-        <!-- <div class="customs-count">
-        <span>Найдено таможенных постов:</span>
-        <b><span class="customs-number"></span></b>
-    </div> -->
     </div>
 </div>
-
-<!-- <div class="wrapper">
-    <p class="map-label">
-        <i class="bi bi-clock-history"></i>
-        Другие пользователи искали ранее:
-    </p>
-
-
-
-</div> -->
