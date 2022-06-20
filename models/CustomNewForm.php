@@ -44,7 +44,7 @@ class CustomNewForm extends Model
     public function rules()
     {
         return [
-            [['CODE', 'NAMT', 'OKPO', 'OGRN', 'INN', 'NAME_ALL', 'ADRTAM', 'PROSF', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'required'],
+            [['CODE', 'NAMT', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'required'],
             // [['CODE', 'OKPO', 'OGRN', 'INN', 'PROSF'], 'integer'],
             [['CODE', 'NAMT', 'OKPO', 'OGRN', 'INN', 'NAME_ALL', 'ADRTAM', 'PROSF', 'TELEFON', 'FAX', 'EMAIL', 'COORDS_LATITUDE', 'COORDS_LONGITUDE'], 'string', 'max' => 256],
         ];
