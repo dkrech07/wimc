@@ -3,6 +3,8 @@ var customsList = document.querySelectorAll('.custom-item');
 var editList = document.querySelectorAll('.custom-param.edit');
 var customEditForm = document.querySelector('.custom-edit');
 var customViewForm = document.querySelector('.custom-view');
+var customDeleteButton = document.querySelector('.delete-button');
+var deleteWindow = document.querySelector('.delete-window');
 
 customsList.forEach(customElement => {
     customElement.addEventListener('click', evt => {
@@ -105,6 +107,44 @@ editList.forEach(editElement => {
     });
 });
 
+customDeleteButton.addEventListener('click', evt => {
+    var customDeleteId = customEditForm.querySelector('#customeditform-id').value;
+
+    if (customDeleteId) {
+        deleteWindow.style.display='block';
+        var deletePostId = deleteWindow.querySelector('.delete-post-id');
+        deletePostId.textContent = customDeleteId;
+
+        var noButton = deleteWindow.querySelector('.custom-delete-no');
+        var yesButton = deleteWindow.querySelector('.custom-delete-yes');
+
+        noButton.addEventListener('click', evt => {
+            deleteWindow.style.display='none';
+        });
+
+        yesButton.addEventListener('click', evt => {
+            $.ajax({
+                url: '/grandmaster/customs',
+                //   url: '/web//grandmaster/customs', 
+                //   url: 'http://localhost/wimc/web/grandmaster/customs', 
+                type: 'POST',
+                data: data,
+                success: function (response) {
+                    // console.log('response');
+
+                    // console.log(response);
+                    // customEditForm.style.display = 'block';
+                    // var customEdit = JSON.parse(response);
+                    // customEditForm.querySelector('#customeditform-id').value = customEdit['ID'];
+
+                }
+            });
+        });
+
+    }
+    console.log(customDeleteId);
+});
+
 $(document).ready(function () {
 
     var start_pos = $('.customs-menu').offset().top;
@@ -118,13 +158,13 @@ $(document).ready(function () {
             if ($('.pagination-list').hasClass() == false) $('.pagination-list').addClass('pagination-list-fixed');
             if ($('.edit-buttons').hasClass() == false) $('.edit-buttons').addClass('edit-buttons-fixed');
             if ($('.custom-search').hasClass() == false) $('.custom-search').addClass('custom-search-fixed');
+
         }
         else {
             $('.customs-menu').removeClass('customs-menu-fixed');
             $('.pagination-list').removeClass('pagination-list-fixed');
             $('.edit-buttons').removeClass('edit-buttons-fixed');
             $('.custom-search').removeClass('custom-search-fixed');
-
         }
 
     });

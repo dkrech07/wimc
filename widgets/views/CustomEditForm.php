@@ -34,6 +34,9 @@ use yii\widgets\ActiveForm;
         <button type="button" class="modal-button cancel-button">Отмена</button>
     </div>
 
+    <button type="button" class="modal-button delete-button">Удалить пост</button>
+
+
     <?php ActiveForm::end(); ?>
 
 </section>

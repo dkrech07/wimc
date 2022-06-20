@@ -67,9 +67,8 @@ $this->title = 'Grandmaster - Customs';
     </table>
 
     <div class="edit-buttons">
-        <!-- <button type="button" class="modal-button all-customs-button">Показать все посты</button> -->
         <a class="modal-button all-customs-button" href="/grandmaster/customs?ALL=all">Показать все посты</a>
-        <button type="button" class="modal-button add-new-custom-button">Добавить новый поист</button>
+        <a class="modal-button all-customs-button" href="#">Добавить новый поист</a>
     </div>
 
 
@@ -94,3 +93,11 @@ $this->title = 'Grandmaster - Customs';
 
 <?= ModalForm::widget(['formType' => 'CustomEditForm', 'formModel' => $customEditFormModel]) ?>
 <?= ModalForm::widget(['formType' => 'CustomViewForm', 'formModel' => $customEditFormModel]) ?>
+
+<div class="delete-window" style="display: none">
+    <h3 class="delete-title">Вы действительно хотите удалить пост ID <span class="delete-post-id"></span> из системы?</h3>
+    <div class="delete-buttons">
+        <button class="custom-delete-no">Нет</button>
+        <button class="custom-delete-yes">Да</button>
+    </div>
+</div>
