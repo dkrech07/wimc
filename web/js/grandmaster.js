@@ -3,8 +3,10 @@ var customsList = document.querySelectorAll('.custom-item');
 var editList = document.querySelectorAll('.custom-param.edit');
 var customEditForm = document.querySelector('.custom-edit');
 var customViewForm = document.querySelector('.custom-view');
+var customNewForm = document.querySelector('.custom-new');
 var customDeleteButton = document.querySelector('.delete-button');
 var deleteWindow = document.querySelector('.delete-window');
+var addNewCustom = document.querySelector('.add-new-custom');
 
 customsList.forEach(customElement => {
     customElement.addEventListener('click', evt => {
@@ -13,13 +15,11 @@ customsList.forEach(customElement => {
             var viewElementId = customElement.querySelector('.id').innerHTML;
 
             var data = {
-                'ID': viewElementId,
+                'CUSTOM_ID': viewElementId,
             };
 
             $.ajax({
                 url: '/grandmaster/customs',
-                //   url: '/web//grandmaster/customs', 
-                //   url: 'http://localhost/wimc/web/grandmaster/customs', 
                 type: 'POST',
                 data: data,
                 success: function (response) {
@@ -60,7 +60,7 @@ editList.forEach(editElement => {
     editElement.addEventListener('click', evt => {
 
         var data = {
-            'ID': editElement.id
+            'CUSTOM_ID': editElement.id
         };
 
         // Отрисовываю основные таможенные посты;
@@ -71,9 +71,6 @@ editList.forEach(editElement => {
             type: 'POST',
             data: data,
             success: function (response) {
-                console.log('response');
-
-                console.log(response);
                 customEditForm.style.display = 'block';
                 var customEdit = JSON.parse(response);
                 customEditForm.querySelector('#customeditform-id').value = customEdit['ID'];
@@ -123,26 +120,33 @@ customDeleteButton.addEventListener('click', evt => {
         });
 
         yesButton.addEventListener('click', evt => {
+            var data = {
+                'CUSTOM_DELETE': customDeleteId
+            };
+
             $.ajax({
                 url: '/grandmaster/customs',
-                //   url: '/web//grandmaster/customs', 
-                //   url: 'http://localhost/wimc/web/grandmaster/customs', 
                 type: 'POST',
-                data: data,
-                success: function (response) {
-                    // console.log('response');
-
-                    // console.log(response);
-                    // customEditForm.style.display = 'block';
-                    // var customEdit = JSON.parse(response);
-                    // customEditForm.querySelector('#customeditform-id').value = customEdit['ID'];
-
-                }
+                data: data
             });
         });
 
     }
-    console.log(customDeleteId);
+});
+
+addNewCustom.addEventListener('click', evt=> {
+    customNewForm.style.display = 'block';
+
+    var closeBtn = customNewForm.querySelector('.close-btn');
+    closeBtn.addEventListener('click', evt => {
+        customNewForm.style.display = 'none';
+    });
+
+    var cancelButton = customNewForm.querySelector('.cancel-button');
+
+    cancelButton.addEventListener('click', evt => {
+        customNewForm.style.display = 'none';
+    });
 });
 
 $(document).ready(function () {

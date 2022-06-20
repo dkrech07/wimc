@@ -71,6 +71,7 @@
 .custom-param,
 .search-param {
     border-right: 2px solid #efefef;
+    padding: 5px;
 }
 
 .custom-param:last-child,
@@ -159,7 +160,8 @@
 }
 
 .custom-edit,
-.custom-view {
+.custom-view,
+.custom-new {
     position: fixed;
     background-color: #ffffff;
     width: 70%;
@@ -180,26 +182,30 @@
 }
 
 .custom-edit .close-btn,
-.custom-view .close-btn {
+.custom-view .close-btn,
+.custom-new .close-btn {
     font-size: 24px;
     cursor: pointer;
 }
 
 .custom-edit .close-btn:hover,
-.custom-view .close-btn:hover {
+.custom-view .close-btn:hover,
+.custom-new .close-btn:hover {
     color: #007bff;
 }
 
 #custom-edit .form-group,
 #custom-view .form-group,
-#page-edit .form-group {
+#page-edit .form-group,
+#custom-new .form-group {
     width: 40%;
     display: inline-block;
 }
 
 #custom-edit .form-group:nth-child(2n),
 #custom-view .form-group:nth-child(2n),
-#page-edit .form-group:nth-child(2n) {
+#page-edit .form-group:nth-child(2n),
+#custom-new .form-group:nth-child(2n) {
     margin-right: 10%;
 }
 
@@ -213,6 +219,8 @@
 #custom-edit .accept-button,
 #custom-edit .cancel-button,
 #custom-view .cancel-button,
+#custom-new .accept-button,
+#custom-new .cancel-button,
 #page-edit .accept-button,
 #page-edit .cancel-button {
     margin: 0;
@@ -227,6 +235,7 @@
 }
 
 #custom-edit .accept-button,
+#custom-new .accept-button,
 #page-edit .accept-button {
     background-color: #007bff;
     color: #ffffff;
@@ -234,6 +243,7 @@
 
 #custom-edit .cancel-button,
 #custom-view .cancel-button,
+#custom-new .cancel-button,
 #page-edit .cancel-button {
     background-color: #ffffff;
     color: #007bff;
@@ -361,7 +371,7 @@
 }
 
 .delete-window {
-    position: absolute;
+    position: fixed;
     width: 850px;
     height: 250px;
     background-color: #ffffff;

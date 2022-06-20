@@ -13,6 +13,7 @@ use yii\data\ActiveDataProvider;
 use app\services\HelperService;
 use app\services\GrandmasterService;
 use app\models\CustomEditForm;
+use app\models\CustomNewForm;
 use app\models\PageEditFormModel;
 use app\models\CustomSearchForm;
 use app\models\HistorySearch;
@@ -97,14 +98,21 @@ class GrandmasterController extends Controller
 
         $customEditFormModel = new CustomEditForm();
         $customSearchFormModel = new CustomSearchForm();
+        $customNewFormModel = new customNewForm();
+
 
         if (\Yii::$app->request->isAjax && \Yii::$app->request->post()) {
             $request = Yii::$app->request;
             $data = $request->post();
 
             // Если пришел ID, отдаю найденный пост для просмотра/редактирования
-            if (key($data) == 'ID') {
-                return json_encode((new GrandmasterService())->getEditCustom($data['ID']), JSON_UNESCAPED_UNICODE);
+            if (key($data) == 'CUSTOM_ID') {
+                return json_encode((new GrandmasterService())->getEditCustom($data['CUSTOM_ID']), JSON_UNESCAPED_UNICODE);
+            }
+
+            if (key($data) == 'CUSTOM_DELETE') {
+                (new GrandmasterService())->deleteCustom($data['CUSTOM_DELETE']);
+                $this->refresh();
             }
         }
 
@@ -113,18 +121,29 @@ class GrandmasterController extends Controller
 
         $query = (new GrandmasterService())->getSearchCusom($customSearchFormModel);
 
-
         if (Yii::$app->request->isPost) {
-            $customEditFormModel->load(Yii::$app->request->post());
-
-            if (Yii::$app->request->isAjax) {
-                Yii::$app->response->format = Response::FORMAT_JSON;
-                return ActiveForm::validate($customEditFormModel);
+            if (Yii::$app->request->post('CustomNewForm')) {
+                $customNewFormModel->load(Yii::$app->request->post());
+                if (Yii::$app->request->isAjax) {
+                    Yii::$app->response->format = Response::FORMAT_JSON;
+                    return ActiveForm::validate($customNewFormModel);
+                }
+                if ($customNewFormModel->validate()) {
+                    (new GrandmasterService())->addNewCustom($customNewFormModel);
+                    return $this->refresh();
+                }
             }
 
-            if ($customEditFormModel->validate()) {
-                (new GrandmasterService())->editCustom($customEditFormModel);
-                return $this->refresh();
+            if (Yii::$app->request->post('CustomEditForm')) {
+                $customEditFormModel->load(Yii::$app->request->post());
+                if (Yii::$app->request->isAjax) {
+                    Yii::$app->response->format = Response::FORMAT_JSON;
+                    return ActiveForm::validate($customEditFormModel);
+                }
+                if ($customEditFormModel->validate()) {
+                    (new GrandmasterService())->editCustom($customEditFormModel);
+                    return $this->refresh();
+                }
             }
         }
 
@@ -147,6 +166,7 @@ class GrandmasterController extends Controller
         return $this->render('customs', [
             'dataProvider' => $dataProvider,
             'customEditFormModel' => $customEditFormModel,
+            'customNewFormModel' => $customNewFormModel,
             'customSearchFormModel' => $customSearchFormModel,
         ]);
     }

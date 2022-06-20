@@ -6,6 +6,7 @@ use Yii;
 use app\models\User;
 use app\models\Customs;
 use app\models\CustomEditForm;
+use app\models\CustomNewForm;
 use app\models\Pages;
 use app\models\PageEditFormModel;
 use app\models\CustomSearchForm;
@@ -115,6 +116,42 @@ class GrandmasterService
         }
     }
 
+
+    public function deleteCustom($customId)
+    {
+        $deleteCustom = Customs::findOne($customId);
+        $deleteCustom->delete();
+    }
+
+    public function addNewCustom(CustomNewForm $customNewFormModel)
+    {
+        $newCustom = new Customs;
+
+        $newCustom->CODE = $customNewFormModel->CODE;
+        $newCustom->NAMT = $customNewFormModel->NAMT;
+        $newCustom->OKPO = $customNewFormModel->OKPO;
+        $newCustom->OGRN = $customNewFormModel->OGRN;
+        $newCustom->INN = $customNewFormModel->INN;
+        $newCustom->NAME_ALL = $customNewFormModel->NAME_ALL;
+        $newCustom->ADRTAM = $customNewFormModel->ADRTAM;
+        $newCustom->PROSF = $customNewFormModel->PROSF;
+        $newCustom->TELEFON = $customNewFormModel->TELEFON;
+        $newCustom->FAX = $customNewFormModel->FAX;
+        $newCustom->EMAIL = $customNewFormModel->EMAIL;
+        $newCustom->COORDS_LATITUDE = $customNewFormModel->COORDS_LATITUDE;
+        $newCustom->COORDS_LONGITUDE = $customNewFormModel->COORDS_LONGITUDE;
+
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            $newCustom->save();
+            $transaction->commit();
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            throw $e;
+        } catch (\Throwable $e) {
+            $transaction->rollBack();
+        }
+    }
 
     public function getСustoms()
     {
