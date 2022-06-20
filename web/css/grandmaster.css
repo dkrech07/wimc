@@ -165,7 +165,7 @@
     position: fixed;
     background-color: #ffffff;
     width: 70%;
-    height: 800px;
+    height: 775px;
     top: 3%;
     left: 50%;
     margin-left: -35%;
@@ -174,6 +174,7 @@
     display: none;
     border: 1px solid #363636;
     z-index: 10;
+    overflow: scroll
 }
 
 .form-header {
@@ -250,11 +251,12 @@
 }
 
 .delete-button {
+    position: relative;
     margin: 0;
     padding: 0;
     padding: 3px 10px;
-    margin-top: 10px;
-    margin-left: 400px;
+    /* margin-top: 10px; */
+    /* margin-left: 50%; */
     background-color: red;
     border-color: red;
     color: #ffffff;
@@ -267,7 +269,7 @@
     height: 185px;
     padding: 10px;
     padding-left: 20px;
-    width: 1200px;
+    /* width: 1200px; */
 }
 
 .customs-menu-fixed {
@@ -405,12 +407,12 @@
 .delete-window .custom-delete-yes {
     background-color: #FF0000;
     color: #ffffff;
-    border-color: #FF0000;    
+    border-color: #FF0000;
 }
 
 .delete-window .custom-delete-no {
     background-color: #ffffff;
-    color: #007bff;    
+    color: #007bff;
     border-color: #007bff;
     margin-right: 150px;
 
