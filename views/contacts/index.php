@@ -17,6 +17,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_d
 
 <h2><?php print($page->page_name) ?></h2>
 
+
+<!-- <form action="upload.php" class="dropzone"></form> -->
+
+
 <?php if ($formSent == false) : ?>
 
     <div class="wrapper question-form col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
@@ -49,6 +53,13 @@ $this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_d
             'captchaAction' => '/contacts/captcha',
             'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-9">{input}</div></div>',
         ]) ?>
+
+        <p class="form-label">Загрузить файл</p>
+        <div class="new-file">
+            <?= $form
+                ->field($questionsFormModel, 'files[]', ['template' => "{input}{label}", 'labelOptions' => ['class' => 'add-file']])
+                ->fileInput(['style' => 'display: none;', 'multiple' => true]) ?>
+        </div>
 
         <?= Html::submitInput('Отправить сообщение', [
             // 'style' => 'margin-top: 30px;',

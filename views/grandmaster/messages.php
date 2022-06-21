@@ -16,7 +16,7 @@ $this->title = 'Grandmaster - Admin';
 
 
 
-<div class="wrapper content-block col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+<div class="content-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
     <p>Сообщения из формы</p>
 
     <table class="customs-table">

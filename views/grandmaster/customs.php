@@ -17,13 +17,31 @@ GrandmasterAsset::register($this);
 $this->title = 'Grandmaster - Customs';
 ?>
 
-<div class="content-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-
-    <!-- <div class="stick_menu customs-edit-group">
-  
-    </div> -->
-
+<div class="content-block customs-content col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
     <h2 class="grandmaster-title">Список таможенных постов:</h2>
+
+    <div class="customs-menu-table">
+        <div class="custom-search">
+            <?php $form = ActiveForm::begin([
+                'id' => 'custom-search',
+                'action' => 'customs',
+                'method' => 'get',
+                'enableClientValidation' => false,
+                'enableAjaxValidation' => false
+            ]); ?>
+
+            <?= $form->field($customSearchFormModel, 'CODE')->textInput(['placeholder' => 'CODE', 'size' => 50, 'name' => 'CODE']) ?>
+            <?= $form->field($customSearchFormModel, 'NAMT')->textInput(['placeholder' => 'NAMT', 'size' => 50, 'name' => 'NAMT']) ?>
+            <button type="submit" class="modal-button custom-search-button">Найти</button>
+
+            <?php ActiveForm::end(); ?>
+        </div>
+
+        <div class="edit-buttons">
+            <a class="modal-button all-customs-button" href="/grandmaster/customs?ALL=all">Показать все посты</a>
+            <a class="modal-button all-customs-button add-new-custom" href="#">Добавить новый пост</a>
+        </div>
+    </div>
     <table class="customs-table">
         <thead class="customs-head">
             <td class="custom-param id">ID</td>
@@ -48,7 +66,7 @@ $this->title = 'Grandmaster - Customs';
             'dataProvider' => $dataProvider,
             'itemView' => '_custom_item',
             'options' => [ // настройка атрибутов для внешнего контейнера списка
-                'class' => 'title-list customs-menu', // класс блока div
+                'class' => 'title-list', // класс блока div
             ],
             'pager' => [
                 'prevPageLabel' => '',
@@ -58,37 +76,14 @@ $this->title = 'Grandmaster - Customs';
                 'nextPageCssClass' => 'pagination-item mark',
                 'activePageCssClass' => 'pagination-item--active',
                 'options' => ['class' => 'pagination-list'],
-                // 'linkOptions' => ['class' => 'link link--page'],
-                // 'options' => [
-                //     'class' => 'pagination-list',
-                // ],
+                'linkOptions' => ['class' => 'link link--page'],
+                'options' => [
+                    'class' => 'pagination-list',
+                ],
             ],
         ]) ?>
+
     </table>
-
-    <div class="edit-buttons">
-        <a class="modal-button all-customs-button" href="/grandmaster/customs?ALL=all">Показать все посты</a>
-        <a class="modal-button all-customs-button add-new-custom" href="#">Добавить новый пост</a>
-    </div>
-
-
-    <div class="custom-search">
-        <?php $form = ActiveForm::begin([
-            'id' => 'custom-search',
-            'action' => 'customs',
-            'method' => 'get',
-            'enableClientValidation' => false,
-            'enableAjaxValidation' => false
-        ]); ?>
-
-        <?= $form->field($customSearchFormModel, 'CODE')->textInput(['placeholder' => 'CODE', 'size' => 25, 'name' => 'CODE']) ?>
-        <?= $form->field($customSearchFormModel, 'NAMT')->textInput(['placeholder' => 'NAMT', 'size' => 50, 'name' => 'NAMT']) ?>
-
-        <div class="submit-btn form-group">
-            <button type="submit" class="modal-button custom-search-button">Найти</button>
-        </div>
-        <?php ActiveForm::end(); ?>
-    </div>
 </div>
 
 <?= ModalForm::widget(['formType' => 'CustomEditForm', 'formModel' => $customEditFormModel]) ?>

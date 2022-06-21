@@ -18,6 +18,7 @@ class QuestionsForm extends Model
     public $user_email;
     public $form_content;
     public $verifyCode;
+    public $files;
 
     /**
      * {@inheritdoc}
@@ -37,6 +38,8 @@ class QuestionsForm extends Model
             [['user_name', 'user_email'], 'string', 'max' => 256],
             [['form_content'], 'string', 'max' => 1000],
             ['verifyCode', 'captcha', 'captchaAction' => '/contacts/captcha'],
+            [['files'], 'file', 'maxFiles' => 10],
+
             // загрузка файла
             // капча
             // соглашение на обработку персональных данных

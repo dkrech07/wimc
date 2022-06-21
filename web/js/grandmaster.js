@@ -104,80 +104,97 @@ editList.forEach(editElement => {
     });
 });
 
-customDeleteButton.addEventListener('click', evt => {
-    var customDeleteId = customEditForm.querySelector('#customeditform-id').value;
-
-    if (customDeleteId) {
-        deleteWindow.style.display='block';
-        var deletePostId = deleteWindow.querySelector('.delete-post-id');
-        deletePostId.textContent = customDeleteId;
-
-        var noButton = deleteWindow.querySelector('.custom-delete-no');
-        var yesButton = deleteWindow.querySelector('.custom-delete-yes');
-
-        noButton.addEventListener('click', evt => {
-            deleteWindow.style.display='none';
-        });
-
-        yesButton.addEventListener('click', evt => {
-            var data = {
-                'CUSTOM_DELETE': customDeleteId
-            };
-
-            $.ajax({
-                url: '/grandmaster/customs',
-                type: 'POST',
-                data: data
+if (customDeleteButton) {
+    customDeleteButton.addEventListener('click', evt => {
+        var customDeleteId = customEditForm.querySelector('#customeditform-id').value;
+    
+        if (customDeleteId) {
+            deleteWindow.style.display='block';
+            var deletePostId = deleteWindow.querySelector('.delete-post-id');
+            deletePostId.textContent = customDeleteId;
+    
+            var noButton = deleteWindow.querySelector('.custom-delete-no');
+            var yesButton = deleteWindow.querySelector('.custom-delete-yes');
+    
+            noButton.addEventListener('click', evt => {
+                deleteWindow.style.display='none';
             });
+    
+            yesButton.addEventListener('click', evt => {
+                var data = {
+                    'CUSTOM_DELETE': customDeleteId
+                };
+    
+                $.ajax({
+                    url: '/grandmaster/customs',
+                    type: 'POST',
+                    data: data
+                });
+            });
+    
+        }
+    });
+}
+
+if (addNewCustom) {
+    addNewCustom.addEventListener('click', evt=> {
+        customNewForm.style.display = 'block';
+    
+        var closeBtn = customNewForm.querySelector('.close-btn');
+        closeBtn.addEventListener('click', evt => {
+            customNewForm.style.display = 'none';
         });
+    
+        var cancelButton = customNewForm.querySelector('.cancel-button');
+    
+        cancelButton.addEventListener('click', evt => {
+            customNewForm.style.display = 'none';
+        });
+    });
+}
 
+// $(document).ready(function () {
+//     var start_pos = $('.customs-menu').offset().top;
+//     // var start_pos = $('.pagination-list').offset().top;
+//     // var start_pos = $('.edit-buttons').offset().top;
+//     // var start_pos = $('.custom-search').offset().top;
+
+//     $(window).scroll(function () {
+//         if ($(window).scrollTop() >= start_pos) {
+//             if ($('.customs-menu').hasClass() == false) $('.customs-menu').addClass('customs-menu-fixed');
+//             // if ($('.pagination-list').hasClass() == false) $('.pagination-list').addClass('pagination-list-fixed');
+//             // if ($('.edit-buttons').hasClass() == false) $('.edit-buttons').addClass('edit-buttons-fixed');
+//             // if ($('.custom-search').hasClass() == false) $('.custom-search').addClass('custom-search-fixed');
+
+//         }
+//         else {
+//             $('.customs-menu').removeClass('customs-menu-fixed');
+//         }
+
+//     });
+
+// });
+
+
+function fixedMenu (item, fixedItem) {
+    if ($(item)) {
+        var startPos = $(item).offset().top;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= startPos) {
+                if ($(item).hasClass() == false) $(item).addClass(fixedItem);
+            }
+            else {
+                $(item).removeClass(fixedItem);
+            }
+        });
     }
-});
-
-addNewCustom.addEventListener('click', evt=> {
-    customNewForm.style.display = 'block';
-
-    var closeBtn = customNewForm.querySelector('.close-btn');
-    closeBtn.addEventListener('click', evt => {
-        customNewForm.style.display = 'none';
-    });
-
-    var cancelButton = customNewForm.querySelector('.cancel-button');
-
-    cancelButton.addEventListener('click', evt => {
-        customNewForm.style.display = 'none';
-    });
-});
-
-$(document).ready(function () {
-
-    var start_pos = $('.customs-menu').offset().top;
-    var start_pos = $('.pagination-list').offset().top;
-    var start_pos = $('.edit-buttons').offset().top;
-    var start_pos = $('.custom-search').offset().top;
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() >= start_pos) {
-            if ($('.customs-menu').hasClass() == false) $('.customs-menu').addClass('customs-menu-fixed');
-            if ($('.pagination-list').hasClass() == false) $('.pagination-list').addClass('pagination-list-fixed');
-            if ($('.edit-buttons').hasClass() == false) $('.edit-buttons').addClass('edit-buttons-fixed');
-            if ($('.custom-search').hasClass() == false) $('.custom-search').addClass('custom-search-fixed');
-
-        }
-        else {
-            $('.customs-menu').removeClass('customs-menu-fixed');
-            $('.pagination-list').removeClass('pagination-list-fixed');
-            $('.edit-buttons').removeClass('edit-buttons-fixed');
-            $('.custom-search').removeClass('custom-search-fixed');
-        }
-
-    });
-
-});
+};
 
 
-
-
+fixedMenu('.pagination-list', 'pagination-list-fixed');
+fixedMenu('.title-list', 'title-list-fixed');
+// fixedMenu('.customs-menu', 'customs-menu-fixed');
+// fixedMenu('.customs-menu-table', 'customs-menu-table-fixed');
 
 
 

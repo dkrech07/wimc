@@ -1,0 +1,139 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.customs-content .customs-menu {
+    position: relative;
+    background-color: #ffffff;
+    height: 185px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.customs-content .customs-menu-fixed {
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.customs-content .pagination-list {
+    padding: 0;
+    position: absolute;
+    top: 75px;
+    padding: 10px;
+}
+
+.edit-buttons {
+    position: absolute;
+    top: 75px;
+    margin-left: 550px;
+}
+
+.edit-buttons-fixed {
+    position: fixed;
+    top: 30px;
+}
+
+.edit-buttons .all-customs-button,
+.edit-buttons .add-new-custom-button {
+    display: inline-block;
+    border-color: #007bff;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 5px;
+    width: 290px;
+    box-shadow: 4px 4px 4px rgb(109, 106, 104);
+    margin-right: 30px;
+    text-align: center;
+
+    /* right: 100px; */
+}
+
+.edit-buttons .add-new-custom-button {
+
+    padding: 2px;
+}
+
+.customs-content .pagination-list-fixed {
+    position: fixed;
+    top: 25px;
+}
+
+.customs-content .custom-search {
+    position: absolute;
+    top: 130px;
+    margin-left: 450px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.customs-content .custom-search-fixed {
+    position: fixed;
+    top: 85px;
+}
+
+/* .customs-table-fixed {
+    position: fixed;
+    top: 85px;
+} */
+
+#custom-search .form-group.field-customsearchform-code,
+#custom-search .form-group.field-customsearchform-namt {
+    margin: 0;
+    margin-right: 20px;
+    padding: 0;
+    width: 500px;
+    display: inline-block;
+}
+
+
+
+.list-item--active {
+    text-decoration: underline;
+}
+
+
+
+.statistics-content .statistics-menu {
+    position: relative;
+    background-color: #ffffff;
+    height: 85px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.statistics-content .pagination-list {
+    padding: 0;
+    position: absolute;
+    top: 115px;
+    padding: 10px;
+    margin-left: 15px;
+}

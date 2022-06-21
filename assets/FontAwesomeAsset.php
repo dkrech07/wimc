@@ -19,7 +19,11 @@ use yii\web\AssetBundle;
 class FontAwesomeAsset extends AssetBundle
 {
     public $sourcePath = '@bower/font-awesome';
+    public $js = [
+        'https://unpkg.com/dropzone@5/dist/min/dropzone.min.js',
+    ];
     public $css = [
         'css/font-awesome.min.css',
+        'https://unpkg.com/dropzone@5/dist/min/dropzone.min.css',
     ];
 }

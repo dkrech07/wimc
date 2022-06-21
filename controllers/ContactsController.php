@@ -9,7 +9,7 @@ use yii\web\Controller;
 use app\models\Pages;
 use app\models\QuestionsForm;
 use app\services\QuestionService;
-
+use yii\web\UploadedFile;
 
 class ContactsController extends Controller
 {
@@ -39,6 +39,7 @@ class ContactsController extends Controller
         if (Yii::$app->request->getIsPost()) {
 
             $questionsFormModel->load(Yii::$app->request->post());
+            $questionsFormModel->files = UploadedFile::getInstances($questionsFormModel, 'files');
 
             if (Yii::$app->request->isAjax) {
                 Yii::$app->response->format = Response::FORMAT_JSON;

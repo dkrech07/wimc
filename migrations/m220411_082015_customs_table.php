@@ -32,8 +32,8 @@ class m220411_082015_customs_table extends Migration
         $this->createTable('{{%history_geocoder}}', [
             'id' => $this->primaryKey(),
             'history_dt_add_geocoder' => $this->dateTime()->notNull(),
-            'request_text_geocoder' => $this->string(256)->null(), // Текст запроса для геокодера OpenMaps (из автокоплита); 
-            'response_text_geocoder' => $this->string(256)->null(), // Ответ геокодера OpenMaps; 
+            'request_text_geocoder' => $this->string(256)->null(),
+            'response_text_geocoder' => $this->string(256)->null(),
         ]);
 
         $this->createTable('{{%history_search}}', [
@@ -83,6 +83,21 @@ class m220411_082015_customs_table extends Migration
             'user_ip' => $this->string(256)->null(),
             'form_content' => $this->string()->notNull(),
         ]);
+
+        $this->createTable('{{%questions_files}}', [
+            'id' => $this->primaryKey(),
+            'question_id' => $this->integer()->notNull(),
+            'file_link' => $this->string()->notNull(),
+        ]);
+
+        $this->addForeignKey(
+            'question_id',
+            'questions_files',
+            'question_id',
+            'questions',
+            'id',
+            'CASCADE'
+        );
     }
 
     /**
@@ -93,7 +108,10 @@ class m220411_082015_customs_table extends Migration
         $this->dropTable('{{%customs}}');
         $this->dropTable('{{%history_geocoder}}');
         $this->dropTable('{{%history_search}}');
+        $this->dropTable('{{%history_ip}}');
+        $this->dropTable('{{%users}}');
         $this->dropTable('{{%pages}}');
-        $this->dropTable('{{%questions_form}}');
+        $this->dropTable('{{%questions}}');
+        $this->dropTable('{{%questions_files}}');
     }
 }

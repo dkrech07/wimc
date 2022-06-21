@@ -29,6 +29,16 @@ class QuestionService
             $question->user_email = 'Ответ не требуется';
         }
 
+        foreach ($QuestionsFormModel->files as $file) {
+            $file_path = uniqid('file_') . '.' . $file->extension;
+            $file->saveAs(Yii::getAlias('@webroot') . '/upload/files/' . $file_path);
+
+            // $task_file = new TasksFiles;
+            // $task_file->link = $file_path;
+            // $task_file->task_id = $task_id;
+            // $task_file->save();
+        }
+
         $transaction = Yii::$app->db->beginTransaction();
         try {
             $question->save();
