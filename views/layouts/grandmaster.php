@@ -47,6 +47,7 @@ if (isset(Yii::$app->user->identity->login)) {
             'items' => [
                 // ['label' => 'Перейти на сайт', 'url' => ['/customs/index']],
                 ['label' => 'Grandmaster', 'url' => ['/grandmaster/index']],
+                ['label' => 'Перейти на сайт', 'url' => ['/']],
                 ['label' => 'Выход', 'url' => ['/site/logout']],
                 '<li class="user-item">Пользователь: ' . $user . '</li>',
                 // ['label' => 'About', 'url' => ['/site/about']],
