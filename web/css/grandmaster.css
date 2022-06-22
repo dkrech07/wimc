@@ -351,6 +351,7 @@
 }
 
 .delete-button {
+    position: relative;
     margin: 0;
     padding: 0;
     padding: 3px 10px;
@@ -400,12 +401,12 @@
 .delete-window .custom-delete-yes {
     background-color: #FF0000;
     color: #ffffff;
-    border-color: #FF0000;    
+    border-color: #FF0000;
 }
 
 .delete-window .custom-delete-no {
     background-color: #ffffff;
-    color: #007bff;    
+    color: #007bff;
     border-color: #007bff;
     margin-right: 150px;
 
