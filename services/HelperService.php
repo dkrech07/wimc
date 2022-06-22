@@ -6,6 +6,8 @@ use Yii;
 use yii\db\Expression;
 use app\models\User;
 
+const COUNT_BYTES_IN_KILOBYTE = 1024;
+
 class HelperService
 {
     /**
@@ -25,5 +27,12 @@ class HelperService
         $expression = new Expression('NOW()');
         $now = (new \yii\db\Query)->select($expression)->scalar();
         return $now;
+    }
+
+    public static function getFileSize(string $file_path)
+    {
+        $fileSize = filesize(Yii::getAlias('@webroot') . '/upload/files/' . $file_path) / COUNT_BYTES_IN_KILOBYTE;
+
+        return ceil($fileSize);
     }
 }

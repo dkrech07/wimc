@@ -216,7 +216,8 @@ class GrandmasterController extends Controller
 
     public function actionMessages()
     {
-        $query = Questions::find();
+        $query = Questions::find()
+            ->joinWith('questionsFiles');
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

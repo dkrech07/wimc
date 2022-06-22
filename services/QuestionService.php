@@ -7,11 +7,10 @@ use app\models\User;
 use app\models\Customs;
 use app\models\CustomEditForm;
 use app\models\Pages;
-use app\models\PageEditFormModel;
 use app\models\QuestionsForm;
 use app\models\Questions;
+use app\models\QuestionsFiles;
 use app\services\HelperService;
-
 
 class QuestionService
 {
@@ -29,16 +28,6 @@ class QuestionService
             $question->user_email = 'Ответ не требуется';
         }
 
-        foreach ($QuestionsFormModel->files as $file) {
-            $file_path = uniqid('file_') . '.' . $file->extension;
-            $file->saveAs(Yii::getAlias('@webroot') . '/upload/files/' . $file_path);
-
-            // $task_file = new TasksFiles;
-            // $task_file->link = $file_path;
-            // $task_file->task_id = $task_id;
-            // $task_file->save();
-        }
-
         $transaction = Yii::$app->db->beginTransaction();
         try {
             $question->save();
@@ -48,6 +37,18 @@ class QuestionService
             throw $e;
         } catch (\Throwable $e) {
             $transaction->rollBack();
+        }
+
+        $question_id = $question->id;
+
+        foreach ($QuestionsFormModel->files as $file) {
+            $file_path = uniqid('file_') . '.' . $file->extension;
+            $file->saveAs(Yii::getAlias('@webroot') . '/upload/files/' . $file_path);
+
+            $question_file = new QuestionsFiles;
+            $question_file->file_link = $file_path;
+            $question_file->question_id = $question_id;
+            $question_file->save();
         }
     }
 }

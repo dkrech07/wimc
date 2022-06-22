@@ -12,6 +12,8 @@ use Yii;
  * @property string $user_name
  * @property string $user_email
  * @property string $form_content
+ * 
+ * @property QuestionsFiles $questionsFiles
  */
 class Questions extends \yii\db\ActiveRecord
 {
@@ -48,5 +50,15 @@ class Questions extends \yii\db\ActiveRecord
             'user_email' => 'Email',
             'form_content' => 'Текст сообщения',
         ];
+    }
+
+    /**
+     * Gets query for [[questionsFiles]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getQuestionsFiles()
+    {
+        return $this->hasMany(QuestionsFiles::className(), ['question_id' => 'id']);
     }
 }

@@ -212,7 +212,7 @@
     display: none;
     border: 1px solid #363636;
     z-index: 10;
-    overflow-y: scroll ;
+    overflow-y: scroll;
 }
 
 .customs-menu {
@@ -302,7 +302,7 @@
     display: inline-block;
 }
 
- 
+
 
 #custom-edit .form-group:nth-child(2n),
 #custom-view .form-group:nth-child(2n),
@@ -359,7 +359,7 @@
     border-color: red;
     color: #ffffff;
     border-radius: 5px;
-} 
+}
 
 .user-item {
     padding: 0.5rem 1rem;
@@ -410,4 +410,10 @@
     border-color: #007bff;
     margin-right: 150px;
 
+}
+
+.question-file {
+    margin: 0;
+    padding: 0;
+    padding: 2px;
 }

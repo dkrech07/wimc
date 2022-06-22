@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use app\services\HelperService;
 use yii\helpers\Url;
 use TaskForce\utils\NounPluralConverter;
 ?>
@@ -14,5 +15,12 @@ use TaskForce\utils\NounPluralConverter;
     <td class="search-param"><?= Html::encode($model->user_email); ?></td>
     <td class="search-param"><?= Html::encode($model->form_content); ?></td>
 
-    <!-- <td id='<?= Html::encode($model->id); ?>' class="custom-param edit edit-param"><i class="edit-param bi bi-pencil-square"></i></td> -->
+    <td class="search-param">
+        <?php foreach ($model->questionsFiles as $questionFile) : ?>
+            <p class="question-file"><a target="_blank" href="<?= '/upload/files/' . $questionFile->file_link ?>"> <?= Html::encode($questionFile->file_link); ?></a>
+                <span><?= (new HelperService())->getFileSize($questionFile->file_link) ?> Кб</span>
+            </p>
+        <?php endforeach; ?>
+    </td>
+
 </tr>
