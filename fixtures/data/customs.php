@@ -13,8 +13,8 @@ return [
         'TELEFON' => '(499) 449-72-35',
         'FAX' => '(499) 449-73-00',
         'EMAIL' => 'fts@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.507637',
-        'COORDS_LONGITUDE' => '55.749972'
+        'COORDS_LONGITUDE' => '37.507637',
+        'COORDS_LATITUDE' => '55.749972'
     ],
     'customs1' => [
         'CODE' => '10000010',
@@ -28,8 +28,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.507637',
-        'COORDS_LONGITUDE' => '55.749972'
+        'COORDS_LONGITUDE' => '37.507637',
+        'COORDS_LATITUDE' => '55.749972'
     ],
     'customs2' => [
         'CODE' => '10000020',
@@ -43,8 +43,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '41.109566',
-        'COORDS_LONGITUDE' => '42.919764'
+        'COORDS_LONGITUDE' => '41.109566',
+        'COORDS_LATITUDE' => '42.919764'
     ],
     'customs3' => [
         'CODE' => '10000030',
@@ -58,8 +58,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.962724',
-        'COORDS_LONGITUDE' => '42.225397'
+        'COORDS_LONGITUDE' => '43.962724',
+        'COORDS_LATITUDE' => '42.225397'
     ],
     'customs4' => [
         'CODE' => '10001000',
@@ -73,8 +73,8 @@ return [
         'TELEFON' => '(495)736-90-27',
         'FAX' => '(495)285-65-77',
         'EMAIL' => 'VNUK_ODO@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.288717',
-        'COORDS_LONGITUDE' => '55.609497'
+        'COORDS_LONGITUDE' => '37.288717',
+        'COORDS_LATITUDE' => '55.609497'
     ],
     'customs5' => [
         'CODE' => '10001010',
@@ -88,8 +88,8 @@ return [
         'TELEFON' => '(495)436-78-86',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.290379',
-        'COORDS_LONGITUDE' => '55.60369'
+        'COORDS_LONGITUDE' => '37.290379',
+        'COORDS_LATITUDE' => '55.60369'
     ],
     'customs6' => [
         'CODE' => '10001020',
@@ -103,8 +103,8 @@ return [
         'TELEFON' => '(495)662-68-02',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.282492',
-        'COORDS_LONGITUDE' => '55.607824'
+        'COORDS_LONGITUDE' => '37.282492',
+        'COORDS_LATITUDE' => '55.607824'
     ],
     'customs7' => [
         'CODE' => '10002000',
@@ -118,8 +118,8 @@ return [
         'TELEFON' => '(495)967-83-52',
         'FAX' => '(495)787-86-04',
         'EMAIL' => 'domodedovo@ca.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.768004',
-        'COORDS_LONGITUDE' => '55.437174'
+        'COORDS_LONGITUDE' => '37.768004',
+        'COORDS_LATITUDE' => '55.437174'
     ],
     'customs8' => [
         'CODE' => '10002010',
@@ -133,8 +133,8 @@ return [
         'TELEFON' => '(495)276-09-52',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.768004',
-        'COORDS_LONGITUDE' => '55.437174'
+        'COORDS_LONGITUDE' => '37.768004',
+        'COORDS_LATITUDE' => '55.437174'
     ],
     'customs9' => [
         'CODE' => '10002020',
@@ -148,8 +148,8 @@ return [
         'TELEFON' => '(495)556-51-06',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.118078',
-        'COORDS_LONGITUDE' => '55.561976'
+        'COORDS_LONGITUDE' => '38.118078',
+        'COORDS_LATITUDE' => '55.561976'
     ],
     'customs10' => [
         'CODE' => '10002030',
@@ -163,8 +163,8 @@ return [
         'TELEFON' => '(495)745-42-30',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.051162',
-        'COORDS_LONGITUDE' => '55.893566'
+        'COORDS_LONGITUDE' => '38.051162',
+        'COORDS_LATITUDE' => '55.893566'
     ],
     'customs11' => [
         'CODE' => '10002040',
@@ -178,8 +178,8 @@ return [
         'TELEFON' => '(495)787-16-69',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.768004',
-        'COORDS_LONGITUDE' => '55.437174'
+        'COORDS_LONGITUDE' => '37.768004',
+        'COORDS_LATITUDE' => '55.437174'
     ],
     'customs12' => [
         'CODE' => '10005000',
@@ -193,8 +193,8 @@ return [
         'TELEFON' => '(495)538-72-29',
         'FAX' => '(495)538-76-00',
         'EMAIL' => 'SHEREMETYEVO_ODS@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.431262',
-        'COORDS_LONGITUDE' => '55.985373'
+        'COORDS_LONGITUDE' => '37.431262',
+        'COORDS_LATITUDE' => '55.985373'
     ],
     'customs13' => [
         'CODE' => '10005010',
@@ -208,8 +208,8 @@ return [
         'TELEFON' => '(495)538-76-78',
         'FAX' => '(495)538-76-74',
         'EMAIL' => 'SHER_PASITO@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.415838',
-        'COORDS_LONGITUDE' => '55.966448'
+        'COORDS_LONGITUDE' => '37.415838',
+        'COORDS_LATITUDE' => '55.966448'
     ],
     'customs14' => [
         'CODE' => '10005020',
@@ -223,8 +223,8 @@ return [
         'TELEFON' => '(495)538-76-02',
         'FAX' => '(495)538-76-24',
         'EMAIL' => 'SHER_OTD_DP@ca.customs.gov.ru,SHER_ITO@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.415838',
-        'COORDS_LONGITUDE' => '55.966448'
+        'COORDS_LONGITUDE' => '37.415838',
+        'COORDS_LATITUDE' => '55.966448'
     ],
     'customs15' => [
         'CODE' => '10005030',
@@ -238,8 +238,8 @@ return [
         'TELEFON' => '(495)538-76-33',
         'FAX' => '(495)538-76-00',
         'EMAIL' => 'SHER_CED@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.435681',
-        'COORDS_LONGITUDE' => '55.969451'
+        'COORDS_LONGITUDE' => '37.435681',
+        'COORDS_LATITUDE' => '55.969451'
     ],
     'customs16' => [
         'CODE' => '10006000',
@@ -253,8 +253,8 @@ return [
         'TELEFON' => '(495)637-28-58',
         'FAX' => '(495)637-77-22',
         'EMAIL' => 'ENERGY_ODO@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.597351',
-        'COORDS_LONGITUDE' => '55.743'
+        'COORDS_LONGITUDE' => '37.597351',
+        'COORDS_LATITUDE' => '55.743'
     ],
     'customs17' => [
         'CODE' => '10006060',
@@ -268,8 +268,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => 'GadzhievMG@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.597351',
-        'COORDS_LONGITUDE' => '55.743'
+        'COORDS_LONGITUDE' => '37.597351',
+        'COORDS_LATITUDE' => '55.743'
     ],
     'customs18' => [
         'CODE' => '10006140',
@@ -283,8 +283,8 @@ return [
         'TELEFON' => '(4236)62-07-60',
         'FAX' => '(4236)62-46-18',
         'EMAIL' => 'TimashevAV@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '132.887834',
-        'COORDS_LONGITUDE' => '42.770035'
+        'COORDS_LONGITUDE' => '132.887834',
+        'COORDS_LATITUDE' => '42.770035'
     ],
     'customs19' => [
         'CODE' => '10006150',
@@ -298,8 +298,8 @@ return [
         'TELEFON' => '(8722)70-01-57',
         'FAX' => '(8722)70-01-56',
         'EMAIL' => 'ShihshabekovRS@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '47.504745',
-        'COORDS_LONGITUDE' => '42.9831'
+        'COORDS_LONGITUDE' => '47.504745',
+        'COORDS_LATITUDE' => '42.9831'
     ],
     'customs20' => [
         'CODE' => '10006160',
@@ -313,8 +313,8 @@ return [
         'TELEFON' => '(84012)68-90-21',
         'FAX' => '(84012)68-90-28',
         'EMAIL' => 'KochegarovEA@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.467063',
-        'COORDS_LONGITUDE' => '54.697287'
+        'COORDS_LONGITUDE' => '20.467063',
+        'COORDS_LATITUDE' => '54.697287'
     ],
     'customs21' => [
         'CODE' => '10006170',
@@ -328,8 +328,8 @@ return [
         'TELEFON' => '(81533)7-20-21',
         'FAX' => '(81533)4-00-29',
         'EMAIL' => 'MinkinME@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.084925',
-        'COORDS_LONGITUDE' => '68.979679'
+        'COORDS_LONGITUDE' => '33.084925',
+        'COORDS_LATITUDE' => '68.979679'
     ],
     'customs22' => [
         'CODE' => '10006180',
@@ -343,8 +343,8 @@ return [
         'TELEFON' => '(81378)6-50-51',
         'FAX' => '(81378)6-50-50',
         'EMAIL' => 'BragaVV@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.605134',
-        'COORDS_LONGITUDE' => '60.366237'
+        'COORDS_LONGITUDE' => '28.605134',
+        'COORDS_LATITUDE' => '60.366237'
     ],
     'customs23' => [
         'CODE' => '10006182',
@@ -358,8 +358,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.568277',
-        'COORDS_LONGITUDE' => '60.625604'
+        'COORDS_LONGITUDE' => '28.568277',
+        'COORDS_LATITUDE' => '60.625604'
     ],
     'customs24' => [
         'CODE' => '10006183',
@@ -373,8 +373,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.427708',
-        'COORDS_LONGITUDE' => '59.698495'
+        'COORDS_LONGITUDE' => '28.427708',
+        'COORDS_LATITUDE' => '59.698495'
     ],
     'customs25' => [
         'CODE' => '10006190',
@@ -388,8 +388,8 @@ return [
         'TELEFON' => '(8617)60-31-21',
         'FAX' => '(8617)60-30-61',
         'EMAIL' => 'ENERGY_YTK1@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.848116',
-        'COORDS_LONGITUDE' => '44.713344'
+        'COORDS_LONGITUDE' => '37.848116',
+        'COORDS_LATITUDE' => '44.713344'
     ],
     'customs26' => [
         'CODE' => '10006191',
@@ -403,8 +403,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.837705',
-        'COORDS_LONGITUDE' => '44.719883'
+        'COORDS_LONGITUDE' => '37.837705',
+        'COORDS_LATITUDE' => '44.719883'
     ],
     'customs27' => [
         'CODE' => '10006192',
@@ -418,8 +418,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.632035',
-        'COORDS_LONGITUDE' => '44.673834'
+        'COORDS_LONGITUDE' => '37.632035',
+        'COORDS_LATITUDE' => '44.673834'
     ],
     'customs28' => [
         'CODE' => '10006193',
@@ -433,8 +433,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.706663',
-        'COORDS_LONGITUDE' => '45.130723'
+        'COORDS_LONGITUDE' => '36.706663',
+        'COORDS_LATITUDE' => '45.130723'
     ],
     'customs29' => [
         'CODE' => '10006194',
@@ -448,8 +448,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.094987',
-        'COORDS_LONGITUDE' => '44.098217'
+        'COORDS_LONGITUDE' => '39.094987',
+        'COORDS_LATITUDE' => '44.098217'
     ],
     'customs30' => [
         'CODE' => '10007000',
@@ -463,8 +463,8 @@ return [
         'TELEFON' => '(499)449-73-60',
         'FAX' => '(495)913-93-91',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.506945',
-        'COORDS_LONGITUDE' => '55.748843'
+        'COORDS_LONGITUDE' => '37.506945',
+        'COORDS_LATITUDE' => '55.748843'
     ],
     'customs31' => [
         'CODE' => '10008000',
@@ -478,8 +478,8 @@ return [
         'TELEFON' => '(495)221-85-77',
         'FAX' => '(495)221-85-79',
         'EMAIL' => 'kinolog-custom@mail.ru',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs32' => [
         'CODE' => '10009000',
@@ -493,8 +493,8 @@ return [
         'TELEFON' => '(495)915-37-59',
         'FAX' => '(495)915-58-37',
         'EMAIL' => 'cat@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.647001',
-        'COORDS_LONGITUDE' => '55.746502'
+        'COORDS_LONGITUDE' => '37.647001',
+        'COORDS_LATITUDE' => '55.746502'
     ],
     'customs33' => [
         'CODE' => '10009010',
@@ -508,8 +508,8 @@ return [
         'TELEFON' => '(495)780-69-52',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.298329',
-        'COORDS_LONGITUDE' => '55.674844'
+        'COORDS_LONGITUDE' => '37.298329',
+        'COORDS_LATITUDE' => '55.674844'
     ],
     'customs34' => [
         'CODE' => '10009020',
@@ -523,8 +523,8 @@ return [
         'TELEFON' => '(495)720-49-84',
         'FAX' => '(495)720-49-87',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.979885',
-        'COORDS_LONGITUDE' => '55.51405'
+        'COORDS_LONGITUDE' => '36.979885',
+        'COORDS_LATITUDE' => '55.51405'
     ],
     'customs35' => [
         'CODE' => '10009030',
@@ -538,8 +538,8 @@ return [
         'TELEFON' => '(495)926-53-98',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.102523',
-        'COORDS_LONGITUDE' => '55.584293'
+        'COORDS_LONGITUDE' => '37.102523',
+        'COORDS_LATITUDE' => '55.584293'
     ],
     'customs36' => [
         'CODE' => '10009050',
@@ -553,8 +553,8 @@ return [
         'TELEFON' => '(495)657-92-37',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.743615',
-        'COORDS_LONGITUDE' => '55.465851'
+        'COORDS_LONGITUDE' => '37.743615',
+        'COORDS_LATITUDE' => '55.465851'
     ],
     'customs37' => [
         'CODE' => '10009100',
@@ -568,8 +568,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.743678',
-        'COORDS_LONGITUDE' => '55.756285'
+        'COORDS_LONGITUDE' => '37.743678',
+        'COORDS_LATITUDE' => '55.756285'
     ],
     'customs38' => [
         'CODE' => '10009130',
@@ -583,8 +583,8 @@ return [
         'TELEFON' => '(495)223-29-70',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.497387',
-        'COORDS_LONGITUDE' => '55.849873'
+        'COORDS_LONGITUDE' => '37.497387',
+        'COORDS_LATITUDE' => '55.849873'
     ],
     'customs39' => [
         'CODE' => '10009131',
@@ -598,8 +598,8 @@ return [
         'TELEFON' => '282-55-04',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.637605',
-        'COORDS_LONGITUDE' => '55.86792'
+        'COORDS_LONGITUDE' => '37.637605',
+        'COORDS_LATITUDE' => '55.86792'
     ],
     'customs40' => [
         'CODE' => '10009140',
@@ -613,8 +613,8 @@ return [
         'TELEFON' => '(495)737-44-47',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.186839',
-        'COORDS_LONGITUDE' => '56.004745'
+        'COORDS_LONGITUDE' => '37.186839',
+        'COORDS_LATITUDE' => '56.004745'
     ],
     'customs41' => [
         'CODE' => '10009160',
@@ -628,8 +628,8 @@ return [
         'TELEFON' => '(4832)61-07-07',
         'FAX' => '(4832)52-26-55',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.404128',
-        'COORDS_LONGITUDE' => '53.227522'
+        'COORDS_LONGITUDE' => '34.404128',
+        'COORDS_LATITUDE' => '53.227522'
     ],
     'customs42' => [
         'CODE' => '10009170',
@@ -643,8 +643,8 @@ return [
         'TELEFON' => '(495)669-21-42',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.70077',
-        'COORDS_LONGITUDE' => '56.374527'
+        'COORDS_LONGITUDE' => '38.70077',
+        'COORDS_LATITUDE' => '56.374527'
     ],
     'customs43' => [
         'CODE' => '10009180',
@@ -658,8 +658,8 @@ return [
         'TELEFON' => '(4842)71-38-47',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.059858',
-        'COORDS_LONGITUDE' => '54.504468'
+        'COORDS_LONGITUDE' => '36.059858',
+        'COORDS_LATITUDE' => '54.504468'
     ],
     'customs44' => [
         'CODE' => '10009190',
@@ -673,8 +673,8 @@ return [
         'TELEFON' => '(812)337-57-38',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.378876',
-        'COORDS_LONGITUDE' => '60.070801'
+        'COORDS_LONGITUDE' => '30.378876',
+        'COORDS_LATITUDE' => '60.070801'
     ],
     'customs45' => [
         'CODE' => '10009199',
@@ -688,8 +688,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.244802',
-        'COORDS_LONGITUDE' => '60.102046'
+        'COORDS_LONGITUDE' => '30.244802',
+        'COORDS_LATITUDE' => '60.102046'
     ],
     'customs46' => [
         'CODE' => '10009210',
@@ -703,8 +703,8 @@ return [
         'TELEFON' => '(81148)2-33-54',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '27.605822',
-        'COORDS_LONGITUDE' => '57.834049'
+        'COORDS_LONGITUDE' => '27.605822',
+        'COORDS_LATITUDE' => '57.834049'
     ],
     'customs47' => [
         'CODE' => '10009220',
@@ -718,8 +718,8 @@ return [
         'TELEFON' => '(496)402-45-44',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.003772',
-        'COORDS_LONGITUDE' => '55.392183'
+        'COORDS_LONGITUDE' => '39.003772',
+        'COORDS_LATITUDE' => '55.392183'
     ],
     'customs48' => [
         'CODE' => '10009230',
@@ -733,8 +733,8 @@ return [
         'TELEFON' => '(4812)47-51-09',
         'FAX' => '(4812)42-24-69',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '32.0631',
-        'COORDS_LONGITUDE' => '54.915802'
+        'COORDS_LONGITUDE' => '32.0631',
+        'COORDS_LATITUDE' => '54.915802'
     ],
     'customs49' => [
         'CODE' => '10009250',
@@ -748,8 +748,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.099734',
-        'COORDS_LONGITUDE' => '44.939293'
+        'COORDS_LONGITUDE' => '34.099734',
+        'COORDS_LATITUDE' => '44.939293'
     ],
     'customs50' => [
         'CODE' => '10009260',
@@ -763,8 +763,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '132.139995',
-        'COORDS_LONGITUDE' => '43.377866'
+        'COORDS_LONGITUDE' => '132.139995',
+        'COORDS_LATITUDE' => '43.377866'
     ],
     'customs51' => [
         'CODE' => '10009270',
@@ -778,8 +778,8 @@ return [
         'TELEFON' => '(863)206-15-71',
         'FAX' => '(863)206-15-74',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.894631',
-        'COORDS_LONGITUDE' => '47.783542'
+        'COORDS_LONGITUDE' => '39.894631',
+        'COORDS_LATITUDE' => '47.783542'
     ],
     'customs52' => [
         'CODE' => '10012000',
@@ -793,8 +793,8 @@ return [
         'TELEFON' => '(4012)60-92-27',
         'FAX' => '(4012)60-92-29',
         'EMAIL' => 'svc-odo@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.541542',
-        'COORDS_LONGITUDE' => '54.731846'
+        'COORDS_LONGITUDE' => '20.541542',
+        'COORDS_LATITUDE' => '54.731846'
     ],
     'customs53' => [
         'CODE' => '10012010',
@@ -808,8 +808,8 @@ return [
         'TELEFON' => '(40156)6-13-72',
         'FAX' => '',
         'EMAIL' => 'svc-del-bgr@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.657757',
-        'COORDS_LONGITUDE' => '54.385995'
+        'COORDS_LONGITUDE' => '20.657757',
+        'COORDS_LATITUDE' => '54.385995'
     ],
     'customs54' => [
         'CODE' => '10012020',
@@ -823,8 +823,8 @@ return [
         'TELEFON' => '(4012)59-70-31',
         'FAX' => '(4012)60-98-29',
         'EMAIL' => 'svc-del-klg@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.541542',
-        'COORDS_LONGITUDE' => '54.731846'
+        'COORDS_LONGITUDE' => '20.541542',
+        'COORDS_LATITUDE' => '54.731846'
     ],
     'customs55' => [
         'CODE' => '10012030',
@@ -838,8 +838,8 @@ return [
         'TELEFON' => '(40156)3-38-80',
         'FAX' => '(4012)68-64-58',
         'EMAIL' => 'svc-del-mam@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.45905',
-        'COORDS_LONGITUDE' => '54.666244'
+        'COORDS_LONGITUDE' => '20.45905',
+        'COORDS_LATITUDE' => '54.666244'
     ],
     'customs56' => [
         'CODE' => '10012040',
@@ -853,8 +853,8 @@ return [
         'TELEFON' => '(4012)73-21-33',
         'FAX' => '(4012)60-97-28',
         'EMAIL' => 'svc-del-msk@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.541102',
-        'COORDS_LONGITUDE' => '54.653902'
+        'COORDS_LONGITUDE' => '20.541102',
+        'COORDS_LATITUDE' => '54.653902'
     ],
     'customs57' => [
         'CODE' => '10012050',
@@ -868,8 +868,8 @@ return [
         'TELEFON' => '(40161)3-19-00',
         'FAX' => '(40161)3-72-25',
         'EMAIL' => 'svc-del-sov@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '21.884272',
-        'COORDS_LONGITUDE' => '55.085131'
+        'COORDS_LONGITUDE' => '21.884272',
+        'COORDS_LATITUDE' => '55.085131'
     ],
     'customs58' => [
         'CODE' => '10012060',
@@ -883,8 +883,8 @@ return [
         'TELEFON' => '(4012)53-99-22',
         'FAX' => '(4012)60-91-09',
         'EMAIL' => 'svc-del-hra@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.571698',
-        'COORDS_LONGITUDE' => '54.897562'
+        'COORDS_LONGITUDE' => '20.571698',
+        'COORDS_LATITUDE' => '54.897562'
     ],
     'customs59' => [
         'CODE' => '10012070',
@@ -898,8 +898,8 @@ return [
         'TELEFON' => '(40145)6-11-00',
         'FAX' => '(40145)6-11-00',
         'EMAIL' => 'svc-del-mpb@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '19.923905',
-        'COORDS_LONGITUDE' => '54.6377'
+        'COORDS_LONGITUDE' => '19.923905',
+        'COORDS_LATITUDE' => '54.6377'
     ],
     'customs60' => [
         'CODE' => '10012080',
@@ -913,8 +913,8 @@ return [
         'TELEFON' => '(4016)42-23-36',
         'FAX' => '(4016)42-28-32',
         'EMAIL' => 'svc-del-pgr@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '22.582209',
-        'COORDS_LONGITUDE' => '55.059858'
+        'COORDS_LONGITUDE' => '22.582209',
+        'COORDS_LATITUDE' => '55.059858'
     ],
     'customs61' => [
         'CODE' => '10012090',
@@ -928,8 +928,8 @@ return [
         'TELEFON' => '(40144)2-25-35',
         'FAX' => '(40144)2-25-35',
         'EMAIL' => 'svc-del-nes@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '22.733674',
-        'COORDS_LONGITUDE' => '54.63722'
+        'COORDS_LONGITUDE' => '22.733674',
+        'COORDS_LATITUDE' => '54.63722'
     ],
     'customs62' => [
         'CODE' => '10012100',
@@ -943,8 +943,8 @@ return [
         'TELEFON' => '(40156)3-29-27',
         'FAX' => '(40156)3-29-27',
         'EMAIL' => 'svc-del-mbgr@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.649115',
-        'COORDS_LONGITUDE' => '54.380872'
+        'COORDS_LONGITUDE' => '20.649115',
+        'COORDS_LATITUDE' => '54.380872'
     ],
     'customs63' => [
         'CODE' => '10012110',
@@ -958,8 +958,8 @@ return [
         'TELEFON' => '(40144)9-27-22',
         'FAX' => '(40144)9-27-22',
         'EMAIL' => 'svc-del-gus@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '22.285073',
-        'COORDS_LONGITUDE' => '54.593478'
+        'COORDS_LONGITUDE' => '22.285073',
+        'COORDS_LATITUDE' => '54.593478'
     ],
     'customs64' => [
         'CODE' => '10012120',
@@ -973,8 +973,8 @@ return [
         'TELEFON' => '(40156)4-04-54',
         'FAX' => '',
         'EMAIL' => 'svc-del-mmn@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '19.941485',
-        'COORDS_LONGITUDE' => '54.462922'
+        'COORDS_LONGITUDE' => '19.941485',
+        'COORDS_LATITUDE' => '54.462922'
     ],
     'customs65' => [
         'CODE' => '10012130',
@@ -988,8 +988,8 @@ return [
         'TELEFON' => '(40156)3-28-10',
         'FAX' => '(40156)3-38-69',
         'EMAIL' => 'svc-del-mmn2@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.134165',
-        'COORDS_LONGITUDE' => '54.46186'
+        'COORDS_LONGITUDE' => '20.134165',
+        'COORDS_LATITUDE' => '54.46186'
     ],
     'customs66' => [
         'CODE' => '10012140',
@@ -1003,8 +1003,8 @@ return [
         'TELEFON' => '(4012)8344-28',
         'FAX' => '',
         'EMAIL' => 'svc-del-mor@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.916993',
-        'COORDS_LONGITUDE' => '55.229491'
+        'COORDS_LONGITUDE' => '20.916993',
+        'COORDS_LATITUDE' => '55.229491'
     ],
     'customs67' => [
         'CODE' => '10012150',
@@ -1018,8 +1018,8 @@ return [
         'TELEFON' => '(40161)3-11-71',
         'FAX' => '(40161)3-10-71',
         'EMAIL' => 'svc-del-msov@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '21.906011',
-        'COORDS_LONGITUDE' => '55.082168'
+        'COORDS_LONGITUDE' => '21.906011',
+        'COORDS_LATITUDE' => '55.082168'
     ],
     'customs68' => [
         'CODE' => '10012160',
@@ -1033,8 +1033,8 @@ return [
         'TELEFON' => '(40144)9-28-61',
         'FAX' => '(40144)9-28-91',
         'EMAIL' => 'svc-del-chrn@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '22.743277',
-        'COORDS_LONGITUDE' => '54.640425'
+        'COORDS_LONGITUDE' => '22.743277',
+        'COORDS_LATITUDE' => '54.640425'
     ],
     'customs69' => [
         'CODE' => '10012170',
@@ -1048,8 +1048,8 @@ return [
         'TELEFON' => '(4012)60-91-08',
         'FAX' => '(4012)60-91-09',
         'EMAIL' => 'svc-del-mpk@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.456319',
-        'COORDS_LONGITUDE' => '54.703457'
+        'COORDS_LONGITUDE' => '20.456319',
+        'COORDS_LATITUDE' => '54.703457'
     ],
     'customs70' => [
         'CODE' => '10012180',
@@ -1063,8 +1063,8 @@ return [
         'TELEFON' => '(40152)3-54-64',
         'FAX' => '(40152)3-54-64',
         'EMAIL' => 'svc-del-sve@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.125029',
-        'COORDS_LONGITUDE' => '54.669629'
+        'COORDS_LONGITUDE' => '20.125029',
+        'COORDS_LATITUDE' => '54.669629'
     ],
     'customs71' => [
         'CODE' => '10012190',
@@ -1078,8 +1078,8 @@ return [
         'TELEFON' => '(4012)60-98-18',
         'FAX' => '(4012)60-98-19',
         'EMAIL' => 'svc-del-cnt@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.495674',
-        'COORDS_LONGITUDE' => '54.695351'
+        'COORDS_LONGITUDE' => '20.495674',
+        'COORDS_LATITUDE' => '54.695351'
     ],
     'customs72' => [
         'CODE' => '10012200',
@@ -1093,8 +1093,8 @@ return [
         'TELEFON' => '(40141)5-42-33',
         'FAX' => '(40141)5-42-32',
         'EMAIL' => 'svc-del-crh@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '21.76582',
-        'COORDS_LONGITUDE' => '54.617362'
+        'COORDS_LONGITUDE' => '21.76582',
+        'COORDS_LATITUDE' => '54.617362'
     ],
     'customs73' => [
         'CODE' => '10012202',
@@ -1108,8 +1108,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '21.323903',
-        'COORDS_LONGITUDE' => '54.357248'
+        'COORDS_LONGITUDE' => '21.323903',
+        'COORDS_LATITUDE' => '54.357248'
     ],
     'customs74' => [
         'CODE' => '10012210',
@@ -1123,8 +1123,8 @@ return [
         'TELEFON' => '(4012)56-01-52',
         'FAX' => '',
         'EMAIL' => 'svc-del-katp@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '20.658844',
-        'COORDS_LONGITUDE' => '54.376106'
+        'COORDS_LONGITUDE' => '20.658844',
+        'COORDS_LATITUDE' => '54.376106'
     ],
     'customs75' => [
         'CODE' => '10013000',
@@ -1138,8 +1138,8 @@ return [
         'TELEFON' => '(499)732-22-10',
         'FAX' => '(499)720-86-29',
         'EMAIL' => 'ohr_zln@zln@zln.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.214974',
-        'COORDS_LONGITUDE' => '55.977068'
+        'COORDS_LONGITUDE' => '37.214974',
+        'COORDS_LATITUDE' => '55.977068'
     ],
     'customs76' => [
         'CODE' => '10013010',
@@ -1153,8 +1153,8 @@ return [
         'TELEFON' => '(495)555-11-88',
         'FAX' => '(495)555-11-63',
         'EMAIL' => 'mot-lit-insp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.234755',
-        'COORDS_LONGITUDE' => '55.664786'
+        'COORDS_LONGITUDE' => '37.234755',
+        'COORDS_LATITUDE' => '55.664786'
     ],
     'customs77' => [
         'CODE' => '10013020',
@@ -1168,8 +1168,8 @@ return [
         'TELEFON' => '(495)502-87-91',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.404672',
-        'COORDS_LONGITUDE' => '55.919428'
+        'COORDS_LONGITUDE' => '37.404672',
+        'COORDS_LATITUDE' => '55.919428'
     ],
     'customs78' => [
         'CODE' => '10013030',
@@ -1183,8 +1183,8 @@ return [
         'TELEFON' => '(495)926-53-99',
         'FAX' => '(495)926-53-57',
         'EMAIL' => 'zln-mail-130@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.214974',
-        'COORDS_LONGITUDE' => '55.977068'
+        'COORDS_LONGITUDE' => '37.214974',
+        'COORDS_LATITUDE' => '55.977068'
     ],
     'customs79' => [
         'CODE' => '10013040',
@@ -1198,8 +1198,8 @@ return [
         'TELEFON' => '(495)995-02-73',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.10821',
-        'COORDS_LONGITUDE' => '55.816834'
+        'COORDS_LONGITUDE' => '37.10821',
+        'COORDS_LATITUDE' => '55.816834'
     ],
     'customs80' => [
         'CODE' => '10013050',
@@ -1213,8 +1213,8 @@ return [
         'TELEFON' => '(495)783-33-25',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.793709',
-        'COORDS_LONGITUDE' => '55.909287'
+        'COORDS_LONGITUDE' => '36.793709',
+        'COORDS_LATITUDE' => '55.909287'
     ],
     'customs81' => [
         'CODE' => '10013060',
@@ -1228,8 +1228,8 @@ return [
         'TELEFON' => '(495)644-45-90',
         'FAX' => '(495)644-45-96',
         'EMAIL' => 'mot-kash-insp@mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.736761',
-        'COORDS_LONGITUDE' => '55.474056'
+        'COORDS_LONGITUDE' => '37.736761',
+        'COORDS_LATITUDE' => '55.474056'
     ],
     'customs82' => [
         'CODE' => '10013070',
@@ -1243,8 +1243,8 @@ return [
         'TELEFON' => '(495)276-13-92',
         'FAX' => '(495)276-13-93',
         'EMAIL' => 'zln-kiev-insp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.023759',
-        'COORDS_LONGITUDE' => '55.604554'
+        'COORDS_LONGITUDE' => '37.023759',
+        'COORDS_LATITUDE' => '55.604554'
     ],
     'customs83' => [
         'CODE' => '10013080',
@@ -1258,8 +1258,8 @@ return [
         'TELEFON' => '(496)616-74-56',
         'FAX' => '(496)616-74-56',
         'EMAIL' => 'mot-kol-insp@mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.730971',
-        'COORDS_LONGITUDE' => '55.11613'
+        'COORDS_LONGITUDE' => '38.730971',
+        'COORDS_LATITUDE' => '55.11613'
     ],
     'customs84' => [
         'CODE' => '10013090',
@@ -1273,8 +1273,8 @@ return [
         'TELEFON' => '(495)602-94-26',
         'FAX' => '(495)602-94-27',
         'EMAIL' => 'mot-kras-insp@mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.080106',
-        'COORDS_LONGITUDE' => '56.451807'
+        'COORDS_LONGITUDE' => '38.080106',
+        'COORDS_LATITUDE' => '56.451807'
     ],
     'customs85' => [
         'CODE' => '10013100',
@@ -1288,8 +1288,8 @@ return [
         'TELEFON' => '(496)561-10-01',
         'FAX' => '(496)561-10-05',
         'EMAIL' => 'mot-shhel-ced@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.621341',
-        'COORDS_LONGITUDE' => '55.604737'
+        'COORDS_LONGITUDE' => '36.621341',
+        'COORDS_LATITUDE' => '55.604737'
     ],
     'customs86' => [
         'CODE' => '10013110',
@@ -1303,8 +1303,8 @@ return [
         'TELEFON' => '(495)730-44-33',
         'FAX' => '(495)781-77-69',
         'EMAIL' => 'zln-mail-320@zln.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.321236',
-        'COORDS_LONGITUDE' => '55.984511'
+        'COORDS_LONGITUDE' => '37.321236',
+        'COORDS_LATITUDE' => '55.984511'
     ],
     'customs87' => [
         'CODE' => '10013120',
@@ -1318,8 +1318,8 @@ return [
         'TELEFON' => '(495)565-79-83',
         'FAX' => '(495)589-93-26',
         'EMAIL' => 'mot-lob-insp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.458184',
-        'COORDS_LONGITUDE' => '56.021'
+        'COORDS_LONGITUDE' => '37.458184',
+        'COORDS_LATITUDE' => '56.021'
     ],
     'customs88' => [
         'CODE' => '10013130',
@@ -1333,8 +1333,8 @@ return [
         'TELEFON' => '(495)663-98-65',
         'FAX' => '(495)660-49-32',
         'EMAIL' => 'zln-310-mail@zln.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.11192',
-        'COORDS_LONGITUDE' => '55.279488'
+        'COORDS_LONGITUDE' => '37.11192',
+        'COORDS_LATITUDE' => '55.279488'
     ],
     'customs89' => [
         'CODE' => '10013140',
@@ -1348,8 +1348,8 @@ return [
         'TELEFON' => '(495)229-50-21',
         'FAX' => '(495)229-50-22',
         'EMAIL' => 'mot-mam-insp@mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.863387',
-        'COORDS_LONGITUDE' => '55.975164'
+        'COORDS_LONGITUDE' => '37.863387',
+        'COORDS_LATITUDE' => '55.975164'
     ],
     'customs90' => [
         'CODE' => '10013150',
@@ -1363,8 +1363,8 @@ return [
         'TELEFON' => '(495)780-69-31',
         'FAX' => '(495)780-69-31',
         'EMAIL' => 'zln-mail-200@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.068455',
-        'COORDS_LONGITUDE' => '55.483867'
+        'COORDS_LONGITUDE' => '36.068455',
+        'COORDS_LATITUDE' => '55.483867'
     ],
     'customs91' => [
         'CODE' => '10013160',
@@ -1378,8 +1378,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.666719',
-        'COORDS_LONGITUDE' => '55.609121'
+        'COORDS_LONGITUDE' => '37.666719',
+        'COORDS_LATITUDE' => '55.609121'
     ],
     'customs92' => [
         'CODE' => '10013170',
@@ -1393,8 +1393,8 @@ return [
         'TELEFON' => '(499)682-91-53',
         'FAX' => '(499)682-91-54',
         'EMAIL' => 'Mot-novom@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.455588',
-        'COORDS_LONGITUDE' => '55.599296'
+        'COORDS_LONGITUDE' => '37.455588',
+        'COORDS_LATITUDE' => '55.599296'
     ],
     'customs93' => [
         'CODE' => '10013180',
@@ -1408,8 +1408,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.963814',
-        'COORDS_LONGITUDE' => '55.512617'
+        'COORDS_LONGITUDE' => '36.963814',
+        'COORDS_LATITUDE' => '55.512617'
     ],
     'customs94' => [
         'CODE' => '10013190',
@@ -1423,8 +1423,8 @@ return [
         'TELEFON' => '(495)657-84-73',
         'FAX' => '(495)651-92-23',
         'EMAIL' => 'zln-shod-insp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.306701',
-        'COORDS_LONGITUDE' => '55.972655'
+        'COORDS_LONGITUDE' => '37.306701',
+        'COORDS_LATITUDE' => '55.972655'
     ],
     'customs95' => [
         'CODE' => '10013200',
@@ -1438,8 +1438,8 @@ return [
         'TELEFON' => '(495)993-76-90',
         'FAX' => '(496)219-10-43',
         'EMAIL' => 'mot-dubna@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.164175',
-        'COORDS_LONGITUDE' => '56.753429'
+        'COORDS_LONGITUDE' => '37.164175',
+        'COORDS_LATITUDE' => '56.753429'
     ],
     'customs96' => [
         'CODE' => '10013210',
@@ -1453,8 +1453,8 @@ return [
         'TELEFON' => '(495)669-61-33',
         'FAX' => '(495)669-61-34',
         'EMAIL' => 'zln-mail-240@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.977478',
-        'COORDS_LONGITUDE' => '55.642916'
+        'COORDS_LONGITUDE' => '36.977478',
+        'COORDS_LATITUDE' => '55.642916'
     ],
     'customs97' => [
         'CODE' => '10013220',
@@ -1468,8 +1468,8 @@ return [
         'TELEFON' => '(495)660-66-94',
         'FAX' => '(495)660-66-94',
         'EMAIL' => 'mot-cher-insp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.402691',
-        'COORDS_LONGITUDE' => '55.928814'
+        'COORDS_LONGITUDE' => '38.402691',
+        'COORDS_LATITUDE' => '55.928814'
     ],
     'customs98' => [
         'CODE' => '10013230',
@@ -1483,8 +1483,8 @@ return [
         'TELEFON' => '(495)644-31-04',
         'FAX' => '(495)644-31-04',
         'EMAIL' => 'mt-mih@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.951494',
-        'COORDS_LONGITUDE' => '55.139823'
+        'COORDS_LONGITUDE' => '37.951494',
+        'COORDS_LATITUDE' => '55.139823'
     ],
     'customs99' => [
         'CODE' => '10013240',
@@ -1498,8 +1498,8 @@ return [
         'TELEFON' => '(495)363-18-98',
         'FAX' => '(495)363-18-98',
         'EMAIL' => 'mt-rail-odo@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.527588',
-        'COORDS_LONGITUDE' => '55.863853'
+        'COORDS_LONGITUDE' => '37.527588',
+        'COORDS_LATITUDE' => '55.863853'
     ],
     'customs100' => [
         'CODE' => '10013250',
@@ -1513,8 +1513,8 @@ return [
         'TELEFON' => '(495)775-40-56',
         'FAX' => '(495)775-40-57',
         'EMAIL' => 'mt-avtoframos@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.721058',
-        'COORDS_LONGITUDE' => '55.708902'
+        'COORDS_LONGITUDE' => '37.721058',
+        'COORDS_LATITUDE' => '55.708902'
     ],
     'customs101' => [
         'CODE' => '10014000',
@@ -1528,8 +1528,8 @@ return [
         'TELEFON' => '(495)276-47-27',
         'FAX' => '(495)276-47-29',
         'EMAIL' => 'mt-odo@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.510493',
-        'COORDS_LONGITUDE' => '55.62176'
+        'COORDS_LONGITUDE' => '37.510493',
+        'COORDS_LATITUDE' => '55.62176'
     ],
     'customs102' => [
         'CODE' => '10014010',
@@ -1543,8 +1543,8 @@ return [
         'TELEFON' => '(495)259-35-36',
         'FAX' => '(495)259-35-36',
         'EMAIL' => 'mt-vyst-odo@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.545572',
-        'COORDS_LONGITUDE' => '55.749243'
+        'COORDS_LONGITUDE' => '37.545572',
+        'COORDS_LATITUDE' => '55.749243'
     ],
     'customs103' => [
         'CODE' => '10014012',
@@ -1558,8 +1558,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.637245',
-        'COORDS_LONGITUDE' => '55.829835'
+        'COORDS_LONGITUDE' => '37.637245',
+        'COORDS_LATITUDE' => '55.829835'
     ],
     'customs104' => [
         'CODE' => '10014013',
@@ -1573,8 +1573,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.38781',
-        'COORDS_LONGITUDE' => '55.822281'
+        'COORDS_LONGITUDE' => '37.38781',
+        'COORDS_LATITUDE' => '55.822281'
     ],
     'customs105' => [
         'CODE' => '10014020',
@@ -1588,8 +1588,8 @@ return [
         'TELEFON' => '(495)395-64-27',
         'FAX' => '(495)393-17-66',
         'EMAIL' => 'mt-diplom@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.719154',
-        'COORDS_LONGITUDE' => '55.61358'
+        'COORDS_LONGITUDE' => '37.719154',
+        'COORDS_LATITUDE' => '55.61358'
     ],
     'customs106' => [
         'CODE' => '10014030',
@@ -1603,8 +1603,8 @@ return [
         'TELEFON' => '(495)956-20-67',
         'FAX' => '(495)956-20-67',
         'EMAIL' => 'mt-MPochtamt@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.62342',
-        'COORDS_LONGITUDE' => '55.688649'
+        'COORDS_LONGITUDE' => '37.62342',
+        'COORDS_LATITUDE' => '55.688649'
     ],
     'customs107' => [
         'CODE' => '10014031',
@@ -1618,8 +1618,8 @@ return [
         'TELEFON' => '8-499-782-23-16',
         'FAX' => '8-499-782-24-30',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.62342',
-        'COORDS_LONGITUDE' => '55.688649'
+        'COORDS_LONGITUDE' => '37.62342',
+        'COORDS_LATITUDE' => '55.688649'
     ],
     'customs108' => [
         'CODE' => '10014032',
@@ -1633,8 +1633,8 @@ return [
         'TELEFON' => '797-69-60',
         'FAX' => '797-27-95',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.396775',
-        'COORDS_LONGITUDE' => '55.788237'
+        'COORDS_LONGITUDE' => '37.396775',
+        'COORDS_LATITUDE' => '55.788237'
     ],
     'customs109' => [
         'CODE' => '10014033',
@@ -1648,8 +1648,8 @@ return [
         'TELEFON' => '961-10-26',
         'FAX' => '961-10-05',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.552067',
-        'COORDS_LONGITUDE' => '55.805275'
+        'COORDS_LONGITUDE' => '37.552067',
+        'COORDS_LATITUDE' => '55.805275'
     ],
     'customs110' => [
         'CODE' => '10014034',
@@ -1663,8 +1663,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.502256',
-        'COORDS_LONGITUDE' => '55.776958'
+        'COORDS_LONGITUDE' => '37.502256',
+        'COORDS_LATITUDE' => '55.776958'
     ],
     'customs111' => [
         'CODE' => '10014035',
@@ -1678,8 +1678,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.662416',
-        'COORDS_LONGITUDE' => '55.781863'
+        'COORDS_LONGITUDE' => '37.662416',
+        'COORDS_LATITUDE' => '55.781863'
     ],
     'customs112' => [
         'CODE' => '10014040',
@@ -1693,8 +1693,8 @@ return [
         'TELEFON' => '(423)249-80-73',
         'FAX' => '(423)249-80-75',
         'EMAIL' => 'vld_vpp@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '132.139995',
-        'COORDS_LONGITUDE' => '43.377866'
+        'COORDS_LONGITUDE' => '132.139995',
+        'COORDS_LATITUDE' => '43.377866'
     ],
     'customs113' => [
         'CODE' => '10014050',
@@ -1708,8 +1708,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '49.268632',
-        'COORDS_LONGITUDE' => '55.615502'
+        'COORDS_LONGITUDE' => '49.268632',
+        'COORDS_LATITUDE' => '55.615502'
     ],
     'customs114' => [
         'CODE' => '10014060',
@@ -1723,8 +1723,8 @@ return [
         'TELEFON' => '(383)290-33-43',
         'FAX' => '(383)290-33-43',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.63861',
-        'COORDS_LONGITUDE' => '55.004375'
+        'COORDS_LONGITUDE' => '82.63861',
+        'COORDS_LATITUDE' => '55.004375'
     ],
     'customs115' => [
         'CODE' => '10014070',
@@ -1738,8 +1738,8 @@ return [
         'TELEFON' => '(3532)44-75-06',
         'FAX' => '(3532)79-93-32',
         'EMAIL' => 'orb-mmpo-odo@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '55.077794',
-        'COORDS_LONGITUDE' => '51.777188'
+        'COORDS_LONGITUDE' => '55.077794',
+        'COORDS_LATITUDE' => '51.777188'
     ],
     'customs116' => [
         'CODE' => '10014080',
@@ -1753,8 +1753,8 @@ return [
         'TELEFON' => '(495)736-90-18',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.292131',
-        'COORDS_LONGITUDE' => '55.603863'
+        'COORDS_LONGITUDE' => '37.292131',
+        'COORDS_LATITUDE' => '55.603863'
     ],
     'customs117' => [
         'CODE' => '10014090',
@@ -1768,8 +1768,8 @@ return [
         'TELEFON' => '(343)359-64-99',
         'FAX' => '',
         'EMAIL' => 'klc_mmpo@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.788887',
-        'COORDS_LONGITUDE' => '56.750418'
+        'COORDS_LONGITUDE' => '60.788887',
+        'COORDS_LATITUDE' => '56.750418'
     ],
     'customs118' => [
         'CODE' => '10014100',
@@ -1783,8 +1783,8 @@ return [
         'TELEFON' => '(812)331-32-92',
         'FAX' => '(812)777-34-52',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.326091',
-        'COORDS_LONGITUDE' => '59.776786'
+        'COORDS_LONGITUDE' => '30.326091',
+        'COORDS_LATITUDE' => '59.776786'
     ],
     'customs119' => [
         'CODE' => '10014110',
@@ -1798,8 +1798,8 @@ return [
         'TELEFON' => '(495)956-99-64',
         'FAX' => '(495)538-76-00',
         'EMAIL' => 'SHER_POCHT@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.413861',
-        'COORDS_LONGITUDE' => '55.981349'
+        'COORDS_LONGITUDE' => '37.413861',
+        'COORDS_LATITUDE' => '55.981349'
     ],
     'customs120' => [
         'CODE' => '10021000',
@@ -1813,8 +1813,8 @@ return [
         'TELEFON' => '(81037517) 288-60-80',
         'FAX' => '(81037517) 288-60-87',
         'EMAIL' => 'ptsrf@mail.bn.by',
-        'COORDS_LATITUDE' => '27.56211',
-        'COORDS_LONGITUDE' => '53.912659'
+        'COORDS_LONGITUDE' => '27.56211',
+        'COORDS_LATITUDE' => '53.912659'
     ],
     'customs121' => [
         'CODE' => '10022000',
@@ -1828,8 +1828,8 @@ return [
         'TELEFON' => '87172-22-73-28',
         'FAX' => '87172-2273-24',
         'EMAIL' => 'RTPKAZ@CA.customs.gov.ru',
-        'COORDS_LATITUDE' => '71.421832',
-        'COORDS_LONGITUDE' => '51.177872'
+        'COORDS_LONGITUDE' => '71.421832',
+        'COORDS_LATITUDE' => '51.177872'
     ],
     'customs122' => [
         'CODE' => '10023000',
@@ -1843,8 +1843,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '74.606638',
-        'COORDS_LONGITUDE' => '42.834827'
+        'COORDS_LONGITUDE' => '74.606638',
+        'COORDS_LATITUDE' => '42.834827'
     ],
     'customs123' => [
         'CODE' => '10024000',
@@ -1858,8 +1858,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '31.482771',
-        'COORDS_LONGITUDE' => '49.027536'
+        'COORDS_LONGITUDE' => '31.482771',
+        'COORDS_LATITUDE' => '49.027536'
     ],
     'customs124' => [
         'CODE' => '10025000',
@@ -1873,8 +1873,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '25.933922',
-        'COORDS_LONGITUDE' => '62.72321'
+        'COORDS_LONGITUDE' => '25.933922',
+        'COORDS_LATITUDE' => '62.72321'
     ],
     'customs125' => [
         'CODE' => '10026000',
@@ -1888,8 +1888,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '10.551701',
-        'COORDS_LONGITUDE' => '51.228764'
+        'COORDS_LONGITUDE' => '10.551701',
+        'COORDS_LATITUDE' => '51.228764'
     ],
     'customs126' => [
         'CODE' => '10027000',
@@ -1903,8 +1903,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '4.863757',
-        'COORDS_LONGITUDE' => '50.510873'
+        'COORDS_LONGITUDE' => '4.863757',
+        'COORDS_LATITUDE' => '50.510873'
     ],
     'customs127' => [
         'CODE' => '10091000',
@@ -1918,8 +1918,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs128' => [
         'CODE' => '10092000',
@@ -1933,8 +1933,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '42.715718',
-        'COORDS_LONGITUDE' => '43.905518'
+        'COORDS_LONGITUDE' => '42.715718',
+        'COORDS_LATITUDE' => '43.905518'
     ],
     'customs129' => [
         'CODE' => '10093000',
@@ -1948,8 +1948,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs130' => [
         'CODE' => '10094000',
@@ -1963,8 +1963,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs131' => [
         'CODE' => '10095000',
@@ -1978,8 +1978,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs132' => [
         'CODE' => '10096000',
@@ -1993,8 +1993,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs133' => [
         'CODE' => '10096001',
@@ -2008,8 +2008,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs134' => [
         'CODE' => '10096002',
@@ -2023,8 +2023,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs135' => [
         'CODE' => '10096003',
@@ -2038,8 +2038,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs136' => [
         'CODE' => '10097000',
@@ -2053,8 +2053,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs137' => [
         'CODE' => '10100000',
@@ -2068,8 +2068,8 @@ return [
         'TELEFON' => '(499)975-19-18',
         'FAX' => '(499)975-36-79',
         'EMAIL' => 'ctu-info@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.654116',
-        'COORDS_LONGITUDE' => '55.775773'
+        'COORDS_LONGITUDE' => '37.654116',
+        'COORDS_LATITUDE' => '55.775773'
     ],
     'customs138' => [
         'CODE' => '10100010',
@@ -2083,8 +2083,8 @@ return [
         'TELEFON' => '(4842)79-49-96',
         'FAX' => '(4842)59-70-16',
         'EMAIL' => 'snacheva-pttp@mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.234921',
-        'COORDS_LONGITUDE' => '54.519464'
+        'COORDS_LONGITUDE' => '36.234921',
+        'COORDS_LATITUDE' => '54.519464'
     ],
     'customs139' => [
         'CODE' => '10101000',
@@ -2098,8 +2098,8 @@ return [
         'TELEFON' => '(4722)27-16-44',
         'FAX' => '(4722)32-01-83',
         'EMAIL' => 'BELG-ODO_9@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.583531',
-        'COORDS_LONGITUDE' => '50.594156'
+        'COORDS_LONGITUDE' => '36.583531',
+        'COORDS_LATITUDE' => '50.594156'
     ],
     'customs140' => [
         'CODE' => '10101010',
@@ -2113,8 +2113,8 @@ return [
         'TELEFON' => '(47234)3-42-83',
         'FAX' => '(47234)3-07-34',
         'EMAIL' => 'belg-alk-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.682759',
-        'COORDS_LONGITUDE' => '50.618966'
+        'COORDS_LONGITUDE' => '38.682759',
+        'COORDS_LATITUDE' => '50.618966'
     ],
     'customs141' => [
         'CODE' => '10101020',
@@ -2128,8 +2128,8 @@ return [
         'TELEFON' => '(47236)3-69-17',
         'FAX' => '(47236)3-50-92',
         'EMAIL' => 'belg-vlk-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.113353',
-        'COORDS_LONGITUDE' => '50.214019'
+        'COORDS_LONGITUDE' => '38.113353',
+        'COORDS_LATITUDE' => '50.214019'
     ],
     'customs142' => [
         'CODE' => '10101030',
@@ -2143,8 +2143,8 @@ return [
         'TELEFON' => '(4722)21-54-81',
         'FAX' => '(4722)21-54-81',
         'EMAIL' => 'belg-btp-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.673497',
-        'COORDS_LONGITUDE' => '50.593116'
+        'COORDS_LONGITUDE' => '36.673497',
+        'COORDS_LATITUDE' => '50.593116'
     ],
     'customs143' => [
         'CODE' => '10101035',
@@ -2158,8 +2158,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.298208',
-        'COORDS_LONGITUDE' => '50.340131'
+        'COORDS_LONGITUDE' => '36.298208',
+        'COORDS_LATITUDE' => '50.340131'
     ],
     'customs144' => [
         'CODE' => '10101040',
@@ -2173,8 +2173,8 @@ return [
         'TELEFON' => '(47261)4-40-83',
         'FAX' => '(47261)4-40-71',
         'EMAIL' => 'belg-grv-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '35.591054',
-        'COORDS_LONGITUDE' => '50.430339'
+        'COORDS_LONGITUDE' => '35.591054',
+        'COORDS_LATITUDE' => '50.430339'
     ],
     'customs145' => [
         'CODE' => '10101050',
@@ -2188,8 +2188,8 @@ return [
         'TELEFON' => '(47241)9-32-55',
         'FAX' => '(47241)9-32-55',
         'EMAIL' => 'belg-gbn-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.303207',
-        'COORDS_LONGITUDE' => '50.872237'
+        'COORDS_LONGITUDE' => '37.303207',
+        'COORDS_LATITUDE' => '50.872237'
     ],
     'customs146' => [
         'CODE' => '10101070',
@@ -2203,8 +2203,8 @@ return [
         'TELEFON' => '(47233)4-42-17',
         'FAX' => '(47233)4-49-79',
         'EMAIL' => 'belg-nvo-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.878829',
-        'COORDS_LONGITUDE' => '50.74703'
+        'COORDS_LONGITUDE' => '37.878829',
+        'COORDS_LATITUDE' => '50.74703'
     ],
     'customs147' => [
         'CODE' => '10101080',
@@ -2218,8 +2218,8 @@ return [
         'TELEFON' => '(47245)3-58-88',
         'FAX' => '(47245)3-50-59',
         'EMAIL' => 'belg-prt-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '35.771606',
-        'COORDS_LONGITUDE' => '50.792335'
+        'COORDS_LONGITUDE' => '35.771606',
+        'COORDS_LATITUDE' => '50.792335'
     ],
     'customs148' => [
         'CODE' => '10101090',
@@ -2233,8 +2233,8 @@ return [
         'TELEFON' => '(47238)5-64-53',
         'FAX' => '(47238)5-61-77',
         'EMAIL' => 'belg-rvk-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs149' => [
         'CODE' => '10101100',
@@ -2248,8 +2248,8 @@ return [
         'TELEFON' => '(4725)46-94-66',
         'FAX' => '(4725)46-94-66',
         'EMAIL' => 'belg-sto-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.868948',
-        'COORDS_LONGITUDE' => '51.341672'
+        'COORDS_LONGITUDE' => '37.868948',
+        'COORDS_LATITUDE' => '51.341672'
     ],
     'customs150' => [
         'CODE' => '10101110',
@@ -2263,8 +2263,8 @@ return [
         'TELEFON' => '(47248)4-09-70',
         'FAX' => '(47248)2-36-57',
         'EMAIL' => 'belg-shb-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.097825',
-        'COORDS_LONGITUDE' => '50.503179'
+        'COORDS_LONGITUDE' => '37.097825',
+        'COORDS_LATITUDE' => '50.503179'
     ],
     'customs151' => [
         'CODE' => '10101120',
@@ -2278,8 +2278,8 @@ return [
         'TELEFON' => '(4722)30-60-27',
         'FAX' => '(4722)30-60-29',
         'EMAIL' => 'belg-neh-main@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.430341',
-        'COORDS_LONGITUDE' => '50.507207'
+        'COORDS_LONGITUDE' => '36.430341',
+        'COORDS_LATITUDE' => '50.507207'
     ],
     'customs152' => [
         'CODE' => '10102000',
@@ -2293,8 +2293,8 @@ return [
         'TELEFON' => '(4832)67-17-58',
         'FAX' => '(4832)67-17-41',
         'EMAIL' => 'ods3@mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.341497',
-        'COORDS_LONGITUDE' => '53.261324'
+        'COORDS_LONGITUDE' => '34.341497',
+        'COORDS_LATITUDE' => '53.261324'
     ],
     'customs153' => [
         'CODE' => '10102010',
@@ -2308,8 +2308,8 @@ return [
         'TELEFON' => '(4832)26-01-92',
         'FAX' => '(4832)26-01-92',
         'EMAIL' => 'Yachmeneva@bryansk.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.405925',
-        'COORDS_LONGITUDE' => '53.262154'
+        'COORDS_LONGITUDE' => '34.405925',
+        'COORDS_LATITUDE' => '53.262154'
     ],
     'customs154' => [
         'CODE' => '10102030',
@@ -2323,8 +2323,8 @@ return [
         'TELEFON' => '(4832)67-17-27',
         'FAX' => '(4832)67-17-27',
         'EMAIL' => 'brn-ain@bryansk.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.662897',
-        'COORDS_LONGITUDE' => '53.20727'
+        'COORDS_LONGITUDE' => '34.662897',
+        'COORDS_LATITUDE' => '53.20727'
     ],
     'customs155' => [
         'CODE' => '10102032',
@@ -2338,8 +2338,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.455601',
-        'COORDS_LONGITUDE' => '53.215807'
+        'COORDS_LONGITUDE' => '34.455601',
+        'COORDS_LATITUDE' => '53.215807'
     ],
     'customs156' => [
         'CODE' => '10102040',
@@ -2353,8 +2353,8 @@ return [
         'TELEFON' => '(48347)2-11-37',
         'FAX' => '(48347)2-17-99',
         'EMAIL' => 'kli-Rygenko@bryansk.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '31.860431',
-        'COORDS_LONGITUDE' => '52.122798'
+        'COORDS_LONGITUDE' => '31.860431',
+        'COORDS_LATITUDE' => '52.122798'
     ],
     'customs157' => [
         'CODE' => '10102070',
@@ -2368,8 +2368,8 @@ return [
         'TELEFON' => '(48343)3-04-27',
         'FAX' => '(48343)3-04-27',
         'EMAIL' => 'MEYKUP@mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '32.196204',
-        'COORDS_LONGITUDE' => '52.379787'
+        'COORDS_LONGITUDE' => '32.196204',
+        'COORDS_LATITUDE' => '52.379787'
     ],
     'customs158' => [
         'CODE' => '10102072',
@@ -2383,8 +2383,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '32.212113',
-        'COORDS_LONGITUDE' => '52.80671'
+        'COORDS_LONGITUDE' => '32.212113',
+        'COORDS_LATITUDE' => '52.80671'
     ],
     'customs159' => [
         'CODE' => '10102073',
@@ -2398,8 +2398,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '31.983105',
-        'COORDS_LONGITUDE' => '52.516084'
+        'COORDS_LONGITUDE' => '31.983105',
+        'COORDS_LATITUDE' => '52.516084'
     ],
     'customs160' => [
         'CODE' => '10102080',
@@ -2413,8 +2413,8 @@ return [
         'TELEFON' => '(48349)2-16-93',
         'FAX' => '(48349)2-16-93',
         'EMAIL' => 'kozlova_j@bryansk.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.235806',
-        'COORDS_LONGITUDE' => '52.545492'
+        'COORDS_LONGITUDE' => '33.235806',
+        'COORDS_LATITUDE' => '52.545492'
     ],
     'customs161' => [
         'CODE' => '10102081',
@@ -2428,8 +2428,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.237207',
-        'COORDS_LONGITUDE' => '52.54576'
+        'COORDS_LONGITUDE' => '33.237207',
+        'COORDS_LATITUDE' => '52.54576'
     ],
     'customs162' => [
         'CODE' => '10102082',
@@ -2443,8 +2443,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.235348',
-        'COORDS_LONGITUDE' => '52.382018'
+        'COORDS_LONGITUDE' => '33.235348',
+        'COORDS_LATITUDE' => '52.382018'
     ],
     'customs163' => [
         'CODE' => '10102090',
@@ -2458,8 +2458,8 @@ return [
         'TELEFON' => '(48356)9-56-31',
         'FAX' => '(48356)9-56-31',
         'EMAIL' => 'sevsk_tp@bryansk.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '31.482771',
-        'COORDS_LONGITUDE' => '49.027536'
+        'COORDS_LONGITUDE' => '31.482771',
+        'COORDS_LATITUDE' => '49.027536'
     ],
     'customs164' => [
         'CODE' => '10102120',
@@ -2473,8 +2473,8 @@ return [
         'TELEFON' => '(4832)67-06-17',
         'FAX' => '(4832)67-06-17',
         'EMAIL' => 'brn-nis@bryansk.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '31.482771',
-        'COORDS_LONGITUDE' => '49.027536'
+        'COORDS_LONGITUDE' => '31.482771',
+        'COORDS_LATITUDE' => '49.027536'
     ],
     'customs165' => [
         'CODE' => '10102150',
@@ -2488,8 +2488,8 @@ return [
         'TELEFON' => '(4832)60-36-95',
         'FAX' => '(4832)73-70-33',
         'EMAIL' => 'Svc-brn-fokodomail@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.411638',
-        'COORDS_LONGITUDE' => '53.211034'
+        'COORDS_LONGITUDE' => '34.411638',
+        'COORDS_LATITUDE' => '53.211034'
     ],
     'customs166' => [
         'CODE' => '10102170',
@@ -2503,8 +2503,8 @@ return [
         'TELEFON' => '(48349)9-65-27',
         'FAX' => '(48349)9-65-29',
         'EMAIL' => 'pog_bnp@bryansk.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.205308',
-        'COORDS_LONGITUDE' => '52.514736'
+        'COORDS_LONGITUDE' => '33.205308',
+        'COORDS_LATITUDE' => '52.514736'
     ],
     'customs167' => [
         'CODE' => '10103000',
@@ -2518,8 +2518,8 @@ return [
         'TELEFON' => '(4922)40-21-28',
         'FAX' => '(4922)45-18-08',
         'EMAIL' => 'VLADIMIR@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '40.392756',
-        'COORDS_LONGITUDE' => '56.146237'
+        'COORDS_LONGITUDE' => '40.392756',
+        'COORDS_LATITUDE' => '56.146237'
     ],
     'customs168' => [
         'CODE' => '10103010',
@@ -2533,8 +2533,8 @@ return [
         'TELEFON' => '(49244)6-67-10',
         'FAX' => '(49244)6-15-12',
         'EMAIL' => 'Alx-Vld@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.70077',
-        'COORDS_LONGITUDE' => '56.374527'
+        'COORDS_LONGITUDE' => '38.70077',
+        'COORDS_LATITUDE' => '56.374527'
     ],
     'customs169' => [
         'CODE' => '10103020',
@@ -2548,8 +2548,8 @@ return [
         'TELEFON' => '(4922)45-30-72',
         'FAX' => '(4922)45-30-71',
         'EMAIL' => 'Vlad-vld@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '40.414594',
-        'COORDS_LONGITUDE' => '56.166982'
+        'COORDS_LONGITUDE' => '40.414594',
+        'COORDS_LATITUDE' => '56.166982'
     ],
     'customs170' => [
         'CODE' => '10103030',
@@ -2563,8 +2563,8 @@ return [
         'TELEFON' => '(49241)2-72-42',
         'FAX' => '(49241)2-72-42',
         'EMAIL' => 'Gus-Vld@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '40.637071',
-        'COORDS_LONGITUDE' => '55.624291'
+        'COORDS_LONGITUDE' => '40.637071',
+        'COORDS_LATITUDE' => '55.624291'
     ],
     'customs171' => [
         'CODE' => '10103040',
@@ -2578,8 +2578,8 @@ return [
         'TELEFON' => '(49243)2-29-56',
         'FAX' => '(49243)2-18-35',
         'EMAIL' => 'Kir-Vld@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '40.392756',
-        'COORDS_LONGITUDE' => '56.146237'
+        'COORDS_LONGITUDE' => '40.392756',
+        'COORDS_LATITUDE' => '56.146237'
     ],
     'customs172' => [
         'CODE' => '10103050',
@@ -2593,8 +2593,8 @@ return [
         'TELEFON' => '(49232)2-35-27',
         'FAX' => '(49232)2-35-27',
         'EMAIL' => 'Kvr-Vld@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '41.347755',
-        'COORDS_LONGITUDE' => '56.370105'
+        'COORDS_LONGITUDE' => '41.347755',
+        'COORDS_LATITUDE' => '56.370105'
     ],
     'customs173' => [
         'CODE' => '10103060',
@@ -2608,8 +2608,8 @@ return [
         'TELEFON' => '(49245)2-20-69',
         'FAX' => '(49245)2-01-98',
         'EMAIL' => 'Klg-Vld@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.350908',
-        'COORDS_LONGITUDE' => '56.287542'
+        'COORDS_LONGITUDE' => '39.350908',
+        'COORDS_LATITUDE' => '56.287542'
     ],
     'customs174' => [
         'CODE' => '10103070',
@@ -2623,8 +2623,8 @@ return [
         'TELEFON' => '(49234)4-96-85',
         'FAX' => '(49234)4-81-99',
         'EMAIL' => 'Mur-Vld@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '42.00118',
-        'COORDS_LONGITUDE' => '55.579984'
+        'COORDS_LONGITUDE' => '42.00118',
+        'COORDS_LATITUDE' => '55.579984'
     ],
     'customs175' => [
         'CODE' => '10103080',
@@ -2638,8 +2638,8 @@ return [
         'TELEFON' => '(4922)40-21-10',
         'FAX' => '(4922)40-21-14',
         'EMAIL' => 'Vced-Vld@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '40.392756',
-        'COORDS_LONGITUDE' => '56.146237'
+        'COORDS_LONGITUDE' => '40.392756',
+        'COORDS_LATITUDE' => '56.146237'
     ],
     'customs176' => [
         'CODE' => '10103130',
@@ -2653,8 +2653,8 @@ return [
         'TELEFON' => '(4932)38-75-68',
         'FAX' => '(4932)38-75-66',
         'EMAIL' => 'ivn-TPIv@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '40.914722',
-        'COORDS_LONGITUDE' => '56.99392'
+        'COORDS_LONGITUDE' => '40.914722',
+        'COORDS_LATITUDE' => '56.99392'
     ],
     'customs177' => [
         'CODE' => '10103140',
@@ -2668,8 +2668,8 @@ return [
         'TELEFON' => '(49331)2-06-14',
         'FAX' => '(49331)2-06-22',
         'EMAIL' => 'ivn-TPKineshma@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '42.092467',
-        'COORDS_LONGITUDE' => '57.450221'
+        'COORDS_LONGITUDE' => '42.092467',
+        'COORDS_LATITUDE' => '57.450221'
     ],
     'customs178' => [
         'CODE' => '10103150',
@@ -2683,8 +2683,8 @@ return [
         'TELEFON' => '(49351)4-11-26',
         'FAX' => '(49351)4-11-26',
         'EMAIL' => 'ivn-TPS@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '41.370994',
-        'COORDS_LONGITUDE' => '56.852258'
+        'COORDS_LONGITUDE' => '41.370994',
+        'COORDS_LATITUDE' => '56.852258'
     ],
     'customs179' => [
         'CODE' => '10103160',
@@ -2698,8 +2698,8 @@ return [
         'TELEFON' => '(4942)34-74-41',
         'FAX' => '(4942)22-65-74',
         'EMAIL' => 'отсутствует',
-        'COORDS_LATITUDE' => '41.003502',
-        'COORDS_LONGITUDE' => '57.774724'
+        'COORDS_LONGITUDE' => '41.003502',
+        'COORDS_LATITUDE' => '57.774724'
     ],
     'customs180' => [
         'CODE' => '10103170',
@@ -2713,8 +2713,8 @@ return [
         'TELEFON' => '(4852)44-16-90',
         'FAX' => '(4852)44-16-90',
         'EMAIL' => 'отсутствует',
-        'COORDS_LATITUDE' => '39.893813',
-        'COORDS_LONGITUDE' => '57.626559'
+        'COORDS_LONGITUDE' => '39.893813',
+        'COORDS_LATITUDE' => '57.626559'
     ],
     'customs181' => [
         'CODE' => '10103180',
@@ -2728,8 +2728,8 @@ return [
         'TELEFON' => '(4855)21-47-03',
         'FAX' => '(4855)21-44-87',
         'EMAIL' => 'отсутствует',
-        'COORDS_LATITUDE' => '39.105138',
-        'COORDS_LONGITUDE' => '57.817361'
+        'COORDS_LONGITUDE' => '39.105138',
+        'COORDS_LATITUDE' => '57.817361'
     ],
     'customs182' => [
         'CODE' => '10103190',
@@ -2743,8 +2743,8 @@ return [
         'TELEFON' => '(49449)5-97-53',
         'FAX' => '(49449)5-96-98',
         'EMAIL' => 'отсутствует',
-        'COORDS_LATITUDE' => '45.473959',
-        'COORDS_LONGITUDE' => '58.396893'
+        'COORDS_LONGITUDE' => '45.473959',
+        'COORDS_LATITUDE' => '58.396893'
     ],
     'customs183' => [
         'CODE' => '10103200',
@@ -2758,8 +2758,8 @@ return [
         'TELEFON' => '(4852)45-45-18',
         'FAX' => '(4852)45-45-26',
         'EMAIL' => 'отсутствует',
-        'COORDS_LATITUDE' => '39.889115',
-        'COORDS_LONGITUDE' => '57.596446'
+        'COORDS_LONGITUDE' => '39.889115',
+        'COORDS_LATITUDE' => '57.596446'
     ],
     'customs184' => [
         'CODE' => '10103210',
@@ -2773,8 +2773,8 @@ return [
         'TELEFON' => '(4852)30-02-47',
         'FAX' => 'отсутствует',
         'EMAIL' => 'отсутствует',
-        'COORDS_LATITUDE' => '39.860163',
-        'COORDS_LONGITUDE' => '57.629653'
+        'COORDS_LONGITUDE' => '39.860163',
+        'COORDS_LATITUDE' => '57.629653'
     ],
     'customs185' => [
         'CODE' => '10103901',
@@ -2788,8 +2788,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.860163',
-        'COORDS_LONGITUDE' => '57.629653'
+        'COORDS_LONGITUDE' => '39.860163',
+        'COORDS_LATITUDE' => '57.629653'
     ],
     'customs186' => [
         'CODE' => '10104000',
@@ -2803,8 +2803,8 @@ return [
         'TELEFON' => '(473)277-27-97',
         'FAX' => '(473)277-73-90',
         'EMAIL' => 'vrn-odo3@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.180506',
-        'COORDS_LONGITUDE' => '51.671495'
+        'COORDS_LONGITUDE' => '39.180506',
+        'COORDS_LATITUDE' => '51.671495'
     ],
     'customs187' => [
         'CODE' => '10104020',
@@ -2818,8 +2818,8 @@ return [
         'TELEFON' => '(473267)6-40-50',
         'FAX' => '(473267)6-40-55',
         'EMAIL' => 'vrn-tp6@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.842654',
-        'COORDS_LONGITUDE' => '49.785221'
+        'COORDS_LONGITUDE' => '39.842654',
+        'COORDS_LATITUDE' => '49.785221'
     ],
     'customs188' => [
         'CODE' => '10104030',
@@ -2833,8 +2833,8 @@ return [
         'TELEFON' => '(473)221-98-68',
         'FAX' => '(473)237-61-60',
         'EMAIL' => 'vrn-tp8@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.293299',
-        'COORDS_LONGITUDE' => '51.651248'
+        'COORDS_LONGITUDE' => '39.293299',
+        'COORDS_LATITUDE' => '51.651248'
     ],
     'customs189' => [
         'CODE' => '10104050',
@@ -2848,8 +2848,8 @@ return [
         'TELEFON' => '(47396)5-16-37',
         'FAX' => '(47396)5-16-68',
         'EMAIL' => 'vrn-tp3@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.49851',
-        'COORDS_LONGITUDE' => '50.209759'
+        'COORDS_LONGITUDE' => '39.49851',
+        'COORDS_LATITUDE' => '50.209759'
     ],
     'customs190' => [
         'CODE' => '10104060',
@@ -2863,8 +2863,8 @@ return [
         'TELEFON' => '(473)253-33-24',
         'FAX' => '(473)251-20-43',
         'EMAIL' => 'vrn-tpf@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.200296',
-        'COORDS_LONGITUDE' => '51.660781'
+        'COORDS_LONGITUDE' => '39.200296',
+        'COORDS_LATITUDE' => '51.660781'
     ],
     'customs191' => [
         'CODE' => '10104070',
@@ -2878,8 +2878,8 @@ return [
         'TELEFON' => '(473)221-40-59',
         'FAX' => '(473)221-51-45',
         'EMAIL' => 'vrn-tp1@regions.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.126023',
-        'COORDS_LONGITUDE' => '51.669255'
+        'COORDS_LONGITUDE' => '39.126023',
+        'COORDS_LATITUDE' => '51.669255'
     ],
     'customs192' => [
         'CODE' => '10104080',
@@ -2893,8 +2893,8 @@ return [
         'TELEFON' => '(473)230-92-68',
         'FAX' => 'отсутствует',
         'EMAIL' => 'vrn-tp5@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.263205',
-        'COORDS_LONGITUDE' => '51.637623'
+        'COORDS_LONGITUDE' => '39.263205',
+        'COORDS_LATITUDE' => '51.637623'
     ],
     'customs193' => [
         'CODE' => '10104100',
@@ -2908,8 +2908,8 @@ return [
         'TELEFON' => '(4752)72-70-77',
         'FAX' => '(4752)72-03-37',
         'EMAIL' => 'vrn-tpt@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '41.439131',
-        'COORDS_LONGITUDE' => '52.70715'
+        'COORDS_LONGITUDE' => '41.439131',
+        'COORDS_LATITUDE' => '52.70715'
     ],
     'customs194' => [
         'CODE' => '10104110',
@@ -2923,8 +2923,8 @@ return [
         'TELEFON' => '(47467)6-77-76',
         'FAX' => '(47467)6-77-37',
         'EMAIL' => 'lipetsk-elec@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.577108',
-        'COORDS_LONGITUDE' => '52.619374'
+        'COORDS_LONGITUDE' => '38.577108',
+        'COORDS_LATITUDE' => '52.619374'
     ],
     'customs195' => [
         'CODE' => '10104120',
@@ -2938,8 +2938,8 @@ return [
         'TELEFON' => '(4742)51-94-44',
         'FAX' => '62-92-16',
         'EMAIL' => 'lipetsk-lip@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.673596',
-        'COORDS_LONGITUDE' => '52.619423'
+        'COORDS_LONGITUDE' => '38.673596',
+        'COORDS_LATITUDE' => '52.619423'
     ],
     'customs196' => [
         'CODE' => '10104122',
@@ -2953,8 +2953,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.631564',
-        'COORDS_LONGITUDE' => '52.6073'
+        'COORDS_LONGITUDE' => '38.631564',
+        'COORDS_LATITUDE' => '52.6073'
     ],
     'customs197' => [
         'CODE' => '10104130',
@@ -2968,8 +2968,8 @@ return [
         'TELEFON' => '(4742)42-32-66',
         'FAX' => '(4742)42-32-90',
         'EMAIL' => 'PTP-KIS@llpc.mtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.5478',
-        'COORDS_LONGITUDE' => '52.625376'
+        'COORDS_LONGITUDE' => '39.5478',
+        'COORDS_LATITUDE' => '52.625376'
     ],
     'customs198' => [
         'CODE' => '10104140',
@@ -2983,8 +2983,8 @@ return [
         'TELEFON' => '(4742)44-54-74',
         'FAX' => '(4742)44-54-41',
         'EMAIL' => 'lipetsk-nlmk@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.622477',
-        'COORDS_LONGITUDE' => '52.571667'
+        'COORDS_LONGITUDE' => '39.622477',
+        'COORDS_LATITUDE' => '52.571667'
     ],
     'customs199' => [
         'CODE' => '10104150',
@@ -2998,8 +2998,8 @@ return [
         'TELEFON' => '(4742)42-46-08',
         'FAX' => '(4742)42-40-68',
         'EMAIL' => 'lipetsk-stinol@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.622477',
-        'COORDS_LONGITUDE' => '52.571667'
+        'COORDS_LONGITUDE' => '39.622477',
+        'COORDS_LATITUDE' => '52.571667'
     ],
     'customs200' => [
         'CODE' => '10104160',
@@ -3013,8 +3013,8 @@ return [
         'TELEFON' => '(4742)42-32-19',
         'FAX' => '(4742)42-32-64',
         'EMAIL' => 'KurdyukovAN@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.5478',
-        'COORDS_LONGITUDE' => '52.625376'
+        'COORDS_LONGITUDE' => '39.5478',
+        'COORDS_LATITUDE' => '52.625376'
     ],
     'customs201' => [
         'CODE' => '10104901',
@@ -3028,8 +3028,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.5478',
-        'COORDS_LONGITUDE' => '52.625376'
+        'COORDS_LONGITUDE' => '39.5478',
+        'COORDS_LATITUDE' => '52.625376'
     ],
     'customs202' => [
         'CODE' => '10106000',
@@ -3043,8 +3043,8 @@ return [
         'TELEFON' => '(4842)71-57-27',
         'FAX' => '(4842)71-57-29',
         'EMAIL' => 'klg-office@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.254864',
-        'COORDS_LONGITUDE' => '54.553689'
+        'COORDS_LONGITUDE' => '36.254864',
+        'COORDS_LATITUDE' => '54.553689'
     ],
     'customs203' => [
         'CODE' => '10106010',
@@ -3058,8 +3058,8 @@ return [
         'TELEFON' => '(4842)71-38-01',
         'FAX' => '(4842)71-38-10',
         'EMAIL' => 'klg1-oto@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.059858',
-        'COORDS_LONGITUDE' => '54.504468'
+        'COORDS_LONGITUDE' => '36.059858',
+        'COORDS_LATITUDE' => '54.504468'
     ],
     'customs204' => [
         'CODE' => '10106050',
@@ -3073,8 +3073,8 @@ return [
         'TELEFON' => '(48438)2-60-16',
         'FAX' => '(48438)2-60-18',
         'EMAIL' => 'klg-obn@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.663391',
-        'COORDS_LONGITUDE' => '55.246277'
+        'COORDS_LONGITUDE' => '36.663391',
+        'COORDS_LATITUDE' => '55.246277'
     ],
     'customs205' => [
         'CODE' => '10106060',
@@ -3088,8 +3088,8 @@ return [
         'TELEFON' => '(4842)71-15-90',
         'FAX' => '(4842)71-15-91',
         'EMAIL' => 'klg-vw@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.361961',
-        'COORDS_LONGITUDE' => '54.572394'
+        'COORDS_LONGITUDE' => '36.361961',
+        'COORDS_LATITUDE' => '54.572394'
     ],
     'customs206' => [
         'CODE' => '10106062',
@@ -3103,8 +3103,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.059858',
-        'COORDS_LONGITUDE' => '54.504468'
+        'COORDS_LONGITUDE' => '36.059858',
+        'COORDS_LATITUDE' => '54.504468'
     ],
     'customs207' => [
         'CODE' => '10106063',
@@ -3118,8 +3118,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.232801',
-        'COORDS_LONGITUDE' => '54.469332'
+        'COORDS_LONGITUDE' => '36.232801',
+        'COORDS_LATITUDE' => '54.469332'
     ],
     'customs208' => [
         'CODE' => '10106070',
@@ -3133,8 +3133,8 @@ return [
         'TELEFON' => '(48438)6-26-85',
         'FAX' => '(48438)6-26-84',
         'EMAIL' => 'klg-bor@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.237949',
-        'COORDS_LONGITUDE' => '54.992606'
+        'COORDS_LONGITUDE' => '36.237949',
+        'COORDS_LATITUDE' => '54.992606'
     ],
     'customs209' => [
         'CODE' => '10108000',
@@ -3148,8 +3148,8 @@ return [
         'TELEFON' => '(4712)55-65-64',
         'FAX' => '(4712)55-65-17',
         'EMAIL' => 'PintyukhovIA@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.180546',
-        'COORDS_LONGITUDE' => '51.744717'
+        'COORDS_LONGITUDE' => '36.180546',
+        'COORDS_LATITUDE' => '51.744717'
     ],
     'customs210' => [
         'CODE' => '10108010',
@@ -3163,8 +3163,8 @@ return [
         'TELEFON' => '(47132)2-11-95',
         'FAX' => '(47132)2-14-81',
         'EMAIL' => 'kur-gl-post@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.635228',
-        'COORDS_LONGITUDE' => '51.321198'
+        'COORDS_LONGITUDE' => '34.635228',
+        'COORDS_LATITUDE' => '51.321198'
     ],
     'customs211' => [
         'CODE' => '10108020',
@@ -3178,8 +3178,8 @@ return [
         'TELEFON' => '(47148)3-08-15',
         'FAX' => '(47148)3-54-69',
         'EMAIL' => 'kur-zh-post@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '35.380426',
-        'COORDS_LONGITUDE' => '52.369241'
+        'COORDS_LONGITUDE' => '35.380426',
+        'COORDS_LATITUDE' => '52.369241'
     ],
     'customs212' => [
         'CODE' => '10108030',
@@ -3193,8 +3193,8 @@ return [
         'TELEFON' => '(4712)31-23-09',
         'FAX' => '(4712)31-23-09',
         'EMAIL' => 'kur-ku-post@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.114637',
-        'COORDS_LONGITUDE' => '51.637025'
+        'COORDS_LONGITUDE' => '36.114637',
+        'COORDS_LATITUDE' => '51.637025'
     ],
     'customs213' => [
         'CODE' => '10108040',
@@ -3208,8 +3208,8 @@ return [
         'TELEFON' => '(47152)2-63-12',
         'FAX' => '(47152)2-63-29',
         'EMAIL' => 'kur-mk-post@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.583162',
-        'COORDS_LONGITUDE' => '51.593454'
+        'COORDS_LONGITUDE' => '34.583162',
+        'COORDS_LATITUDE' => '51.593454'
     ],
     'customs214' => [
         'CODE' => '10108050',
@@ -3223,8 +3223,8 @@ return [
         'TELEFON' => '(47143)2-30-22',
         'FAX' => '(47143)2-30-29',
         'EMAIL' => 'kur-ms-post@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '35.287414',
-        'COORDS_LONGITUDE' => '51.23318'
+        'COORDS_LONGITUDE' => '35.287414',
+        'COORDS_LATITUDE' => '51.23318'
     ],
     'customs215' => [
         'CODE' => '10108060',
@@ -3238,8 +3238,8 @@ return [
         'TELEFON' => '(47143)2-43-82',
         'FAX' => '(47143)2-43-82',
         'EMAIL' => 'kur-mi-post@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '35.287414',
-        'COORDS_LONGITUDE' => '51.23318'
+        'COORDS_LONGITUDE' => '35.287414',
+        'COORDS_LATITUDE' => '51.23318'
     ],
     'customs216' => [
         'CODE' => '10108070',
@@ -3253,8 +3253,8 @@ return [
         'TELEFON' => '(47152)6-52-28',
         'FAX' => '(47152)6-52-30',
         'EMAIL' => 'kur-kr-post@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.206804',
-        'COORDS_LONGITUDE' => '51.632021'
+        'COORDS_LONGITUDE' => '34.206804',
+        'COORDS_LATITUDE' => '51.632021'
     ],
     'customs217' => [
         'CODE' => '10108073',
@@ -3268,8 +3268,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.321276',
-        'COORDS_LONGITUDE' => '51.620929'
+        'COORDS_LONGITUDE' => '34.321276',
+        'COORDS_LATITUDE' => '51.620929'
     ],
     'customs218' => [
         'CODE' => '10108080',
@@ -3283,8 +3283,8 @@ return [
         'TELEFON' => '(4862)74-17-72',
         'FAX' => '(4862)72-08-12',
         'EMAIL' => 'kur-orl-post@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.029441',
-        'COORDS_LONGITUDE' => '52.946356'
+        'COORDS_LONGITUDE' => '36.029441',
+        'COORDS_LATITUDE' => '52.946356'
     ],
     'customs219' => [
         'CODE' => '10108082',
@@ -3298,8 +3298,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.167799',
-        'COORDS_LONGITUDE' => '53.043245'
+        'COORDS_LONGITUDE' => '36.167799',
+        'COORDS_LATITUDE' => '53.043245'
     ],
     'customs220' => [
         'CODE' => '10113000',
@@ -3313,8 +3313,8 @@ return [
         'TELEFON' => '(4812)44-20-33',
         'FAX' => '(4812)44-01-74',
         'EMAIL' => 'sml-odo@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '31.977176',
-        'COORDS_LONGITUDE' => '54.814512'
+        'COORDS_LONGITUDE' => '31.977176',
+        'COORDS_LATITUDE' => '54.814512'
     ],
     'customs221' => [
         'CODE' => '10113010',
@@ -3328,8 +3328,8 @@ return [
         'TELEFON' => '(48144)4-15-77',
         'FAX' => '(48144)4-16-88',
         'EMAIL' => 'sml-vdp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.344969',
-        'COORDS_LONGITUDE' => '54.981397'
+        'COORDS_LONGITUDE' => '33.344969',
+        'COORDS_LATITUDE' => '54.981397'
     ],
     'customs222' => [
         'CODE' => '10113020',
@@ -3343,8 +3343,8 @@ return [
         'TELEFON' => '(48131)4-17-01',
         'FAX' => '(48131)4-17-01',
         'EMAIL' => 'sml-vzm@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.325004',
-        'COORDS_LONGITUDE' => '55.232428'
+        'COORDS_LONGITUDE' => '34.325004',
+        'COORDS_LATITUDE' => '55.232428'
     ],
     'customs223' => [
         'CODE' => '10113040',
@@ -3358,8 +3358,8 @@ return [
         'TELEFON' => '(4812)44-59-49',
         'FAX' => '(4812)44-01-24',
         'EMAIL' => 'sml-ztpodo@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '31.977176',
-        'COORDS_LONGITUDE' => '54.814512'
+        'COORDS_LONGITUDE' => '31.977176',
+        'COORDS_LATITUDE' => '54.814512'
     ],
     'customs224' => [
         'CODE' => '10113050',
@@ -3373,8 +3373,8 @@ return [
         'TELEFON' => '(48134)4-18-34',
         'FAX' => '(48134)4-07-97',
         'EMAIL' => 'sml-rsl@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '32.892721',
-        'COORDS_LONGITUDE' => '53.936714'
+        'COORDS_LONGITUDE' => '32.892721',
+        'COORDS_LATITUDE' => '53.936714'
     ],
     'customs225' => [
         'CODE' => '10113070',
@@ -3388,8 +3388,8 @@ return [
         'TELEFON' => '(48143)3-13-55',
         'FAX' => '(48143)3-15-32',
         'EMAIL' => 'sml-jar@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '32.771988',
-        'COORDS_LONGITUDE' => '55.051355'
+        'COORDS_LONGITUDE' => '32.771988',
+        'COORDS_LATITUDE' => '55.051355'
     ],
     'customs226' => [
         'CODE' => '10113080',
@@ -3403,8 +3403,8 @@ return [
         'TELEFON' => '(4812)20-09-15',
         'FAX' => '(4812)20-09-07',
         'EMAIL' => 'sml-zatp-d@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '32.069344',
-        'COORDS_LONGITUDE' => '54.872041'
+        'COORDS_LONGITUDE' => '32.069344',
+        'COORDS_LATITUDE' => '54.872041'
     ],
     'customs227' => [
         'CODE' => '10113090',
@@ -3418,8 +3418,8 @@ return [
         'TELEFON' => '(4812)30-27-29',
         'FAX' => '(4812)30-27-25',
         'EMAIL' => 'sml-ktp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '31.023516',
-        'COORDS_LONGITUDE' => '54.685995'
+        'COORDS_LONGITUDE' => '31.023516',
+        'COORDS_LATITUDE' => '54.685995'
     ],
     'customs228' => [
         'CODE' => '10113100',
@@ -3433,8 +3433,8 @@ return [
         'TELEFON' => '(4812)20-10-81',
         'FAX' => '(4812)47-54-81',
         'EMAIL' => 'sml-stb@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '32.0631',
-        'COORDS_LONGITUDE' => '54.915802'
+        'COORDS_LONGITUDE' => '32.0631',
+        'COORDS_LATITUDE' => '54.915802'
     ],
     'customs229' => [
         'CODE' => '10113110',
@@ -3448,8 +3448,8 @@ return [
         'TELEFON' => '(4812)20-09-15',
         'FAX' => '(4812)30-40-00',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '32.0631',
-        'COORDS_LONGITUDE' => '54.915802'
+        'COORDS_LONGITUDE' => '32.0631',
+        'COORDS_LATITUDE' => '54.915802'
     ],
     'customs230' => [
         'CODE' => '10113120',
@@ -3463,8 +3463,8 @@ return [
         'TELEFON' => '(48233)7-15-20',
         'FAX' => '(48233)7-15-21',
         'EMAIL' => 'tvr-v-vol@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.480368',
-        'COORDS_LONGITUDE' => '57.509031'
+        'COORDS_LONGITUDE' => '34.480368',
+        'COORDS_LATITUDE' => '57.509031'
     ],
     'customs231' => [
         'CODE' => '10113130',
@@ -3478,8 +3478,8 @@ return [
         'TELEFON' => '(48265)2-31-95',
         'FAX' => '(48265)2-25-82',
         'EMAIL' => 'tvr-zap-dv@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '31.062305',
-        'COORDS_LONGITUDE' => '54.69199'
+        'COORDS_LONGITUDE' => '31.062305',
+        'COORDS_LATITUDE' => '54.69199'
     ],
     'customs232' => [
         'CODE' => '10113140',
@@ -3493,8 +3493,8 @@ return [
         'TELEFON' => '(48236)4-61-51',
         'FAX' => '(48236)4-61-50',
         'EMAIL' => 'tvr-kmr-cvs@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.388241',
-        'COORDS_LONGITUDE' => '56.871606'
+        'COORDS_LONGITUDE' => '37.388241',
+        'COORDS_LATITUDE' => '56.871606'
     ],
     'customs233' => [
         'CODE' => '10113150',
@@ -3508,8 +3508,8 @@ return [
         'TELEFON' => '(48232)2-01-36',
         'FAX' => '(48232)6-75-43',
         'EMAIL' => 'tvr-rg-sv@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.338641',
-        'COORDS_LONGITUDE' => '56.235706'
+        'COORDS_LONGITUDE' => '34.338641',
+        'COORDS_LATITUDE' => '56.235706'
     ],
     'customs234' => [
         'CODE' => '10113160',
@@ -3523,8 +3523,8 @@ return [
         'TELEFON' => '(4822)53-61-35',
         'FAX' => '(4822)53-61-38',
         'EMAIL' => 'tvr-ter@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '35.880177',
-        'COORDS_LONGITUDE' => '56.825306'
+        'COORDS_LONGITUDE' => '35.880177',
+        'COORDS_LATITUDE' => '56.825306'
     ],
     'customs235' => [
         'CODE' => '10113162',
@@ -3538,8 +3538,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '35.823008',
-        'COORDS_LONGITUDE' => '56.830591'
+        'COORDS_LONGITUDE' => '35.823008',
+        'COORDS_LATITUDE' => '56.830591'
     ],
     'customs236' => [
         'CODE' => '10113170',
@@ -3553,8 +3553,8 @@ return [
         'TELEFON' => '(4822)33-69-32',
         'FAX' => '(4822)72-43-55',
         'EMAIL' => 'tvr-ced@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '35.884111',
-        'COORDS_LONGITUDE' => '56.818927'
+        'COORDS_LONGITUDE' => '35.884111',
+        'COORDS_LATITUDE' => '56.818927'
     ],
     'customs237' => [
         'CODE' => '10113901',
@@ -3568,8 +3568,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '35.884111',
-        'COORDS_LONGITUDE' => '56.818927'
+        'COORDS_LONGITUDE' => '35.884111',
+        'COORDS_LATITUDE' => '56.818927'
     ],
     'customs238' => [
         'CODE' => '10116000',
@@ -3583,8 +3583,8 @@ return [
         'TELEFON' => '(4872)55-54-24',
         'FAX' => '(4872)36-82-03',
         'EMAIL' => 'tula@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.577274',
-        'COORDS_LONGITUDE' => '54.196899'
+        'COORDS_LONGITUDE' => '37.577274',
+        'COORDS_LATITUDE' => '54.196899'
     ],
     'customs239' => [
         'CODE' => '10116020',
@@ -3598,8 +3598,8 @@ return [
         'TELEFON' => '(48762)3-18-10',
         'FAX' => '(48762)3-18-36',
         'EMAIL' => 'tula-ntp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.257694',
-        'COORDS_LONGITUDE' => '54.067796'
+        'COORDS_LONGITUDE' => '38.257694',
+        'COORDS_LATITUDE' => '54.067796'
     ],
     'customs240' => [
         'CODE' => '10116030',
@@ -3613,8 +3613,8 @@ return [
         'TELEFON' => '(4872)36-68-43',
         'FAX' => '(4872)30-23-24',
         'EMAIL' => 'tula-ttp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.577256',
-        'COORDS_LONGITUDE' => '54.195919'
+        'COORDS_LONGITUDE' => '37.577256',
+        'COORDS_LATITUDE' => '54.195919'
     ],
     'customs241' => [
         'CODE' => '10116050',
@@ -3628,8 +3628,8 @@ return [
         'TELEFON' => '(4912)46-50-80',
         'FAX' => 'отсутствует',
         'EMAIL' => 'tula-mtp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.826251',
-        'COORDS_LONGITUDE' => '54.567639'
+        'COORDS_LONGITUDE' => '39.826251',
+        'COORDS_LATITUDE' => '54.567639'
     ],
     'customs242' => [
         'CODE' => '10116060',
@@ -3643,8 +3643,8 @@ return [
         'TELEFON' => 'отсутствует',
         'FAX' => '(4912)24-33-91',
         'EMAIL' => 'tula-rtp@ctu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.776484',
-        'COORDS_LONGITUDE' => '54.566376'
+        'COORDS_LONGITUDE' => '39.776484',
+        'COORDS_LATITUDE' => '54.566376'
     ],
     'customs243' => [
         'CODE' => '10119000',
@@ -3658,8 +3658,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.743678',
-        'COORDS_LONGITUDE' => '55.756285'
+        'COORDS_LONGITUDE' => '37.743678',
+        'COORDS_LATITUDE' => '55.756285'
     ],
     'customs244' => [
         'CODE' => '10131000',
@@ -3673,8 +3673,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.653774',
-        'COORDS_LONGITUDE' => '55.777064'
+        'COORDS_LONGITUDE' => '37.653774',
+        'COORDS_LATITUDE' => '55.777064'
     ],
     'customs245' => [
         'CODE' => '10131010',
@@ -3688,8 +3688,8 @@ return [
         'TELEFON' => '(495)393-78-71',
         'FAX' => '(495)393-78-71',
         'EMAIL' => 'mt-msk@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.653532',
-        'COORDS_LONGITUDE' => '55.776806'
+        'COORDS_LONGITUDE' => '37.653532',
+        'COORDS_LATITUDE' => '55.776806'
     ],
     'customs246' => [
         'CODE' => '10200000',
@@ -3703,8 +3703,8 @@ return [
         'TELEFON' => '(812)273-16-19',
         'FAX' => '(812)275-43-70',
         'EMAIL' => 'SZTU_email1@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.342054',
-        'COORDS_LONGITUDE' => '59.948843'
+        'COORDS_LONGITUDE' => '30.342054',
+        'COORDS_LATITUDE' => '59.948843'
     ],
     'customs247' => [
         'CODE' => '10206000',
@@ -3718,8 +3718,8 @@ return [
         'TELEFON' => '(81378)5-92-27',
         'FAX' => '(81378)5-92-27',
         'EMAIL' => 'odo_vybcu@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.788499',
-        'COORDS_LONGITUDE' => '60.694579'
+        'COORDS_LONGITUDE' => '28.788499',
+        'COORDS_LATITUDE' => '60.694579'
     ],
     'customs248' => [
         'CODE' => '10206010',
@@ -3733,8 +3733,8 @@ return [
         'TELEFON' => '(81378)5-94-82',
         'FAX' => '(81378)5-94-83',
         'EMAIL' => 'sve_vybcu@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.865879',
-        'COORDS_LONGITUDE' => '61.113731'
+        'COORDS_LONGITUDE' => '28.865879',
+        'COORDS_LATITUDE' => '61.113731'
     ],
     'customs249' => [
         'CODE' => '10206020',
@@ -3748,8 +3748,8 @@ return [
         'TELEFON' => '(81378)5-94-37',
         'FAX' => '(81378)5-94-41',
         'EMAIL' => 'buslovo_vybcu@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.377591',
-        'COORDS_LONGITUDE' => '60.840267'
+        'COORDS_LONGITUDE' => '28.377591',
+        'COORDS_LATITUDE' => '60.840267'
     ],
     'customs250' => [
         'CODE' => '10206022',
@@ -3763,8 +3763,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.846188',
-        'COORDS_LONGITUDE' => '61.117834'
+        'COORDS_LONGITUDE' => '28.846188',
+        'COORDS_LATITUDE' => '61.117834'
     ],
     'customs251' => [
         'CODE' => '10206030',
@@ -3778,8 +3778,8 @@ return [
         'TELEFON' => '(81378)5-94-60',
         'FAX' => '(81378)5-94-68',
         'EMAIL' => 'brus_vybcu@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '29.720779',
-        'COORDS_LONGITUDE' => '60.330527'
+        'COORDS_LONGITUDE' => '29.720779',
+        'COORDS_LATITUDE' => '60.330527'
     ],
     'customs252' => [
         'CODE' => '10206040',
@@ -3793,8 +3793,8 @@ return [
         'TELEFON' => '(81378)5-94-21',
         'FAX' => '(81378)5-94-29',
         'EMAIL' => 'torf_vybcu@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '27.93456',
-        'COORDS_LONGITUDE' => '60.594266'
+        'COORDS_LONGITUDE' => '27.93456',
+        'COORDS_LATITUDE' => '60.594266'
     ],
     'customs253' => [
         'CODE' => '10206050',
@@ -3808,8 +3808,8 @@ return [
         'TELEFON' => '(81378)5-92-95',
         'FAX' => '(81378)5-92-98',
         'EMAIL' => 'GushinVV@regions.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.729425',
-        'COORDS_LONGITUDE' => '60.711979'
+        'COORDS_LONGITUDE' => '28.729425',
+        'COORDS_LATITUDE' => '60.711979'
     ],
     'customs254' => [
         'CODE' => '10206070',
@@ -3823,8 +3823,8 @@ return [
         'TELEFON' => '(81378)5-94-35',
         'FAX' => '(81278)5-93-50',
         'EMAIL' => 'pass_vybcu@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.751344',
-        'COORDS_LONGITUDE' => '60.715447'
+        'COORDS_LONGITUDE' => '28.751344',
+        'COORDS_LATITUDE' => '60.715447'
     ],
     'customs255' => [
         'CODE' => '10206080',
@@ -3838,8 +3838,8 @@ return [
         'TELEFON' => '(81378)5-26-89',
         'FAX' => '(81378)5-26-93',
         'EMAIL' => 'vyb_vybcu@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.791858',
-        'COORDS_LONGITUDE' => '60.697838'
+        'COORDS_LONGITUDE' => '28.791858',
+        'COORDS_LATITUDE' => '60.697838'
     ],
     'customs256' => [
         'CODE' => '10206084',
@@ -3853,8 +3853,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.61047',
-        'COORDS_LONGITUDE' => '60.745634'
+        'COORDS_LONGITUDE' => '28.61047',
+        'COORDS_LATITUDE' => '60.745634'
     ],
     'customs257' => [
         'CODE' => '10206085',
@@ -3868,8 +3868,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '27.93456',
-        'COORDS_LONGITUDE' => '60.594266'
+        'COORDS_LONGITUDE' => '27.93456',
+        'COORDS_LATITUDE' => '60.594266'
     ],
     'customs258' => [
         'CODE' => '10207000',
@@ -3883,8 +3883,8 @@ return [
         'TELEFON' => '(8152)28-22-28',
         'FAX' => '(8152)23-16-36',
         'EMAIL' => 'odo_mt@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.05847',
-        'COORDS_LONGITUDE' => '68.949452'
+        'COORDS_LONGITUDE' => '33.05847',
+        'COORDS_LATITUDE' => '68.949452'
     ],
     'customs259' => [
         'CODE' => '10207020',
@@ -3898,8 +3898,8 @@ return [
         'TELEFON' => '(8152)28-23-58',
         'FAX' => '(8152)28-23-80',
         'EMAIL' => 'mt_kirovsk@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.719118',
-        'COORDS_LONGITUDE' => '67.547767'
+        'COORDS_LONGITUDE' => '33.719118',
+        'COORDS_LATITUDE' => '67.547767'
     ],
     'customs260' => [
         'CODE' => '10207050',
@@ -3913,8 +3913,8 @@ return [
         'TELEFON' => '(8152)28-84-80',
         'FAX' => '(8152)28-84-89',
         'EMAIL' => 'mt_port_odo@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.063213',
-        'COORDS_LONGITUDE' => '68.975463'
+        'COORDS_LONGITUDE' => '33.063213',
+        'COORDS_LATITUDE' => '68.975463'
     ],
     'customs261' => [
         'CODE' => '10207070',
@@ -3928,8 +3928,8 @@ return [
         'TELEFON' => '(8152)28-23-73',
         'FAX' => '(8152)28-23-75',
         'EMAIL' => 'mt_airport@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '32.812385',
-        'COORDS_LONGITUDE' => '68.815157'
+        'COORDS_LONGITUDE' => '32.812385',
+        'COORDS_LATITUDE' => '68.815157'
     ],
     'customs262' => [
         'CODE' => '10207080',
@@ -3943,8 +3943,8 @@ return [
         'TELEFON' => '(8152)28-24-44',
         'FAX' => '(8152)28-22-00',
         'EMAIL' => 'mt_bgleb@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.145242',
-        'COORDS_LONGITUDE' => '69.650522'
+        'COORDS_LONGITUDE' => '30.145242',
+        'COORDS_LATITUDE' => '69.650522'
     ],
     'customs263' => [
         'CODE' => '10207090',
@@ -3958,8 +3958,8 @@ return [
         'TELEFON' => '(8152)28-23-25',
         'FAX' => '(8152)28-22-15',
         'EMAIL' => 'mt_salla@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.34456',
-        'COORDS_LONGITUDE' => '66.962654'
+        'COORDS_LONGITUDE' => '30.34456',
+        'COORDS_LATITUDE' => '66.962654'
     ],
     'customs264' => [
         'CODE' => '10207100',
@@ -3973,8 +3973,8 @@ return [
         'TELEFON' => '(8152)28-24-57',
         'FAX' => '(8152)28-22-93',
         'EMAIL' => 'mt_lotta@customs.gov.ru',
-        'COORDS_LATITUDE' => '28.494642',
-        'COORDS_LONGITUDE' => '68.482533'
+        'COORDS_LONGITUDE' => '28.494642',
+        'COORDS_LATITUDE' => '68.482533'
     ],
     'customs265' => [
         'CODE' => '10207110',
@@ -3988,8 +3988,8 @@ return [
         'TELEFON' => '(8152)28-23-50',
         'FAX' => '(8152)28-23-52',
         'EMAIL' => 'mt_mtp@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.103987',
-        'COORDS_LONGITUDE' => '68.909496'
+        'COORDS_LONGITUDE' => '33.103987',
+        'COORDS_LATITUDE' => '68.909496'
     ],
     'customs266' => [
         'CODE' => '10207120',
@@ -4003,8 +4003,8 @@ return [
         'TELEFON' => '(81850)3-93-39',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.11581',
-        'COORDS_LONGITUDE' => '61.287931'
+        'COORDS_LONGITUDE' => '47.11581',
+        'COORDS_LATITUDE' => '61.287931'
     ],
     'customs267' => [
         'CODE' => '10207130',
@@ -4018,8 +4018,8 @@ return [
         'TELEFON' => '(81852)4-64-63',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '40.810805',
-        'COORDS_LONGITUDE' => '64.424076'
+        'COORDS_LONGITUDE' => '40.810805',
+        'COORDS_LATITUDE' => '64.424076'
     ],
     'customs268' => [
         'CODE' => '10207140',
@@ -4033,8 +4033,8 @@ return [
         'TELEFON' => '(8182)63-00-11',
         'FAX' => '(8182)63-35-18',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '40.523182',
-        'COORDS_LONGITUDE' => '64.703108'
+        'COORDS_LONGITUDE' => '40.523182',
+        'COORDS_LATITUDE' => '64.703108'
     ],
     'customs269' => [
         'CODE' => '10207150',
@@ -4048,8 +4048,8 @@ return [
         'TELEFON' => '(8184)56-35-90',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.845394',
-        'COORDS_LONGITUDE' => '64.575687'
+        'COORDS_LONGITUDE' => '39.845394',
+        'COORDS_LATITUDE' => '64.575687'
     ],
     'customs270' => [
         'CODE' => '10207160',
@@ -4063,8 +4063,8 @@ return [
         'TELEFON' => '(8182)63-00-21',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '40.699845',
-        'COORDS_LONGITUDE' => '64.609099'
+        'COORDS_LONGITUDE' => '40.699845',
+        'COORDS_LATITUDE' => '64.609099'
     ],
     'customs271' => [
         'CODE' => '10209000',
@@ -4078,8 +4078,8 @@ return [
         'TELEFON' => '(8112)75-41-49',
         'FAX' => '(8112)69-22-29',
         'EMAIL' => 'svc-psk-info@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.347381',
-        'COORDS_LONGITUDE' => '57.820645'
+        'COORDS_LONGITUDE' => '28.347381',
+        'COORDS_LATITUDE' => '57.820645'
     ],
     'customs272' => [
         'CODE' => '10209020',
@@ -4093,8 +4093,8 @@ return [
         'TELEFON' => '(81148)9-32-01',
         'FAX' => '(81148)9-32-26',
         'EMAIL' => '10209020_Псковскаятаможня_т/пЖДПППечоры-Псковские',
-        'COORDS_LATITUDE' => '27.629079',
-        'COORDS_LONGITUDE' => '57.836843'
+        'COORDS_LONGITUDE' => '27.629079',
+        'COORDS_LATITUDE' => '57.836843'
     ],
     'customs273' => [
         'CODE' => '10209030',
@@ -4108,8 +4108,8 @@ return [
         'TELEFON' => '(81147)2-83-21',
         'FAX' => '(81147)2-83-30',
         'EMAIL' => '10209030_Псковскаятаможня_т/пЖДППСкангали',
-        'COORDS_LATITUDE' => '27.910764',
-        'COORDS_LONGITUDE' => '57.064713'
+        'COORDS_LONGITUDE' => '27.910764',
+        'COORDS_LATITUDE' => '57.064713'
     ],
     'customs274' => [
         'CODE' => '10209040',
@@ -4123,8 +4123,8 @@ return [
         'TELEFON' => '(81148)9-34-21',
         'FAX' => '(81148)9-34-29',
         'EMAIL' => '10209040_Псковскаятаможня_т/пМАППКуничинаГора',
-        'COORDS_LATITUDE' => '27.599165',
-        'COORDS_LONGITUDE' => '57.832549'
+        'COORDS_LONGITUDE' => '27.599165',
+        'COORDS_LATITUDE' => '57.832549'
     ],
     'customs275' => [
         'CODE' => '10209050',
@@ -4138,8 +4138,8 @@ return [
         'TELEFON' => '(81147)2-82-21',
         'FAX' => '(81147)2-82-27',
         'EMAIL' => '10209050_Псковскаятаможня_т/пМАППУбылинка',
-        'COORDS_LATITUDE' => '27.839545',
-        'COORDS_LONGITUDE' => '56.879589'
+        'COORDS_LONGITUDE' => '27.839545',
+        'COORDS_LATITUDE' => '56.879589'
     ],
     'customs276' => [
         'CODE' => '10209060',
@@ -4153,8 +4153,8 @@ return [
         'TELEFON' => '(81148)9-33-21',
         'FAX' => '(81148)9-33-29',
         'EMAIL' => '10209060_Псковскаятаможня_т/пМАППШумилкино',
-        'COORDS_LATITUDE' => '27.534028',
-        'COORDS_LONGITUDE' => '57.569595'
+        'COORDS_LONGITUDE' => '27.534028',
+        'COORDS_LATITUDE' => '57.569595'
     ],
     'customs277' => [
         'CODE' => '10209070',
@@ -4168,8 +4168,8 @@ return [
         'TELEFON' => '(81147)2-85-65',
         'FAX' => '(81147)2-83-09',
         'EMAIL' => '10209070_Псковскаятаможня_Убылинскийт/п',
-        'COORDS_LATITUDE' => '27.839545',
-        'COORDS_LONGITUDE' => '56.879589'
+        'COORDS_LONGITUDE' => '27.839545',
+        'COORDS_LATITUDE' => '56.879589'
     ],
     'customs278' => [
         'CODE' => '10209073',
@@ -4183,8 +4183,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '27.839545',
-        'COORDS_LONGITUDE' => '56.879589'
+        'COORDS_LONGITUDE' => '27.839545',
+        'COORDS_LATITUDE' => '56.879589'
     ],
     'customs279' => [
         'CODE' => '10209075',
@@ -4198,8 +4198,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '27.945672',
-        'COORDS_LONGITUDE' => '57.072552'
+        'COORDS_LONGITUDE' => '27.945672',
+        'COORDS_LATITUDE' => '57.072552'
     ],
     'customs280' => [
         'CODE' => '10209080',
@@ -4213,8 +4213,8 @@ return [
         'TELEFON' => '(81148)9-32-21',
         'FAX' => '(81148)9-32-29',
         'EMAIL' => '10209080_Псковскаятаможня_Печорскийт/п',
-        'COORDS_LATITUDE' => '27.605822',
-        'COORDS_LONGITUDE' => '57.834049'
+        'COORDS_LONGITUDE' => '27.605822',
+        'COORDS_LATITUDE' => '57.834049'
     ],
     'customs281' => [
         'CODE' => '10209090',
@@ -4228,8 +4228,8 @@ return [
         'TELEFON' => '(8112)73-12-30',
         'FAX' => '(8112)73-12-36',
         'EMAIL' => '10209090_Псковскаятаможня_Псковскийт/п',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs282' => [
         'CODE' => '10209094',
@@ -4243,8 +4243,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.42593',
-        'COORDS_LONGITUDE' => '57.818545'
+        'COORDS_LONGITUDE' => '28.42593',
+        'COORDS_LATITUDE' => '57.818545'
     ],
     'customs283' => [
         'CODE' => '10209095',
@@ -4258,8 +4258,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.421195',
-        'COORDS_LONGITUDE' => '57.805466'
+        'COORDS_LONGITUDE' => '28.421195',
+        'COORDS_LATITUDE' => '57.805466'
     ],
     'customs284' => [
         'CODE' => '10209100',
@@ -4273,8 +4273,8 @@ return [
         'TELEFON' => '(81147)2-84-21',
         'FAX' => '(81147)2-84-29',
         'EMAIL' => '10209100_Псковскаятаможня_т/пМАППЛудонка',
-        'COORDS_LATITUDE' => '29.313222',
-        'COORDS_LONGITUDE' => '58.215941'
+        'COORDS_LONGITUDE' => '29.313222',
+        'COORDS_LATITUDE' => '58.215941'
     ],
     'customs285' => [
         'CODE' => '10209110',
@@ -4288,8 +4288,8 @@ return [
         'TELEFON' => '(81153)5-62-96',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.526379',
-        'COORDS_LONGITUDE' => '56.328683'
+        'COORDS_LONGITUDE' => '30.526379',
+        'COORDS_LATITUDE' => '56.328683'
     ],
     'customs286' => [
         'CODE' => '10209130',
@@ -4303,8 +4303,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.329127',
-        'COORDS_LONGITUDE' => '56.252657'
+        'COORDS_LONGITUDE' => '28.329127',
+        'COORDS_LATITUDE' => '56.252657'
     ],
     'customs287' => [
         'CODE' => '10209133',
@@ -4318,8 +4318,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.329127',
-        'COORDS_LONGITUDE' => '56.252657'
+        'COORDS_LONGITUDE' => '28.329127',
+        'COORDS_LATITUDE' => '56.252657'
     ],
     'customs288' => [
         'CODE' => '10209140',
@@ -4333,8 +4333,8 @@ return [
         'TELEFON' => '(81140)2-19-91',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.469309',
-        'COORDS_LONGITUDE' => '56.305374'
+        'COORDS_LONGITUDE' => '28.469309',
+        'COORDS_LATITUDE' => '56.305374'
     ],
     'customs289' => [
         'CODE' => '10209150',
@@ -4348,8 +4348,8 @@ return [
         'TELEFON' => '(81140)2-28-86',
         'FAX' => '(81140)2-12-52',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs290' => [
         'CODE' => '10210000',
@@ -4363,8 +4363,8 @@ return [
         'TELEFON' => '(812)777-93-28',
         'FAX' => '(812)777-93-29',
         'EMAIL' => 'SPb_ODO@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.282648',
-        'COORDS_LONGITUDE' => '59.937112'
+        'COORDS_LONGITUDE' => '30.282648',
+        'COORDS_LATITUDE' => '59.937112'
     ],
     'customs291' => [
         'CODE' => '10210010',
@@ -4378,8 +4378,8 @@ return [
         'TELEFON' => '(81363)7-11-89',
         'FAX' => '(81363)7-11-89',
         'EMAIL' => 'SPb_Volhov@sztu.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '33.526294',
-        'COORDS_LONGITUDE' => '59.63791'
+        'COORDS_LONGITUDE' => '33.526294',
+        'COORDS_LATITUDE' => '59.63791'
     ],
     'customs292' => [
         'CODE' => '10210020',
@@ -4393,8 +4393,8 @@ return [
         'TELEFON' => '(812)456-44-91',
         'FAX' => '(812)456-44-93',
         'EMAIL' => 'SPb_Gatchina@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.162382',
-        'COORDS_LONGITUDE' => '59.559156'
+        'COORDS_LONGITUDE' => '30.162382',
+        'COORDS_LATITUDE' => '59.559156'
     ],
     'customs293' => [
         'CODE' => '10210040',
@@ -4408,8 +4408,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => 'SPb_Кolpinskiy@sztu.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '29.696453',
-        'COORDS_LONGITUDE' => '60.022031'
+        'COORDS_LONGITUDE' => '29.696453',
+        'COORDS_LATITUDE' => '60.022031'
     ],
     'customs294' => [
         'CODE' => '10210100',
@@ -4423,8 +4423,8 @@ return [
         'TELEFON' => '(812)640-75-91',
         'FAX' => '(812)640-75-99',
         'EMAIL' => 'SPb_Yuzhniy@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.395432',
-        'COORDS_LONGITUDE' => '59.807849'
+        'COORDS_LONGITUDE' => '30.395432',
+        'COORDS_LATITUDE' => '59.807849'
     ],
     'customs295' => [
         'CODE' => '10210120',
@@ -4438,8 +4438,8 @@ return [
         'TELEFON' => '(812)640-59-54',
         'FAX' => '(812)321-26-82',
         'EMAIL' => 'SPb_Vasilostrov@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.356481',
-        'COORDS_LONGITUDE' => '59.758676'
+        'COORDS_LONGITUDE' => '30.356481',
+        'COORDS_LATITUDE' => '59.758676'
     ],
     'customs296' => [
         'CODE' => '10210130',
@@ -4453,8 +4453,8 @@ return [
         'TELEFON' => '(812)777-93-17',
         'FAX' => '(812)380-33-28',
         'EMAIL' => 'Spb_Shushary@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.367467',
-        'COORDS_LONGITUDE' => '59.814224'
+        'COORDS_LONGITUDE' => '30.367467',
+        'COORDS_LATITUDE' => '59.814224'
     ],
     'customs297' => [
         'CODE' => '10210190',
@@ -4468,8 +4468,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => 'spb_beloostrov@sztu.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.234076',
-        'COORDS_LONGITUDE' => '60.05428'
+        'COORDS_LONGITUDE' => '30.234076',
+        'COORDS_LATITUDE' => '60.05428'
     ],
     'customs298' => [
         'CODE' => '10210192',
@@ -4483,8 +4483,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.007234',
-        'COORDS_LONGITUDE' => '59.842074'
+        'COORDS_LONGITUDE' => '30.007234',
+        'COORDS_LATITUDE' => '59.842074'
     ],
     'customs299' => [
         'CODE' => '10210260',
@@ -4498,8 +4498,8 @@ return [
         'TELEFON' => '(8162)98-32-21',
         'FAX' => '(8162)98-32-79',
         'EMAIL' => 'SPb_Nvg@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '31.263824',
-        'COORDS_LONGITUDE' => '58.57277'
+        'COORDS_LONGITUDE' => '31.263824',
+        'COORDS_LATITUDE' => '58.57277'
     ],
     'customs300' => [
         'CODE' => '10210280',
@@ -4513,8 +4513,8 @@ return [
         'TELEFON' => '(8212)25-74-01',
         'FAX' => '(8212)20-55-14',
         'EMAIL' => 'SPb_Stkv@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '50.836659',
-        'COORDS_LONGITUDE' => '61.672776'
+        'COORDS_LONGITUDE' => '50.836659',
+        'COORDS_LATITUDE' => '61.672776'
     ],
     'customs301' => [
         'CODE' => '10210282',
@@ -4528,8 +4528,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '50.735257',
-        'COORDS_LONGITUDE' => '61.815393'
+        'COORDS_LONGITUDE' => '50.735257',
+        'COORDS_LATITUDE' => '61.815393'
     ],
     'customs302' => [
         'CODE' => '10210310',
@@ -4543,8 +4543,8 @@ return [
         'TELEFON' => '(8202)29-16-99',
         'FAX' => '(8202)51-25-57',
         'EMAIL' => 'SPb_Chr@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '37.906417',
-        'COORDS_LONGITUDE' => '59.155858'
+        'COORDS_LONGITUDE' => '37.906417',
+        'COORDS_LATITUDE' => '59.155858'
     ],
     'customs303' => [
         'CODE' => '10210312',
@@ -4558,8 +4558,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.450104',
-        'COORDS_LONGITUDE' => '61.00639'
+        'COORDS_LONGITUDE' => '36.450104',
+        'COORDS_LATITUDE' => '61.00639'
     ],
     'customs304' => [
         'CODE' => '10210313',
@@ -4573,8 +4573,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.933294',
-        'COORDS_LONGITUDE' => '59.192011'
+        'COORDS_LONGITUDE' => '39.933294',
+        'COORDS_LATITUDE' => '59.192011'
     ],
     'customs305' => [
         'CODE' => '10210350',
@@ -4588,8 +4588,8 @@ return [
         'TELEFON' => '(812)334-76-92',
         'FAX' => '(812)334-76-95',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.244802',
-        'COORDS_LONGITUDE' => '60.102046'
+        'COORDS_LONGITUDE' => '30.244802',
+        'COORDS_LATITUDE' => '60.102046'
     ],
     'customs306' => [
         'CODE' => '10210360',
@@ -4603,8 +4603,8 @@ return [
         'TELEFON' => '(812)748-13-48',
         'FAX' => '(812)748-13-48',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.282648',
-        'COORDS_LONGITUDE' => '59.937112'
+        'COORDS_LONGITUDE' => '30.282648',
+        'COORDS_LATITUDE' => '59.937112'
     ],
     'customs307' => [
         'CODE' => '10210370',
@@ -4618,8 +4618,8 @@ return [
         'TELEFON' => '(812)748-14-24',
         'FAX' => '(812)748-14-24',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.282648',
-        'COORDS_LONGITUDE' => '59.937112'
+        'COORDS_LONGITUDE' => '30.282648',
+        'COORDS_LATITUDE' => '59.937112'
     ],
     'customs308' => [
         'CODE' => '10212000',
@@ -4633,8 +4633,8 @@ return [
         'TELEFON' => '(812)640-62-27',
         'FAX' => '(812)640-62-29',
         'EMAIL' => 'szot_odo@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.243006',
-        'COORDS_LONGITUDE' => '59.908737'
+        'COORDS_LONGITUDE' => '30.243006',
+        'COORDS_LATITUDE' => '59.908737'
     ],
     'customs309' => [
         'CODE' => '10216000',
@@ -4648,8 +4648,8 @@ return [
         'TELEFON' => '(812)640-37-28',
         'FAX' => '(812)713-99-40',
         'EMAIL' => 'ODO_Balcu@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.217152',
-        'COORDS_LONGITUDE' => '59.902889'
+        'COORDS_LONGITUDE' => '30.217152',
+        'COORDS_LATITUDE' => '59.902889'
     ],
     'customs310' => [
         'CODE' => '10216020',
@@ -4663,8 +4663,8 @@ return [
         'TELEFON' => '(812)439-06-39',
         'FAX' => '(812)439-13-89',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '29.775846',
-        'COORDS_LONGITUDE' => '59.99179'
+        'COORDS_LONGITUDE' => '29.775846',
+        'COORDS_LATITUDE' => '59.99179'
     ],
     'customs311' => [
         'CODE' => '10216050',
@@ -4678,8 +4678,8 @@ return [
         'TELEFON' => '(812)416-33-67',
         'FAX' => '(812)416-33-79',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.062355',
-        'COORDS_LONGITUDE' => '59.999944'
+        'COORDS_LONGITUDE' => '30.062355',
+        'COORDS_LATITUDE' => '59.999944'
     ],
     'customs312' => [
         'CODE' => '10216100',
@@ -4693,8 +4693,8 @@ return [
         'TELEFON' => '(812)335-79-28',
         'FAX' => '(812)640-37-70',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.216883',
-        'COORDS_LONGITUDE' => '59.875172'
+        'COORDS_LONGITUDE' => '30.216883',
+        'COORDS_LATITUDE' => '59.875172'
     ],
     'customs313' => [
         'CODE' => '10216110',
@@ -4708,8 +4708,8 @@ return [
         'TELEFON' => '(812)332-64-58',
         'FAX' => '(812)332-64-58',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.240149',
-        'COORDS_LONGITUDE' => '59.901238'
+        'COORDS_LONGITUDE' => '30.240149',
+        'COORDS_LATITUDE' => '59.901238'
     ],
     'customs314' => [
         'CODE' => '10216120',
@@ -4723,8 +4723,8 @@ return [
         'TELEFON' => '(812)324-57-79',
         'FAX' => '(812)335-71-00',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.205807',
-        'COORDS_LONGITUDE' => '59.868397'
+        'COORDS_LONGITUDE' => '30.205807',
+        'COORDS_LATITUDE' => '59.868397'
     ],
     'customs315' => [
         'CODE' => '10216160',
@@ -4738,8 +4738,8 @@ return [
         'TELEFON' => '(812)661-12-34',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '29.690407',
-        'COORDS_LONGITUDE' => '59.929308'
+        'COORDS_LONGITUDE' => '29.690407',
+        'COORDS_LATITUDE' => '59.929308'
     ],
     'customs316' => [
         'CODE' => '10216170',
@@ -4753,8 +4753,8 @@ return [
         'TELEFON' => '(812)640-37-19',
         'FAX' => '(812)640-37-13',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.371456',
-        'COORDS_LONGITUDE' => '59.919094'
+        'COORDS_LONGITUDE' => '30.371456',
+        'COORDS_LATITUDE' => '59.919094'
     ],
     'customs317' => [
         'CODE' => '10218000',
@@ -4768,8 +4768,8 @@ return [
         'TELEFON' => '(81375)9-72-28',
         'FAX' => '(81375)9-72-29',
         'EMAIL' => 'kin-odo@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '28.61162',
-        'COORDS_LONGITUDE' => '59.371351'
+        'COORDS_LONGITUDE' => '28.61162',
+        'COORDS_LATITUDE' => '59.371351'
     ],
     'customs318' => [
         'CODE' => '10218020',
@@ -4783,8 +4783,8 @@ return [
         'TELEFON' => '(812)436-48-48',
         'FAX' => '(81375)5-40-70',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.223485',
-        'COORDS_LONGITUDE' => '59.365496'
+        'COORDS_LONGITUDE' => '28.223485',
+        'COORDS_LATITUDE' => '59.365496'
     ],
     'customs319' => [
         'CODE' => '10218030',
@@ -4798,8 +4798,8 @@ return [
         'TELEFON' => '(81375)9-74-21',
         'FAX' => '(81375)5-40-55',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.208735',
-        'COORDS_LONGITUDE' => '59.376797'
+        'COORDS_LONGITUDE' => '28.208735',
+        'COORDS_LATITUDE' => '59.376797'
     ],
     'customs320' => [
         'CODE' => '10218040',
@@ -4813,8 +4813,8 @@ return [
         'TELEFON' => '(81375)9-74-50',
         'FAX' => '(81375)9-10-53',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.271419',
-        'COORDS_LONGITUDE' => '59.65449'
+        'COORDS_LONGITUDE' => '28.271419',
+        'COORDS_LATITUDE' => '59.65449'
     ],
     'customs321' => [
         'CODE' => '10218060',
@@ -4828,8 +4828,8 @@ return [
         'TELEFON' => '(81375)9-74-05',
         'FAX' => '(81375)2-65-79',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.627116',
-        'COORDS_LONGITUDE' => '59.369274'
+        'COORDS_LONGITUDE' => '28.627116',
+        'COORDS_LATITUDE' => '59.369274'
     ],
     'customs322' => [
         'CODE' => '10221000',
@@ -4843,8 +4843,8 @@ return [
         'TELEFON' => '(812)777-35-27',
         'FAX' => '(812)777-35-73',
         'EMAIL' => 'pulkovoodo@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.314925',
-        'COORDS_LONGITUDE' => '59.809156'
+        'COORDS_LONGITUDE' => '30.314925',
+        'COORDS_LATITUDE' => '59.809156'
     ],
     'customs323' => [
         'CODE' => '10221010',
@@ -4858,8 +4858,8 @@ return [
         'TELEFON' => '(812)777-34-85',
         'FAX' => '(812)777-34-67',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.300049',
-        'COORDS_LONGITUDE' => '59.796429'
+        'COORDS_LONGITUDE' => '30.300049',
+        'COORDS_LATITUDE' => '59.796429'
     ],
     'customs324' => [
         'CODE' => '10221020',
@@ -4873,8 +4873,8 @@ return [
         'TELEFON' => '(812)777-34-21',
         'FAX' => '(812)777-34-19',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.328579',
-        'COORDS_LONGITUDE' => '59.803513'
+        'COORDS_LONGITUDE' => '30.328579',
+        'COORDS_LATITUDE' => '59.803513'
     ],
     'customs325' => [
         'CODE' => '10227000',
@@ -4888,8 +4888,8 @@ return [
         'TELEFON' => '(8142)78-37-00',
         'FAX' => '(8142078-14-25',
         'EMAIL' => 'odo_karelia@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.356221',
-        'COORDS_LONGITUDE' => '61.790963'
+        'COORDS_LONGITUDE' => '34.356221',
+        'COORDS_LATITUDE' => '61.790963'
     ],
     'customs326' => [
         'CODE' => '10227010',
@@ -4903,8 +4903,8 @@ return [
         'TELEFON' => '(81430)4-41-01',
         'FAX' => '(81430)4-41-44',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.691633',
-        'COORDS_LONGITUDE' => '61.702943'
+        'COORDS_LONGITUDE' => '30.691633',
+        'COORDS_LATITUDE' => '61.702943'
     ],
     'customs327' => [
         'CODE' => '10227020',
@@ -4918,8 +4918,8 @@ return [
         'TELEFON' => '(81451)7-26-52',
         'FAX' => '(81451)7-26-52',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.268491',
-        'COORDS_LONGITUDE' => '62.207565'
+        'COORDS_LONGITUDE' => '34.268491',
+        'COORDS_LATITUDE' => '62.207565'
     ],
     'customs328' => [
         'CODE' => '10227030',
@@ -4933,8 +4933,8 @@ return [
         'TELEFON' => '(81459)9-71-21',
         'FAX' => '(81459)9-71-29',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.678626',
-        'COORDS_LONGITUDE' => '64.620563'
+        'COORDS_LONGITUDE' => '30.678626',
+        'COORDS_LATITUDE' => '64.620563'
     ],
     'customs329' => [
         'CODE' => '10227040',
@@ -4948,8 +4948,8 @@ return [
         'TELEFON' => '(81450)2-22-88',
         'FAX' => '(81450)2-22-16',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.198925',
-        'COORDS_LONGITUDE' => '61.521873'
+        'COORDS_LONGITUDE' => '30.198925',
+        'COORDS_LATITUDE' => '61.521873'
     ],
     'customs330' => [
         'CODE' => '10227070',
@@ -4963,8 +4963,8 @@ return [
         'TELEFON' => '(8142)71-11-54',
         'FAX' => '(8142)71-11-99',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.356221',
-        'COORDS_LONGITUDE' => '61.790963'
+        'COORDS_LONGITUDE' => '34.356221',
+        'COORDS_LATITUDE' => '61.790963'
     ],
     'customs331' => [
         'CODE' => '10227090',
@@ -4978,8 +4978,8 @@ return [
         'TELEFON' => '(81431)4-35-66',
         'FAX' => '(81431)4-35-45',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.315877',
-        'COORDS_LONGITUDE' => '63.737719'
+        'COORDS_LONGITUDE' => '34.315877',
+        'COORDS_LATITUDE' => '63.737719'
     ],
     'customs332' => [
         'CODE' => '10227110',
@@ -4993,8 +4993,8 @@ return [
         'TELEFON' => '(81457)5-30-67',
         'FAX' => '(81457)5-30-67',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '32.379667',
-        'COORDS_LONGITUDE' => '62.083722'
+        'COORDS_LONGITUDE' => '32.379667',
+        'COORDS_LATITUDE' => '62.083722'
     ],
     'customs333' => [
         'CODE' => '10227120',
@@ -5008,8 +5008,8 @@ return [
         'TELEFON' => '(8142)71-11-81',
         'FAX' => '(8142)71-11-20',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.156705',
-        'COORDS_LONGITUDE' => '61.864836'
+        'COORDS_LONGITUDE' => '34.156705',
+        'COORDS_LATITUDE' => '61.864836'
     ],
     'customs334' => [
         'CODE' => '10227130',
@@ -5023,8 +5023,8 @@ return [
         'TELEFON' => '(81459)9-72-47',
         'FAX' => '(81459)9-72-49',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.596637',
-        'COORDS_LONGITUDE' => '64.587358'
+        'COORDS_LONGITUDE' => '30.596637',
+        'COORDS_LATITUDE' => '64.587358'
     ],
     'customs335' => [
         'CODE' => '10227140',
@@ -5038,8 +5038,8 @@ return [
         'TELEFON' => '(81430)4-41-21',
         'FAX' => '(81430)4-41-29',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.691633',
-        'COORDS_LONGITUDE' => '61.702943'
+        'COORDS_LONGITUDE' => '30.691633',
+        'COORDS_LATITUDE' => '61.702943'
     ],
     'customs336' => [
         'CODE' => '10227150',
@@ -5053,8 +5053,8 @@ return [
         'TELEFON' => '(81459)9-72-21',
         'FAX' => '(81459)5-26-85',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '29.994478',
-        'COORDS_LONGITUDE' => '64.544906'
+        'COORDS_LONGITUDE' => '29.994478',
+        'COORDS_LATITUDE' => '64.544906'
     ],
     'customs337' => [
         'CODE' => '10227160',
@@ -5068,8 +5068,8 @@ return [
         'TELEFON' => '(8142)71-79-14',
         'FAX' => '(8142)71-09-96',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '31.525333',
-        'COORDS_LONGITUDE' => '65.825972'
+        'COORDS_LONGITUDE' => '31.525333',
+        'COORDS_LATITUDE' => '65.825972'
     ],
     'customs338' => [
         'CODE' => '10228000',
@@ -5083,8 +5083,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.371456',
-        'COORDS_LONGITUDE' => '59.919094'
+        'COORDS_LONGITUDE' => '30.371456',
+        'COORDS_LATITUDE' => '59.919094'
     ],
     'customs339' => [
         'CODE' => '10228010',
@@ -5098,8 +5098,8 @@ return [
         'TELEFON' => '(812)242-10-81',
         'FAX' => '',
         'EMAIL' => 'Spb_Spbced@sztu.customs.gov.ru',
-        'COORDS_LATITUDE' => '30.371456',
-        'COORDS_LONGITUDE' => '59.919094'
+        'COORDS_LONGITUDE' => '30.371456',
+        'COORDS_LATITUDE' => '59.919094'
     ],
     'customs340' => [
         'CODE' => '10297000',
@@ -5113,8 +5113,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs341' => [
         'CODE' => '10300000',
@@ -5128,8 +5128,8 @@ return [
         'TELEFON' => '(863)240-54-84',
         'FAX' => '(863)250-92-29',
         'EMAIL' => 'jtu_odo@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.707898',
-        'COORDS_LONGITUDE' => '47.213607'
+        'COORDS_LONGITUDE' => '39.707898',
+        'COORDS_LATITUDE' => '47.213607'
     ],
     'customs342' => [
         'CODE' => '10309000',
@@ -5143,8 +5143,8 @@ return [
         'TELEFON' => '(861)268-59-08',
         'FAX' => '(861)219-92-29',
         'EMAIL' => 'krt_odo_krd@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.979814',
-        'COORDS_LONGITUDE' => '45.015658'
+        'COORDS_LONGITUDE' => '38.979814',
+        'COORDS_LATITUDE' => '45.015658'
     ],
     'customs343' => [
         'CODE' => '10309030',
@@ -5158,8 +5158,8 @@ return [
         'TELEFON' => '(86132)3-84-76',
         'FAX' => '(86132)3-84-64',
         'EMAIL' => 'krt_odo_eis@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.261637',
-        'COORDS_LONGITUDE' => '46.686023'
+        'COORDS_LONGITUDE' => '38.261637',
+        'COORDS_LATITUDE' => '46.686023'
     ],
     'customs344' => [
         'CODE' => '10309090',
@@ -5173,8 +5173,8 @@ return [
         'TELEFON' => '(86146)3-28-17',
         'FAX' => '(86146)3-28-17',
         'EMAIL' => 'krt_odo_kry@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.157083',
-        'COORDS_LONGITUDE' => '45.235546'
+        'COORDS_LONGITUDE' => '38.157083',
+        'COORDS_LATITUDE' => '45.235546'
     ],
     'customs345' => [
         'CODE' => '10309094',
@@ -5188,8 +5188,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.80082',
-        'COORDS_LONGITUDE' => '44.87214'
+        'COORDS_LONGITUDE' => '37.80082',
+        'COORDS_LATITUDE' => '44.87214'
     ],
     'customs346' => [
         'CODE' => '10309130',
@@ -5203,8 +5203,8 @@ return [
         'TELEFON' => '(861)227-54-71',
         'FAX' => '(861)227-54-71',
         'EMAIL' => 'krt_odo_air@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.139175',
-        'COORDS_LONGITUDE' => '45.034126'
+        'COORDS_LONGITUDE' => '39.139175',
+        'COORDS_LATITUDE' => '45.034126'
     ],
     'customs347' => [
         'CODE' => '10309140',
@@ -5218,8 +5218,8 @@ return [
         'TELEFON' => '(86148)6-08-30',
         'FAX' => '(86148)6-07-99',
         'EMAIL' => 'krt_odo_kav@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '36.664424',
-        'COORDS_LONGITUDE' => '45.330937'
+        'COORDS_LONGITUDE' => '36.664424',
+        'COORDS_LATITUDE' => '45.330937'
     ],
     'customs348' => [
         'CODE' => '10309150',
@@ -5233,8 +5233,8 @@ return [
         'TELEFON' => '(86148)5-15-13',
         'FAX' => '(86148)5-15-13',
         'EMAIL' => 'customs-temryk@yandex.ru',
-        'COORDS_LATITUDE' => '36.713041',
-        'COORDS_LONGITUDE' => '45.126799'
+        'COORDS_LONGITUDE' => '36.713041',
+        'COORDS_LATITUDE' => '45.126799'
     ],
     'customs349' => [
         'CODE' => '10309180',
@@ -5248,8 +5248,8 @@ return [
         'TELEFON' => '(86167)2-70-54',
         'FAX' => '(86167)2-70-78',
         'EMAIL' => 'krt_odo_tua@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.080991',
-        'COORDS_LONGITUDE' => '44.092034'
+        'COORDS_LONGITUDE' => '39.080991',
+        'COORDS_LATITUDE' => '44.092034'
     ],
     'customs350' => [
         'CODE' => '10309200',
@@ -5263,8 +5263,8 @@ return [
         'TELEFON' => '(861)201-95-21',
         'FAX' => '(861)201-95-28',
         'EMAIL' => 'krt_odo_prk@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.996082',
-        'COORDS_LONGITUDE' => '45.077837'
+        'COORDS_LONGITUDE' => '38.996082',
+        'COORDS_LATITUDE' => '45.077837'
     ],
     'customs351' => [
         'CODE' => '10309203',
@@ -5278,8 +5278,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.949244',
-        'COORDS_LONGITUDE' => '45.639052'
+        'COORDS_LONGITUDE' => '38.949244',
+        'COORDS_LATITUDE' => '45.639052'
     ],
     'customs352' => [
         'CODE' => '10309204',
@@ -5293,8 +5293,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.889241',
-        'COORDS_LONGITUDE' => '44.793631'
+        'COORDS_LONGITUDE' => '39.889241',
+        'COORDS_LATITUDE' => '44.793631'
     ],
     'customs353' => [
         'CODE' => '10309210',
@@ -5308,8 +5308,8 @@ return [
         'TELEFON' => '(862)260-98-30',
         'FAX' => '(862)262-26-38',
         'EMAIL' => 'sch_odo@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.712426',
-        'COORDS_LONGITUDE' => '43.580967'
+        'COORDS_LONGITUDE' => '39.712426',
+        'COORDS_LATITUDE' => '43.580967'
     ],
     'customs354' => [
         'CODE' => '10309212',
@@ -5323,8 +5323,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.756147',
-        'COORDS_LONGITUDE' => '43.638961'
+        'COORDS_LONGITUDE' => '39.756147',
+        'COORDS_LATITUDE' => '43.638961'
     ],
     'customs355' => [
         'CODE' => '10309220',
@@ -5338,8 +5338,8 @@ return [
         'TELEFON' => '(862)243-21-21',
         'FAX' => '(8622)83-04-38',
         'EMAIL' => 'sch_air@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.939062',
-        'COORDS_LONGITUDE' => '43.448435'
+        'COORDS_LONGITUDE' => '39.939062',
+        'COORDS_LATITUDE' => '43.448435'
     ],
     'customs356' => [
         'CODE' => '10309230',
@@ -5353,8 +5353,8 @@ return [
         'TELEFON' => '(862)260-93-71',
         'FAX' => '(862)260-91-26',
         'EMAIL' => 'sch_odo@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.989071',
-        'COORDS_LONGITUDE' => '43.529145'
+        'COORDS_LONGITUDE' => '39.989071',
+        'COORDS_LATITUDE' => '43.529145'
     ],
     'customs357' => [
         'CODE' => '10309240',
@@ -5368,8 +5368,8 @@ return [
         'TELEFON' => '(862)241-67-01',
         'FAX' => '(862)241-67-01',
         'EMAIL' => 'mapp_adler@mail.ru',
-        'COORDS_LATITUDE' => '39.992969',
-        'COORDS_LONGITUDE' => '43.406475'
+        'COORDS_LONGITUDE' => '39.992969',
+        'COORDS_LATITUDE' => '43.406475'
     ],
     'customs358' => [
         'CODE' => '10309250',
@@ -5383,8 +5383,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.979814',
-        'COORDS_LONGITUDE' => '45.015658'
+        'COORDS_LONGITUDE' => '38.979814',
+        'COORDS_LATITUDE' => '45.015658'
     ],
     'customs359' => [
         'CODE' => '10309901',
@@ -5398,8 +5398,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.735431',
-        'COORDS_LONGITUDE' => '43.570282'
+        'COORDS_LONGITUDE' => '39.735431',
+        'COORDS_LATITUDE' => '43.570282'
     ],
     'customs360' => [
         'CODE' => '10311000',
@@ -5413,8 +5413,8 @@ return [
         'TELEFON' => '(8512)32-15-27',
         'FAX' => '(8512)32-15-29',
         'EMAIL' => 'asttam@telplus.ru',
-        'COORDS_LATITUDE' => '47.99695',
-        'COORDS_LONGITUDE' => '46.313445'
+        'COORDS_LONGITUDE' => '47.99695',
+        'COORDS_LATITUDE' => '46.313445'
     ],
     'customs361' => [
         'CODE' => '10311020',
@@ -5428,8 +5428,8 @@ return [
         'TELEFON' => '(8512)63-22-23',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.975696',
-        'COORDS_LONGITUDE' => '46.422169'
+        'COORDS_LONGITUDE' => '47.975696',
+        'COORDS_LATITUDE' => '46.422169'
     ],
     'customs362' => [
         'CODE' => '10311030',
@@ -5443,8 +5443,8 @@ return [
         'TELEFON' => '(85141)5-21-49',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '46.166587',
-        'COORDS_LONGITUDE' => '48.301291'
+        'COORDS_LONGITUDE' => '46.166587',
+        'COORDS_LATITUDE' => '48.301291'
     ],
     'customs363' => [
         'CODE' => '10311050',
@@ -5458,8 +5458,8 @@ return [
         'TELEFON' => '(8512)64-12-21',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.999923',
-        'COORDS_LONGITUDE' => '46.287257'
+        'COORDS_LONGITUDE' => '47.999923',
+        'COORDS_LATITUDE' => '46.287257'
     ],
     'customs364' => [
         'CODE' => '10311070',
@@ -5473,8 +5473,8 @@ return [
         'TELEFON' => '(8512)31-13-21',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.548529',
-        'COORDS_LONGITUDE' => '45.783622'
+        'COORDS_LONGITUDE' => '47.548529',
+        'COORDS_LATITUDE' => '45.783622'
     ],
     'customs365' => [
         'CODE' => '10311090',
@@ -5488,8 +5488,8 @@ return [
         'TELEFON' => '(8442)99-16-27',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.641068',
-        'COORDS_LONGITUDE' => '48.510196'
+        'COORDS_LONGITUDE' => '44.641068',
+        'COORDS_LATITUDE' => '48.510196'
     ],
     'customs366' => [
         'CODE' => '10311100',
@@ -5503,8 +5503,8 @@ return [
         'TELEFON' => '(8442)25-42-21',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.377718',
-        'COORDS_LONGITUDE' => '48.784174'
+        'COORDS_LONGITUDE' => '44.377718',
+        'COORDS_LATITUDE' => '48.784174'
     ],
     'customs367' => [
         'CODE' => '10311110',
@@ -5518,8 +5518,8 @@ return [
         'TELEFON' => '(8442)35-75-61',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.354623',
-        'COORDS_LONGITUDE' => '48.791606'
+        'COORDS_LONGITUDE' => '44.354623',
+        'COORDS_LATITUDE' => '48.791606'
     ],
     'customs368' => [
         'CODE' => '10311120',
@@ -5533,8 +5533,8 @@ return [
         'TELEFON' => '(8443)22-24-42',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.791267',
-        'COORDS_LONGITUDE' => '48.801748'
+        'COORDS_LONGITUDE' => '44.791267',
+        'COORDS_LATITUDE' => '48.801748'
     ],
     'customs369' => [
         'CODE' => '10311130',
@@ -5548,8 +5548,8 @@ return [
         'TELEFON' => '(8512)32-15-11',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.238394',
-        'COORDS_LONGITUDE' => '50.091154'
+        'COORDS_LONGITUDE' => '43.238394',
+        'COORDS_LATITUDE' => '50.091154'
     ],
     'customs370' => [
         'CODE' => '10313000',
@@ -5563,8 +5563,8 @@ return [
         'TELEFON' => '(863)218-02-27',
         'FAX' => '(863)218-02-38',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.833195',
-        'COORDS_LONGITUDE' => '47.279391'
+        'COORDS_LONGITUDE' => '39.833195',
+        'COORDS_LATITUDE' => '47.279391'
     ],
     'customs371' => [
         'CODE' => '10313010',
@@ -5578,8 +5578,8 @@ return [
         'TELEFON' => '(86342)6-21-37',
         'FAX' => '(86342)4-04-82',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.438008',
-        'COORDS_LONGITUDE' => '47.062774'
+        'COORDS_LONGITUDE' => '39.438008',
+        'COORDS_LATITUDE' => '47.062774'
     ],
     'customs372' => [
         'CODE' => '10313012',
@@ -5593,8 +5593,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.762731',
-        'COORDS_LONGITUDE' => '47.254137'
+        'COORDS_LONGITUDE' => '39.762731',
+        'COORDS_LATITUDE' => '47.254137'
     ],
     'customs373' => [
         'CODE' => '10313013',
@@ -5608,8 +5608,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.747846',
-        'COORDS_LONGITUDE' => '47.06696'
+        'COORDS_LONGITUDE' => '39.747846',
+        'COORDS_LATITUDE' => '47.06696'
     ],
     'customs374' => [
         'CODE' => '10313020',
@@ -5623,8 +5623,8 @@ return [
         'TELEFON' => '(86383)2-68-09',
         'FAX' => '(86383)2-68-09',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '40.788221',
-        'COORDS_LONGITUDE' => '48.170464'
+        'COORDS_LONGITUDE' => '40.788221',
+        'COORDS_LATITUDE' => '48.170464'
     ],
     'customs375' => [
         'CODE' => '10313030',
@@ -5638,8 +5638,8 @@ return [
         'TELEFON' => '(86392)2-55-92',
         'FAX' => '(86392)2-23-48',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '42.156768',
-        'COORDS_LONGITUDE' => '47.528033'
+        'COORDS_LONGITUDE' => '42.156768',
+        'COORDS_LATITUDE' => '47.528033'
     ],
     'customs376' => [
         'CODE' => '10313040',
@@ -5653,8 +5653,8 @@ return [
         'TELEFON' => '(86361)3-52-97',
         'FAX' => '(86361)5-00-00',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.942179',
-        'COORDS_LONGITUDE' => '48.050191'
+        'COORDS_LONGITUDE' => '39.942179',
+        'COORDS_LATITUDE' => '48.050191'
     ],
     'customs377' => [
         'CODE' => '10313070',
@@ -5668,8 +5668,8 @@ return [
         'TELEFON' => '(86342)4-04-82',
         'FAX' => '(86342)4-42-55',
         'EMAIL' => 'SamarichSP@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.421452',
-        'COORDS_LONGITUDE' => '47.118396'
+        'COORDS_LONGITUDE' => '39.421452',
+        'COORDS_LATITUDE' => '47.118396'
     ],
     'customs378' => [
         'CODE' => '10313090',
@@ -5683,8 +5683,8 @@ return [
         'TELEFON' => '(863) 252-05-43',
         'FAX' => '(863) 252-44-32',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.949033',
-        'COORDS_LONGITUDE' => '47.436054'
+        'COORDS_LONGITUDE' => '39.949033',
+        'COORDS_LATITUDE' => '47.436054'
     ],
     'customs379' => [
         'CODE' => '10313100',
@@ -5698,8 +5698,8 @@ return [
         'TELEFON' => '(86369)3-99-95',
         'FAX' => '(863)218-04-47',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.928695',
-        'COORDS_LONGITUDE' => '47.773981'
+        'COORDS_LONGITUDE' => '39.928695',
+        'COORDS_LATITUDE' => '47.773981'
     ],
     'customs380' => [
         'CODE' => '10313110',
@@ -5713,8 +5713,8 @@ return [
         'TELEFON' => '(863)253-85-81',
         'FAX' => '(863)253-85-81',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.750101',
-        'COORDS_LONGITUDE' => '47.22004'
+        'COORDS_LONGITUDE' => '39.750101',
+        'COORDS_LATITUDE' => '47.22004'
     ],
     'customs381' => [
         'CODE' => '10313130',
@@ -5728,8 +5728,8 @@ return [
         'TELEFON' => '(863)259-83-11',
         'FAX' => '(863)253-85-81',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.894631',
-        'COORDS_LONGITUDE' => '47.783542'
+        'COORDS_LONGITUDE' => '39.894631',
+        'COORDS_LATITUDE' => '47.783542'
     ],
     'customs382' => [
         'CODE' => '10313150',
@@ -5743,8 +5743,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.943445',
-        'COORDS_LONGITUDE' => '47.983375'
+        'COORDS_LONGITUDE' => '39.943445',
+        'COORDS_LATITUDE' => '47.983375'
     ],
     'customs383' => [
         'CODE' => '10313160',
@@ -5758,8 +5758,8 @@ return [
         'TELEFON' => '(86315)5-22-30',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '40.268618',
-        'COORDS_LONGITUDE' => '48.306991'
+        'COORDS_LONGITUDE' => '40.268618',
+        'COORDS_LATITUDE' => '48.306991'
     ],
     'customs384' => [
         'CODE' => '10313170',
@@ -5773,8 +5773,8 @@ return [
         'TELEFON' => '(8634)34-30-21',
         'FAX' => '(8634)34-30-00',
         'EMAIL' => 'vavilovua@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.877666',
-        'COORDS_LONGITUDE' => '47.586343'
+        'COORDS_LONGITUDE' => '38.877666',
+        'COORDS_LATITUDE' => '47.586343'
     ],
     'customs385' => [
         'CODE' => '10313172',
@@ -5788,8 +5788,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.883523',
-        'COORDS_LONGITUDE' => '47.257421'
+        'COORDS_LONGITUDE' => '38.883523',
+        'COORDS_LATITUDE' => '47.257421'
     ],
     'customs386' => [
         'CODE' => '10313173',
@@ -5803,8 +5803,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.882769',
-        'COORDS_LONGITUDE' => '47.24999'
+        'COORDS_LONGITUDE' => '38.882769',
+        'COORDS_LATITUDE' => '47.24999'
     ],
     'customs387' => [
         'CODE' => '10313180',
@@ -5818,8 +5818,8 @@ return [
         'TELEFON' => '(86387)2-14-66',
         'FAX' => '(86387)2-17-94',
         'EMAIL' => 'customs@millerovo.donpac.ru',
-        'COORDS_LATITUDE' => '40.135011',
-        'COORDS_LONGITUDE' => '49.386563'
+        'COORDS_LONGITUDE' => '40.135011',
+        'COORDS_LATITUDE' => '49.386563'
     ],
     'customs388' => [
         'CODE' => '10313190',
@@ -5833,8 +5833,8 @@ return [
         'TELEFON' => '(8634)31-11-69',
         'FAX' => '',
         'EMAIL' => 'trifonovsl@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.903744',
-        'COORDS_LONGITUDE' => '47.22873'
+        'COORDS_LONGITUDE' => '38.903744',
+        'COORDS_LATITUDE' => '47.22873'
     ],
     'customs389' => [
         'CODE' => '10313200',
@@ -5848,8 +5848,8 @@ return [
         'TELEFON' => '(8634)32-52-08',
         'FAX' => '(8634)32-52-08',
         'EMAIL' => 'verchoglyadaa@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.336234',
-        'COORDS_LONGITUDE' => '47.140847'
+        'COORDS_LONGITUDE' => '38.336234',
+        'COORDS_LATITUDE' => '47.140847'
     ],
     'customs390' => [
         'CODE' => '10313210',
@@ -5863,8 +5863,8 @@ return [
         'TELEFON' => '(86385)5-74-11',
         'FAX' => '(86385)5-74-11',
         'EMAIL' => 'customs@millerovo.donpac.ru',
-        'COORDS_LATITUDE' => '39.932971',
-        'COORDS_LONGITUDE' => '48.921978'
+        'COORDS_LONGITUDE' => '39.932971',
+        'COORDS_LATITUDE' => '48.921978'
     ],
     'customs391' => [
         'CODE' => '10313220',
@@ -5878,8 +5878,8 @@ return [
         'TELEFON' => '(86368)2-17-94',
         'FAX' => '(86368)2-17-94',
         'EMAIL' => 'customs@millerovo.donpac.ru',
-        'COORDS_LATITUDE' => '39.913594',
-        'COORDS_LONGITUDE' => '48.295831'
+        'COORDS_LONGITUDE' => '39.913594',
+        'COORDS_LATITUDE' => '48.295831'
     ],
     'customs392' => [
         'CODE' => '10313230',
@@ -5893,8 +5893,8 @@ return [
         'TELEFON' => '(8634)34-30-91',
         'FAX' => '',
         'EMAIL' => 'volodinvv@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.906385',
-        'COORDS_LONGITUDE' => '47.810901'
+        'COORDS_LONGITUDE' => '38.906385',
+        'COORDS_LATITUDE' => '47.810901'
     ],
     'customs393' => [
         'CODE' => '10313240',
@@ -5908,8 +5908,8 @@ return [
         'TELEFON' => '(8634)32-52-80',
         'FAX' => '',
         'EMAIL' => 'balashevkr@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.070885',
-        'COORDS_LONGITUDE' => '47.84133'
+        'COORDS_LONGITUDE' => '39.070885',
+        'COORDS_LATITUDE' => '47.84133'
     ],
     'customs394' => [
         'CODE' => '10313250',
@@ -5923,8 +5923,8 @@ return [
         'TELEFON' => '(8634)32-52-12',
         'FAX' => '(8634)32-52-55',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.675321',
-        'COORDS_LONGITUDE' => '47.693828'
+        'COORDS_LONGITUDE' => '38.675321',
+        'COORDS_LATITUDE' => '47.693828'
     ],
     'customs395' => [
         'CODE' => '10313260',
@@ -5938,8 +5938,8 @@ return [
         'TELEFON' => '(8634)31-16-71',
         'FAX' => '',
         'EMAIL' => 'demidenkova@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '38.948822',
-        'COORDS_LONGITUDE' => '47.205925'
+        'COORDS_LONGITUDE' => '38.948822',
+        'COORDS_LATITUDE' => '47.205925'
     ],
     'customs396' => [
         'CODE' => '10313901',
@@ -5953,8 +5953,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.860041',
-        'COORDS_LONGITUDE' => '47.225897'
+        'COORDS_LONGITUDE' => '38.860041',
+        'COORDS_LATITUDE' => '47.225897'
     ],
     'customs397' => [
         'CODE' => '10314000',
@@ -5968,8 +5968,8 @@ return [
         'TELEFON' => '(863)267-01-05',
         'FAX' => '(863)267-40-94',
         'EMAIL' => 'yuot-odo@jtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.706452',
-        'COORDS_LONGITUDE' => '47.223712'
+        'COORDS_LONGITUDE' => '39.706452',
+        'COORDS_LATITUDE' => '47.223712'
     ],
     'customs398' => [
         'CODE' => '10317000',
@@ -5983,8 +5983,8 @@ return [
         'TELEFON' => '(8617)79-12-27',
         'FAX' => '(8617)79-12-29',
         'EMAIL' => 'nvr_odo@jtu.custom.ru',
-        'COORDS_LATITUDE' => '37.760943',
-        'COORDS_LONGITUDE' => '44.693534'
+        'COORDS_LONGITUDE' => '37.760943',
+        'COORDS_LATITUDE' => '44.693534'
     ],
     'customs399' => [
         'CODE' => '10317010',
@@ -5998,8 +5998,8 @@ return [
         'TELEFON' => '(86133)9-84-21',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.610422',
-        'COORDS_LONGITUDE' => '45.54491'
+        'COORDS_LONGITUDE' => '39.610422',
+        'COORDS_LATITUDE' => '45.54491'
     ],
     'customs400' => [
         'CODE' => '10317020',
@@ -6013,8 +6013,8 @@ return [
         'TELEFON' => '(86141)79-13-84',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '38.080986',
-        'COORDS_LONGITUDE' => '44.573098'
+        'COORDS_LONGITUDE' => '38.080986',
+        'COORDS_LATITUDE' => '44.573098'
     ],
     'customs401' => [
         'CODE' => '10317080',
@@ -6028,8 +6028,8 @@ return [
         'TELEFON' => '(8617)30-04-86',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.717663',
-        'COORDS_LONGITUDE' => '44.766728'
+        'COORDS_LONGITUDE' => '37.717663',
+        'COORDS_LATITUDE' => '44.766728'
     ],
     'customs402' => [
         'CODE' => '10317090',
@@ -6043,8 +6043,8 @@ return [
         'TELEFON' => '(8617)79-13-29',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.776287',
-        'COORDS_LONGITUDE' => '44.724392'
+        'COORDS_LONGITUDE' => '37.776287',
+        'COORDS_LATITUDE' => '44.724392'
     ],
     'customs403' => [
         'CODE' => '10317100',
@@ -6058,8 +6058,8 @@ return [
         'TELEFON' => '(8617)79-13-05',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.788019',
-        'COORDS_LONGITUDE' => '44.735323'
+        'COORDS_LONGITUDE' => '37.788019',
+        'COORDS_LATITUDE' => '44.735323'
     ],
     'customs404' => [
         'CODE' => '10317110',
@@ -6073,8 +6073,8 @@ return [
         'TELEFON' => '(8617)79-13-35',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.816064',
-        'COORDS_LONGITUDE' => '44.727645'
+        'COORDS_LONGITUDE' => '37.816064',
+        'COORDS_LATITUDE' => '44.727645'
     ],
     'customs405' => [
         'CODE' => '10317120',
@@ -6088,8 +6088,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.760943',
-        'COORDS_LONGITUDE' => '44.693534'
+        'COORDS_LONGITUDE' => '37.760943',
+        'COORDS_LATITUDE' => '44.693534'
     ],
     'customs406' => [
         'CODE' => '10321000',
@@ -6103,8 +6103,8 @@ return [
         'TELEFON' => '(3652)66-89-04',
         'FAX' => '(3652)66-89-08',
         'EMAIL' => 'crimea_odo@ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '34.100327',
-        'COORDS_LONGITUDE' => '44.948237'
+        'COORDS_LONGITUDE' => '34.100327',
+        'COORDS_LATITUDE' => '44.948237'
     ],
     'customs407' => [
         'CODE' => '10321010',
@@ -6118,8 +6118,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.392872',
-        'COORDS_LONGITUDE' => '45.713348'
+        'COORDS_LONGITUDE' => '34.392872',
+        'COORDS_LATITUDE' => '45.713348'
     ],
     'customs408' => [
         'CODE' => '10321011',
@@ -6133,8 +6133,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.343267',
-        'COORDS_LONGITUDE' => '45.545826'
+        'COORDS_LONGITUDE' => '34.343267',
+        'COORDS_LATITUDE' => '45.545826'
     ],
     'customs409' => [
         'CODE' => '10321020',
@@ -6148,8 +6148,8 @@ return [
         'TELEFON' => '(36569)6-22-12',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.373383',
-        'COORDS_LONGITUDE' => '45.190299'
+        'COORDS_LONGITUDE' => '33.373383',
+        'COORDS_LATITUDE' => '45.190299'
     ],
     'customs410' => [
         'CODE' => '10321030',
@@ -6163,8 +6163,8 @@ return [
         'TELEFON' => '(36561)5-26-07',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.458764',
-        'COORDS_LONGITUDE' => '45.33918'
+        'COORDS_LONGITUDE' => '36.458764',
+        'COORDS_LATITUDE' => '45.33918'
     ],
     'customs411' => [
         'CODE' => '10321031',
@@ -6178,8 +6178,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.483216',
-        'COORDS_LONGITUDE' => '45.362749'
+        'COORDS_LONGITUDE' => '36.483216',
+        'COORDS_LATITUDE' => '45.362749'
     ],
     'customs412' => [
         'CODE' => '10321040',
@@ -6193,8 +6193,8 @@ return [
         'TELEFON' => '(36565)2-18-51',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.782512',
-        'COORDS_LONGITUDE' => '45.963868'
+        'COORDS_LONGITUDE' => '33.782512',
+        'COORDS_LATITUDE' => '45.963868'
     ],
     'customs413' => [
         'CODE' => '10321041',
@@ -6208,8 +6208,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.702759',
-        'COORDS_LONGITUDE' => '46.116175'
+        'COORDS_LONGITUDE' => '33.702759',
+        'COORDS_LATITUDE' => '46.116175'
     ],
     'customs414' => [
         'CODE' => '10321042',
@@ -6223,8 +6223,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.467378',
-        'COORDS_LONGITUDE' => '45.356219'
+        'COORDS_LONGITUDE' => '36.467378',
+        'COORDS_LATITUDE' => '45.356219'
     ],
     'customs415' => [
         'CODE' => '10321043',
@@ -6238,8 +6238,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.691315',
-        'COORDS_LONGITUDE' => '46.110727'
+        'COORDS_LONGITUDE' => '33.691315',
+        'COORDS_LATITUDE' => '46.110727'
     ],
     'customs416' => [
         'CODE' => '10321050',
@@ -6253,8 +6253,8 @@ return [
         'TELEFON' => '(3652)59-50-41',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.100327',
-        'COORDS_LONGITUDE' => '44.948237'
+        'COORDS_LONGITUDE' => '34.100327',
+        'COORDS_LATITUDE' => '44.948237'
     ],
     'customs417' => [
         'CODE' => '10321051',
@@ -6268,8 +6268,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.100327',
-        'COORDS_LONGITUDE' => '44.948237'
+        'COORDS_LONGITUDE' => '34.100327',
+        'COORDS_LATITUDE' => '44.948237'
     ],
     'customs418' => [
         'CODE' => '10321060',
@@ -6283,8 +6283,8 @@ return [
         'TELEFON' => '(3652)59-50-43',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.100327',
-        'COORDS_LONGITUDE' => '44.948237'
+        'COORDS_LONGITUDE' => '34.100327',
+        'COORDS_LATITUDE' => '44.948237'
     ],
     'customs419' => [
         'CODE' => '10321070',
@@ -6298,8 +6298,8 @@ return [
         'TELEFON' => '(36562)3-56-24',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '35.386768',
-        'COORDS_LONGITUDE' => '45.026119'
+        'COORDS_LONGITUDE' => '35.386768',
+        'COORDS_LATITUDE' => '45.026119'
     ],
     'customs420' => [
         'CODE' => '10321080',
@@ -6313,8 +6313,8 @@ return [
         'TELEFON' => '(3654)35-06-38',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.171824',
-        'COORDS_LONGITUDE' => '44.49537'
+        'COORDS_LONGITUDE' => '34.171824',
+        'COORDS_LATITUDE' => '44.49537'
     ],
     'customs421' => [
         'CODE' => '10322000',
@@ -6328,8 +6328,8 @@ return [
         'TELEFON' => '(8692)54-35-66',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.526357',
-        'COORDS_LONGITUDE' => '44.615045'
+        'COORDS_LONGITUDE' => '33.526357',
+        'COORDS_LATITUDE' => '44.615045'
     ],
     'customs422' => [
         'CODE' => '10322010',
@@ -6343,8 +6343,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.557151',
-        'COORDS_LONGITUDE' => '44.630955'
+        'COORDS_LONGITUDE' => '33.557151',
+        'COORDS_LATITUDE' => '44.630955'
     ],
     'customs423' => [
         'CODE' => '10322020',
@@ -6358,8 +6358,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.423311',
-        'COORDS_LONGITUDE' => '44.575223'
+        'COORDS_LONGITUDE' => '33.423311',
+        'COORDS_LATITUDE' => '44.575223'
     ],
     'customs424' => [
         'CODE' => '10322021',
@@ -6373,8 +6373,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '33.432618',
-        'COORDS_LONGITUDE' => '44.58208'
+        'COORDS_LONGITUDE' => '33.432618',
+        'COORDS_LATITUDE' => '44.58208'
     ],
     'customs425' => [
         'CODE' => '10323000',
@@ -6388,8 +6388,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.738459',
-        'COORDS_LONGITUDE' => '47.239211'
+        'COORDS_LONGITUDE' => '39.738459',
+        'COORDS_LATITUDE' => '47.239211'
     ],
     'customs426' => [
         'CODE' => '10323010',
@@ -6403,8 +6403,8 @@ return [
         'TELEFON' => '(863)218-03-48',
         'FAX' => '(863)218-03-23',
         'EMAIL' => 'ROSTOV_ODO@JTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '39.738459',
-        'COORDS_LONGITUDE' => '47.239211'
+        'COORDS_LONGITUDE' => '39.738459',
+        'COORDS_LATITUDE' => '47.239211'
     ],
     'customs427' => [
         'CODE' => '10397000',
@@ -6418,8 +6418,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs428' => [
         'CODE' => '10400000',
@@ -6433,8 +6433,8 @@ return [
         'TELEFON' => '(831)296-02-28',
         'FAX' => '(831)430-73-22',
         'EMAIL' => 'ptu-customs@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '43.990544',
-        'COORDS_LONGITUDE' => '56.305814'
+        'COORDS_LONGITUDE' => '43.990544',
+        'COORDS_LATITUDE' => '56.305814'
     ],
     'customs429' => [
         'CODE' => '10400010',
@@ -6448,8 +6448,8 @@ return [
         'TELEFON' => '(342)238-62-63',
         'FAX' => '(342)238-62-78',
         'EMAIL' => 'pttp@prm.volga.customs.gov.ru',
-        'COORDS_LATITUDE' => '56.229443',
-        'COORDS_LONGITUDE' => '58.010455'
+        'COORDS_LONGITUDE' => '56.229443',
+        'COORDS_LATITUDE' => '58.010455'
     ],
     'customs430' => [
         'CODE' => '10401000',
@@ -6463,8 +6463,8 @@ return [
         'TELEFON' => '(347)273-07-65',
         'FAX' => '(347)279-67-77',
         'EMAIL' => 'BSH-CUSTOMS@PTU.customs.gov.ru',
-        'COORDS_LATITUDE' => '55.97292',
-        'COORDS_LONGITUDE' => '54.739555'
+        'COORDS_LONGITUDE' => '55.97292',
+        'COORDS_LATITUDE' => '54.739555'
     ],
     'customs431' => [
         'CODE' => '10401010',
@@ -6478,8 +6478,8 @@ return [
         'TELEFON' => '(347)229-53-55',
         'FAX' => '(347)229-53-55',
         'EMAIL' => 'BSH-ARP@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '55.886098',
-        'COORDS_LONGITUDE' => '54.56625'
+        'COORDS_LONGITUDE' => '55.886098',
+        'COORDS_LATITUDE' => '54.56625'
     ],
     'customs432' => [
         'CODE' => '10401030',
@@ -6493,8 +6493,8 @@ return [
         'TELEFON' => '(34792)3-05-30',
         'FAX' => '(34792)3-05-30',
         'EMAIL' => 'BSH-BLR@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '58.39786',
-        'COORDS_LONGITUDE' => '53.971175'
+        'COORDS_LONGITUDE' => '58.39786',
+        'COORDS_LATITUDE' => '53.971175'
     ],
     'customs433' => [
         'CODE' => '10401050',
@@ -6508,8 +6508,8 @@ return [
         'TELEFON' => '(3473)25-08-52',
         'FAX' => '(3473)25-08-52',
         'EMAIL' => 'BSH-STR@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '55.934994',
-        'COORDS_LONGITUDE' => '53.593431'
+        'COORDS_LONGITUDE' => '55.934994',
+        'COORDS_LATITUDE' => '53.593431'
     ],
     'customs434' => [
         'CODE' => '10401052',
@@ -6523,8 +6523,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '55.935155',
-        'COORDS_LONGITUDE' => '53.373219'
+        'COORDS_LONGITUDE' => '55.935155',
+        'COORDS_LATITUDE' => '53.373219'
     ],
     'customs435' => [
         'CODE' => '10401060',
@@ -6538,8 +6538,8 @@ return [
         'TELEFON' => '(347)264-79-07',
         'FAX' => '(347)264-79-07',
         'EMAIL' => 'BSH-UFM@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '56.096241',
-        'COORDS_LONGITUDE' => '54.804571'
+        'COORDS_LONGITUDE' => '56.096241',
+        'COORDS_LATITUDE' => '54.804571'
     ],
     'customs436' => [
         'CODE' => '10401080',
@@ -6553,8 +6553,8 @@ return [
         'TELEFON' => '(34782)5-54-88',
         'FAX' => '(34782)5-54-88',
         'EMAIL' => 'BSH-TMZ@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '53.716945',
-        'COORDS_LONGITUDE' => '54.59316'
+        'COORDS_LONGITUDE' => '53.716945',
+        'COORDS_LATITUDE' => '54.59316'
     ],
     'customs437' => [
         'CODE' => '10401081',
@@ -6568,8 +6568,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '54.280512',
-        'COORDS_LONGITUDE' => '56.103628'
+        'COORDS_LONGITUDE' => '54.280512',
+        'COORDS_LATITUDE' => '56.103628'
     ],
     'customs438' => [
         'CODE' => '10404000',
@@ -6583,8 +6583,8 @@ return [
         'TELEFON' => '(843)520-94-12',
         'FAX' => '(843)520-81-11',
         'EMAIL' => 'tat-odo@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '49.100988',
-        'COORDS_LONGITUDE' => '55.84123'
+        'COORDS_LONGITUDE' => '49.100988',
+        'COORDS_LATITUDE' => '55.84123'
     ],
     'customs439' => [
         'CODE' => '10404010',
@@ -6598,8 +6598,8 @@ return [
         'TELEFON' => '(843)291-54-65',
         'FAX' => '(843)237-66-90',
         'EMAIL' => 'tat-aer@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '49.2986',
-        'COORDS_LONGITUDE' => '55.608094'
+        'COORDS_LONGITUDE' => '49.2986',
+        'COORDS_LATITUDE' => '55.608094'
     ],
     'customs440' => [
         'CODE' => '10404020',
@@ -6613,8 +6613,8 @@ return [
         'TELEFON' => '(8553)45-18-03',
         'FAX' => '(8553)45-18-03',
         'EMAIL' => 'tat-alm@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '52.318502',
-        'COORDS_LONGITUDE' => '54.896636'
+        'COORDS_LONGITUDE' => '52.318502',
+        'COORDS_LATITUDE' => '54.896636'
     ],
     'customs441' => [
         'CODE' => '10404050',
@@ -6628,8 +6628,8 @@ return [
         'TELEFON' => '(843)291-93-41',
         'FAX' => '(843)291-54-53',
         'EMAIL' => 'tat-kaz@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '49.14064',
-        'COORDS_LONGITUDE' => '55.919079'
+        'COORDS_LONGITUDE' => '49.14064',
+        'COORDS_LATITUDE' => '55.919079'
     ],
     'customs442' => [
         'CODE' => '10404053',
@@ -6643,8 +6643,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '49.021865',
-        'COORDS_LONGITUDE' => '55.800433'
+        'COORDS_LONGITUDE' => '49.021865',
+        'COORDS_LATITUDE' => '55.800433'
     ],
     'customs443' => [
         'CODE' => '10404070',
@@ -6658,8 +6658,8 @@ return [
         'TELEFON' => '(8555)49-81-58',
         'FAX' => '(8555)49-81-58',
         'EMAIL' => 'tat-nzhn2@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '51.819712',
-        'COORDS_LONGITUDE' => '55.637576'
+        'COORDS_LONGITUDE' => '51.819712',
+        'COORDS_LATITUDE' => '55.637576'
     ],
     'customs444' => [
         'CODE' => '10404080',
@@ -6673,8 +6673,8 @@ return [
         'TELEFON' => '(8552)30-82-28',
         'FAX' => '(8552)30-82-29',
         'EMAIL' => 'tat_ncln@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '52.415134',
-        'COORDS_LONGITUDE' => '55.725564'
+        'COORDS_LONGITUDE' => '52.415134',
+        'COORDS_LATITUDE' => '55.725564'
     ],
     'customs445' => [
         'CODE' => '10404083',
@@ -6688,8 +6688,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '52.439164',
-        'COORDS_LONGITUDE' => '55.710144'
+        'COORDS_LONGITUDE' => '52.439164',
+        'COORDS_LATITUDE' => '55.710144'
     ],
     'customs446' => [
         'CODE' => '10404084',
@@ -6703,8 +6703,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '52.141471',
-        'COORDS_LONGITUDE' => '55.620936'
+        'COORDS_LONGITUDE' => '52.141471',
+        'COORDS_LATITUDE' => '55.620936'
     ],
     'customs447' => [
         'CODE' => '10404090',
@@ -6718,8 +6718,8 @@ return [
         'TELEFON' => '(85557)7-76-78',
         'FAX' => '(85557)7-76-79',
         'EMAIL' => 'tat-elb@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '52.067459',
-        'COORDS_LONGITUDE' => '55.835523'
+        'COORDS_LONGITUDE' => '52.067459',
+        'COORDS_LATITUDE' => '55.835523'
     ],
     'customs448' => [
         'CODE' => '10408000',
@@ -6733,8 +6733,8 @@ return [
         'TELEFON' => '(831)422-32-27',
         'FAX' => '(831)469-02-21',
         'EMAIL' => 'njg-customs@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '44.068051',
-        'COORDS_LONGITUDE' => '56.315196'
+        'COORDS_LONGITUDE' => '44.068051',
+        'COORDS_LATITUDE' => '56.315196'
     ],
     'customs449' => [
         'CODE' => '10408010',
@@ -6748,8 +6748,8 @@ return [
         'TELEFON' => '(831)299-25-80',
         'FAX' => '(831)220-09-49',
         'EMAIL' => 'njg-gaz@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '43.8874',
-        'COORDS_LONGITUDE' => '56.23407'
+        'COORDS_LONGITUDE' => '43.8874',
+        'COORDS_LATITUDE' => '56.23407'
     ],
     'customs450' => [
         'CODE' => '10408020',
@@ -6763,8 +6763,8 @@ return [
         'TELEFON' => '(831)422-39-20',
         'FAX' => '(83145)5-47-77',
         'EMAIL' => 'njg-kst@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '44.144632',
-        'COORDS_LONGITUDE' => '56.191093'
+        'COORDS_LONGITUDE' => '44.144632',
+        'COORDS_LATITUDE' => '56.191093'
     ],
     'customs451' => [
         'CODE' => '10408022',
@@ -6778,8 +6778,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.144004',
-        'COORDS_LONGITUDE' => '56.192946'
+        'COORDS_LONGITUDE' => '44.144004',
+        'COORDS_LATITUDE' => '56.192946'
     ],
     'customs452' => [
         'CODE' => '10408030',
@@ -6793,8 +6793,8 @@ return [
         'TELEFON' => '(831)269-40-02',
         'FAX' => '(831)269-40-18',
         'EMAIL' => 'njg-aer@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '43.791136',
-        'COORDS_LONGITUDE' => '56.219633'
+        'COORDS_LONGITUDE' => '43.791136',
+        'COORDS_LATITUDE' => '56.219633'
     ],
     'customs453' => [
         'CODE' => '10408040',
@@ -6808,8 +6808,8 @@ return [
         'TELEFON' => '(8313)39-14-64',
         'FAX' => '(8313)39-14-65',
         'EMAIL' => 'njg-dze@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '43.596238',
-        'COORDS_LONGITUDE' => '56.292098'
+        'COORDS_LONGITUDE' => '43.596238',
+        'COORDS_LATITUDE' => '56.292098'
     ],
     'customs454' => [
         'CODE' => '10408043',
@@ -6823,8 +6823,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.894739',
-        'COORDS_LONGITUDE' => '56.307506'
+        'COORDS_LONGITUDE' => '43.894739',
+        'COORDS_LATITUDE' => '56.307506'
     ],
     'customs455' => [
         'CODE' => '10408070',
@@ -6838,8 +6838,8 @@ return [
         'TELEFON' => '(83177)3-75-60',
         'FAX' => '(83177)3-75-60',
         'EMAIL' => 'njg-vyk@ptu.cutoms.ru',
-        'COORDS_LATITUDE' => '42.193501',
-        'COORDS_LONGITUDE' => '55.404422'
+        'COORDS_LONGITUDE' => '42.193501',
+        'COORDS_LATITUDE' => '55.404422'
     ],
     'customs456' => [
         'CODE' => '10408100',
@@ -6853,8 +6853,8 @@ return [
         'TELEFON' => '(8332)40-58-21',
         'FAX' => '(8332)40-58-29',
         'EMAIL' => 'njg-krv@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '49.666747',
-        'COORDS_LONGITUDE' => '58.617114'
+        'COORDS_LONGITUDE' => '49.666747',
+        'COORDS_LATITUDE' => '58.617114'
     ],
     'customs457' => [
         'CODE' => '10408101',
@@ -6868,8 +6868,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '49.98803',
-        'COORDS_LONGITUDE' => '58.557041'
+        'COORDS_LONGITUDE' => '49.98803',
+        'COORDS_LATITUDE' => '58.557041'
     ],
     'customs458' => [
         'CODE' => '10408102',
@@ -6883,8 +6883,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '49.665319',
-        'COORDS_LONGITUDE' => '58.575768'
+        'COORDS_LONGITUDE' => '49.665319',
+        'COORDS_LATITUDE' => '58.575768'
     ],
     'customs459' => [
         'CODE' => '10408110',
@@ -6898,8 +6898,8 @@ return [
         'TELEFON' => '(8362)68-72-21',
         'FAX' => '(8362)42-98-62',
         'EMAIL' => 'njg-mrs@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '47.887014',
-        'COORDS_LONGITUDE' => '56.609482'
+        'COORDS_LONGITUDE' => '47.887014',
+        'COORDS_LATITUDE' => '56.609482'
     ],
     'customs460' => [
         'CODE' => '10408120',
@@ -6913,8 +6913,8 @@ return [
         'TELEFON' => '(8352)30-90-21',
         'FAX' => '(8352)30-90-29',
         'EMAIL' => 'njg-chv@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '47.265523',
-        'COORDS_LONGITUDE' => '56.11169'
+        'COORDS_LONGITUDE' => '47.265523',
+        'COORDS_LATITUDE' => '56.11169'
     ],
     'customs461' => [
         'CODE' => '10408122',
@@ -6928,8 +6928,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.228612',
-        'COORDS_LONGITUDE' => '56.07273'
+        'COORDS_LONGITUDE' => '47.228612',
+        'COORDS_LATITUDE' => '56.07273'
     ],
     'customs462' => [
         'CODE' => '10411000',
@@ -6943,8 +6943,8 @@ return [
         'TELEFON' => '(342)238-72-28',
         'FAX' => '(342)281-13-39',
         'EMAIL' => 'prm-odo@ptu.cusoms.ru',
-        'COORDS_LATITUDE' => '56.26013',
-        'COORDS_LONGITUDE' => '57.971732'
+        'COORDS_LONGITUDE' => '56.26013',
+        'COORDS_LATITUDE' => '57.971732'
     ],
     'customs463' => [
         'CODE' => '10411020',
@@ -6958,8 +6958,8 @@ return [
         'TELEFON' => '(342)238-73-02',
         'FAX' => '(3424)20-43-97',
         'EMAIL' => 'prm-brz@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '56.806719',
-        'COORDS_LONGITUDE' => '59.407024'
+        'COORDS_LONGITUDE' => '56.806719',
+        'COORDS_LATITUDE' => '59.407024'
     ],
     'customs464' => [
         'CODE' => '10411050',
@@ -6973,8 +6973,8 @@ return [
         'TELEFON' => '(342)220-02-78',
         'FAX' => '(342)294-95-96',
         'EMAIL' => 'prm-aer@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '56.044148',
-        'COORDS_LONGITUDE' => '57.907682'
+        'COORDS_LONGITUDE' => '56.044148',
+        'COORDS_LATITUDE' => '57.907682'
     ],
     'customs465' => [
         'CODE' => '10411080',
@@ -6988,8 +6988,8 @@ return [
         'TELEFON' => '(342)270-36-08',
         'FAX' => '',
         'EMAIL' => 'prm-pln@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '56.398048',
-        'COORDS_LONGITUDE' => '58.175781'
+        'COORDS_LONGITUDE' => '56.398048',
+        'COORDS_LATITUDE' => '58.175781'
     ],
     'customs466' => [
         'CODE' => '10411090',
@@ -7003,8 +7003,8 @@ return [
         'TELEFON' => '(3412)48-15-28',
         'FAX' => '(3412)48-15-29',
         'EMAIL' => 'prm-udn@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '53.277741',
-        'COORDS_LONGITUDE' => '56.843875'
+        'COORDS_LONGITUDE' => '53.277741',
+        'COORDS_LATITUDE' => '56.843875'
     ],
     'customs467' => [
         'CODE' => '10411092',
@@ -7018,8 +7018,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '53.305409',
-        'COORDS_LONGITUDE' => '56.840473'
+        'COORDS_LONGITUDE' => '53.305409',
+        'COORDS_LATITUDE' => '56.840473'
     ],
     'customs468' => [
         'CODE' => '10412000',
@@ -7033,8 +7033,8 @@ return [
         'TELEFON' => '(846)933-73-28',
         'FAX' => '(846)933-73-29',
         'EMAIL' => 'SMR-CUSTOMS@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '50.280135',
-        'COORDS_LONGITUDE' => '53.241315'
+        'COORDS_LONGITUDE' => '50.280135',
+        'COORDS_LATITUDE' => '53.241315'
     ],
     'customs469' => [
         'CODE' => '10412030',
@@ -7048,8 +7048,8 @@ return [
         'TELEFON' => '(846)933-74-27',
         'FAX' => '(846)933-74-27',
         'EMAIL' => 'SMR-AER@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '50.144768',
-        'COORDS_LONGITUDE' => '53.508259'
+        'COORDS_LONGITUDE' => '50.144768',
+        'COORDS_LATITUDE' => '53.508259'
     ],
     'customs470' => [
         'CODE' => '10412050',
@@ -7063,8 +7063,8 @@ return [
         'TELEFON' => '(84661)3-13-74',
         'FAX' => '(84661)3-13-74',
         'EMAIL' => 'SMR-OTR@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '51.339913',
-        'COORDS_LONGITUDE' => '53.350074'
+        'COORDS_LONGITUDE' => '51.339913',
+        'COORDS_LATITUDE' => '53.350074'
     ],
     'customs471' => [
         'CODE' => '10412060',
@@ -7078,8 +7078,8 @@ return [
         'TELEFON' => '(846)933-74-61',
         'FAX' => '(846)933-74-65',
         'EMAIL' => 'SMR-SMR@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '50.292567',
-        'COORDS_LONGITUDE' => '53.230692'
+        'COORDS_LONGITUDE' => '50.292567',
+        'COORDS_LATITUDE' => '53.230692'
     ],
     'customs472' => [
         'CODE' => '10412063',
@@ -7093,8 +7093,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '49.944569',
-        'COORDS_LONGITUDE' => '53.093916'
+        'COORDS_LONGITUDE' => '49.944569',
+        'COORDS_LATITUDE' => '53.093916'
     ],
     'customs473' => [
         'CODE' => '10412080',
@@ -7108,8 +7108,8 @@ return [
         'TELEFON' => '(8482)73-68-86',
         'FAX' => '(8482)73-68-72',
         'EMAIL' => 'SMR-VAZ@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '49.26432',
-        'COORDS_LONGITUDE' => '53.556294'
+        'COORDS_LONGITUDE' => '49.26432',
+        'COORDS_LATITUDE' => '53.556294'
     ],
     'customs474' => [
         'CODE' => '10412110',
@@ -7123,8 +7123,8 @@ return [
         'TELEFON' => '(8482)66-96-00',
         'FAX' => '(8482)66-96-05',
         'EMAIL' => 'SMR-TOL@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '49.351429',
-        'COORDS_LONGITUDE' => '53.563487'
+        'COORDS_LONGITUDE' => '49.351429',
+        'COORDS_LATITUDE' => '53.563487'
     ],
     'customs475' => [
         'CODE' => '10412113',
@@ -7138,8 +7138,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '48.412897',
-        'COORDS_LONGITUDE' => '53.098036'
+        'COORDS_LONGITUDE' => '48.412897',
+        'COORDS_LATITUDE' => '53.098036'
     ],
     'customs476' => [
         'CODE' => '10412120',
@@ -7153,8 +7153,8 @@ return [
         'TELEFON' => '(35342)2-53-51',
         'FAX' => '(35342)2-53-51',
         'EMAIL' => 'orb-buz-odo@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '52.255925',
-        'COORDS_LONGITUDE' => '52.796464'
+        'COORDS_LONGITUDE' => '52.255925',
+        'COORDS_LATITUDE' => '52.796464'
     ],
     'customs477' => [
         'CODE' => '10412130',
@@ -7168,8 +7168,8 @@ return [
         'TELEFON' => '(3532)79-93-88',
         'FAX' => '(3532)79-93-04',
         'EMAIL' => 'orb-orn-odo@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '55.098527',
-        'COORDS_LONGITUDE' => '51.694948'
+        'COORDS_LONGITUDE' => '55.098527',
+        'COORDS_LATITUDE' => '51.694948'
     ],
     'customs478' => [
         'CODE' => '10412150',
@@ -7183,8 +7183,8 @@ return [
         'TELEFON' => '(3537)23-07-89',
         'FAX' => '(3537)22-62-23',
         'EMAIL' => 'oto1@ors.volga.customs.gov.ru',
-        'COORDS_LATITUDE' => '58.490323',
-        'COORDS_LONGITUDE' => '51.227077'
+        'COORDS_LONGITUDE' => '58.490323',
+        'COORDS_LATITUDE' => '51.227077'
     ],
     'customs479' => [
         'CODE' => '10412151',
@@ -7198,8 +7198,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '58.321251',
-        'COORDS_LONGITUDE' => '51.19894'
+        'COORDS_LONGITUDE' => '58.321251',
+        'COORDS_LATITUDE' => '51.19894'
     ],
     'customs480' => [
         'CODE' => '10412160',
@@ -7213,8 +7213,8 @@ return [
         'TELEFON' => '(35336)2-85-33',
         'FAX' => '(35336)2-85-33',
         'EMAIL' => 'orb-ilezk-odo@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '54.991987',
-        'COORDS_LONGITUDE' => '51.175873'
+        'COORDS_LONGITUDE' => '54.991987',
+        'COORDS_LATITUDE' => '51.175873'
     ],
     'customs481' => [
         'CODE' => '10412170',
@@ -7228,8 +7228,8 @@ return [
         'TELEFON' => '(3532)44-03-06',
         'FAX' => '(3532)67-68-84',
         'EMAIL' => 'orb-airline@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '55.456865',
-        'COORDS_LONGITUDE' => '51.791468'
+        'COORDS_LONGITUDE' => '55.456865',
+        'COORDS_LATITUDE' => '51.791468'
     ],
     'customs482' => [
         'CODE' => '10412180',
@@ -7243,8 +7243,8 @@ return [
         'TELEFON' => '(3532)79-93-30',
         'FAX' => '',
         'EMAIL' => 'orb-yuj-odo@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '55.11343',
-        'COORDS_LONGITUDE' => '51.798325'
+        'COORDS_LONGITUDE' => '55.11343',
+        'COORDS_LATITUDE' => '51.798325'
     ],
     'customs483' => [
         'CODE' => '10412190',
@@ -7258,8 +7258,8 @@ return [
         'TELEFON' => '(842)357-90-23',
         'FAX' => '(842)357-90-57',
         'EMAIL' => 'ul-customs.dmt@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '49.569513',
-        'COORDS_LONGITUDE' => '54.215994'
+        'COORDS_LONGITUDE' => '49.569513',
+        'COORDS_LATITUDE' => '54.215994'
     ],
     'customs484' => [
         'CODE' => '10412200',
@@ -7273,8 +7273,8 @@ return [
         'TELEFON' => '(8422)40-70-00',
         'FAX' => '(8422)40-70-28',
         'EMAIL' => 'uln-customs.ztp@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '48.666428',
-        'COORDS_LONGITUDE' => '54.368223'
+        'COORDS_LONGITUDE' => '48.666428',
+        'COORDS_LATITUDE' => '54.368223'
     ],
     'customs485' => [
         'CODE' => '10412210',
@@ -7288,8 +7288,8 @@ return [
         'TELEFON' => '(8422)40-70-11',
         'FAX' => '(8422)40-70-14',
         'EMAIL' => 'ul-customs.stp@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '48.798606',
-        'COORDS_LONGITUDE' => '54.414125'
+        'COORDS_LONGITUDE' => '48.798606',
+        'COORDS_LATITUDE' => '54.414125'
     ],
     'customs486' => [
         'CODE' => '10412220',
@@ -7303,8 +7303,8 @@ return [
         'TELEFON' => '(8422)40-70-59',
         'FAX' => '(8422)40-70-39',
         'EMAIL' => 'uln-customs.uaz@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '48.323865',
-        'COORDS_LONGITUDE' => '54.31072'
+        'COORDS_LONGITUDE' => '48.323865',
+        'COORDS_LATITUDE' => '54.31072'
     ],
     'customs487' => [
         'CODE' => '10412901',
@@ -7318,8 +7318,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '55.11343',
-        'COORDS_LONGITUDE' => '51.798325'
+        'COORDS_LONGITUDE' => '55.11343',
+        'COORDS_LATITUDE' => '51.798325'
     ],
     'customs488' => [
         'CODE' => '10412902',
@@ -7333,8 +7333,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '48.3558',
-        'COORDS_LONGITUDE' => '54.322358'
+        'COORDS_LONGITUDE' => '48.3558',
+        'COORDS_LATITUDE' => '54.322358'
     ],
     'customs489' => [
         'CODE' => '10413000',
@@ -7348,8 +7348,8 @@ return [
         'TELEFON' => '(8452)64-83-40',
         'FAX' => '(8452)64-97-31',
         'EMAIL' => 'SRT-CUSTOMS@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '46.015338',
-        'COORDS_LONGITUDE' => '51.566706'
+        'COORDS_LONGITUDE' => '46.015338',
+        'COORDS_LATITUDE' => '51.566706'
     ],
     'customs490' => [
         'CODE' => '10413010',
@@ -7363,8 +7363,8 @@ return [
         'TELEFON' => '(8453)30-84-07',
         'FAX' => '(8453)72-45-43',
         'EMAIL' => 'SRT-eng@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '46.134679',
-        'COORDS_LONGITUDE' => '51.468032'
+        'COORDS_LONGITUDE' => '46.134679',
+        'COORDS_LATITUDE' => '51.468032'
     ],
     'customs491' => [
         'CODE' => '10413012',
@@ -7378,8 +7378,8 @@ return [
         'TELEFON' => '(8453)795031',
         'FAX' => '(8453)795699',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '46.137302',
-        'COORDS_LONGITUDE' => '51.46494'
+        'COORDS_LONGITUDE' => '46.137302',
+        'COORDS_LATITUDE' => '51.46494'
     ],
     'customs492' => [
         'CODE' => '10413020',
@@ -7393,8 +7393,8 @@ return [
         'TELEFON' => '(8453)62-51-00',
         'FAX' => '(8452)30-84-13',
         'EMAIL' => 'SRT-BLK@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '47.909238',
-        'COORDS_LONGITUDE' => '51.928097'
+        'COORDS_LONGITUDE' => '47.909238',
+        'COORDS_LATITUDE' => '51.928097'
     ],
     'customs493' => [
         'CODE' => '10413070',
@@ -7408,8 +7408,8 @@ return [
         'TELEFON' => '(8452)39-04-72',
         'FAX' => '(8452)30-85-69',
         'EMAIL' => 'SRT-SRT@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '45.887086',
-        'COORDS_LONGITUDE' => '51.601896'
+        'COORDS_LONGITUDE' => '45.887086',
+        'COORDS_LATITUDE' => '51.601896'
     ],
     'customs494' => [
         'CODE' => '10413080',
@@ -7423,8 +7423,8 @@ return [
         'TELEFON' => '(8342)29-59-21',
         'FAX' => '(8342)29-59-77',
         'EMAIL' => 'SRT-mrd@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '45.185313',
-        'COORDS_LONGITUDE' => '54.182522'
+        'COORDS_LONGITUDE' => '45.185313',
+        'COORDS_LATITUDE' => '54.182522'
     ],
     'customs495' => [
         'CODE' => '10413081',
@@ -7438,8 +7438,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '45.192796',
-        'COORDS_LONGITUDE' => '54.193022'
+        'COORDS_LONGITUDE' => '45.192796',
+        'COORDS_LATITUDE' => '54.193022'
     ],
     'customs496' => [
         'CODE' => '10413090',
@@ -7453,8 +7453,8 @@ return [
         'TELEFON' => '(8412)90-00-50',
         'FAX' => '(8412)20-32-77',
         'EMAIL' => 'SRT-PNZ@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '45.01466',
-        'COORDS_LONGITUDE' => '53.248783'
+        'COORDS_LONGITUDE' => '45.01466',
+        'COORDS_LATITUDE' => '53.248783'
     ],
     'customs497' => [
         'CODE' => '10415000',
@@ -7468,8 +7468,8 @@ return [
         'TELEFON' => '(831)431-75-27',
         'FAX' => '(831)431-75-01',
         'EMAIL' => 'pot-odo@ptu.customs.gov.ru',
-        'COORDS_LATITUDE' => '44.027914',
-        'COORDS_LONGITUDE' => '56.323787'
+        'COORDS_LONGITUDE' => '44.027914',
+        'COORDS_LATITUDE' => '56.323787'
     ],
     'customs498' => [
         'CODE' => '10418000',
@@ -7483,8 +7483,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.068051',
-        'COORDS_LONGITUDE' => '56.315196'
+        'COORDS_LONGITUDE' => '44.068051',
+        'COORDS_LATITUDE' => '56.315196'
     ],
     'customs499' => [
         'CODE' => '10418010',
@@ -7498,8 +7498,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.068051',
-        'COORDS_LONGITUDE' => '56.315196'
+        'COORDS_LONGITUDE' => '44.068051',
+        'COORDS_LATITUDE' => '56.315196'
     ],
     'customs500' => [
         'CODE' => '10500000',
@@ -7513,8 +7513,8 @@ return [
         'TELEFON' => '(343)358-18-15',
         'FAX' => '(343)371-95-74',
         'EMAIL' => 'utu-odo@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.585257',
-        'COORDS_LONGITUDE' => '56.837322'
+        'COORDS_LONGITUDE' => '60.585257',
+        'COORDS_LATITUDE' => '56.837322'
     ],
     'customs501' => [
         'CODE' => '10502000',
@@ -7528,8 +7528,8 @@ return [
         'TELEFON' => '(343)359-65-28',
         'FAX' => '(343)359-65-29',
         'EMAIL' => 'EKT-CUSTOM@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.611326',
-        'COORDS_LONGITUDE' => '56.83099'
+        'COORDS_LONGITUDE' => '60.611326',
+        'COORDS_LATITUDE' => '56.83099'
     ],
     'customs502' => [
         'CODE' => '10502020',
@@ -7543,8 +7543,8 @@ return [
         'TELEFON' => '(34365)7-60-09',
         'FAX' => '(34365)7-62-39',
         'EMAIL' => 'EKT-ASB@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '61.468867',
-        'COORDS_LONGITUDE' => '57.010509'
+        'COORDS_LONGITUDE' => '61.468867',
+        'COORDS_LATITUDE' => '57.010509'
     ],
     'customs503' => [
         'CODE' => '10502030',
@@ -7558,8 +7558,8 @@ return [
         'TELEFON' => '(34355)3-73-21',
         'FAX' => '(34355)3-73-21',
         'EMAIL' => 'EKT-IRB@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '63.057978',
-        'COORDS_LONGITUDE' => '57.687668'
+        'COORDS_LONGITUDE' => '63.057978',
+        'COORDS_LATITUDE' => '57.687668'
     ],
     'customs504' => [
         'CODE' => '10502040',
@@ -7573,8 +7573,8 @@ return [
         'TELEFON' => '(3439)38-59-00',
         'FAX' => '(3439)38-59-00',
         'EMAIL' => 'EKT-KUR@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '61.864854',
-        'COORDS_LONGITUDE' => '56.427891'
+        'COORDS_LONGITUDE' => '61.864854',
+        'COORDS_LATITUDE' => '56.427891'
     ],
     'customs505' => [
         'CODE' => '10502050',
@@ -7588,8 +7588,8 @@ return [
         'TELEFON' => '(343)359-66-32',
         'FAX' => '(343)371-96-86',
         'EMAIL' => 'EKT-MAL@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.611326',
-        'COORDS_LONGITUDE' => '56.83099'
+        'COORDS_LONGITUDE' => '60.611326',
+        'COORDS_LATITUDE' => '56.83099'
     ],
     'customs506' => [
         'CODE' => '10502060',
@@ -7603,8 +7603,8 @@ return [
         'TELEFON' => '(34396)2-29-57',
         'FAX' => '(34396)6-26-29',
         'EMAIL' => 'EKT-PUR@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '59.969875',
-        'COORDS_LONGITUDE' => '56.891553'
+        'COORDS_LONGITUDE' => '59.969875',
+        'COORDS_LATITUDE' => '56.891553'
     ],
     'customs507' => [
         'CODE' => '10502070',
@@ -7618,8 +7618,8 @@ return [
         'TELEFON' => '(343)359-66-46',
         'FAX' => '(343)359-65-37',
         'EMAIL' => 'EKT-VI@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.494959',
-        'COORDS_LONGITUDE' => '56.879624'
+        'COORDS_LONGITUDE' => '60.494959',
+        'COORDS_LATITUDE' => '56.879624'
     ],
     'customs508' => [
         'CODE' => '10502090',
@@ -7633,8 +7633,8 @@ return [
         'TELEFON' => '(343)359-66-36',
         'FAX' => '(343)278-20-30',
         'EMAIL' => 'EKT-ORD@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.805893',
-        'COORDS_LONGITUDE' => '56.762977'
+        'COORDS_LONGITUDE' => '60.805893',
+        'COORDS_LATITUDE' => '56.762977'
     ],
     'customs509' => [
         'CODE' => '10502100',
@@ -7648,8 +7648,8 @@ return [
         'TELEFON' => '(34370)2-50-09',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.092442',
-        'COORDS_LONGITUDE' => '57.256598'
+        'COORDS_LONGITUDE' => '60.092442',
+        'COORDS_LATITUDE' => '57.256598'
     ],
     'customs510' => [
         'CODE' => '10502130',
@@ -7663,8 +7663,8 @@ return [
         'TELEFON' => '(3435)49-58-25',
         'FAX' => '(3435)49-58-10',
         'EMAIL' => 'ntg-ntp@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '59.969292',
-        'COORDS_LONGITUDE' => '57.927004'
+        'COORDS_LONGITUDE' => '59.969292',
+        'COORDS_LATITUDE' => '57.927004'
     ],
     'customs511' => [
         'CODE' => '10502140',
@@ -7678,8 +7678,8 @@ return [
         'TELEFON' => '(34345)5-51-18',
         'FAX' => '(34345)2-27-60',
         'EMAIL' => 'NTG-SLD@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.55396',
-        'COORDS_LONGITUDE' => '58.062507'
+        'COORDS_LONGITUDE' => '60.55396',
+        'COORDS_LATITUDE' => '58.062507'
     ],
     'customs512' => [
         'CODE' => '10502150',
@@ -7693,8 +7693,8 @@ return [
         'TELEFON' => '(34385)7-79-80',
         'FAX' => '(34385)7-79-12',
         'EMAIL' => 'ntg-srv@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.592264',
-        'COORDS_LONGITUDE' => '59.615283'
+        'COORDS_LONGITUDE' => '60.592264',
+        'COORDS_LATITUDE' => '59.615283'
     ],
     'customs513' => [
         'CODE' => '10503000',
@@ -7708,8 +7708,8 @@ return [
         'TELEFON' => '(3452)59-72-28',
         'FAX' => '(3452)50-56-58',
         'EMAIL' => 'tmn-customs@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '65.571033',
-        'COORDS_LONGITUDE' => '57.147677'
+        'COORDS_LONGITUDE' => '65.571033',
+        'COORDS_LATITUDE' => '57.147677'
     ],
     'customs514' => [
         'CODE' => '10503020',
@@ -7723,8 +7723,8 @@ return [
         'TELEFON' => '(3452)49-65-88',
         'FAX' => '(3452)49-65-71',
         'EMAIL' => 'tmn-airpost@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '65.349014',
-        'COORDS_LONGITUDE' => '57.181266'
+        'COORDS_LONGITUDE' => '65.349014',
+        'COORDS_LATITUDE' => '57.181266'
     ],
     'customs515' => [
         'CODE' => '10503030',
@@ -7738,8 +7738,8 @@ return [
         'TELEFON' => '(3456)39-83-15',
         'FAX' => '(3456)39-83-15',
         'EMAIL' => 'tmn-tobpost@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '68.253995',
-        'COORDS_LONGITUDE' => '58.200891'
+        'COORDS_LONGITUDE' => '68.253995',
+        'COORDS_LATITUDE' => '58.200891'
     ],
     'customs516' => [
         'CODE' => '10503050',
@@ -7753,8 +7753,8 @@ return [
         'TELEFON' => '(3452)22-52-99',
         'FAX' => '(3452)22-52-81',
         'EMAIL' => 'tmn-tumpost@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '65.631211',
-        'COORDS_LONGITUDE' => '57.110457'
+        'COORDS_LONGITUDE' => '65.631211',
+        'COORDS_LATITUDE' => '57.110457'
     ],
     'customs517' => [
         'CODE' => '10503060',
@@ -7768,8 +7768,8 @@ return [
         'TELEFON' => '(3522)56-60-44',
         'FAX' => '(3522)56-79-19',
         'EMAIL' => 'krg-pervtp@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '65.330814',
-        'COORDS_LONGITUDE' => '55.484571'
+        'COORDS_LONGITUDE' => '65.330814',
+        'COORDS_LATITUDE' => '55.484571'
     ],
     'customs518' => [
         'CODE' => '10503062',
@@ -7783,8 +7783,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '67.899969',
-        'COORDS_LONGITUDE' => '55.070499'
+        'COORDS_LONGITUDE' => '67.899969',
+        'COORDS_LATITUDE' => '55.070499'
     ],
     'customs519' => [
         'CODE' => '10503070',
@@ -7798,8 +7798,8 @@ return [
         'TELEFON' => '(3466)49-73-94',
         'FAX' => '(3466)49-73-95',
         'EMAIL' => 'HMT-NVTP@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '76.606944',
-        'COORDS_LONGITUDE' => '60.932364'
+        'COORDS_LONGITUDE' => '76.606944',
+        'COORDS_LATITUDE' => '60.932364'
     ],
     'customs520' => [
         'CODE' => '10503080',
@@ -7813,8 +7813,8 @@ return [
         'TELEFON' => '(3494)34-49-26',
         'FAX' => '(3494)34-49-39',
         'EMAIL' => 'ymt-postnur@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '76.680956',
-        'COORDS_LONGITUDE' => '66.084539'
+        'COORDS_LONGITUDE' => '76.680956',
+        'COORDS_LATITUDE' => '66.084539'
     ],
     'customs521' => [
         'CODE' => '10503090',
@@ -7828,8 +7828,8 @@ return [
         'TELEFON' => '(3496)35-47-20',
         'FAX' => '(3496)35-47-20',
         'EMAIL' => 'ymt-postnoj@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '75.4503',
-        'COORDS_LONGITUDE' => '63.17298'
+        'COORDS_LONGITUDE' => '75.4503',
+        'COORDS_LATITUDE' => '63.17298'
     ],
     'customs522' => [
         'CODE' => '10503100',
@@ -7843,8 +7843,8 @@ return [
         'TELEFON' => '(34922)3-40-62',
         'FAX' => '(34922)3-40-62',
         'EMAIL' => 'ymt-postsal@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '66.631503',
-        'COORDS_LONGITUDE' => '66.53623'
+        'COORDS_LONGITUDE' => '66.631503',
+        'COORDS_LATITUDE' => '66.53623'
     ],
     'customs523' => [
         'CODE' => '10503110',
@@ -7858,8 +7858,8 @@ return [
         'TELEFON' => '(3462)32-85-50',
         'FAX' => '(3462)31-89-94',
         'EMAIL' => 'HMT-SRG-ODO@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '73.409319',
-        'COORDS_LONGITUDE' => '61.266485'
+        'COORDS_LONGITUDE' => '73.409319',
+        'COORDS_LATITUDE' => '61.266485'
     ],
     'customs524' => [
         'CODE' => '10503120',
@@ -7873,8 +7873,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '76.495328',
-        'COORDS_LONGITUDE' => '60.951357'
+        'COORDS_LONGITUDE' => '76.495328',
+        'COORDS_LATITUDE' => '60.951357'
     ],
     'customs525' => [
         'CODE' => '10503130',
@@ -7888,8 +7888,8 @@ return [
         'TELEFON' => '(34997)2-17-22',
         'FAX' => '(34997)2-17-20',
         'EMAIL' => 'ymt-posttar@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '77.771888',
-        'COORDS_LONGITUDE' => '64.912177'
+        'COORDS_LONGITUDE' => '77.771888',
+        'COORDS_LATITUDE' => '64.912177'
     ],
     'customs526' => [
         'CODE' => '10503140',
@@ -7903,8 +7903,8 @@ return [
         'TELEFON' => '(3467)92-82-56',
         'FAX' => '(3467)92-82-56',
         'EMAIL' => 'HMT-HMTP@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '69.095681',
-        'COORDS_LONGITUDE' => '61.025455'
+        'COORDS_LONGITUDE' => '69.095681',
+        'COORDS_LATITUDE' => '61.025455'
     ],
     'customs527' => [
         'CODE' => '10503150',
@@ -7918,8 +7918,8 @@ return [
         'TELEFON' => '(34675)7-53-30',
         'FAX' => '(34675)7-53-30',
         'EMAIL' => 'HMT-UGR@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '63.309291',
-        'COORDS_LONGITUDE' => '61.309155'
+        'COORDS_LONGITUDE' => '63.309291',
+        'COORDS_LATITUDE' => '61.309155'
     ],
     'customs528' => [
         'CODE' => '10504000',
@@ -7933,8 +7933,8 @@ return [
         'TELEFON' => '(351)793-03-33',
         'FAX' => '(351)793-19-47',
         'EMAIL' => 'Chl-Custom01@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '61.310566',
-        'COORDS_LONGITUDE' => '55.190914'
+        'COORDS_LONGITUDE' => '61.310566',
+        'COORDS_LATITUDE' => '55.190914'
     ],
     'customs529' => [
         'CODE' => '10504010',
@@ -7948,8 +7948,8 @@ return [
         'TELEFON' => '(351)778-30-58',
         'FAX' => '(351)778-30-60',
         'EMAIL' => 'chl-bal@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '61.515436',
-        'COORDS_LONGITUDE' => '55.288352'
+        'COORDS_LONGITUDE' => '61.515436',
+        'COORDS_LATITUDE' => '55.288352'
     ],
     'customs530' => [
         'CODE' => '10504030',
@@ -7963,8 +7963,8 @@ return [
         'TELEFON' => '(351)772-07-77',
         'FAX' => '(351)772-69-73',
         'EMAIL' => 'chl-chemk@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '61.428623',
-        'COORDS_LONGITUDE' => '55.19019'
+        'COORDS_LONGITUDE' => '61.428623',
+        'COORDS_LATITUDE' => '55.19019'
     ],
     'customs531' => [
         'CODE' => '10504040',
@@ -7978,8 +7978,8 @@ return [
         'TELEFON' => '(3513)54-32-50',
         'FAX' => '(3513)54-32-50',
         'EMAIL' => 'chl-miass@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.134411',
-        'COORDS_LONGITUDE' => '55.100113'
+        'COORDS_LONGITUDE' => '60.134411',
+        'COORDS_LATITUDE' => '55.100113'
     ],
     'customs532' => [
         'CODE' => '10504041',
@@ -7993,8 +7993,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '57.272792',
-        'COORDS_LONGITUDE' => '54.993629'
+        'COORDS_LONGITUDE' => '57.272792',
+        'COORDS_LATITUDE' => '54.993629'
     ],
     'customs533' => [
         'CODE' => '10504042',
@@ -8008,8 +8008,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '58.972494',
-        'COORDS_LONGITUDE' => '55.038047'
+        'COORDS_LONGITUDE' => '58.972494',
+        'COORDS_LATITUDE' => '55.038047'
     ],
     'customs534' => [
         'CODE' => '10504050',
@@ -8023,8 +8023,8 @@ return [
         'TELEFON' => '(35130)2-85-80',
         'FAX' => '(35130)2-85-80',
         'EMAIL' => 'chl-oztp@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.699505',
-        'COORDS_LONGITUDE' => '55.766192'
+        'COORDS_LONGITUDE' => '60.699505',
+        'COORDS_LATITUDE' => '55.766192'
     ],
     'customs535' => [
         'CODE' => '10504070',
@@ -8038,8 +8038,8 @@ return [
         'TELEFON' => '(35163)2-26-14',
         'FAX' => '(35163)2-03-30',
         'EMAIL' => 'chl-troodj@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '61.561897',
-        'COORDS_LONGITUDE' => '54.067881'
+        'COORDS_LONGITUDE' => '61.561897',
+        'COORDS_LATITUDE' => '54.067881'
     ],
     'customs536' => [
         'CODE' => '10504080',
@@ -8053,8 +8053,8 @@ return [
         'TELEFON' => '(351)257-64-22',
         'FAX' => '(351)256-55-85',
         'EMAIL' => 'chl-cto@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '61.429036',
-        'COORDS_LONGITUDE' => '55.152259'
+        'COORDS_LONGITUDE' => '61.429036',
+        'COORDS_LATITUDE' => '55.152259'
     ],
     'customs537' => [
         'CODE' => '10504170',
@@ -8068,8 +8068,8 @@ return [
         'TELEFON' => '(35133)5-59-64',
         'FAX' => '(35133)5-59-62',
         'EMAIL' => 'ZagvozdinaTM@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.609233',
-        'COORDS_LONGITUDE' => '53.045816'
+        'COORDS_LONGITUDE' => '60.609233',
+        'COORDS_LATITUDE' => '53.045816'
     ],
     'customs538' => [
         'CODE' => '10504180',
@@ -8083,8 +8083,8 @@ return [
         'TELEFON' => '(3519)37-57-09',
         'FAX' => '(3519)37-57-09',
         'EMAIL' => 'MGN-MGTP@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '58.96043',
-        'COORDS_LONGITUDE' => '53.418445'
+        'COORDS_LONGITUDE' => '58.96043',
+        'COORDS_LATITUDE' => '53.418445'
     ],
     'customs539' => [
         'CODE' => '10504190',
@@ -8098,8 +8098,8 @@ return [
         'TELEFON' => '(3519)29-92-74',
         'FAX' => '(3519)29-94-50',
         'EMAIL' => 'MGN-ATP@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '58.980291',
-        'COORDS_LONGITUDE' => '53.407163'
+        'COORDS_LONGITUDE' => '58.980291',
+        'COORDS_LATITUDE' => '53.407163'
     ],
     'customs540' => [
         'CODE' => '10507000',
@@ -8113,8 +8113,8 @@ return [
         'TELEFON' => '(343)263-95-27',
         'FAX' => '(343)263-95-29',
         'EMAIL' => 'UTU-UOT@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.606503',
-        'COORDS_LONGITUDE' => '56.789022'
+        'COORDS_LONGITUDE' => '60.606503',
+        'COORDS_LATITUDE' => '56.789022'
     ],
     'customs541' => [
         'CODE' => '10508000',
@@ -8128,8 +8128,8 @@ return [
         'TELEFON' => '(343)359-64-28',
         'FAX' => '(343)359-64-98',
         'EMAIL' => 'cust-klc@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.816915',
-        'COORDS_LONGITUDE' => '56.757145'
+        'COORDS_LONGITUDE' => '60.816915',
+        'COORDS_LATITUDE' => '56.757145'
     ],
     'customs542' => [
         'CODE' => '10508010',
@@ -8143,8 +8143,8 @@ return [
         'TELEFON' => '(343)359-64-96',
         'FAX' => '(343)359-64-96',
         'EMAIL' => 'tpgruz-klc@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.788887',
-        'COORDS_LONGITUDE' => '56.750418'
+        'COORDS_LONGITUDE' => '60.788887',
+        'COORDS_LATITUDE' => '56.750418'
     ],
     'customs543' => [
         'CODE' => '10508020',
@@ -8158,8 +8158,8 @@ return [
         'TELEFON' => '(343)359-64-20',
         'FAX' => '',
         'EMAIL' => 'tppass-klc@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.807779',
-        'COORDS_LONGITUDE' => '56.750976'
+        'COORDS_LONGITUDE' => '60.807779',
+        'COORDS_LATITUDE' => '56.750976'
     ],
     'customs544' => [
         'CODE' => '10511000',
@@ -8173,8 +8173,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.582697',
-        'COORDS_LONGITUDE' => '56.839833'
+        'COORDS_LONGITUDE' => '60.582697',
+        'COORDS_LATITUDE' => '56.839833'
     ],
     'customs545' => [
         'CODE' => '10511010',
@@ -8188,8 +8188,8 @@ return [
         'TELEFON' => '(343)359-66-80',
         'FAX' => '(343)371-29-82',
         'EMAIL' => 'EKT-CED@utu.customs.gov.ru',
-        'COORDS_LATITUDE' => '60.582697',
-        'COORDS_LONGITUDE' => '56.839833'
+        'COORDS_LONGITUDE' => '60.582697',
+        'COORDS_LATITUDE' => '56.839833'
     ],
     'customs546' => [
         'CODE' => '10600000',
@@ -8203,8 +8203,8 @@ return [
         'TELEFON' => '(383)319-91-28',
         'FAX' => '(383)319-90-29',
         'EMAIL' => 'STU_ODO@STU.customs.gov.ru',
-        'COORDS_LATITUDE' => '82.9032',
-        'COORDS_LONGITUDE' => '55.057285'
+        'COORDS_LONGITUDE' => '82.9032',
+        'COORDS_LATITUDE' => '55.057285'
     ],
     'customs547' => [
         'CODE' => '10605000',
@@ -8218,8 +8218,8 @@ return [
         'TELEFON' => '(3852)39-90-27',
         'FAX' => '(3852)24-67-22',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '83.773299',
-        'COORDS_LONGITUDE' => '53.36207'
+        'COORDS_LONGITUDE' => '83.773299',
+        'COORDS_LATITUDE' => '53.36207'
     ],
     'customs548' => [
         'CODE' => '10605010',
@@ -8233,8 +8233,8 @@ return [
         'TELEFON' => '(3852)55-41-01',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '83.547678',
-        'COORDS_LONGITUDE' => '53.361345'
+        'COORDS_LONGITUDE' => '83.547678',
+        'COORDS_LATITUDE' => '53.361345'
     ],
     'customs549' => [
         'CODE' => '10605020',
@@ -8248,8 +8248,8 @@ return [
         'TELEFON' => '(3852)77-42-68',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '83.751093',
-        'COORDS_LONGITUDE' => '53.378268'
+        'COORDS_LONGITUDE' => '83.751093',
+        'COORDS_LATITUDE' => '53.378268'
     ],
     'customs550' => [
         'CODE' => '10605030',
@@ -8263,8 +8263,8 @@ return [
         'TELEFON' => '(3854)32-89-37',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '85.233978',
-        'COORDS_LONGITUDE' => '52.549506'
+        'COORDS_LONGITUDE' => '85.233978',
+        'COORDS_LATITUDE' => '52.549506'
     ],
     'customs551' => [
         'CODE' => '10605040',
@@ -8278,8 +8278,8 @@ return [
         'TELEFON' => '(38586)3-10-95',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '81.485937',
-        'COORDS_LONGITUDE' => '50.986827'
+        'COORDS_LONGITUDE' => '81.485937',
+        'COORDS_LATITUDE' => '50.986827'
     ],
     'customs552' => [
         'CODE' => '10605050',
@@ -8293,8 +8293,8 @@ return [
         'TELEFON' => '(38595)4-48-25',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '84.993894',
-        'COORDS_LONGITUDE' => '53.67538'
+        'COORDS_LONGITUDE' => '84.993894',
+        'COORDS_LATITUDE' => '53.67538'
     ],
     'customs553' => [
         'CODE' => '10605060',
@@ -8308,8 +8308,8 @@ return [
         'TELEFON' => '(38566)2-19-46',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '78.912461',
-        'COORDS_LONGITUDE' => '52.563807'
+        'COORDS_LONGITUDE' => '78.912461',
+        'COORDS_LATITUDE' => '52.563807'
     ],
     'customs554' => [
         'CODE' => '10605100',
@@ -8323,8 +8323,8 @@ return [
         'TELEFON' => '(983)609-44-03',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '89.19642',
-        'COORDS_LONGITUDE' => '49.714152'
+        'COORDS_LONGITUDE' => '89.19642',
+        'COORDS_LATITUDE' => '49.714152'
     ],
     'customs555' => [
         'CODE' => '10605110',
@@ -8338,8 +8338,8 @@ return [
         'TELEFON' => '(38822)6-41-32',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '85.889416',
-        'COORDS_LONGITUDE' => '51.972753'
+        'COORDS_LONGITUDE' => '85.889416',
+        'COORDS_LATITUDE' => '51.972753'
     ],
     'customs556' => [
         'CODE' => '10606000',
@@ -8353,8 +8353,8 @@ return [
         'TELEFON' => '(391)256-60-27',
         'FAX' => '(391)256-60-29',
         'EMAIL' => 'stu_krs_odo@stu.customs.gov.ru',
-        'COORDS_LATITUDE' => '92.965436',
-        'COORDS_LONGITUDE' => '56.049792'
+        'COORDS_LONGITUDE' => '92.965436',
+        'COORDS_LATITUDE' => '56.049792'
     ],
     'customs557' => [
         'CODE' => '10606010',
@@ -8368,8 +8368,8 @@ return [
         'TELEFON' => '(391)256-61-81',
         'FAX' => '(391)256-61-89',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '92.486248',
-        'COORDS_LONGITUDE' => '56.180397'
+        'COORDS_LONGITUDE' => '92.486248',
+        'COORDS_LATITUDE' => '56.180397'
     ],
     'customs558' => [
         'CODE' => '10606020',
@@ -8383,8 +8383,8 @@ return [
         'TELEFON' => '(39151)7-09-84',
         'FAX' => '(39151)4-24-86',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '90.473689',
-        'COORDS_LONGITUDE' => '56.252692'
+        'COORDS_LONGITUDE' => '90.473689',
+        'COORDS_LATITUDE' => '56.252692'
     ],
     'customs559' => [
         'CODE' => '10606040',
@@ -8398,8 +8398,8 @@ return [
         'TELEFON' => '(39169)3-60-96',
         'FAX' => '(39169)3-30-82',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '94.594324',
-        'COORDS_LONGITUDE' => '56.112312'
+        'COORDS_LONGITUDE' => '94.594324',
+        'COORDS_LATITUDE' => '56.112312'
     ],
     'customs560' => [
         'CODE' => '10606050',
@@ -8413,8 +8413,8 @@ return [
         'TELEFON' => '(39161)9-00-10',
         'FAX' => '(39161)9-00-08',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '95.715808',
-        'COORDS_LONGITUDE' => '56.205305'
+        'COORDS_LONGITUDE' => '95.715808',
+        'COORDS_LATITUDE' => '56.205305'
     ],
     'customs561' => [
         'CODE' => '10606060',
@@ -8428,8 +8428,8 @@ return [
         'TELEFON' => '(391)256-60-54',
         'FAX' => '(391)256-60-55',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '92.950641',
-        'COORDS_LONGITUDE' => '56.062208'
+        'COORDS_LONGITUDE' => '92.950641',
+        'COORDS_LATITUDE' => '56.062208'
     ],
     'customs562' => [
         'CODE' => '10606070',
@@ -8443,8 +8443,8 @@ return [
         'TELEFON' => '(39145)4-34-36',
         'FAX' => '(39145)4-34-35',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '92.524444',
-        'COORDS_LONGITUDE' => '58.195556'
+        'COORDS_LONGITUDE' => '92.524444',
+        'COORDS_LATITUDE' => '58.195556'
     ],
     'customs563' => [
         'CODE' => '10606110',
@@ -8458,8 +8458,8 @@ return [
         'TELEFON' => '(3919)34-66-69',
         'FAX' => '(3919)34-66-69',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '88.225952',
-        'COORDS_LONGITUDE' => '69.34798'
+        'COORDS_LONGITUDE' => '88.225952',
+        'COORDS_LATITUDE' => '69.34798'
     ],
     'customs564' => [
         'CODE' => '10606112',
@@ -8473,8 +8473,8 @@ return [
         'TELEFON' => '(839111)58115,841871',
         'FAX' => '(839111)22993,841872',
         'EMAIL' => 'dudinka@customs.krs.ru',
-        'COORDS_LATITUDE' => '86.171954',
-        'COORDS_LONGITUDE' => '69.402863'
+        'COORDS_LONGITUDE' => '86.171954',
+        'COORDS_LATITUDE' => '69.402863'
     ],
     'customs565' => [
         'CODE' => '10606120',
@@ -8488,8 +8488,8 @@ return [
         'TELEFON' => '(3902)35-81-09',
         'FAX' => '',
         'EMAIL' => 'xtcustom@yandex.ru',
-        'COORDS_LATITUDE' => '91.434698',
-        'COORDS_LONGITUDE' => '53.736659'
+        'COORDS_LONGITUDE' => '91.434698',
+        'COORDS_LATITUDE' => '53.736659'
     ],
     'customs566' => [
         'CODE' => '10606130',
@@ -8503,8 +8503,8 @@ return [
         'TELEFON' => '(39422)9-57-30',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '94.390766',
-        'COORDS_LONGITUDE' => '51.701953'
+        'COORDS_LONGITUDE' => '94.390766',
+        'COORDS_LATITUDE' => '51.701953'
     ],
     'customs567' => [
         'CODE' => '10606140',
@@ -8518,8 +8518,8 @@ return [
         'TELEFON' => '(39042)2-05-00',
         'FAX' => '(39042)2-05-00',
         'EMAIL' => 'xtcustom@yandex.ru',
-        'COORDS_LATITUDE' => '91.419822',
-        'COORDS_LONGITUDE' => '53.101151'
+        'COORDS_LONGITUDE' => '91.419822',
+        'COORDS_LATITUDE' => '53.101151'
     ],
     'customs568' => [
         'CODE' => '10606150',
@@ -8533,8 +8533,8 @@ return [
         'TELEFON' => '(39444)2-13-08',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs569' => [
         'CODE' => '10606160',
@@ -8548,8 +8548,8 @@ return [
         'TELEFON' => '(39422)3-60-03',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '96.057644',
-        'COORDS_LONGITUDE' => '50.30124'
+        'COORDS_LONGITUDE' => '96.057644',
+        'COORDS_LATITUDE' => '50.30124'
     ],
     'customs570' => [
         'CODE' => '10606170',
@@ -8563,8 +8563,8 @@ return [
         'TELEFON' => '(39422)9-57-12',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '94.338798',
-        'COORDS_LONGITUDE' => '50.515707'
+        'COORDS_LONGITUDE' => '94.338798',
+        'COORDS_LATITUDE' => '50.515707'
     ],
     'customs571' => [
         'CODE' => '10606901',
@@ -8578,8 +8578,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '91.434698',
-        'COORDS_LONGITUDE' => '53.736659'
+        'COORDS_LONGITUDE' => '91.434698',
+        'COORDS_LATITUDE' => '53.736659'
     ],
     'customs572' => [
         'CODE' => '10606902',
@@ -8593,8 +8593,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '94.390766',
-        'COORDS_LONGITUDE' => '51.701953'
+        'COORDS_LONGITUDE' => '94.390766',
+        'COORDS_LATITUDE' => '51.701953'
     ],
     'customs573' => [
         'CODE' => '10607000',
@@ -8608,8 +8608,8 @@ return [
         'TELEFON' => '(3952)26-15-28',
         'FAX' => '(3952)26-15-29',
         'EMAIL' => 'irk_odo@stu.customs.gov.ru',
-        'COORDS_LATITUDE' => '104.315479',
-        'COORDS_LONGITUDE' => '52.265316'
+        'COORDS_LONGITUDE' => '104.315479',
+        'COORDS_LATITUDE' => '52.265316'
     ],
     'customs574' => [
         'CODE' => '10607010',
@@ -8623,8 +8623,8 @@ return [
         'TELEFON' => '(3952)26-62-05',
         'FAX' => '(3952)26-63-08',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '104.355723',
-        'COORDS_LONGITUDE' => '52.273009'
+        'COORDS_LONGITUDE' => '104.355723',
+        'COORDS_LATITUDE' => '52.273009'
     ],
     'customs575' => [
         'CODE' => '10607020',
@@ -8638,8 +8638,8 @@ return [
         'TELEFON' => '(3955)67-63-32',
         'FAX' => '(3955)67-37-77',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '103.862486',
-        'COORDS_LONGITUDE' => '52.532028'
+        'COORDS_LONGITUDE' => '103.862486',
+        'COORDS_LATITUDE' => '52.532028'
     ],
     'customs576' => [
         'CODE' => '10607040',
@@ -8653,8 +8653,8 @@ return [
         'TELEFON' => '(3952)55-38-91',
         'FAX' => '(3952)55-38-79',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '104.142436',
-        'COORDS_LONGITUDE' => '52.341525'
+        'COORDS_LONGITUDE' => '104.142436',
+        'COORDS_LATITUDE' => '52.341525'
     ],
     'customs577' => [
         'CODE' => '10607050',
@@ -8668,8 +8668,8 @@ return [
         'TELEFON' => '(39557)7-09-04',
         'FAX' => '(39557)7-08-64',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '99.042359',
-        'COORDS_LONGITUDE' => '54.906181'
+        'COORDS_LONGITUDE' => '99.042359',
+        'COORDS_LATITUDE' => '54.906181'
     ],
     'customs578' => [
         'CODE' => '10607052',
@@ -8683,8 +8683,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '98.049173',
-        'COORDS_LONGITUDE' => '55.935047'
+        'COORDS_LONGITUDE' => '98.049173',
+        'COORDS_LATITUDE' => '55.935047'
     ],
     'customs579' => [
         'CODE' => '10607053',
@@ -8698,8 +8698,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '99.654193',
-        'COORDS_LONGITUDE' => '56.084631'
+        'COORDS_LONGITUDE' => '99.654193',
+        'COORDS_LATITUDE' => '56.084631'
     ],
     'customs580' => [
         'CODE' => '10607060',
@@ -8713,8 +8713,8 @@ return [
         'TELEFON' => '(39553)7-15-60',
         'FAX' => '(39553)7-18-61',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '102.147377',
-        'COORDS_LONGITUDE' => '54.103114'
+        'COORDS_LONGITUDE' => '102.147377',
+        'COORDS_LATITUDE' => '54.103114'
     ],
     'customs581' => [
         'CODE' => '10607070',
@@ -8728,8 +8728,8 @@ return [
         'TELEFON' => '(39543)6-41-53',
         'FAX' => '(39543)6-41-47',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '103.649037',
-        'COORDS_LONGITUDE' => '52.759139'
+        'COORDS_LONGITUDE' => '103.649037',
+        'COORDS_LATITUDE' => '52.759139'
     ],
     'customs582' => [
         'CODE' => '10607090',
@@ -8743,8 +8743,8 @@ return [
         'TELEFON' => '(3953)49-58-21',
         'FAX' => '(3953)49-58-10',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '101.606304',
-        'COORDS_LONGITUDE' => '56.157147'
+        'COORDS_LONGITUDE' => '101.606304',
+        'COORDS_LATITUDE' => '56.157147'
     ],
     'customs583' => [
         'CODE' => '10607100',
@@ -8758,8 +8758,8 @@ return [
         'TELEFON' => '(39565)5-03-01',
         'FAX' => '(39565)5-02-23',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '105.753349',
-        'COORDS_LONGITUDE' => '56.780867'
+        'COORDS_LONGITUDE' => '105.753349',
+        'COORDS_LATITUDE' => '56.780867'
     ],
     'customs584' => [
         'CODE' => '10607103',
@@ -8773,8 +8773,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '107.449207',
-        'COORDS_LONGITUDE' => '56.175341'
+        'COORDS_LONGITUDE' => '107.449207',
+        'COORDS_LATITUDE' => '56.175341'
     ],
     'customs585' => [
         'CODE' => '10607104',
@@ -8788,8 +8788,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '104.115846',
-        'COORDS_LONGITUDE' => '56.583892'
+        'COORDS_LONGITUDE' => '104.115846',
+        'COORDS_LATITUDE' => '56.583892'
     ],
     'customs586' => [
         'CODE' => '10607110',
@@ -8803,8 +8803,8 @@ return [
         'TELEFON' => '(39535)5-77-62',
         'FAX' => '(39535)5-33-67',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '102.657953',
-        'COORDS_LONGITUDE' => '57.985968'
+        'COORDS_LONGITUDE' => '102.657953',
+        'COORDS_LATITUDE' => '57.985968'
     ],
     'customs587' => [
         'CODE' => '10608000',
@@ -8818,8 +8818,8 @@ return [
         'TELEFON' => '(3842)75-27-43',
         'FAX' => '(3842)36-28-69',
         'EMAIL' => 'svc-kem-odo@stu.customs.gov.ru',
-        'COORDS_LATITUDE' => '86.078179',
-        'COORDS_LONGITUDE' => '55.340148'
+        'COORDS_LONGITUDE' => '86.078179',
+        'COORDS_LATITUDE' => '55.340148'
     ],
     'customs588' => [
         'CODE' => '10608010',
@@ -8833,8 +8833,8 @@ return [
         'TELEFON' => '(38452)2-32-97',
         'FAX' => '(38452)2-32-97',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '86.307824',
-        'COORDS_LONGITUDE' => '54.407643'
+        'COORDS_LONGITUDE' => '86.307824',
+        'COORDS_LATITUDE' => '54.407643'
     ],
     'customs589' => [
         'CODE' => '10608050',
@@ -8848,8 +8848,8 @@ return [
         'TELEFON' => '(3843)72-15-91',
         'FAX' => '(3843)72-15-91',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '87.094847',
-        'COORDS_LONGITUDE' => '53.75676'
+        'COORDS_LONGITUDE' => '87.094847',
+        'COORDS_LATITUDE' => '53.75676'
     ],
     'customs590' => [
         'CODE' => '10608052',
@@ -8863,8 +8863,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '87.237131',
-        'COORDS_LONGITUDE' => '53.887581'
+        'COORDS_LONGITUDE' => '87.237131',
+        'COORDS_LATITUDE' => '53.887581'
     ],
     'customs591' => [
         'CODE' => '10608060',
@@ -8878,8 +8878,8 @@ return [
         'TELEFON' => '(3846)61-46-59',
         'FAX' => '(3846)61-46-59',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '86.753083',
-        'COORDS_LONGITUDE' => '53.879721'
+        'COORDS_LONGITUDE' => '86.753083',
+        'COORDS_LATITUDE' => '53.879721'
     ],
     'customs592' => [
         'CODE' => '10608070',
@@ -8893,8 +8893,8 @@ return [
         'TELEFON' => '(3842)39-02-50',
         'FAX' => '(3842)39-02-54',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '85.995489',
-        'COORDS_LONGITUDE' => '55.360879'
+        'COORDS_LONGITUDE' => '85.995489',
+        'COORDS_LATITUDE' => '55.360879'
     ],
     'customs593' => [
         'CODE' => '10608090',
@@ -8908,8 +8908,8 @@ return [
         'TELEFON' => '(38241)2-22-74',
         'FAX' => '(38241)2-18-24',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '86.134566',
-        'COORDS_LONGITUDE' => '56.999024'
+        'COORDS_LONGITUDE' => '86.134566',
+        'COORDS_LATITUDE' => '56.999024'
     ],
     'customs594' => [
         'CODE' => '10608110',
@@ -8923,8 +8923,8 @@ return [
         'TELEFON' => '(3822)48-86-00',
         'FAX' => '(3822)48-86-00',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '84.95718',
-        'COORDS_LONGITUDE' => '56.461059'
+        'COORDS_LONGITUDE' => '84.95718',
+        'COORDS_LATITUDE' => '56.461059'
     ],
     'customs595' => [
         'CODE' => '10608112',
@@ -8938,8 +8938,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '85.048098',
-        'COORDS_LONGITUDE' => '56.479043'
+        'COORDS_LONGITUDE' => '85.048098',
+        'COORDS_LATITUDE' => '56.479043'
     ],
     'customs596' => [
         'CODE' => '10608901',
@@ -8953,8 +8953,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '84.95718',
-        'COORDS_LONGITUDE' => '56.461059'
+        'COORDS_LONGITUDE' => '84.95718',
+        'COORDS_LATITUDE' => '56.461059'
     ],
     'customs597' => [
         'CODE' => '10609000',
@@ -8968,8 +8968,8 @@ return [
         'TELEFON' => '(383)279-46-38',
         'FAX' => '(383)278-76-29',
         'EMAIL' => 'stu_odo@stu.customs.gov.ru',
-        'COORDS_LATITUDE' => '82.961177',
-        'COORDS_LONGITUDE' => '55.057533'
+        'COORDS_LONGITUDE' => '82.961177',
+        'COORDS_LATITUDE' => '55.057533'
     ],
     'customs598' => [
         'CODE' => '10609010',
@@ -8983,8 +8983,8 @@ return [
         'TELEFON' => '(383)347-00-10',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '83.111528',
-        'COORDS_LONGITUDE' => '54.850733'
+        'COORDS_LONGITUDE' => '83.111528',
+        'COORDS_LATITUDE' => '54.850733'
     ],
     'customs599' => [
         'CODE' => '10609030',
@@ -8998,8 +8998,8 @@ return [
         'TELEFON' => '(383)347-01-12',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.828388',
-        'COORDS_LONGITUDE' => '54.964173'
+        'COORDS_LONGITUDE' => '82.828388',
+        'COORDS_LATITUDE' => '54.964173'
     ],
     'customs600' => [
         'CODE' => '10609040',
@@ -9013,8 +9013,8 @@ return [
         'TELEFON' => '(383)349-17-88',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '83.006803',
-        'COORDS_LONGITUDE' => '55.125731'
+        'COORDS_LONGITUDE' => '83.006803',
+        'COORDS_LATITUDE' => '55.125731'
     ],
     'customs601' => [
         'CODE' => '10609060',
@@ -9028,8 +9028,8 @@ return [
         'TELEFON' => '(383)290-33-22',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.6675',
-        'COORDS_LONGITUDE' => '55.00943'
+        'COORDS_LONGITUDE' => '82.6675',
+        'COORDS_LATITUDE' => '55.00943'
     ],
     'customs602' => [
         'CODE' => '10610000',
@@ -9043,8 +9043,8 @@ return [
         'TELEFON' => '(3812)31-52-34',
         'FAX' => '(3812)30-62-00',
         'EMAIL' => 'OMS_ODO@STU.customs.gov.ru',
-        'COORDS_LATITUDE' => '73.38546',
-        'COORDS_LONGITUDE' => '54.982606'
+        'COORDS_LONGITUDE' => '73.38546',
+        'COORDS_LATITUDE' => '54.982606'
     ],
     'customs603' => [
         'CODE' => '10610010',
@@ -9058,8 +9058,8 @@ return [
         'TELEFON' => '(3812)76-44-54',
         'FAX' => '(3812)76-44-54',
         'EMAIL' => 'OMS_ODO@STU.customs.gov.ru',
-        'COORDS_LATITUDE' => '73.315337',
-        'COORDS_LONGITUDE' => '54.957185'
+        'COORDS_LONGITUDE' => '73.315337',
+        'COORDS_LATITUDE' => '54.957185'
     ],
     'customs604' => [
         'CODE' => '10610050',
@@ -9073,8 +9073,8 @@ return [
         'TELEFON' => '(3812)90-24-54',
         'FAX' => '(3812)90-24-55',
         'EMAIL' => 'OMS_ODO@STU.customs.gov.ru',
-        'COORDS_LATITUDE' => '73.48078',
-        'COORDS_LONGITUDE' => '54.952884'
+        'COORDS_LONGITUDE' => '73.48078',
+        'COORDS_LATITUDE' => '54.952884'
     ],
     'customs605' => [
         'CODE' => '10614000',
@@ -9088,8 +9088,8 @@ return [
         'TELEFON' => '(383)359-98-27',
         'FAX' => '(383)359-98-29',
         'EMAIL' => 'sot_odo@stu.customs.gov.ru',
-        'COORDS_LATITUDE' => '82.893058',
-        'COORDS_LONGITUDE' => '54.990261'
+        'COORDS_LONGITUDE' => '82.893058',
+        'COORDS_LATITUDE' => '54.990261'
     ],
     'customs606' => [
         'CODE' => '10620000',
@@ -9103,8 +9103,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '92.915759',
-        'COORDS_LONGITUDE' => '55.999359'
+        'COORDS_LONGITUDE' => '92.915759',
+        'COORDS_LATITUDE' => '55.999359'
     ],
     'customs607' => [
         'CODE' => '10620010',
@@ -9118,8 +9118,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '92.915759',
-        'COORDS_LONGITUDE' => '55.999359'
+        'COORDS_LONGITUDE' => '92.915759',
+        'COORDS_LATITUDE' => '55.999359'
     ],
     'customs608' => [
         'CODE' => '10700000',
@@ -9133,8 +9133,8 @@ return [
         'TELEFON' => '(423)230-82-27',
         'FAX' => '(423)230-82-29',
         'EMAIL' => 'dvtu_odo@.ca.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.907341',
-        'COORDS_LONGITUDE' => '43.125578'
+        'COORDS_LONGITUDE' => '131.907341',
+        'COORDS_LATITUDE' => '43.125578'
     ],
     'customs609' => [
         'CODE' => '10702000',
@@ -9148,8 +9148,8 @@ return [
         'TELEFON' => '(423)249-80-07',
         'FAX' => '(423)222-86-92',
         'EMAIL' => 'vld_customs@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.878819',
-        'COORDS_LONGITUDE' => '43.111363'
+        'COORDS_LONGITUDE' => '131.878819',
+        'COORDS_LATITUDE' => '43.111363'
     ],
     'customs610' => [
         'CODE' => '10702010',
@@ -9163,8 +9163,8 @@ return [
         'TELEFON' => '(42337)4-34-34',
         'FAX' => '(42337)4-34-34',
         'EMAIL' => 'vld_av@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '132.165454',
-        'COORDS_LONGITUDE' => '43.396329'
+        'COORDS_LONGITUDE' => '132.165454',
+        'COORDS_LATITUDE' => '43.396329'
     ],
     'customs611' => [
         'CODE' => '10702020',
@@ -9178,8 +9178,8 @@ return [
         'TELEFON' => '(423)227-97-71',
         'FAX' => '(423)227-97-71',
         'EMAIL' => 'vld_ptp@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.890569',
-        'COORDS_LONGITUDE' => '43.101563'
+        'COORDS_LONGITUDE' => '131.890569',
+        'COORDS_LATITUDE' => '43.101563'
     ],
     'customs612' => [
         'CODE' => '10702030',
@@ -9193,8 +9193,8 @@ return [
         'TELEFON' => '(423)249-81-34',
         'FAX' => '(423)249-81-31',
         'EMAIL' => 'vld_mpv@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.865821',
-        'COORDS_LONGITUDE' => '43.0976'
+        'COORDS_LONGITUDE' => '131.865821',
+        'COORDS_LATITUDE' => '43.0976'
     ],
     'customs613' => [
         'CODE' => '10702070',
@@ -9208,8 +9208,8 @@ return [
         'TELEFON' => '(423)249-81-77',
         'FAX' => '',
         'EMAIL' => 'vld_ced@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.867348',
-        'COORDS_LONGITUDE' => '43.096941'
+        'COORDS_LONGITUDE' => '131.867348',
+        'COORDS_LATITUDE' => '43.096941'
     ],
     'customs614' => [
         'CODE' => '10702080',
@@ -9223,8 +9223,8 @@ return [
         'TELEFON' => '(42331)5-02-46',
         'FAX' => '(42331)5-02-46',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.081493',
-        'COORDS_LONGITUDE' => '42.641187'
+        'COORDS_LONGITUDE' => '131.081493',
+        'COORDS_LATITUDE' => '42.641187'
     ],
     'customs615' => [
         'CODE' => '10703000',
@@ -9238,8 +9238,8 @@ return [
         'TELEFON' => '(4212)41-14-00',
         'FAX' => '(4212)41-14-06',
         'EMAIL' => 'khab_odo@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '135.091141',
-        'COORDS_LONGITUDE' => '48.492423'
+        'COORDS_LONGITUDE' => '135.091141',
+        'COORDS_LATITUDE' => '48.492423'
     ],
     'customs616' => [
         'CODE' => '10703010',
@@ -9253,8 +9253,8 @@ return [
         'TELEFON' => '(4212)47-41-60',
         'FAX' => '(4212)26-38-57',
         'EMAIL' => 'khab-air_oto@regions.customs.gov.ru',
-        'COORDS_LATITUDE' => '135.171351',
-        'COORDS_LONGITUDE' => '48.527723'
+        'COORDS_LONGITUDE' => '135.171351',
+        'COORDS_LATITUDE' => '48.527723'
     ],
     'customs617' => [
         'CODE' => '10703020',
@@ -9268,8 +9268,8 @@ return [
         'TELEFON' => '(42155)2-25-84',
         'FAX' => '(42155)2-25-84',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '134.0252',
-        'COORDS_LONGITUDE' => '46.716906'
+        'COORDS_LONGITUDE' => '134.0252',
+        'COORDS_LATITUDE' => '46.716906'
     ],
     'customs618' => [
         'CODE' => '10703050',
@@ -9283,8 +9283,8 @@ return [
         'TELEFON' => '(4212)41-14-51',
         'FAX' => '(4212)32-27-01',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '135.169429',
-        'COORDS_LONGITUDE' => '48.52863'
+        'COORDS_LONGITUDE' => '135.169429',
+        'COORDS_LATITUDE' => '48.52863'
     ],
     'customs619' => [
         'CODE' => '10703080',
@@ -9298,8 +9298,8 @@ return [
         'TELEFON' => '(4217)52-42-21',
         'FAX' => '(4217)52-42-29',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '137.024495',
-        'COORDS_LONGITUDE' => '50.532492'
+        'COORDS_LONGITUDE' => '137.024495',
+        'COORDS_LATITUDE' => '50.532492'
     ],
     'customs620' => [
         'CODE' => '10703100',
@@ -9313,8 +9313,8 @@ return [
         'TELEFON' => '(42135)2-58-38',
         'FAX' => '(42135)2-31-24',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '140.732785',
-        'COORDS_LONGITUDE' => '53.140509'
+        'COORDS_LONGITUDE' => '140.732785',
+        'COORDS_LATITUDE' => '53.140509'
     ],
     'customs621' => [
         'CODE' => '10703110',
@@ -9328,8 +9328,8 @@ return [
         'TELEFON' => '(42151)5-64-42',
         'FAX' => '(42151)5-67-79',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '140.772383',
-        'COORDS_LONGITUDE' => '51.472772'
+        'COORDS_LONGITUDE' => '140.772383',
+        'COORDS_LATITUDE' => '51.472772'
     ],
     'customs622' => [
         'CODE' => '10703130',
@@ -9343,8 +9343,8 @@ return [
         'TELEFON' => '(42137)5-03-29',
         'FAX' => '(42137)5-03-32',
         'EMAIL' => 'mpv@gmail.ru',
-        'COORDS_LATITUDE' => '139.720052',
-        'COORDS_LONGITUDE' => '49.975491'
+        'COORDS_LONGITUDE' => '139.720052',
+        'COORDS_LATITUDE' => '49.975491'
     ],
     'customs623' => [
         'CODE' => '10703140',
@@ -9358,8 +9358,8 @@ return [
         'TELEFON' => '(42663)4-02-04',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.073138',
-        'COORDS_LONGITUDE' => '47.690377'
+        'COORDS_LONGITUDE' => '131.073138',
+        'COORDS_LATITUDE' => '47.690377'
     ],
     'customs624' => [
         'CODE' => '10703142',
@@ -9373,8 +9373,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '132.668986',
-        'COORDS_LONGITUDE' => '47.96082'
+        'COORDS_LONGITUDE' => '132.668986',
+        'COORDS_LATITUDE' => '47.96082'
     ],
     'customs625' => [
         'CODE' => '10703150',
@@ -9388,8 +9388,8 @@ return [
         'TELEFON' => '(42622)4-03-89',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '132.937367',
-        'COORDS_LONGITUDE' => '48.787053'
+        'COORDS_LONGITUDE' => '132.937367',
+        'COORDS_LATITUDE' => '48.787053'
     ],
     'customs626' => [
         'CODE' => '10703160',
@@ -9403,8 +9403,8 @@ return [
         'TELEFON' => '(4162)23-64-39',
         'FAX' => '(4162)23-64-39',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '127.563636',
-        'COORDS_LONGITUDE' => '50.248281'
+        'COORDS_LONGITUDE' => '127.563636',
+        'COORDS_LATITUDE' => '50.248281'
     ],
     'customs627' => [
         'CODE' => '10703164',
@@ -9418,8 +9418,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '127.632034',
-        'COORDS_LONGITUDE' => '50.20653'
+        'COORDS_LONGITUDE' => '127.632034',
+        'COORDS_LATITUDE' => '50.20653'
     ],
     'customs628' => [
         'CODE' => '10703170',
@@ -9433,8 +9433,8 @@ return [
         'TELEFON' => '(41147)4-79-66',
         'FAX' => '(41147)4-77-87',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '124.725921',
-        'COORDS_LONGITUDE' => '56.667166'
+        'COORDS_LONGITUDE' => '124.725921',
+        'COORDS_LATITUDE' => '56.667166'
     ],
     'customs629' => [
         'CODE' => '10703180',
@@ -9448,8 +9448,8 @@ return [
         'TELEFON' => '(41637)2-18-94',
         'FAX' => '(41637)2-18-94',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '128.666516',
-        'COORDS_LONGITUDE' => '49.622982'
+        'COORDS_LONGITUDE' => '128.666516',
+        'COORDS_LATITUDE' => '49.622982'
     ],
     'customs630' => [
         'CODE' => '10703190',
@@ -9463,8 +9463,8 @@ return [
         'TELEFON' => '(41656)3-26-14',
         'FAX' => '(41656)4-29-41',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '127.403754',
-        'COORDS_LONGITUDE' => '50.421054'
+        'COORDS_LONGITUDE' => '127.403754',
+        'COORDS_LATITUDE' => '50.421054'
     ],
     'customs631' => [
         'CODE' => '10703200',
@@ -9478,8 +9478,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '127.559692',
-        'COORDS_LONGITUDE' => '50.258459'
+        'COORDS_LONGITUDE' => '127.559692',
+        'COORDS_LATITUDE' => '50.258459'
     ],
     'customs632' => [
         'CODE' => '10703210',
@@ -9493,8 +9493,8 @@ return [
         'TELEFON' => '(4112)47-04-13',
         'FAX' => '(4112)47-04-13',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '129.73349',
-        'COORDS_LONGITUDE' => '62.053781'
+        'COORDS_LONGITUDE' => '129.73349',
+        'COORDS_LATITUDE' => '62.053781'
     ],
     'customs633' => [
         'CODE' => '10703220',
@@ -9508,8 +9508,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '132.667001',
-        'COORDS_LONGITUDE' => '47.962214'
+        'COORDS_LONGITUDE' => '132.667001',
+        'COORDS_LATITUDE' => '47.962214'
     ],
     'customs634' => [
         'CODE' => '10703901',
@@ -9523,8 +9523,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '127.559692',
-        'COORDS_LONGITUDE' => '50.258459'
+        'COORDS_LONGITUDE' => '127.559692',
+        'COORDS_LATITUDE' => '50.258459'
     ],
     'customs635' => [
         'CODE' => '10707000',
@@ -9538,8 +9538,8 @@ return [
         'TELEFON' => '(4242)49-12-28',
         'FAX' => '(4242)22-70-01',
         'EMAIL' => 'sakh@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '142.736469',
-        'COORDS_LONGITUDE' => '46.945167'
+        'COORDS_LONGITUDE' => '142.736469',
+        'COORDS_LATITUDE' => '46.945167'
     ],
     'customs636' => [
         'CODE' => '10707030',
@@ -9553,8 +9553,8 @@ return [
         'TELEFON' => '(42435)9-72-28',
         'FAX' => '(42435)9-72-29',
         'EMAIL' => 'sakh_kors@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '142.772617',
-        'COORDS_LONGITUDE' => '46.621488'
+        'COORDS_LONGITUDE' => '142.772617',
+        'COORDS_LATITUDE' => '46.621488'
     ],
     'customs637' => [
         'CODE' => '10707070',
@@ -9568,8 +9568,8 @@ return [
         'TELEFON' => '(42433)5-39-24',
         'FAX' => '(42433)5-39-24',
         'EMAIL' => 'sakh_holm.customs.gov.ru',
-        'COORDS_LATITUDE' => '142.03863',
-        'COORDS_LONGITUDE' => '47.041574'
+        'COORDS_LONGITUDE' => '142.03863',
+        'COORDS_LATITUDE' => '47.041574'
     ],
     'customs638' => [
         'CODE' => '10707080',
@@ -9583,8 +9583,8 @@ return [
         'TELEFON' => '(42455)2-19-16',
         'FAX' => '(42455)2-19-16',
         'EMAIL' => 'uktp.customs@mail.ru',
-        'COORDS_LATITUDE' => '146.000731',
-        'COORDS_LONGITUDE' => '44.261617'
+        'COORDS_LONGITUDE' => '146.000731',
+        'COORDS_LATITUDE' => '44.261617'
     ],
     'customs639' => [
         'CODE' => '10707090',
@@ -9598,8 +9598,8 @@ return [
         'TELEFON' => '(4242)49-13-47',
         'FAX' => '(4242)49-12-55',
         'EMAIL' => 'sakh_ustp@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '142.738086',
-        'COORDS_LONGITUDE' => '46.963558'
+        'COORDS_LONGITUDE' => '142.738086',
+        'COORDS_LATITUDE' => '46.963558'
     ],
     'customs640' => [
         'CODE' => '10707110',
@@ -9613,8 +9613,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '142.729587',
-        'COORDS_LONGITUDE' => '46.957771'
+        'COORDS_LONGITUDE' => '142.729587',
+        'COORDS_LATITUDE' => '46.957771'
     ],
     'customs641' => [
         'CODE' => '10707120',
@@ -9628,8 +9628,8 @@ return [
         'TELEFON' => '(42722)2-81-56',
         'FAX' => '(42722)2-80-59',
         'EMAIL' => 'mgd-andtp@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '177.5117',
-        'COORDS_LONGITUDE' => '64.733534'
+        'COORDS_LONGITUDE' => '177.5117',
+        'COORDS_LATITUDE' => '64.733534'
     ],
     'customs642' => [
         'CODE' => '10707130',
@@ -9643,8 +9643,8 @@ return [
         'TELEFON' => '(42453)4-22-68',
         'FAX' => '(42453)2-17-82',
         'EMAIL' => 'sktpkam@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '156.138066',
-        'COORDS_LONGITUDE' => '50.676464'
+        'COORDS_LONGITUDE' => '156.138066',
+        'COORDS_LATITUDE' => '50.676464'
     ],
     'customs643' => [
         'CODE' => '10707140',
@@ -9658,8 +9658,8 @@ return [
         'TELEFON' => '(4132)60-38-67',
         'FAX' => '(4132)60-30-34',
         'EMAIL' => 'mgd-airport@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '150.750896',
-        'COORDS_LONGITUDE' => '59.918047'
+        'COORDS_LONGITUDE' => '150.750896',
+        'COORDS_LATITUDE' => '59.918047'
     ],
     'customs644' => [
         'CODE' => '10707150',
@@ -9673,8 +9673,8 @@ return [
         'TELEFON' => '(41531)7-39-17',
         'FAX' => '(41531)6-27-29',
         'EMAIL' => 'apk_kam@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '158.424314',
-        'COORDS_LONGITUDE' => '53.166516'
+        'COORDS_LONGITUDE' => '158.424314',
+        'COORDS_LATITUDE' => '53.166516'
     ],
     'customs645' => [
         'CODE' => '10707160',
@@ -9688,8 +9688,8 @@ return [
         'TELEFON' => '(4132)62-91-51',
         'FAX' => '(4132)60-73-62',
         'EMAIL' => 'mgd-morport@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '150.806762',
-        'COORDS_LONGITUDE' => '59.575406'
+        'COORDS_LONGITUDE' => '150.806762',
+        'COORDS_LATITUDE' => '59.575406'
     ],
     'customs646' => [
         'CODE' => '10707170',
@@ -9703,8 +9703,8 @@ return [
         'TELEFON' => '(4152)43-47-01',
         'FAX' => '(4152)43-47-02',
         'EMAIL' => 'mppk_kam@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '158.623579',
-        'COORDS_LONGITUDE' => '53.067552'
+        'COORDS_LONGITUDE' => '158.623579',
+        'COORDS_LATITUDE' => '53.067552'
     ],
     'customs647' => [
         'CODE' => '10707901',
@@ -9718,8 +9718,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '150.806762',
-        'COORDS_LONGITUDE' => '59.575406'
+        'COORDS_LONGITUDE' => '150.806762',
+        'COORDS_LATITUDE' => '59.575406'
     ],
     'customs648' => [
         'CODE' => '10707902',
@@ -9733,8 +9733,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '158.623579',
-        'COORDS_LONGITUDE' => '53.067552'
+        'COORDS_LONGITUDE' => '158.623579',
+        'COORDS_LATITUDE' => '53.067552'
     ],
     'customs649' => [
         'CODE' => '10710000',
@@ -9748,8 +9748,8 @@ return [
         'TELEFON' => '(423)265-87-30',
         'FAX' => '(423)265-87-30',
         'EMAIL' => 'dvot_postman@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.90814',
-        'COORDS_LONGITUDE' => '43.12563'
+        'COORDS_LONGITUDE' => '131.90814',
+        'COORDS_LATITUDE' => '43.12563'
     ],
     'customs650' => [
         'CODE' => '10714000',
@@ -9763,8 +9763,8 @@ return [
         'TELEFON' => '(4236)79-02-27',
         'FAX' => '(4236)74-73-75',
         'EMAIL' => 'nakh_odo_@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '133.08549',
-        'COORDS_LONGITUDE' => '42.729935'
+        'COORDS_LONGITUDE' => '133.08549',
+        'COORDS_LATITUDE' => '42.729935'
     ],
     'customs651' => [
         'CODE' => '10714020',
@@ -9778,8 +9778,8 @@ return [
         'TELEFON' => '(42376)9-13-49',
         'FAX' => '(42376)9-13-49',
         'EMAIL' => 'NAKH_Olg@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '135.257365',
-        'COORDS_LONGITUDE' => '43.730847'
+        'COORDS_LONGITUDE' => '135.257365',
+        'COORDS_LATITUDE' => '43.730847'
     ],
     'customs652' => [
         'CODE' => '10714030',
@@ -9793,8 +9793,8 @@ return [
         'TELEFON' => '(42374)3-47-11',
         'FAX' => '(42374)3-47-11',
         'EMAIL' => 'NAKH_PLast@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '136.282334',
-        'COORDS_LONGITUDE' => '44.759797'
+        'COORDS_LONGITUDE' => '136.282334',
+        'COORDS_LATITUDE' => '44.759797'
     ],
     'customs653' => [
         'CODE' => '10714040',
@@ -9808,8 +9808,8 @@ return [
         'TELEFON' => '(4236)66-53-28',
         'FAX' => '(4236)66-35-79',
         'EMAIL' => 'NAKH_Vost@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '133.08549',
-        'COORDS_LONGITUDE' => '42.729935'
+        'COORDS_LONGITUDE' => '133.08549',
+        'COORDS_LATITUDE' => '42.729935'
     ],
     'customs654' => [
         'CODE' => '10714060',
@@ -9823,8 +9823,8 @@ return [
         'TELEFON' => '(4236)79-04-77',
         'FAX' => '(4236)79-04-77',
         'EMAIL' => 'NAKH_Nakh@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '132.885471',
-        'COORDS_LONGITUDE' => '42.808165'
+        'COORDS_LONGITUDE' => '132.885471',
+        'COORDS_LATITUDE' => '42.808165'
     ],
     'customs655' => [
         'CODE' => '10716000',
@@ -9838,8 +9838,8 @@ return [
         'TELEFON' => '(4234)33-61-76',
         'FAX' => '(4234)38-00-29',
         'EMAIL' => 'svc_usr_od@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.954817',
-        'COORDS_LONGITUDE' => '43.798054'
+        'COORDS_LONGITUDE' => '131.954817',
+        'COORDS_LATITUDE' => '43.798054'
     ],
     'customs656' => [
         'CODE' => '10716010',
@@ -9853,8 +9853,8 @@ return [
         'TELEFON' => '(42349)9-78-25',
         'FAX' => '(42349)9-78-25',
         'EMAIL' => 'usr_trr_p@regions.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.977158',
-        'COORDS_LONGITUDE' => '45.232397'
+        'COORDS_LONGITUDE' => '131.977158',
+        'COORDS_LATITUDE' => '45.232397'
     ],
     'customs657' => [
         'CODE' => '10716020',
@@ -9868,8 +9868,8 @@ return [
         'TELEFON' => '(42355)9-69-86',
         'FAX' => '(42355)9-69-85',
         'EMAIL' => 'usr_lsz_p@region.eais.customs.gov.ru',
-        'COORDS_LATITUDE' => '133.402658',
-        'COORDS_LONGITUDE' => '45.462008'
+        'COORDS_LONGITUDE' => '133.402658',
+        'COORDS_LATITUDE' => '45.462008'
     ],
     'customs658' => [
         'CODE' => '10716030',
@@ -9883,8 +9883,8 @@ return [
         'TELEFON' => '(42344)5-57-26',
         'FAX' => '(42344)5-57-26',
         'EMAIL' => 'usr_plt_p@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.301616',
-        'COORDS_LONGITUDE' => '44.022776'
+        'COORDS_LONGITUDE' => '131.301616',
+        'COORDS_LATITUDE' => '44.022776'
     ],
     'customs659' => [
         'CODE' => '10716040',
@@ -9898,8 +9898,8 @@ return [
         'TELEFON' => '(42361)4-41-80',
         'FAX' => '(42361)4-13-11',
         'EMAIL' => 'usr_ars_p@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '133.260168',
-        'COORDS_LONGITUDE' => '44.153185'
+        'COORDS_LONGITUDE' => '133.260168',
+        'COORDS_LATITUDE' => '44.153185'
     ],
     'customs660' => [
         'CODE' => '10716050',
@@ -9913,8 +9913,8 @@ return [
         'TELEFON' => '(4234)33-13-36',
         'FAX' => '(4234)33-08-67',
         'EMAIL' => 'usr_uss_p@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.941854',
-        'COORDS_LONGITUDE' => '43.843752'
+        'COORDS_LONGITUDE' => '131.941854',
+        'COORDS_LATITUDE' => '43.843752'
     ],
     'customs661' => [
         'CODE' => '10716054',
@@ -9928,8 +9928,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.301616',
-        'COORDS_LONGITUDE' => '44.022776'
+        'COORDS_LONGITUDE' => '131.301616',
+        'COORDS_LATITUDE' => '44.022776'
     ],
     'customs662' => [
         'CODE' => '10716056',
@@ -9943,8 +9943,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '130.793295',
-        'COORDS_LONGITUDE' => '42.701729'
+        'COORDS_LONGITUDE' => '130.793295',
+        'COORDS_LATITUDE' => '42.701729'
     ],
     'customs663' => [
         'CODE' => '10716060',
@@ -9958,8 +9958,8 @@ return [
         'TELEFON' => '(42345)2-13-90',
         'FAX' => '(42345)2-25-68',
         'EMAIL' => 'usr_mpgr_p@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.379086',
-        'COORDS_LONGITUDE' => '44.40804'
+        'COORDS_LONGITUDE' => '131.379086',
+        'COORDS_LATITUDE' => '44.40804'
     ],
     'customs664' => [
         'CODE' => '10716070',
@@ -9973,8 +9973,8 @@ return [
         'TELEFON' => '(42345)2-21-67',
         'FAX' => '(42345)2-21-88',
         'EMAIL' => 'usr_pgr_p@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '131.373175',
-        'COORDS_LONGITUDE' => '44.406701'
+        'COORDS_LONGITUDE' => '131.373175',
+        'COORDS_LATITUDE' => '44.406701'
     ],
     'customs665' => [
         'CODE' => '10716090',
@@ -9988,8 +9988,8 @@ return [
         'TELEFON' => '(42331)2-87-19',
         'FAX' => '(42331)2-87-34',
         'EMAIL' => 'usr_mtv_p@dvtu.customs.gov.ru',
-        'COORDS_LATITUDE' => '130.6428',
-        'COORDS_LONGITUDE' => '42.431506'
+        'COORDS_LONGITUDE' => '130.6428',
+        'COORDS_LATITUDE' => '42.431506'
     ],
     'customs666' => [
         'CODE' => '10716100',
@@ -10003,8 +10003,8 @@ return [
         'TELEFON' => '(42331)3-03-36',
         'FAX' => '(42331)3-03-36',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs667' => [
         'CODE' => '10716110',
@@ -10018,8 +10018,8 @@ return [
         'TELEFON' => '(42331)4-71-46',
         'FAX' => '(42331)4-60-99',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '',
-        'COORDS_LONGITUDE' => ''
+        'COORDS_LONGITUDE' => '',
+        'COORDS_LATITUDE' => ''
     ],
     'customs668' => [
         'CODE' => '10718000',
@@ -10033,8 +10033,8 @@ return [
         'TELEFON' => '(3012)28-90-27',
         'FAX' => '(3012)28-90-29',
         'EMAIL' => 'svc_bur@stu.customs.gov.ru',
-        'COORDS_LATITUDE' => '107.705011',
-        'COORDS_LONGITUDE' => '51.788075'
+        'COORDS_LONGITUDE' => '107.705011',
+        'COORDS_LATITUDE' => '51.788075'
     ],
     'customs669' => [
         'CODE' => '10718010',
@@ -10048,8 +10048,8 @@ return [
         'TELEFON' => '(30147)9-31-30',
         'FAX' => '(30147)9-30-32',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '100.996366',
-        'COORDS_LONGITUDE' => '51.675784'
+        'COORDS_LONGITUDE' => '100.996366',
+        'COORDS_LATITUDE' => '51.675784'
     ],
     'customs670' => [
         'CODE' => '10718020',
@@ -10063,8 +10063,8 @@ return [
         'TELEFON' => '(30142)5-85-88',
         'FAX' => '(30142)9-47-63',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '106.100216',
-        'COORDS_LONGITUDE' => '50.389978'
+        'COORDS_LONGITUDE' => '106.100216',
+        'COORDS_LATITUDE' => '50.389978'
     ],
     'customs671' => [
         'CODE' => '10718030',
@@ -10078,8 +10078,8 @@ return [
         'TELEFON' => '(30142)4-58-00',
         'FAX' => '(30142)4-58-02',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '106.487012',
-        'COORDS_LONGITUDE' => '50.325923'
+        'COORDS_LONGITUDE' => '106.487012',
+        'COORDS_LATITUDE' => '50.325923'
     ],
     'customs672' => [
         'CODE' => '10718040',
@@ -10093,8 +10093,8 @@ return [
         'TELEFON' => '(3012)22-80-83',
         'FAX' => '(3012)22-80-89',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '107.749298',
-        'COORDS_LONGITUDE' => '51.828587'
+        'COORDS_LONGITUDE' => '107.749298',
+        'COORDS_LATITUDE' => '51.828587'
     ],
     'customs673' => [
         'CODE' => '10719000',
@@ -10108,8 +10108,8 @@ return [
         'TELEFON' => '(3022)26-25-73',
         'FAX' => '(3022)35-02-65',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '113.500196',
-        'COORDS_LONGITUDE' => '52.037796'
+        'COORDS_LONGITUDE' => '113.500196',
+        'COORDS_LATITUDE' => '52.037796'
     ],
     'customs674' => [
         'CODE' => '10719010',
@@ -10123,8 +10123,8 @@ return [
         'TELEFON' => '(30255)3-19-94',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '113.500196',
-        'COORDS_LONGITUDE' => '52.037796'
+        'COORDS_LONGITUDE' => '113.500196',
+        'COORDS_LATITUDE' => '52.037796'
     ],
     'customs675' => [
         'CODE' => '10719020',
@@ -10138,8 +10138,8 @@ return [
         'TELEFON' => '(30233)3-15-36',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '116.520323',
-        'COORDS_LONGITUDE' => '50.390225'
+        'COORDS_LONGITUDE' => '116.520323',
+        'COORDS_LATITUDE' => '50.390225'
     ],
     'customs676' => [
         'CODE' => '10719030',
@@ -10153,8 +10153,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '117.374684',
-        'COORDS_LONGITUDE' => '49.639302'
+        'COORDS_LONGITUDE' => '117.374684',
+        'COORDS_LATITUDE' => '49.639302'
     ],
     'customs677' => [
         'CODE' => '10719040',
@@ -10168,8 +10168,8 @@ return [
         'TELEFON' => '(30236)2-20-61',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '108.820539',
-        'COORDS_LONGITUDE' => '51.252605'
+        'COORDS_LONGITUDE' => '108.820539',
+        'COORDS_LATITUDE' => '51.252605'
     ],
     'customs678' => [
         'CODE' => '10719060',
@@ -10183,8 +10183,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '115.701868',
-        'COORDS_LONGITUDE' => '49.896556'
+        'COORDS_LONGITUDE' => '115.701868',
+        'COORDS_LATITUDE' => '49.896556'
     ],
     'customs679' => [
         'CODE' => '10719070',
@@ -10198,8 +10198,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '112.54146',
-        'COORDS_LONGITUDE' => '49.571266'
+        'COORDS_LONGITUDE' => '112.54146',
+        'COORDS_LATITUDE' => '49.571266'
     ],
     'customs680' => [
         'CODE' => '10719080',
@@ -10213,8 +10213,8 @@ return [
         'TELEFON' => '(30248)4-12-28',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '119.899848',
-        'COORDS_LONGITUDE' => '51.352484'
+        'COORDS_LONGITUDE' => '119.899848',
+        'COORDS_LATITUDE' => '51.352484'
     ],
     'customs681' => [
         'CODE' => '10719090',
@@ -10228,8 +10228,8 @@ return [
         'TELEFON' => '(30251)3-21-55',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '119.338329',
-        'COORDS_LONGITUDE' => '50.199928'
+        'COORDS_LONGITUDE' => '119.338329',
+        'COORDS_LATITUDE' => '50.199928'
     ],
     'customs682' => [
         'CODE' => '10719100',
@@ -10243,8 +10243,8 @@ return [
         'TELEFON' => '(30251)2-20-02',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '117.335742',
-        'COORDS_LONGITUDE' => '49.636625'
+        'COORDS_LONGITUDE' => '117.335742',
+        'COORDS_LATITUDE' => '49.636625'
     ],
     'customs683' => [
         'CODE' => '10719110',
@@ -10258,8 +10258,8 @@ return [
         'TELEFON' => '(30251)2-93-32',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '117.374684',
-        'COORDS_LONGITUDE' => '49.639302'
+        'COORDS_LONGITUDE' => '117.374684',
+        'COORDS_LATITUDE' => '49.639302'
     ],
     'customs684' => [
         'CODE' => '10719120',
@@ -10273,8 +10273,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '113.318601',
-        'COORDS_LONGITUDE' => '52.013003'
+        'COORDS_LONGITUDE' => '113.318601',
+        'COORDS_LATITUDE' => '52.013003'
     ],
     'customs685' => [
         'CODE' => '10720000',
@@ -10288,8 +10288,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '132.165903',
-        'COORDS_LONGITUDE' => '43.352417'
+        'COORDS_LONGITUDE' => '132.165903',
+        'COORDS_LATITUDE' => '43.352417'
     ],
     'customs686' => [
         'CODE' => '10720010',
@@ -10303,8 +10303,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '132.165903',
-        'COORDS_LONGITUDE' => '43.352417'
+        'COORDS_LONGITUDE' => '132.165903',
+        'COORDS_LATITUDE' => '43.352417'
     ],
     'customs687' => [
         'CODE' => '10797000',
@@ -10318,8 +10318,8 @@ return [
         'TELEFON' => '23-75-46',
         'FAX' => '23-89-68',
         'EMAIL' => 'RINCOM@ONLINE.RU',
-        'COORDS_LATITUDE' => '131.950226',
-        'COORDS_LONGITUDE' => '43.105466'
+        'COORDS_LONGITUDE' => '131.950226',
+        'COORDS_LATITUDE' => '43.105466'
     ],
     'customs688' => [
         'CODE' => '10800000',
@@ -10333,8 +10333,8 @@ return [
         'TELEFON' => '(87922)7-73-60',
         'FAX' => '(87922)9-54-27',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.084782',
-        'COORDS_LONGITUDE' => '44.212482'
+        'COORDS_LONGITUDE' => '43.084782',
+        'COORDS_LATITUDE' => '44.212482'
     ],
     'customs689' => [
         'CODE' => '10801000',
@@ -10348,8 +10348,8 @@ return [
         'TELEFON' => '(8722)98-22-28',
         'FAX' => '(8722)98-22-29',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.516486',
-        'COORDS_LONGITUDE' => '42.971708'
+        'COORDS_LONGITUDE' => '47.516486',
+        'COORDS_LATITUDE' => '42.971708'
     ],
     'customs690' => [
         'CODE' => '10801010',
@@ -10363,8 +10363,8 @@ return [
         'TELEFON' => '(87240)4-40-62',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '48.322131',
-        'COORDS_LONGITUDE' => '42.031823'
+        'COORDS_LONGITUDE' => '48.322131',
+        'COORDS_LATITUDE' => '42.031823'
     ],
     'customs691' => [
         'CODE' => '10801013',
@@ -10378,8 +10378,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '48.377207',
-        'COORDS_LONGITUDE' => '41.672954'
+        'COORDS_LONGITUDE' => '48.377207',
+        'COORDS_LATITUDE' => '41.672954'
     ],
     'customs692' => [
         'CODE' => '10801020',
@@ -10393,8 +10393,8 @@ return [
         'TELEFON' => '(8722)68-08-40',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.519585',
-        'COORDS_LONGITUDE' => '42.923382'
+        'COORDS_LONGITUDE' => '47.519585',
+        'COORDS_LATITUDE' => '42.923382'
     ],
     'customs693' => [
         'CODE' => '10801030',
@@ -10408,8 +10408,8 @@ return [
         'TELEFON' => '(8722)98-88-55',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.504745',
-        'COORDS_LONGITUDE' => '42.9831'
+        'COORDS_LONGITUDE' => '47.504745',
+        'COORDS_LATITUDE' => '42.9831'
     ],
     'customs694' => [
         'CODE' => '10801040',
@@ -10423,8 +10423,8 @@ return [
         'TELEFON' => '(87240)4-11-32',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '48.308018',
-        'COORDS_LONGITUDE' => '42.056022'
+        'COORDS_LONGITUDE' => '48.308018',
+        'COORDS_LATITUDE' => '42.056022'
     ],
     'customs695' => [
         'CODE' => '10801050',
@@ -10438,8 +10438,8 @@ return [
         'TELEFON' => '(8722)70-03-07',
         'FAX' => '(8722)70-05-85',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.504745',
-        'COORDS_LONGITUDE' => '42.9831'
+        'COORDS_LONGITUDE' => '47.504745',
+        'COORDS_LATITUDE' => '42.9831'
     ],
     'customs696' => [
         'CODE' => '10801060',
@@ -10453,8 +10453,8 @@ return [
         'TELEFON' => '(8722)55-18-45',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '48.385866',
-        'COORDS_LONGITUDE' => '41.646877'
+        'COORDS_LONGITUDE' => '48.385866',
+        'COORDS_LATITUDE' => '41.646877'
     ],
     'customs697' => [
         'CODE' => '10801070',
@@ -10468,8 +10468,8 @@ return [
         'TELEFON' => '(8722)55-18-48',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '48.509807',
-        'COORDS_LONGITUDE' => '41.81083'
+        'COORDS_LONGITUDE' => '48.509807',
+        'COORDS_LATITUDE' => '41.81083'
     ],
     'customs698' => [
         'CODE' => '10802000',
@@ -10483,8 +10483,8 @@ return [
         'TELEFON' => '(87922)9-52-28',
         'FAX' => '(87922)9-52-06',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.084782',
-        'COORDS_LONGITUDE' => '44.212482'
+        'COORDS_LONGITUDE' => '43.084782',
+        'COORDS_LATITUDE' => '44.212482'
     ],
     'customs699' => [
         'CODE' => '10802010',
@@ -10498,8 +10498,8 @@ return [
         'TELEFON' => '712-221',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.911488',
-        'COORDS_LONGITUDE' => '43.307641'
+        'COORDS_LONGITUDE' => '44.911488',
+        'COORDS_LATITUDE' => '43.307641'
     ],
     'customs700' => [
         'CODE' => '10802020',
@@ -10513,8 +10513,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.598627',
-        'COORDS_LONGITUDE' => '43.490792'
+        'COORDS_LONGITUDE' => '43.598627',
+        'COORDS_LATITUDE' => '43.490792'
     ],
     'customs701' => [
         'CODE' => '10802030',
@@ -10528,8 +10528,8 @@ return [
         'TELEFON' => '(87822)2-82-27',
         'FAX' => '(87822)2-82-29',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '42.034409',
-        'COORDS_LONGITUDE' => '44.203274'
+        'COORDS_LONGITUDE' => '42.034409',
+        'COORDS_LATITUDE' => '44.203274'
     ],
     'customs702' => [
         'CODE' => '10802040',
@@ -10543,8 +10543,8 @@ return [
         'TELEFON' => '(87822)5-96-03',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.084782',
-        'COORDS_LONGITUDE' => '44.212482'
+        'COORDS_LONGITUDE' => '43.084782',
+        'COORDS_LATITUDE' => '44.212482'
     ],
     'customs703' => [
         'CODE' => '10802050',
@@ -10558,8 +10558,8 @@ return [
         'TELEFON' => '(8652)94-40-55',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '41.916092',
-        'COORDS_LONGITUDE' => '45.038642'
+        'COORDS_LONGITUDE' => '41.916092',
+        'COORDS_LATITUDE' => '45.038642'
     ],
     'customs704' => [
         'CODE' => '10802060',
@@ -10573,8 +10573,8 @@ return [
         'TELEFON' => '(8712)22-25-41',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '45.720574',
-        'COORDS_LONGITUDE' => '43.351473'
+        'COORDS_LONGITUDE' => '45.720574',
+        'COORDS_LATITUDE' => '43.351473'
     ],
     'customs705' => [
         'CODE' => '10803000',
@@ -10588,8 +10588,8 @@ return [
         'TELEFON' => '(8672)59-52-04',
         'FAX' => '(8672)74-79-24',
         'EMAIL' => 'svs-odo-sot-01@sktu.customs.gov.ru',
-        'COORDS_LATITUDE' => '44.665727',
-        'COORDS_LONGITUDE' => '43.043345'
+        'COORDS_LONGITUDE' => '44.665727',
+        'COORDS_LATITUDE' => '43.043345'
     ],
     'customs706' => [
         'CODE' => '10803010',
@@ -10603,8 +10603,8 @@ return [
         'TELEFON' => '(8672)59-52-97',
         'FAX' => '(8672)59-52-10',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.656744',
-        'COORDS_LONGITUDE' => '43.077123'
+        'COORDS_LONGITUDE' => '44.656744',
+        'COORDS_LATITUDE' => '43.077123'
     ],
     'customs707' => [
         'CODE' => '10803012',
@@ -10618,8 +10618,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.637475',
-        'COORDS_LONGITUDE' => '42.857216'
+        'COORDS_LONGITUDE' => '44.637475',
+        'COORDS_LATITUDE' => '42.857216'
     ],
     'customs708' => [
         'CODE' => '10803030',
@@ -10633,8 +10633,8 @@ return [
         'TELEFON' => '(8672)50-08-80',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.597895',
-        'COORDS_LONGITUDE' => '43.197454'
+        'COORDS_LONGITUDE' => '44.597895',
+        'COORDS_LATITUDE' => '43.197454'
     ],
     'customs709' => [
         'CODE' => '10803040',
@@ -10648,8 +10648,8 @@ return [
         'TELEFON' => '(8672)59-52-97',
         'FAX' => '(8672)59-52-10',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.63134',
-        'COORDS_LONGITUDE' => '42.7703'
+        'COORDS_LONGITUDE' => '44.63134',
+        'COORDS_LATITUDE' => '42.7703'
     ],
     'customs710' => [
         'CODE' => '10803050',
@@ -10663,8 +10663,8 @@ return [
         'TELEFON' => '(8672)59-52-13',
         'FAX' => '(8672)59-52-13',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.021635',
-        'COORDS_LONGITUDE' => '42.679979'
+        'COORDS_LONGITUDE' => '44.021635',
+        'COORDS_LATITUDE' => '42.679979'
     ],
     'customs711' => [
         'CODE' => '10804000',
@@ -10678,8 +10678,8 @@ return [
         'TELEFON' => '(87922)7-79-50',
         'FAX' => '(87922)7-79-50',
         'EMAIL' => 'mw_skot@mail.ru',
-        'COORDS_LATITUDE' => '43.116807',
-        'COORDS_LONGITUDE' => '44.228846'
+        'COORDS_LONGITUDE' => '43.116807',
+        'COORDS_LATITUDE' => '44.228846'
     ],
     'customs712' => [
         'CODE' => '10805000',
@@ -10693,8 +10693,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.084782',
-        'COORDS_LONGITUDE' => '44.212482'
+        'COORDS_LONGITUDE' => '43.084782',
+        'COORDS_LATITUDE' => '44.212482'
     ],
     'customs713' => [
         'CODE' => '10805010',
@@ -10708,8 +10708,8 @@ return [
         'TELEFON' => '(87822)9-52-17',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.084782',
-        'COORDS_LONGITUDE' => '44.212482'
+        'COORDS_LONGITUDE' => '43.084782',
+        'COORDS_LATITUDE' => '44.212482'
     ],
     'customs714' => [
         'CODE' => '12100000',
@@ -10723,8 +10723,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.617644',
-        'COORDS_LONGITUDE' => '55.755819'
+        'COORDS_LONGITUDE' => '37.617644',
+        'COORDS_LATITUDE' => '55.755819'
     ],
     'customs715' => [
         'CODE' => '12200000',
@@ -10738,8 +10738,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.617644',
-        'COORDS_LONGITUDE' => '55.755819'
+        'COORDS_LONGITUDE' => '37.617644',
+        'COORDS_LATITUDE' => '55.755819'
     ],
     'customs716' => [
         'CODE' => '12400000',
@@ -10753,8 +10753,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs717' => [
         'CODE' => '12401000',
@@ -10768,8 +10768,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '20.433286',
-        'COORDS_LONGITUDE' => '54.724417'
+        'COORDS_LONGITUDE' => '20.433286',
+        'COORDS_LATITUDE' => '54.724417'
     ],
     'customs718' => [
         'CODE' => '12401001',
@@ -10783,8 +10783,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '20.433286',
-        'COORDS_LONGITUDE' => '54.724417'
+        'COORDS_LONGITUDE' => '20.433286',
+        'COORDS_LATITUDE' => '54.724417'
     ],
     'customs719' => [
         'CODE' => '12401003',
@@ -10798,8 +10798,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '20.433286',
-        'COORDS_LONGITUDE' => '54.724417'
+        'COORDS_LONGITUDE' => '20.433286',
+        'COORDS_LATITUDE' => '54.724417'
     ],
     'customs720' => [
         'CODE' => '12401004',
@@ -10813,8 +10813,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '20.433286',
-        'COORDS_LONGITUDE' => '54.724417'
+        'COORDS_LONGITUDE' => '20.433286',
+        'COORDS_LATITUDE' => '54.724417'
     ],
     'customs721' => [
         'CODE' => '12401006',
@@ -10828,8 +10828,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '20.433286',
-        'COORDS_LONGITUDE' => '54.724417'
+        'COORDS_LONGITUDE' => '20.433286',
+        'COORDS_LATITUDE' => '54.724417'
     ],
     'customs722' => [
         'CODE' => '12402000',
@@ -10843,8 +10843,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.2624',
-        'COORDS_LONGITUDE' => '59.984422'
+        'COORDS_LONGITUDE' => '30.2624',
+        'COORDS_LATITUDE' => '59.984422'
     ],
     'customs723' => [
         'CODE' => '12402001',
@@ -10858,8 +10858,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.2624',
-        'COORDS_LONGITUDE' => '59.984422'
+        'COORDS_LONGITUDE' => '30.2624',
+        'COORDS_LATITUDE' => '59.984422'
     ],
     'customs724' => [
         'CODE' => '12402002',
@@ -10873,8 +10873,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.2624',
-        'COORDS_LONGITUDE' => '59.984422'
+        'COORDS_LONGITUDE' => '30.2624',
+        'COORDS_LATITUDE' => '59.984422'
     ],
     'customs725' => [
         'CODE' => '12402003',
@@ -10888,8 +10888,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.2624',
-        'COORDS_LONGITUDE' => '59.984422'
+        'COORDS_LONGITUDE' => '30.2624',
+        'COORDS_LATITUDE' => '59.984422'
     ],
     'customs726' => [
         'CODE' => '12402004',
@@ -10903,8 +10903,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.2624',
-        'COORDS_LONGITUDE' => '59.984422'
+        'COORDS_LONGITUDE' => '30.2624',
+        'COORDS_LATITUDE' => '59.984422'
     ],
     'customs727' => [
         'CODE' => '12402005',
@@ -10918,8 +10918,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.2624',
-        'COORDS_LONGITUDE' => '59.984422'
+        'COORDS_LONGITUDE' => '30.2624',
+        'COORDS_LATITUDE' => '59.984422'
     ],
     'customs728' => [
         'CODE' => '12402010',
@@ -10933,8 +10933,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.338784',
-        'COORDS_LONGITUDE' => '57.813075'
+        'COORDS_LONGITUDE' => '28.338784',
+        'COORDS_LATITUDE' => '57.813075'
     ],
     'customs729' => [
         'CODE' => '12402030',
@@ -10948,8 +10948,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.356221',
-        'COORDS_LONGITUDE' => '61.790963'
+        'COORDS_LONGITUDE' => '34.356221',
+        'COORDS_LATITUDE' => '61.790963'
     ],
     'customs730' => [
         'CODE' => '12402060',
@@ -10963,8 +10963,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.395432',
-        'COORDS_LONGITUDE' => '59.807849'
+        'COORDS_LONGITUDE' => '30.395432',
+        'COORDS_LATITUDE' => '59.807849'
     ],
     'customs731' => [
         'CODE' => '12402080',
@@ -10978,8 +10978,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '28.78053',
-        'COORDS_LONGITUDE' => '60.698388'
+        'COORDS_LONGITUDE' => '28.78053',
+        'COORDS_LATITUDE' => '60.698388'
     ],
     'customs732' => [
         'CODE' => '12402090',
@@ -10993,8 +10993,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '30.265643',
-        'COORDS_LONGITUDE' => '59.984368'
+        'COORDS_LONGITUDE' => '30.265643',
+        'COORDS_LATITUDE' => '59.984368'
     ],
     'customs733' => [
         'CODE' => '12403000',
@@ -11008,8 +11008,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.341641',
-        'COORDS_LONGITUDE' => '53.258297'
+        'COORDS_LONGITUDE' => '34.341641',
+        'COORDS_LATITUDE' => '53.258297'
     ],
     'customs734' => [
         'CODE' => '12403001',
@@ -11023,8 +11023,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.341641',
-        'COORDS_LONGITUDE' => '53.258297'
+        'COORDS_LONGITUDE' => '34.341641',
+        'COORDS_LATITUDE' => '53.258297'
     ],
     'customs735' => [
         'CODE' => '12403002',
@@ -11038,8 +11038,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.341641',
-        'COORDS_LONGITUDE' => '53.258297'
+        'COORDS_LONGITUDE' => '34.341641',
+        'COORDS_LATITUDE' => '53.258297'
     ],
     'customs736' => [
         'CODE' => '12403003',
@@ -11053,8 +11053,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.341641',
-        'COORDS_LONGITUDE' => '53.258297'
+        'COORDS_LONGITUDE' => '34.341641',
+        'COORDS_LATITUDE' => '53.258297'
     ],
     'customs737' => [
         'CODE' => '12403004',
@@ -11068,8 +11068,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.341641',
-        'COORDS_LONGITUDE' => '53.258297'
+        'COORDS_LONGITUDE' => '34.341641',
+        'COORDS_LATITUDE' => '53.258297'
     ],
     'customs738' => [
         'CODE' => '12403005',
@@ -11083,8 +11083,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.341641',
-        'COORDS_LONGITUDE' => '53.258297'
+        'COORDS_LONGITUDE' => '34.341641',
+        'COORDS_LATITUDE' => '53.258297'
     ],
     'customs739' => [
         'CODE' => '12403006',
@@ -11098,8 +11098,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.341641',
-        'COORDS_LONGITUDE' => '53.258297'
+        'COORDS_LONGITUDE' => '34.341641',
+        'COORDS_LATITUDE' => '53.258297'
     ],
     'customs740' => [
         'CODE' => '12403010',
@@ -11113,8 +11113,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.174878',
-        'COORDS_LONGITUDE' => '51.764615'
+        'COORDS_LONGITUDE' => '36.174878',
+        'COORDS_LATITUDE' => '51.764615'
     ],
     'customs741' => [
         'CODE' => '12403020',
@@ -11128,8 +11128,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '32.0631',
-        'COORDS_LONGITUDE' => '54.915802'
+        'COORDS_LONGITUDE' => '32.0631',
+        'COORDS_LATITUDE' => '54.915802'
     ],
     'customs742' => [
         'CODE' => '12403030',
@@ -11143,8 +11143,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '36.318285',
-        'COORDS_LONGITUDE' => '50.310595'
+        'COORDS_LONGITUDE' => '36.318285',
+        'COORDS_LATITUDE' => '50.310595'
     ],
     'customs743' => [
         'CODE' => '12403040',
@@ -11158,8 +11158,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.131395',
-        'COORDS_LONGITUDE' => '51.681827'
+        'COORDS_LONGITUDE' => '39.131395',
+        'COORDS_LATITUDE' => '51.681827'
     ],
     'customs744' => [
         'CODE' => '12404000',
@@ -11173,8 +11173,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.990985',
-        'COORDS_LONGITUDE' => '56.282051'
+        'COORDS_LONGITUDE' => '43.990985',
+        'COORDS_LATITUDE' => '56.282051'
     ],
     'customs745' => [
         'CODE' => '12404001',
@@ -11188,8 +11188,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.990985',
-        'COORDS_LONGITUDE' => '56.282051'
+        'COORDS_LONGITUDE' => '43.990985',
+        'COORDS_LATITUDE' => '56.282051'
     ],
     'customs746' => [
         'CODE' => '12404002',
@@ -11203,8 +11203,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.990985',
-        'COORDS_LONGITUDE' => '56.282051'
+        'COORDS_LONGITUDE' => '43.990985',
+        'COORDS_LATITUDE' => '56.282051'
     ],
     'customs747' => [
         'CODE' => '12404003',
@@ -11218,8 +11218,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.990985',
-        'COORDS_LONGITUDE' => '56.282051'
+        'COORDS_LONGITUDE' => '43.990985',
+        'COORDS_LATITUDE' => '56.282051'
     ],
     'customs748' => [
         'CODE' => '12404004',
@@ -11233,8 +11233,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.990985',
-        'COORDS_LONGITUDE' => '56.282051'
+        'COORDS_LONGITUDE' => '43.990985',
+        'COORDS_LATITUDE' => '56.282051'
     ],
     'customs749' => [
         'CODE' => '12404005',
@@ -11248,8 +11248,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.990985',
-        'COORDS_LONGITUDE' => '56.282051'
+        'COORDS_LONGITUDE' => '43.990985',
+        'COORDS_LATITUDE' => '56.282051'
     ],
     'customs750' => [
         'CODE' => '12404006',
@@ -11263,8 +11263,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '43.990985',
-        'COORDS_LONGITUDE' => '56.282051'
+        'COORDS_LONGITUDE' => '43.990985',
+        'COORDS_LATITUDE' => '56.282051'
     ],
     'customs751' => [
         'CODE' => '12404011',
@@ -11278,8 +11278,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '50.280871',
-        'COORDS_LONGITUDE' => '53.2418'
+        'COORDS_LONGITUDE' => '50.280871',
+        'COORDS_LATITUDE' => '53.2418'
     ],
     'customs752' => [
         'CODE' => '12404031',
@@ -11293,8 +11293,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '49.197602',
-        'COORDS_LONGITUDE' => '55.729336'
+        'COORDS_LONGITUDE' => '49.197602',
+        'COORDS_LATITUDE' => '55.729336'
     ],
     'customs753' => [
         'CODE' => '12405000',
@@ -11308,8 +11308,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '42.983802',
-        'COORDS_LONGITUDE' => '44.065412'
+        'COORDS_LONGITUDE' => '42.983802',
+        'COORDS_LATITUDE' => '44.065412'
     ],
     'customs754' => [
         'CODE' => '12405010',
@@ -11323,8 +11323,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '42.983802',
-        'COORDS_LONGITUDE' => '44.065412'
+        'COORDS_LONGITUDE' => '42.983802',
+        'COORDS_LATITUDE' => '44.065412'
     ],
     'customs755' => [
         'CODE' => '12405020',
@@ -11338,8 +11338,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '47.499633',
-        'COORDS_LONGITUDE' => '42.989081'
+        'COORDS_LONGITUDE' => '47.499633',
+        'COORDS_LATITUDE' => '42.989081'
     ],
     'customs756' => [
         'CODE' => '12405030',
@@ -11353,8 +11353,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '44.665727',
-        'COORDS_LONGITUDE' => '43.043345'
+        'COORDS_LONGITUDE' => '44.665727',
+        'COORDS_LATITUDE' => '43.043345'
     ],
     'customs757' => [
         'CODE' => '12406000',
@@ -11368,8 +11368,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.748538',
-        'COORDS_LONGITUDE' => '47.238165'
+        'COORDS_LONGITUDE' => '39.748538',
+        'COORDS_LATITUDE' => '47.238165'
     ],
     'customs758' => [
         'CODE' => '12406001',
@@ -11383,8 +11383,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.748538',
-        'COORDS_LONGITUDE' => '47.238165'
+        'COORDS_LONGITUDE' => '39.748538',
+        'COORDS_LATITUDE' => '47.238165'
     ],
     'customs759' => [
         'CODE' => '12406003',
@@ -11398,8 +11398,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.748538',
-        'COORDS_LONGITUDE' => '47.238165'
+        'COORDS_LONGITUDE' => '39.748538',
+        'COORDS_LATITUDE' => '47.238165'
     ],
     'customs760' => [
         'CODE' => '12406004',
@@ -11413,8 +11413,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.748538',
-        'COORDS_LONGITUDE' => '47.238165'
+        'COORDS_LONGITUDE' => '39.748538',
+        'COORDS_LATITUDE' => '47.238165'
     ],
     'customs761' => [
         'CODE' => '12406005',
@@ -11428,8 +11428,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.748538',
-        'COORDS_LONGITUDE' => '47.238165'
+        'COORDS_LONGITUDE' => '39.748538',
+        'COORDS_LATITUDE' => '47.238165'
     ],
     'customs762' => [
         'CODE' => '12406006',
@@ -11443,8 +11443,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.748538',
-        'COORDS_LONGITUDE' => '47.238165'
+        'COORDS_LONGITUDE' => '39.748538',
+        'COORDS_LATITUDE' => '47.238165'
     ],
     'customs763' => [
         'CODE' => '12406007',
@@ -11458,8 +11458,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.748538',
-        'COORDS_LONGITUDE' => '47.238165'
+        'COORDS_LONGITUDE' => '39.748538',
+        'COORDS_LATITUDE' => '47.238165'
     ],
     'customs764' => [
         'CODE' => '12406010',
@@ -11473,8 +11473,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.759955',
-        'COORDS_LONGITUDE' => '44.69233'
+        'COORDS_LONGITUDE' => '37.759955',
+        'COORDS_LATITUDE' => '44.69233'
     ],
     'customs765' => [
         'CODE' => '12406020',
@@ -11488,8 +11488,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '34.099734',
-        'COORDS_LONGITUDE' => '44.939293'
+        'COORDS_LONGITUDE' => '34.099734',
+        'COORDS_LATITUDE' => '44.939293'
     ],
     'customs766' => [
         'CODE' => '12406050',
@@ -11503,8 +11503,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '48.000471',
-        'COORDS_LONGITUDE' => '46.32448'
+        'COORDS_LONGITUDE' => '48.000471',
+        'COORDS_LATITUDE' => '46.32448'
     ],
     'customs767' => [
         'CODE' => '12406060',
@@ -11518,8 +11518,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '39.932082',
-        'COORDS_LONGITUDE' => '43.430107'
+        'COORDS_LONGITUDE' => '39.932082',
+        'COORDS_LATITUDE' => '43.430107'
     ],
     'customs768' => [
         'CODE' => '12407000',
@@ -11533,8 +11533,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.592588',
-        'COORDS_LONGITUDE' => '56.865294'
+        'COORDS_LONGITUDE' => '60.592588',
+        'COORDS_LATITUDE' => '56.865294'
     ],
     'customs769' => [
         'CODE' => '12407001',
@@ -11548,8 +11548,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.592588',
-        'COORDS_LONGITUDE' => '56.865294'
+        'COORDS_LONGITUDE' => '60.592588',
+        'COORDS_LATITUDE' => '56.865294'
     ],
     'customs770' => [
         'CODE' => '12407002',
@@ -11563,8 +11563,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.592588',
-        'COORDS_LONGITUDE' => '56.865294'
+        'COORDS_LONGITUDE' => '60.592588',
+        'COORDS_LATITUDE' => '56.865294'
     ],
     'customs771' => [
         'CODE' => '12407004',
@@ -11578,8 +11578,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.592588',
-        'COORDS_LONGITUDE' => '56.865294'
+        'COORDS_LONGITUDE' => '60.592588',
+        'COORDS_LATITUDE' => '56.865294'
     ],
     'customs772' => [
         'CODE' => '12407005',
@@ -11593,8 +11593,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.592588',
-        'COORDS_LONGITUDE' => '56.865294'
+        'COORDS_LONGITUDE' => '60.592588',
+        'COORDS_LATITUDE' => '56.865294'
     ],
     'customs773' => [
         'CODE' => '12407006',
@@ -11608,8 +11608,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.592588',
-        'COORDS_LONGITUDE' => '56.865294'
+        'COORDS_LONGITUDE' => '60.592588',
+        'COORDS_LATITUDE' => '56.865294'
     ],
     'customs774' => [
         'CODE' => '12407007',
@@ -11623,8 +11623,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '60.592588',
-        'COORDS_LONGITUDE' => '56.865294'
+        'COORDS_LONGITUDE' => '60.592588',
+        'COORDS_LATITUDE' => '56.865294'
     ],
     'customs775' => [
         'CODE' => '12407010',
@@ -11638,8 +11638,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '56.082865',
-        'COORDS_LONGITUDE' => '54.818979'
+        'COORDS_LONGITUDE' => '56.082865',
+        'COORDS_LATITUDE' => '54.818979'
     ],
     'customs776' => [
         'CODE' => '12407020',
@@ -11653,8 +11653,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '61.316791',
-        'COORDS_LONGITUDE' => '55.188139'
+        'COORDS_LONGITUDE' => '61.316791',
+        'COORDS_LATITUDE' => '55.188139'
     ],
     'customs777' => [
         'CODE' => '12407030',
@@ -11668,8 +11668,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '55.11343',
-        'COORDS_LONGITUDE' => '51.798325'
+        'COORDS_LONGITUDE' => '55.11343',
+        'COORDS_LATITUDE' => '51.798325'
     ],
     'customs778' => [
         'CODE' => '12408000',
@@ -11683,8 +11683,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.961177',
-        'COORDS_LONGITUDE' => '55.057533'
+        'COORDS_LONGITUDE' => '82.961177',
+        'COORDS_LATITUDE' => '55.057533'
     ],
     'customs779' => [
         'CODE' => '12408001',
@@ -11698,8 +11698,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.961177',
-        'COORDS_LONGITUDE' => '55.057533'
+        'COORDS_LONGITUDE' => '82.961177',
+        'COORDS_LATITUDE' => '55.057533'
     ],
     'customs780' => [
         'CODE' => '12408002',
@@ -11713,8 +11713,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.961177',
-        'COORDS_LONGITUDE' => '55.057533'
+        'COORDS_LONGITUDE' => '82.961177',
+        'COORDS_LATITUDE' => '55.057533'
     ],
     'customs781' => [
         'CODE' => '12408003',
@@ -11728,8 +11728,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.961177',
-        'COORDS_LONGITUDE' => '55.057533'
+        'COORDS_LONGITUDE' => '82.961177',
+        'COORDS_LATITUDE' => '55.057533'
     ],
     'customs782' => [
         'CODE' => '12408004',
@@ -11743,8 +11743,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.961177',
-        'COORDS_LONGITUDE' => '55.057533'
+        'COORDS_LONGITUDE' => '82.961177',
+        'COORDS_LATITUDE' => '55.057533'
     ],
     'customs783' => [
         'CODE' => '12408006',
@@ -11758,8 +11758,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.961177',
-        'COORDS_LONGITUDE' => '55.057533'
+        'COORDS_LONGITUDE' => '82.961177',
+        'COORDS_LATITUDE' => '55.057533'
     ],
     'customs784' => [
         'CODE' => '12408007',
@@ -11773,8 +11773,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '82.961177',
-        'COORDS_LONGITUDE' => '55.057533'
+        'COORDS_LONGITUDE' => '82.961177',
+        'COORDS_LATITUDE' => '55.057533'
     ],
     'customs785' => [
         'CODE' => '12408010',
@@ -11788,8 +11788,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '73.38546',
-        'COORDS_LONGITUDE' => '54.982606'
+        'COORDS_LONGITUDE' => '73.38546',
+        'COORDS_LATITUDE' => '54.982606'
     ],
     'customs786' => [
         'CODE' => '12408020',
@@ -11803,8 +11803,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '83.751093',
-        'COORDS_LONGITUDE' => '53.378268'
+        'COORDS_LONGITUDE' => '83.751093',
+        'COORDS_LATITUDE' => '53.378268'
     ],
     'customs787' => [
         'CODE' => '12408040',
@@ -11818,8 +11818,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '104.255472',
-        'COORDS_LONGITUDE' => '52.276486'
+        'COORDS_LONGITUDE' => '104.255472',
+        'COORDS_LATITUDE' => '52.276486'
     ],
     'customs788' => [
         'CODE' => '12408050',
@@ -11833,8 +11833,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '117.374684',
-        'COORDS_LONGITUDE' => '49.639302'
+        'COORDS_LONGITUDE' => '117.374684',
+        'COORDS_LATITUDE' => '49.639302'
     ],
     'customs789' => [
         'CODE' => '12408070',
@@ -11848,8 +11848,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '106.100216',
-        'COORDS_LONGITUDE' => '50.389978'
+        'COORDS_LONGITUDE' => '106.100216',
+        'COORDS_LATITUDE' => '50.389978'
     ],
     'customs790' => [
         'CODE' => '12408080',
@@ -11863,8 +11863,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '113.490099',
-        'COORDS_LONGITUDE' => '52.048864'
+        'COORDS_LONGITUDE' => '113.490099',
+        'COORDS_LATITUDE' => '52.048864'
     ],
     'customs791' => [
         'CODE' => '12408090',
@@ -11878,8 +11878,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '92.965436',
-        'COORDS_LONGITUDE' => '56.049792'
+        'COORDS_LONGITUDE' => '92.965436',
+        'COORDS_LATITUDE' => '56.049792'
     ],
     'customs792' => [
         'CODE' => '12410000',
@@ -11893,8 +11893,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.925082',
-        'COORDS_LONGITUDE' => '43.158653'
+        'COORDS_LONGITUDE' => '131.925082',
+        'COORDS_LATITUDE' => '43.158653'
     ],
     'customs793' => [
         'CODE' => '12410001',
@@ -11908,8 +11908,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.925082',
-        'COORDS_LONGITUDE' => '43.158653'
+        'COORDS_LONGITUDE' => '131.925082',
+        'COORDS_LATITUDE' => '43.158653'
     ],
     'customs794' => [
         'CODE' => '12410002',
@@ -11923,8 +11923,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.925082',
-        'COORDS_LONGITUDE' => '43.158653'
+        'COORDS_LONGITUDE' => '131.925082',
+        'COORDS_LATITUDE' => '43.158653'
     ],
     'customs795' => [
         'CODE' => '12410005',
@@ -11938,8 +11938,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.925082',
-        'COORDS_LONGITUDE' => '43.158653'
+        'COORDS_LONGITUDE' => '131.925082',
+        'COORDS_LATITUDE' => '43.158653'
     ],
     'customs796' => [
         'CODE' => '12410006',
@@ -11953,8 +11953,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.925082',
-        'COORDS_LONGITUDE' => '43.158653'
+        'COORDS_LONGITUDE' => '131.925082',
+        'COORDS_LATITUDE' => '43.158653'
     ],
     'customs797' => [
         'CODE' => '12410007',
@@ -11968,8 +11968,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.925082',
-        'COORDS_LONGITUDE' => '43.158653'
+        'COORDS_LONGITUDE' => '131.925082',
+        'COORDS_LATITUDE' => '43.158653'
     ],
     'customs798' => [
         'CODE' => '12410008',
@@ -11983,8 +11983,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.925082',
-        'COORDS_LONGITUDE' => '43.158653'
+        'COORDS_LONGITUDE' => '131.925082',
+        'COORDS_LATITUDE' => '43.158653'
     ],
     'customs799' => [
         'CODE' => '12410010',
@@ -11998,8 +11998,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '131.954817',
-        'COORDS_LONGITUDE' => '43.798054'
+        'COORDS_LONGITUDE' => '131.954817',
+        'COORDS_LATITUDE' => '43.798054'
     ],
     'customs800' => [
         'CODE' => '12410021',
@@ -12013,8 +12013,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '158.623579',
-        'COORDS_LONGITUDE' => '53.067552'
+        'COORDS_LONGITUDE' => '158.623579',
+        'COORDS_LATITUDE' => '53.067552'
     ],
     'customs801' => [
         'CODE' => '12410030',
@@ -12028,8 +12028,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '135.091141',
-        'COORDS_LONGITUDE' => '48.492423'
+        'COORDS_LONGITUDE' => '135.091141',
+        'COORDS_LATITUDE' => '48.492423'
     ],
     'customs802' => [
         'CODE' => '12410040',
@@ -12043,8 +12043,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '142.738086',
-        'COORDS_LONGITUDE' => '46.963558'
+        'COORDS_LONGITUDE' => '142.738086',
+        'COORDS_LATITUDE' => '46.963558'
     ],
     'customs803' => [
         'CODE' => '12410060',
@@ -12058,8 +12058,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '127.555578',
-        'COORDS_LONGITUDE' => '50.25058'
+        'COORDS_LONGITUDE' => '127.555578',
+        'COORDS_LATITUDE' => '50.25058'
     ],
     'customs804' => [
         'CODE' => '12410080',
@@ -12073,8 +12073,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '133.08549',
-        'COORDS_LONGITUDE' => '42.729935'
+        'COORDS_LONGITUDE' => '133.08549',
+        'COORDS_LATITUDE' => '42.729935'
     ],
     'customs805' => [
         'CODE' => '12411000',
@@ -12088,8 +12088,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs806' => [
         'CODE' => '12411001',
@@ -12103,8 +12103,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs807' => [
         'CODE' => '12411002',
@@ -12118,8 +12118,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs808' => [
         'CODE' => '12411003',
@@ -12133,8 +12133,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs809' => [
         'CODE' => '12411004',
@@ -12148,8 +12148,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs810' => [
         'CODE' => '12411005',
@@ -12163,8 +12163,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs811' => [
         'CODE' => '12411006',
@@ -12178,8 +12178,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs812' => [
         'CODE' => '12411007',
@@ -12193,8 +12193,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs813' => [
         'CODE' => '12411008',
@@ -12208,8 +12208,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs814' => [
         'CODE' => '12411009',
@@ -12223,8 +12223,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.513368',
-        'COORDS_LONGITUDE' => '55.825077'
+        'COORDS_LONGITUDE' => '37.513368',
+        'COORDS_LATITUDE' => '55.825077'
     ],
     'customs815' => [
         'CODE' => '12411010',
@@ -12238,8 +12238,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.431262',
-        'COORDS_LONGITUDE' => '55.985373'
+        'COORDS_LONGITUDE' => '37.431262',
+        'COORDS_LATITUDE' => '55.985373'
     ],
     'customs816' => [
         'CODE' => '12411020',
@@ -12253,8 +12253,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.768004',
-        'COORDS_LONGITUDE' => '55.437174'
+        'COORDS_LONGITUDE' => '37.768004',
+        'COORDS_LATITUDE' => '55.437174'
     ],
     'customs817' => [
         'CODE' => '12411030',
@@ -12268,8 +12268,8 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.290379',
-        'COORDS_LONGITUDE' => '55.60369'
+        'COORDS_LONGITUDE' => '37.290379',
+        'COORDS_LATITUDE' => '55.60369'
     ],
     'customs818' => [
         'CODE' => '12500000',
@@ -12283,7 +12283,7 @@ return [
         'TELEFON' => '',
         'FAX' => '',
         'EMAIL' => '',
-        'COORDS_LATITUDE' => '37.507637',
-        'COORDS_LONGITUDE' => '55.749972'
+        'COORDS_LONGITUDE' => '37.507637',
+        'COORDS_LATITUDE' => '55.749972'
     ],
 ];
