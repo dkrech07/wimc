@@ -13,6 +13,18 @@ use mihaildev\elfinder\ElFinder;
         <?= Html::tag('h3', 'Редактирование страницы: ' . Html::encode($pageFormModel->page_name)) ?>
     </div>
 
+    <?php
+
+    if ($pageFormModel->page_url === 'main') {
+        $page_link = '';
+    } else {
+        $page_link = $pageFormModel->page_url;
+    }
+    ?>
+    <a target="_blank" href="/<?= Html::encode($page_link) ?>">Перейти на страницу "<?= Html::encode($pageFormModel->page_name) ?>"</a>
+    <span class="pages-text">(ссылка откроется в новой вкладке)</span>
+
+
     <?php $form = ActiveForm::begin([
         'id' => 'page-edit',
         // 'encodeErrorSummary' => true,

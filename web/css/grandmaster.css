@@ -1,3 +1,9 @@
+body {
+    font-size: 14px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+
+}
+
 .input-alert {
     box-shadow: 0px 0px 5px rgb(255, 51, 0);
 }
@@ -125,13 +131,13 @@
 
 .title-list{
     right: 0;
-    z-index: 12;
+    z-index: 10;
 }
 
 .pagination-list {
     bottom: 0;
     width: 100%;    
-    z-index: 10;
+    z-index: 5;
 }
 
 .pagination-item a {
@@ -410,3 +416,21 @@
     padding: 0;
     padding: 2px;
 }
+
+.pages-link,
+.pages-text {
+    margin: 0;
+    padding: 0;
+}
+
+.pages-text {
+    font-size: 12px;
+}
+
+/* @font-face {
+    font-family: "Roboto-Regular"; 
+    src: url("../fonts/Rooboto/Roboto-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}  */
+

@@ -9,8 +9,8 @@ class NearestPointService
 {
     function distanceTo($current_point, $nearest_point)
     {
-        $distanceX = $current_point['x'] - $nearest_point['x']; // вычитаю корддинаты по оси x;
-        $distanceY = $current_point['y'] - $nearest_point['y']; // вычитаю координаты по оси y;
+        $distanceX = intval($current_point['x']) - intval($nearest_point['x']); // вычитаю корддинаты по оси x;
+        $distanceY = intval($current_point['y']) - intval($nearest_point['y']); // вычитаю координаты по оси y;
         $distance = sqrt($distanceX * $distanceX + $distanceY * $distanceY); // считаю дистанцию;
         return $distance;
     }
@@ -35,6 +35,7 @@ class NearestPointService
 
         $curNearestPoint = $customs_points[0];
         $curNearestDistance = self::distanceTo($current_point, $curNearestPoint);
+
 
         foreach ($customs_points as $customs_point) {
             $distance = self::distanceTo($current_point, $customs_point);

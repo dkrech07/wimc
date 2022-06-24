@@ -52,7 +52,7 @@ $config = [
             'rules' => [
                 '/' => 'customs/index',
                 'grundmaster' => 'grundmaster/index',
-                'admin' => 'grundmaster/admin',
+                // 'admin' => 'grundmaster/admin',
                 // 'pages' => 'grundmaster/pages',
                 // 'grundmaster/pages/<id>' => 'grundmaster/pages',
                 // 'index/<id:>' => 'site/index',
@@ -62,6 +62,7 @@ $config = [
                 'api/geocoder' => 'geoapi/term<geocode>',
                 'geoapi/<geocode>' => 'api/geocoder',
                 '/' => '/customs',
+                'grandmaster/admin' => 'grandmaster/customs',
                 // 'ajax' => 'customs/ajax',
                 // 'checkbox/<customscode>' => 'customs/checkbox',
             ],

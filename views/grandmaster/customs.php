@@ -18,7 +18,7 @@ $this->title = 'Grandmaster - Customs';
 ?>
 
 <div class="content-block customs-content col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-    <h2 class="grandmaster-title">Список таможенных постов:</h2>
+    <h3 class="grandmaster-title">Список таможенных постов:</h3>
 
     <div class="customs-menu-table">
         <div class="custom-search">
