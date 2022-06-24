@@ -114,31 +114,24 @@
 
 .title-list,
 .pagination-list {
-    padding: 0;
+    position: fixed;
+    bottom: 0;
     margin: 0;
-    position: relative;
-    top: 0px;
-    width: 100%;
+    padding: 0;
+    padding: 5px;
     background-color: #efefef;
+    opacity: 0.8;
 }
 
-.title-list {
-    z-index: 20;
+.title-list{
+    right: 0;
+    z-index: 12;
 }
 
 .pagination-list {
+    bottom: 0;
+    width: 100%;    
     z-index: 10;
-}
-
-.title-list-fixed,
-.pagination-list-fixed {
-    top: 0;
-    position: fixed;
-    width: 100%;
-}
-
-.pagination-list-fixed {
-    padding-top: 30px;
 }
 
 .pagination-item a {

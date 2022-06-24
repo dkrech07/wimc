@@ -176,23 +176,23 @@ if (addNewCustom) {
 // });
 
 
-function fixedMenu (item, fixedItem) {
-    if ($(item)) {
-        var startPos = $(item).offset().top;
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= startPos) {
-                if ($(item).hasClass() == false) $(item).addClass(fixedItem);
-            }
-            else {
-                $(item).removeClass(fixedItem);
-            }
-        });
-    }
-};
+// function fixedMenu (item, fixedItem) {
+//     if ($(item)) {
+//         var startPos = $(item).offset().top;
+//         $(window).scroll(function () {
+//             if ($(window).scrollTop() >= startPos) {
+//                 if ($(item).hasClass() == false) $(item).addClass(fixedItem);
+//             }
+//             else {
+//                 $(item).removeClass(fixedItem);
+//             }
+//         });
+//     }
+// };
 
 
-fixedMenu('.pagination-list', 'pagination-list-fixed');
-fixedMenu('.title-list', 'title-list-fixed');
+// fixedMenu('.pagination-list', 'pagination-list-fixed');
+// fixedMenu('.title-list', 'title-list-fixed');
 // fixedMenu('.customs-menu', 'customs-menu-fixed');
 // fixedMenu('.customs-menu-table', 'customs-menu-table-fixed');
 
