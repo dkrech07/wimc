@@ -112,6 +112,8 @@ body {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    position: relative;
+    z-index: 10;
     /* box-shadow: 4px 4px 4px rgb(109, 106, 104); */
 
 }
@@ -520,6 +522,90 @@ body {
 .help-block {
     font-size: 12px;
     color: #FF0000;
+}
+
+.nearest-popup {
+    position: absolute;
+    top: 65px;
+    right: 25px;
+    z-index: 10;
+    width: 332px;
+    font-size: 12px;
+    border: 2px solid #6C757D;
+    border-radius: 20px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.nearest-popup .nearest-header {
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #ffffff;
+    background-color: #343A40;
+    text-align: center;    
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 24px;
+}
+
+.nearest-list {
+    margin: 0;
+    padding: 0;
+    padding: 5px;
+    list-style-type: none;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.nearest-title,
+.nearest-distance,
+.nearest-info {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+.nearest-distance,
+.nearest-name,
+.nearest-address {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nearest-name{
+    font-weight: 600;
+}
+
+.nearest-item:hover {
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+
+.nearest-poput-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.nearest-poput-button {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    width: 100px;
+    padding: 8px 10px;
+    background-color: #00AA00;
+    margin-left: 0;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
 }
 /* .question-form {
     margin: 0 auto;

@@ -99,4 +99,29 @@ $this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_d
             <button type="button" class="zoom-out btn btn-light"><i class="bi bi-arrow-counterclockwise"></i></button>
         </div>
     </div>
+
+    <div class='nearest-popup'>
+        <h3 class="nearest-header">Ближайшие точки</h3>
+        <ul class="nearest-list">
+            <li class="nearest-item">
+                <h4 class="nearest-title">Ближайший пост<h4>
+                        <div class="nearest-distance">~ 12 км</div>
+                        <div class="nearest-name">10502050 т/п Малахит (специализированный) 620075</div>
+                        <div class="nearest-address">СВЕРДЛОВСКАЯ ОБЛ., Г.ЕКАТЕРИНБУРГ, УЛ.ГОГОЛЯ, Д. 27</div>
+            </li>
+            <li class="nearest-item">
+                <h4 class="nearest-title">Еще рядом<h4>
+                        <div class="nearest-distance">~ 12 км</div>
+                        <div class="nearest-name">10502050 т/п Малахит (специализированный) 620075</div>
+                        <div class="nearest-address">СВЕРДЛОВСКАЯ ОБЛ., Г.ЕКАТЕРИНБУРГ, УЛ.ГОГОЛЯ, Д. 27</div>
+            </li>
+            <li class="nearest-item">
+                <h4 class="nearest-title">Еще рядом<h4>
+                        <div class="nearest-distance">~ 12 км</div>
+                        <div class="nearest-name">10502050 т/п Малахит (специализированный) 620075</div>
+                        <div class="nearest-address">СВЕРДЛОВСКАЯ ОБЛ., Г.ЕКАТЕРИНБУРГ, УЛ.ГОГОЛЯ, Д. 27</div>
+            </li>
+        </ul>
+        <div class="nearest-poput-button">OK</div>
+    </div>
 </div>
