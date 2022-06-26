@@ -529,8 +529,7 @@ body {
     top: 65px;
     right: 25px;
     z-index: 10;
-    width: 332px;
-    font-size: 12px;
+    width: 265px;
     border: 2px solid #6C757D;
     border-radius: 20px;
     background-color: #ffffff;
@@ -540,25 +539,27 @@ body {
 .nearest-popup .nearest-header {
     margin: 0;
     padding: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: #ffffff;
     background-color: #343A40;
-    text-align: center;    
+    text-align: center;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     font-family: 'PT Sans', 'Arial', sans-serif;
-    font-size: 24px;
+    font-size: 14px;
 }
+
 
 .nearest-list {
     margin: 0;
     padding: 0;
-    padding: 5px;
+
     list-style-type: none;
     text-align: center;
     padding-bottom: 50px;
 }
+
 
 .nearest-title,
 .nearest-distance,
@@ -566,7 +567,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', 'Arial', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -576,17 +577,18 @@ body {
 .nearest-distance,
 .nearest-name,
 .nearest-address {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
 }
 
-.nearest-name{
+.nearest-name {
     font-weight: 600;
 }
 
 .nearest-item:hover {
     background-color: #D9D9D9;
     cursor: pointer;
+    padding: 5px;
 }
 
 .nearest-poput-button:hover {
@@ -596,17 +598,19 @@ body {
 
 .nearest-poput-button {
     position: absolute;
-    right: 30px;
+    left: 50%;
+    margin-left: -40px;
     bottom: 10px;
-    width: 100px;
-    padding: 8px 10px;
+    width: 80px;
+    padding: 4px 10px;
     background-color: #00AA00;
-    margin-left: 0;
     border-radius: 15px;
     text-align: center;
     color: #ffffff;
     font-size: 18px;
 }
+
+
 /* .question-form {
     margin: 0 auto;
 }
