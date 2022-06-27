@@ -31,7 +31,8 @@ class AppAsset extends AssetBundle
         'js/jquery.ui.autocomplete.html.js',
         'js/autocomplete.js',
         'js/yandex-map.js',
-        'js/nearestPopup.js'
+        'js/nearestPopup.js',
+        'js/cookie.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
