@@ -51,13 +51,15 @@ class SearchController extends Controller
 
             $nearest_point = (new NearestPointService())->getNearestPoint($form_model->latitude, $form_model->longitude, $filter_model);
 
+            $form_model->nearest_point = $nearest_point['nearestPoint'];
+            $form_model->other_nearest_points = $nearest_point['otherNearestPoints'];
             $form_model->filter = implode(', ', [$data['main'], $data['head'], $data['excise'], $data['others'], $data['captions']]);
-            $form_model->nearest_lat = $nearest_point['nearestPoint']['x'];
-            $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
-            $form_model->distance = $nearest_point['distance'] * 100000;
-            $form_model->nearest_code = $nearest_point['nearestPoint']['code'];
+            // $form_model->nearest_lat = $nearest_point['nearestPoint']['x'];
+            // $form_model->nearest_lon = $nearest_point['nearestPoint']['y'];
+            // $form_model->distance = $nearest_point['distance'] * 100000;
+            // $form_model->nearest_code = $nearest_point['nearestPoint']['code'];
 
-            (new LogService())->logSearch($form_model);
+            // (new LogService())->logSearch($form_model);
 
             return json_encode($form_model, JSON_UNESCAPED_UNICODE); // Отсюда приходят данные в модель формы на фронт;
         }

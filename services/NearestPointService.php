@@ -9,8 +9,8 @@ class NearestPointService
 {
     function distanceTo($current_point, $nearest_point)
     {
-        $distanceX = intval($current_point['x']) - intval($nearest_point['x']); // вычитаю корддинаты по оси x;
-        $distanceY = intval($current_point['y']) - intval($nearest_point['y']); // вычитаю координаты по оси y;
+        $distanceX = floatval($current_point['x']) - floatval($nearest_point['x']); // вычитаю корддинаты по оси x;
+        $distanceY = floatval($current_point['y']) - floatval($nearest_point['y']); // вычитаю координаты по оси y;
         $distance = sqrt($distanceX * $distanceX + $distanceY * $distanceY); // считаю дистанцию;
         return $distance;
     }
@@ -22,29 +22,38 @@ class NearestPointService
             "y" => $y,
         ];
 
-        // $form_model = new FilterCustoms();
-        $customs = (new CustomsFilterService())->getFilteredCustoms($filter_model);
         $customs_points = [];
+        $customs = (new CustomsFilterService())->getFilteredCustoms($filter_model);
+
         foreach ($customs as $number => $custom) {
-            $customs_points[] = [
+
+            $custom_point = [
                 "x" => $custom['COORDS_LATITUDE'],
                 "y" => $custom['COORDS_LONGITUDE'],
+            ];
+
+            $customs_points[] = [
+                "distance" => self::distanceTo($current_point, $custom_point),
                 "code" => $custom['CODE'],
+                'namt' => $custom['NAMT'],
+                'adrtam' => $custom['ADRTAM'],
+                "x" => $custom['COORDS_LATITUDE'],
+                "y" => $custom['COORDS_LONGITUDE'],
             ];
         }
 
-        $curNearestPoint = $customs_points[0];
-        $curNearestDistance = self::distanceTo($current_point, $curNearestPoint);
+        usort($customs_points, function ($a, $b) {
+            return ($a['distance'] - $b['distance']);
+        });
 
+        $otherNearestPoints = [];
 
-        foreach ($customs_points as $customs_point) {
-            $distance = self::distanceTo($current_point, $customs_point);
-            if ($distance < $curNearestDistance) {
-                $curNearestDistance = $distance;
-                $curNearestPoint = $customs_point;
+        foreach ($customs_points as $nearest_point_nuber => $other_nearest_point) {
+            if ($nearest_point_nuber > 0 && $other_nearest_point['distance'] - $customs_points[0]['distance'] < 0.5) {
+                $otherNearestPoints[] = $other_nearest_point;
             }
         }
 
-        return  ['nearestPoint' => $curNearestPoint, 'distance' => $curNearestDistance];
+        return  ['nearestPoint' => $customs_points[0], 'otherNearestPoints' => $otherNearestPoints];
     }
 }

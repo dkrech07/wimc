@@ -295,6 +295,58 @@ function init () {
             // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
             myMap.setBounds(searchCollection.getBounds()); 
             myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
+
+            // Наполняю всплывающее окно с результатами поиска;
+            // var nearestPopupElement = document.querySelector('.nearest-popup');
+            // var nearestList = nearestPopupElement.querySelector('.nearest-list');
+            // var nearestOthers = nearestPopupElement.querySelector('.nearest-others');
+
+            // nearestPopupElement.style.display = 'block';
+
+            var nearestPopup = document.createElement('div');
+            nearestPopup.className = 'nearest-popup';
+
+            function getNearestPoint (point, containerElement) {
+                var nearestItem = document.createElement('li');
+                nearestItem.className = 'nearest-item';
+    
+                var nearestTitle = document.createElement('h4');
+                nearestTitle.className = 'nearest-title';
+                nearestTitle.textContent = point['namt'];
+    
+                var nearestDistance = document.createElement('div');
+                nearestDistance.className = 'nearest-distance';
+                nearestDistance.textContent = '~' + Math.floor(point['distance'] * 100000) + ' км.';
+                
+                var nearestName = document.createElement('div');
+                nearestName.className = 'nearest-name';
+                nearestName.textContent = point['namt'];
+    
+                var nearestAddress = document.createElement('div');
+                nearestAddress.className = 'nearest-address';
+                nearestAddress.textContent = point['adrtam'];
+    
+                nearestItem.append(nearestTitle);
+                nearestItem.append(nearestDistance);
+                nearestItem.append(nearestName);
+                nearestItem.append(nearestAddress);
+                nearestPopup.append(nearestItem);
+
+                containerElement.append(nearestItem);
+            }
+
+            getNearestPoint(searchData['nearest_point'], nearestPopup);
+
+            if (searchData['other_nearest_points'].length > 0) {
+
+                searchData['other_nearest_points'].forEach(element => {
+                    getNearestPoint(element, nearestPopup);
+
+                });
+
+            }
+
+            document.body.append(nearestPopup);
         },
             // error: function(){
             //     alert('Error!');

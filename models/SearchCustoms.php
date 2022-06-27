@@ -7,6 +7,8 @@ use yii\base\Model;
 class SearchCustoms extends Model
 {
     public $autocomplete;
+    public $nearest_point;
+    public $other_nearest_points;
     public $latitude;
     public $longitude;
     public $nearest_lat;
@@ -24,7 +26,9 @@ class SearchCustoms extends Model
     {
         return [
             [['autocomplete'], 'required'], //, 'latitude', 'longitude'
-            [['autocomplete', 'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'nearest_code', 'distance', 'filter'], 'string'],
+            [['autocomplete', 'nearest_point', 'other_nearest_points', 'filter'], 'string'],
+
+            // [['autocomplete', 'nearest_point', 'other_nearest_points',  'latitude', 'longitude', 'nearest_lat', 'nearest_lon', 'nearest_code', 'distance', 'filter'], 'string'],
             // [['head', 'excise', 'others', 'captions'], 'boolean'],
         ];
     }
