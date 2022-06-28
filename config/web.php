@@ -4,7 +4,9 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
+    'language' => 'ru-RU',
     'id' => 'basic',
+    'name' => 'MyCustoms',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
@@ -43,14 +45,38 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => false,
             'rules' => [
+                '/' => 'customs/index',
+                'grundmaster' => 'grundmaster/index',
+                // 'admin' => 'grundmaster/admin',
+                // 'pages' => 'grundmaster/pages',
+                // 'grundmaster/pages/<id>' => 'grundmaster/pages',
+                // 'index/<id:>' => 'site/index',
+                'checkbox' => 'filter/checkbox',
+                'autocomplete' => 'search/autocomplete',
+                'search' => 'search/search',
+                'api/geocoder' => 'geoapi/term<geocode>',
+                'geoapi/<geocode>' => 'api/geocoder',
+                '/' => '/customs',
+                'grandmaster/admin' => 'grandmaster/customs',
+                // 'ajax' => 'customs/ajax',
+                // 'checkbox/<customscode>' => 'customs/checkbox',
             ],
         ],
-        */
+    ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'path' => 'upload/global',
+                'name' => 'Global'
+            ],
+        ]
     ],
     'params' => $params,
 ];
