@@ -46,14 +46,14 @@ class NearestPointService
             return ($a['distance'] - $b['distance']);
         });
 
-        $otherNearestPoints = [];
+        // $otherNearestPoints = [];
 
-        foreach ($customs_points as $nearest_point_nuber => $other_nearest_point) {
-            if ($nearest_point_nuber > 0 && $other_nearest_point['distance'] - $customs_points[0]['distance'] < 0.5) {
-                $otherNearestPoints[] = $other_nearest_point;
-            }
-        }
+        // foreach ($customs_points as $nearest_point_nuber => $other_nearest_point) {
+        //     if ($nearest_point_nuber > 0 && $other_nearest_point['distance'] - $customs_points[0]['distance'] < 0.5) {
+        //         $otherNearestPoints[] = $other_nearest_point;
+        //     }
+        // }
 
-        return  ['nearestPoint' => $customs_points[0], 'otherNearestPoints' => $otherNearestPoints];
+        return  ['nearestPoints' => array_slice($customs_points, 0, 3)];
     }
 }

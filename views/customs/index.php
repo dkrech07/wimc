@@ -35,9 +35,6 @@ $this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_d
 
     <?= $form->field($searchCustomsModel, 'latitude', ['template' => '{input}'])->hiddenInput(['id' => 'latitude']) ?>
     <?= $form->field($searchCustomsModel, 'longitude', ['template' => '{input}'])->hiddenInput(['id' => 'longitude']) ?>
-    <?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lat']) ?>
-    <?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lon']) ?>
-    <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
 
     <?= $form->field($searchCustomsModel, 'autocomplete', [
         'template' => '{label}{input}',
@@ -100,14 +97,12 @@ $this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_d
         </div>
     </div>
 
-    <!-- <div class='nearest-popup'>
+    <div class='nearest-popup nearest-disabled'>
         <h3 class="nearest-header">Ближайшие точки</h3>
         <h4 class="nearest-title">Ближайший пост</h4>
         <ul class="nearest-list"></ul>
         <h4 class="nearest-title">Еще посты рядом</h4>
         <ul class="nearest-list nearest-others"></ul>
         <div class="nearest-poput-button">OK</div>
-
-
-    </div> -->
+    </div>
 </div>

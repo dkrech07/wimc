@@ -45,6 +45,10 @@ http://localhost/wimc/web/index.php?r=customs/index
 
 ---------------------------------------------------------
 
+    <?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lat']) ?>
+    <?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lon']) ?>
+    <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
+    
 <!-- <?= $form->field(
             $loginForm,
             'login',

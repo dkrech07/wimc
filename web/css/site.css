@@ -524,6 +524,14 @@ body {
     color: #FF0000;
 }
 
+.nearest-active {
+    display: block;
+}
+
+.nearest-disabled {
+    display: none;
+}
+
 .nearest-popup {
     position: absolute;
     top: 65px;
@@ -587,6 +595,7 @@ body {
 .nearest-address {
     font-size: 14px;
     font-weight: 400;
+    display: block;
 }
 
 .nearest-name {

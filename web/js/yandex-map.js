@@ -224,12 +224,12 @@ function init () {
 
    // Отрисовывает точки при поиске обеъкта на карте;
    $('#search-customs').on('beforeSubmit', function(){
+        data['autocomplete'] = this['SearchCustoms[autocomplete]'].value;
         data['latitude'] = this['SearchCustoms[latitude]'].value;
         data['longitude'] = this['SearchCustoms[longitude]'].value;
-        data['nearest_lat'] = this['SearchCustoms[nearest_lat]'].value;
-        data['nearest_lon'] = this['SearchCustoms[nearest_lon]'].value;
-        data['distance'] = this['SearchCustoms[distance]'].value;
-        data['autocomplete'] = this['SearchCustoms[autocomplete]'].value;
+        // data['nearest_lat'] = this['SearchCustoms[nearest_lat]'].value;
+        // data['nearest_lon'] = this['SearchCustoms[nearest_lon]'].value;
+        // data['distance'] = this['SearchCustoms[distance]'].value;
 
         $.ajax({
             url: '/search', 
@@ -289,12 +289,14 @@ function init () {
                 iconColor: 'red',
             }));
 
-            searchCollection.add(new ymaps.Placemark([searchData['nearest_lat'], searchData['nearest_lon']]));
-            myMap.geoObjects.add(searchCollection);
+            //!!!!!!!!!!!!!!!!!!!!!!! ЗДЕСЬ РИСУЕТСЯ ТОЧКА НА КАРТЕ;
+            // searchCollection.add(new ymaps.Placemark([searchData['nearest_lat'], searchData['nearest_lon']]));
+            // myMap.geoObjects.add(searchCollection);
 
+            //!!!!!!!!!!!!!!!!!!!!!!! ЗДЕСЬ ВЫПОЛНЯЕТСЯ ЗУМ К ТОЧКЕ ПОЛЬЗОВАТЕЛИ НАЙДЕННОМУ БЛИЖАЙШЕМУ ПОСТУ;
             // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
-            myMap.setBounds(searchCollection.getBounds()); 
-            myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
+            // myMap.setBounds(searchCollection.getBounds()); 
+            // myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
 
             // Наполняю всплывающее окно с результатами поиска;
             // var nearestPopupElement = document.querySelector('.nearest-popup');
@@ -302,51 +304,48 @@ function init () {
             // var nearestOthers = nearestPopupElement.querySelector('.nearest-others');
 
             // nearestPopupElement.style.display = 'block';
-
-            var nearestPopup = document.createElement('div');
-            nearestPopup.className = 'nearest-popup';
-
-            function getNearestPoint (point, containerElement) {
+           
+            function getNearestInfo (item) {
                 var nearestItem = document.createElement('li');
                 nearestItem.className = 'nearest-item';
-    
-                var nearestTitle = document.createElement('h4');
-                nearestTitle.className = 'nearest-title';
-                nearestTitle.textContent = point['namt'];
-    
-                var nearestDistance = document.createElement('div');
-                nearestDistance.className = 'nearest-distance';
-                nearestDistance.textContent = '~' + Math.floor(point['distance'] * 100000) + ' км.';
-                
-                var nearestName = document.createElement('div');
-                nearestName.className = 'nearest-name';
-                nearestName.textContent = point['namt'];
-    
-                var nearestAddress = document.createElement('div');
-                nearestAddress.className = 'nearest-address';
-                nearestAddress.textContent = point['adrtam'];
-    
-                nearestItem.append(nearestTitle);
-                nearestItem.append(nearestDistance);
-                nearestItem.append(nearestName);
-                nearestItem.append(nearestAddress);
-                nearestPopup.append(nearestItem);
 
-                containerElement.append(nearestItem);
+                var nearestItemDistance = document.createElement('span');
+                nearestItemDistance.className = 'nearest-distance';
+                nearestItemDistance.textContent = '~' + Math.floor(item['distance'] * 100000) + ' км';
+
+                var nearestItemName = document.createElement('span');
+                nearestItemName.className = 'nearest-name';
+                nearestItemName.textContent = item['namt'];
+
+                var nearestItemAddress = document.createElement('span');
+                nearestItemAddress.className = 'nearest-address';
+                nearestItemAddress.textContent = item['adrtam'];
+
+                nearestItem.append(nearestItemDistance);
+                nearestItem.append(nearestItemName);
+                nearestItem.append(nearestItemAddress);
+
+                return nearestItem;
             }
 
-            getNearestPoint(searchData['nearest_point'], nearestPopup);
+            var nearestPopupElement = document.querySelector('.nearest-popup');
 
-            if (searchData['other_nearest_points'].length > 0) {
+            console.log(nearestPopupElement.classList);
 
-                searchData['other_nearest_points'].forEach(element => {
-                    getNearestPoint(element, nearestPopup);
-
-                });
-
+            if(nearestPopupElement.classList.contains('nearest-active')){
+                nearestPopupElement.classList.remove('nearest-active');
+                nearestPopupElement.classList.add('nearest-disabled');
+            } else {
+                nearestPopupElement.classList.remove('nearest-disabled');
+                nearestPopupElement.classList.add('nearest-active');
             }
 
-            document.body.append(nearestPopup);
+            var nearestContainerElement = nearestPopupElement.querySelector('.nearest-list');
+            var otherContainerElement = nearestPopupElement.querySelector('.nearest-others');
+
+            nearestContainerElement.append(getNearestInfo(searchData['nearest_points'][0]));
+            otherContainerElement.append(getNearestInfo(searchData['nearest_points'][1]));
+            otherContainerElement.append(getNearestInfo(searchData['nearest_points'][2]));
         },
             // error: function(){
             //     alert('Error!');
