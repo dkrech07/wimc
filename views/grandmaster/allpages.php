@@ -29,6 +29,9 @@ use mihaildev\elfinder\ElFinder;
         <li class="page-edit">
             <a href="/grandmaster/pages/?id=cookie">Cookie</a>
         </li>
+        <li class="page-edit">
+            <a href="/grandmaster/pages/?id=cookie_message">Сообщение об использовании cookie</a>
+        </li>
     </ul>
 
 </div>

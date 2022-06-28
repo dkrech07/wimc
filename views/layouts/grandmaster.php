@@ -108,7 +108,7 @@ if (isset(Yii::$app->user->identity->login)) {
                                 ['label' => 'Как это работает', 'url' => ['/grandmaster/pages/?id=about']],
                                 ['label' => 'Связаться с нами', 'url' => ['/grandmaster/pages/?id=contacts']],
                                 ['label' => 'Cookie', 'url' => ['/grandmaster/pages/?id=cookie']],
-
+                                ['label' => 'Сообщение об использовании Cookie', 'url' => ['/grandmaster/pages/?id=cookie_message']],
                             ]
                         ],
                     ];
