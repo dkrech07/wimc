@@ -1,6 +1,41 @@
 var nearestPopupElement = document.querySelector('.nearest-popup');
 
 if (nearestPopupElement) {
+
+    var rollButtonElement = nearestPopupElement.querySelector('.roll-button');
+
+    rollButtonElement.addEventListener('click', evt => {
+        var nearestTitles = nearestPopupElement.querySelectorAll('.nearest-title');
+        var nearestLists = nearestPopupElement.querySelectorAll('.nearest-list');
+
+        if (nearestPopupElement.classList.contains('roll-up')) {
+            nearestPopupElement.classList.remove('roll-up');
+            nearestPopupElement.classList.add('roll-down');
+            rollButtonElement.textContent = 'Развернуть';
+
+            nearestTitles.forEach(function (element) {
+                element.style.display = 'none';
+            });
+
+            nearestLists.forEach(function (element) {
+                element.style.display = 'none';
+            });
+
+        } else {
+            nearestPopupElement.classList.remove('roll-down');
+            nearestPopupElement.classList.add('roll-up');
+            rollButtonElement.textContent = 'Свернуть';
+
+            nearestTitles.forEach(function (element) {
+                        element.style.display = 'block';
+                    });
+
+            nearestLists.forEach(function (element) {
+                element.style.display = 'block';
+            });
+        }
+    });
+
     var popupHeader = nearestPopupElement.querySelector('.nearest-header');
 
     popupHeader.addEventListener('mousedown', evt => {

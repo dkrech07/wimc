@@ -97,12 +97,12 @@ $this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_d
         </div>
     </div>
 
-    <div class='nearest-popup nearest-disabled'>
+    <div class='nearest-popup nearest-disabled roll-up'>
         <h3 class="nearest-header">Ближайшие точки</h3>
         <h4 class="nearest-title">Ближайший пост</h4>
         <ul class="nearest-list"></ul>
         <h4 class="nearest-title">Еще посты рядом</h4>
         <ul class="nearest-list nearest-others"></ul>
-        <div class="nearest-poput-button">OK</div>
+        <div class="roll-button">Свернуть</div>
     </div>
 </div>
