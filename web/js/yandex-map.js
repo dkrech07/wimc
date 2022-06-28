@@ -326,6 +326,25 @@ if (yandexMap) {
                     nearestPopupElement.classList.add('nearest-active');
                 }
 
+                if (nearestPopupElement.classList.contains('roll-down')) {
+                    var nearestTitles = nearestPopupElement.querySelectorAll('.nearest-title');
+                    var nearestLists = nearestPopupElement.querySelectorAll('.nearest-list');
+                    var rollButtonElement = nearestPopupElement.querySelector('.roll-button');
+
+                    nearestPopupElement.classList.remove('roll-down');
+                    nearestPopupElement.classList.add('roll-up');
+
+                    rollButtonElement.textContent = 'Развернуть';
+        
+                    nearestTitles.forEach(function (element) {
+                        element.style.display = 'block';
+                    });
+        
+                    nearestLists.forEach(function (element) {
+                        element.style.display = 'block';
+                    });
+                }
+
                 var nearestContainerElement = nearestPopupElement.querySelector('.nearest-list');
                 var otherContainerElement = nearestPopupElement.querySelector('.nearest-others');
 

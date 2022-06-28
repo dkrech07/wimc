@@ -621,7 +621,7 @@ body {
 .roll-button {
     position: absolute;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -60px;
     bottom: 8px;
     width: 120px;
     padding: 4px 10px;
