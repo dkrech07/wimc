@@ -27,11 +27,7 @@ yii migrate
 
 7. Загрузить тестовые данные:
 
-php yii fixture "Customs, Cities"
-
-
-
-
+php yii fixture "Customs, Pages"
 
 
 Дополнительно:
@@ -46,3 +42,35 @@ http://localhost/wimc/web/geoapi/Екатеринбург
 
 // Роут без ЧПУ (enablePrettyUrl):
 http://localhost/wimc/web/index.php?r=customs/index
+
+---------------------------------------------------------
+
+    <?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lat']) ?>
+    <?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lon']) ?>
+    <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
+    
+<!-- <?= $form->field(
+            $loginForm,
+            'login',
+            [
+                // 'options' => [
+                //     'class' => 'col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8',
+                // ],
+            ]
+        )->textInput([
+            'id' => 'login',
+            'class' => 'form-control',
+            // 'required' => true,
+        ]) ?>
+
+    <?= $form->field($loginForm, 'password', [
+        // 'options' => [
+        //     'class' => 'col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8',
+        // ],
+    ])->passwordInput(
+        [
+            'id' => 'password',
+            'class' => 'form-control login',
+            // 'required' => true,
+        ]
+    ) ?> -->
