@@ -28,7 +28,7 @@
                         balloonOffset: [3, -25],
                     });
                 }
-        
+
             }
         },
 
@@ -47,17 +47,17 @@
                 var cluster = e.get('target');
                 if (cluster.options._name == 'cluster') {
                     var clusterPoints = cluster.getGeoObjects();
-        
+
                     var pointsCoordinates = []; // список всех точек координат кластера;
                     clusterPoints.forEach(point => {
                         pointsCoordinates.push(point.geometry._coordinates);
                     });
-        
+
                     for (var i = 0; i < pointsCoordinates.length; i++) {
                         currentPoint = pointsCoordinates[i];
                         for (var j = 0; j < pointsCoordinates.length; j++) {
                             checkPoint = pointsCoordinates[j];
-        
+
                             if (currentPoint[0] != checkPoint[0] || currentPoint[1] != checkPoint[1]) {
                                 myMap.setCenter(pointsCoordinates[0]);
                                 myMap.setBounds(cluster.getBounds());
@@ -66,7 +66,7 @@
                         }
                     }
                     clusterer.balloon.open(cluster);
-        
+
                 }
             });
         },
@@ -79,7 +79,59 @@
                 myMap.setBounds(clusterer.getBounds());
             });
         },
- 
+
+        getData: function (data, geoObjects, clusterer, myMap, pointsColors) {
+            $.ajax({
+                url: '/checkbox',
+                type: 'POST',
+                data: data,
+                success: function (response) {
+                    let customsCoords = JSON.parse(response);
+
+                    console.log('data:');
+                    console.log(data);
+                    console.log('response:');
+                    console.log(customsCoords);
+
+                    clusterer.removeAll();
+
+                    if (data['main'] == 1) {
+                        window.points.getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
+                        clusterer.add(geoObjects['main']);
+                    }
+
+                    if (data['head'] == 1) {
+                        window.points.getPoints(geoObjects['head'], customsCoords['head'], pointsColors['head'], data['captions']);
+                        clusterer.add(geoObjects['head']);
+                    }
+
+                    if (data['excise'] == 1) {
+                        window.points.getPoints(geoObjects['excise'], customsCoords['excise'], pointsColors['excise'], data['captions']);
+                        clusterer.add(geoObjects['excise']);
+                    }
+
+                    if (data['others'] == 1) {
+                        window.points.getPoints(geoObjects['others'], customsCoords['others'], pointsColors['others'], data['captions']);
+                        clusterer.add(geoObjects['others']);
+                    }
+
+                    myMap.geoObjects.add(clusterer);
+
+                    // if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
+
+                    //     window.points.getPoints(geoObjects[checkbox.id], customsCoords[checkbox.id], pointsColors[checkbox.id], data['captions']);
+
+                    //     clusterer.add(geoObjects[checkbox.id]);
+                    //     myMap.geoObjects.add(clusterer);
+                    // } else if (checkbox.id == 'captions') {
+
+                    // } else {
+                    //     clusterer.remove(geoObjects[checkbox.id]);
+                    // }
+                }
+            });
+        }
+
     };
 
 
