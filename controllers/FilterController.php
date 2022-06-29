@@ -26,6 +26,10 @@ class FilterController extends Controller
             $form_model->others = $data['others'];
             $form_model->captions = $data['captions'];
 
+            // $form_model->autocomplete = $data['autocomplete'];
+            // $form_model->latitude = $data['latitude'];
+            // $form_model->longitude = $data['longitude'];
+
             (new LogService())->logIP(Yii::$app->request->userIP);
 
 

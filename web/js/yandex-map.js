@@ -64,20 +64,7 @@ function init() {
     };
 
     // Отрисовываю основные таможенные посты;
-    $.ajax({
-        url: '/checkbox',
-        type: 'POST',
-        data: data,
-        success: function (response) {
-            let customsCoords = JSON.parse(response);
-            window.points.getPoints(geoObjects['main'], customsCoords['main'], pointsColors['main'], data['captions']);
-            clusterer.add(geoObjects['main']);
-            myMap.geoObjects.add(clusterer);
-            myMap.setBounds(clusterer.getBounds(), {
-                checkZoomRange: true
-            });
-        }
-    });
+    window.points.getData(data, geoObjects, clusterer, myMap, pointsColors);
 
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
