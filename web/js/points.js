@@ -194,6 +194,28 @@
                         checkZoomRange: true
                     });
 
+                    if (data['latitude'] && data['longitude']) {
+                        myMap.geoObjects.add(new ymaps.Placemark([data['latitude'], data['longitude']], {
+                            balloonContentHeader: 'Вы искали:',
+                            balloonContentBody: data['autocomplete'],
+                            balloonContentFooter: 'Координаты точки: ' + data['latitude'] + ', ' + data['longitude'],
+                            iconCaption: 'Ваша точка',
+                        }, {
+                            preset: 'islands#pinkDotIcon',
+                            iconColor: 'red',
+                        }));
+                    }
+                    // myMap.geoObjects.add(searchCollection);
+
+                    //!!!!!!!!!!!!!!!!!!!!!!! ЗДЕСЬ РИСУЕТСЯ ТОЧКА НА КАРТЕ;
+                    // searchCollection.add(new ymaps.Placemark([searchData['nearest_lat'], searchData['nearest_lon']]));
+
+                    //!!!!!!!!!!!!!!!!!!!!!!! ЗДЕСЬ ВЫПОЛНЯЕТСЯ ЗУМ К ТОЧКЕ ПОЛЬЗОВАТЕЛИ НАЙДЕННОМУ БЛИЖАЙШЕМУ ПОСТУ;
+                    // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
+                    // myMap.setBounds(searchCollection.getBounds()); 
+                    // myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
+
+
                     // if (data[checkbox.id] == 1 && checkbox.id !== 'captions') {
 
                     //     window.points.getPoints(geoObjects[checkbox.id], customsCoords[checkbox.id], pointsColors[checkbox.id], data['captions']);
