@@ -2,7 +2,15 @@
 
     window.points = {
         // Получает данные точек для карты с бэкенда;
-        getPoints: function (geoObjects, points, color, captions) {
+        getPoints: function (geoObjects, points, captions) {
+            // Карта цветов меток;
+            var pointsColors = {
+                'main': '#00AA00',
+                'head': '#FF0000',
+                'excise': '#0000FF',
+                'others': '#E8B000',
+            };
+
             for (var i = 0, len = points.length; i < len; i++) {
                 if (captions == 1) {
                     geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']],
@@ -12,7 +20,7 @@
                             balloonContentBody: points[i]['properties']['balloonContentBody'],
                             balloonContentFooter: points[i]['properties']['balloonContentFooter'],
                         }, {
-                        iconColor: color,
+                        iconColor: pointsColors[points[i]['custom_type']],
                         hideIconOnBalloonOpen: false,
                         balloonOffset: [3, -25],
                     });
@@ -23,7 +31,7 @@
                             balloonContentBody: points[i]['properties']['balloonContentBody'],
                             balloonContentFooter: points[i]['properties']['balloonContentFooter'],
                         }, {
-                        iconColor: color,
+                        iconColor: pointsColors[points[i]['custom_type']],
                         hideIconOnBalloonOpen: false,
                         balloonOffset: [3, -25],
                     });
@@ -106,7 +114,7 @@
             return customsList;
         },
 
-        getData: function (data, geoObjects, clusterer, myMap, pointsColors) {
+        getData: function (data, geoObjects, clusterer, myMap) {
             $.ajax({
                 url: '/checkbox',
                 type: 'POST',
@@ -122,12 +130,12 @@
                     clusterer.removeAll();
 
                     if (data['main'] == 1) {
-                        window.points.getPoints(geoObjects['main'], window.points.getCustomsList(customsCoords)['main'], pointsColors['main'], data['captions']);
+                        window.points.getPoints(geoObjects['main'], window.points.getCustomsList(customsCoords)['main'], data['captions']);
                         clusterer.add(geoObjects['main']);
                     }
 
                     if (data['head'] == 1) {
-                        window.points.getPoints(geoObjects['head'], window.points.getCustomsList(customsCoords)['head'], pointsColors['head'], data['captions']);
+                        window.points.getPoints(geoObjects['head'], window.points.getCustomsList(customsCoords)['head'], data['captions']);
                         clusterer.add(geoObjects['head']);
                     }
 

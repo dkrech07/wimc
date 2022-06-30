@@ -55,16 +55,8 @@ function init() {
         'longitude': null,
     };
 
-    // Карта цветов меток;
-    var pointsColors = {
-        'main': '#00AA00',
-        'head': '#FF0000',
-        'excise': '#0000FF',
-        'others': '#E8B000',
-    };
-
     // Отрисовываю основные таможенные посты;
-    window.points.getData(data, geoObjects, clusterer, myMap, pointsColors);
+    window.points.getData(data, geoObjects, clusterer, myMap);
 
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
@@ -84,7 +76,7 @@ function init() {
                 labelElements[i].style.boxShadow = '4px 4px 4px rgb(109, 106, 104)';
             }
 
-            window.points.getData(data, geoObjects, clusterer, myMap, pointsColors);
+            window.points.getData(data, geoObjects, clusterer, myMap);
         }
     });
 
@@ -94,7 +86,7 @@ function init() {
         data['latitude'] = this['SearchCustoms[latitude]'].value;
         data['longitude'] = this['SearchCustoms[longitude]'].value;
 
-        window.points.getData(data, geoObjects, clusterer, myMap, pointsColors);
+        window.points.getData(data, geoObjects, clusterer, myMap);
         return false;
     });
 

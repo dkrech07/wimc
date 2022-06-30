@@ -1,7 +1,6 @@
 var nearestPopupElement = document.querySelector('.nearest-popup');
 
 if (nearestPopupElement) {
-
     var rollButtonElement = nearestPopupElement.querySelector('.roll-button');
 
     rollButtonElement.addEventListener('click', evt => {
