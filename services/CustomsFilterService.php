@@ -65,7 +65,15 @@ class CustomsFilterService
         return Customs::findBySql($sql)->all();
     }
 
-    public function getCustom($custom, $custom_type, $captions = null)
+    function distanceTo($user_point, $current_point)
+    {
+        $distanceX = floatval($user_point['x']) - floatval($current_point['x']); // вычитаю корддинаты по оси x;
+        $distanceY = floatval($user_point['y']) - floatval($current_point['y']); // вычитаю координаты по оси y;
+        $distance = sqrt($distanceX * $distanceX + $distanceY * $distanceY); // считаю дистанцию;
+        return $distance;
+    }
+
+    public function getCustom($custom, $filterCustomsModel, $custom_type)
     {
         $custom_color = [
             'main' => 'padding: 3px; background: #00AA00; color: #FFFFFF;',
@@ -87,13 +95,29 @@ class CustomsFilterService
             $email = '';
         }
 
+        $user_point = [
+            "x" => $filterCustomsModel['longitude'],
+            "y" => $filterCustomsModel['latitude'],
+        ];
+
+        $current_point = [
+            "x" => $custom['COORDS_LONGITUDE'],
+            "y" => $custom['COORDS_LATITUDE'],
+        ];
+
+        if ($filterCustomsModel['longitude'] && $filterCustomsModel['latitude']) {
+            $distance = self::distanceTo($user_point, $current_point) * 10000;
+        } else {
+            $distance = null;
+        }
+
         return [
-            "distance" => null,
+            "distance" => $distance,
             "nearest" => null,
             "custom_type" => $custom_type,
             "coordinates" => [
-                'lat' => $custom['COORDS_LATITUDE'],
                 'lon' => $custom['COORDS_LONGITUDE'],
+                'lat' => $custom['COORDS_LATITUDE'],
             ],
             "code" => $custom['CODE'],
             "properties" => [
@@ -109,20 +133,15 @@ class CustomsFilterService
         ];
     }
 
-    public function getCustoms($customs, $data)
+    public function getCustoms($customs, $filterCustomsModel)
     {
         $customs_coords = [];
-        // 'main' => [],
-        // 'head' => [],
-        // 'excise' => [],
-        // 'others' => [],
-
 
         foreach ($customs as $number => $custom) {
             if (substr($custom['CODE'], -3) == '000') {
-                $customs_coords[] = self::getCustom($custom, 'head', $data['captions']);
+                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'head');
             } else if (substr($custom['CODE'], 0, 5) == '10009') {
-                $customs_coords[] = self::getCustom($custom, 'excise', $data['captions']);
+                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'excise');
             } else if (
                 substr($custom['CODE'], 0, 3) == '121'
                 || substr($custom['CODE'], 0, 3) == '122'
@@ -130,44 +149,21 @@ class CustomsFilterService
                 || substr($custom['CODE'], 0, 3) == '124'
                 || substr($custom['CODE'], 0, 3) == '125'
             ) {
-                $customs_coords[] = self::getCustom($custom, 'others', $data['captions']);
+                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'others');
             } else {
-                $customs_coords[] = self::getCustom($custom, 'main', $data['captions']);
+                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'main');
             }
         }
 
+        usort($customs_coords, function ($a, $b) {
+            return ($a['distance'] - $b['distance']);
+        });
 
-        // function distanceTo($current_point, $nearest_point)
-        // {
-        //     $distanceX = floatval($current_point['x']) - floatval($nearest_point['x']); // вычитаю корддинаты по оси x;
-        //     $distanceY = floatval($current_point['y']) - floatval($nearest_point['y']); // вычитаю координаты по оси y;
-        //     $distance = sqrt($distanceX * $distanceX + $distanceY * $distanceY); // считаю дистанцию;
-        //     return $distance;
-        // }
-
-        // $form_model->autocomplete = $data['autocomplete'];
-        // $form_model->latitude = $data['latitude'];
-        // $form_model->longitude = $data['longitude'];
-
-        // $current_point = [
-        //     "x" => $data['longitude'],
-        //     "y" => $data['latitude'],
-        // ];
-
-        // foreach ($customs_coords as $number => $custom) {
-
-        //     $custom_point = [
-        //         "x" => $custom['COORDS_LONGITUDE'],
-        //         "y" => $custom['COORDS_LATITUDE'],
-        //     ];
-
-
-        //     $custom['distance'] = distanceTo($current_point, $custom_point);
-        // }
-
-        // usort($customs_points, function ($a, $b) {
-        //     return ($a['distance'] - $b['distance']);
-        // });
+        if ($filterCustomsModel['longitude'] && $filterCustomsModel['latitude']) {
+            $customs_coords[0]['nearest'] = 1;
+            $customs_coords[1]['nearest'] = 1;
+            $customs_coords[2]['nearest'] = 1;
+        }
 
         return $customs_coords;
     }

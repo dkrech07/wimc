@@ -6,7 +6,9 @@ use yii\base\Model;
 
 class FilterCustoms extends Model
 {
-
+    public $autocomplete;
+    public $latitude;
+    public $longitude;
     public $head;
     public $excise;
     public $others;
@@ -17,6 +19,7 @@ class FilterCustoms extends Model
     {
         return [
             [['main', 'head', 'excise', 'others', 'captions'], 'boolean'],
+            [['autocomplete', 'latitude', 'longitude'], 'string'],
         ];
     }
 
