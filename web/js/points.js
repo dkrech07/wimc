@@ -150,7 +150,7 @@
             }
         },
 
-        getData: function (data, geoObjects, clusterer, myMap) {
+        getData: function (data, geoObjects, clusterer, searchCollection, myMap) {
             $.ajax({
                 url: '/checkbox',
                 type: 'POST',
@@ -195,7 +195,9 @@
                     });
 
                     if (data['latitude'] && data['longitude']) {
-                        myMap.geoObjects.add(new ymaps.Placemark([data['latitude'], data['longitude']], {
+                        searchCollection.removeAll();
+
+                        searchCollection.add(new ymaps.Placemark([data['latitude'], data['longitude']], {
                             balloonContentHeader: 'Вы искали:',
                             balloonContentBody: data['autocomplete'],
                             balloonContentFooter: 'Координаты точки: ' + data['latitude'] + ', ' + data['longitude'],
@@ -204,7 +206,14 @@
                             preset: 'islands#pinkDotIcon',
                             iconColor: 'red',
                         }));
+
+                        myMap.geoObjects.add(searchCollection);
+
+                        // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
+                        myMap.setBounds(searchCollection.getBounds()); 
+                        myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
                     }
+
                     // myMap.geoObjects.add(searchCollection);
 
                     //!!!!!!!!!!!!!!!!!!!!!!! ЗДЕСЬ РИСУЕТСЯ ТОЧКА НА КАРТЕ;

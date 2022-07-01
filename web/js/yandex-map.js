@@ -10,7 +10,7 @@ function init() {
     }, {
         searchControlProvider: 'yandex#search',
     }),
-        nearestCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (самая ближайшая точка);
+        searchCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (самая ближайшая точка);
             preset: 'islands#orange'
         }),
         otherNearestCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (две дополнительные ближайшие точки);
@@ -56,7 +56,7 @@ function init() {
     };
 
     // Отрисовываю основные таможенные посты;
-    window.points.getData(data, geoObjects, clusterer, myMap);
+    window.points.getData(data, geoObjects, clusterer, searchCollection, myMap);
 
     // Отрысовывает точки при фильтрации по типам постов;
     let checkboxes = Array.from(document.querySelectorAll('.customs-checkbox'));
@@ -76,7 +76,7 @@ function init() {
                 labelElements[i].style.boxShadow = '4px 4px 4px rgb(109, 106, 104)';
             }
 
-            window.points.getData(data, geoObjects, clusterer, myMap);
+            window.points.getData(data, geoObjects, clusterer, searchCollection, myMap);
         }
     });
 
@@ -86,7 +86,7 @@ function init() {
         data['latitude'] = this['SearchCustoms[latitude]'].value;
         data['longitude'] = this['SearchCustoms[longitude]'].value;
 
-        window.points.getData(data, geoObjects, clusterer, myMap);
+        window.points.getData(data, geoObjects, clusterer, searchCollection, myMap);
         return false;
     });
 
