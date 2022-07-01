@@ -88,31 +88,31 @@
             });
         },
 
-        getCustomsList: function (customsCoords) {
-            var customsList = {
-                'main': [],
-                'head': [],
-                'excise': [],
-                'others': [],
-            };
+        // getCustomsList: function (customsCoords) {
+        //     var customsList = {
+        //         'main': [],
+        //         'head': [],
+        //         'excise': [],
+        //         'others': [],
+        //     };
 
-            customsCoords.forEach(function (custom) {
-                if (custom['custom_type'] === 'main') {
-                    customsList['main'].push(custom);
-                }
-                if (custom['custom_type'] === 'head') {
-                    customsList['head'].push(custom);
-                }
-                if (custom['custom_type'] === 'excise') {
-                    customsList['excise'].push(custom);
-                }
-                if (custom['custom_type'] === 'others') {
-                    customsList['others'].push(custom);
-                }
-            });
+        //     customsCoords.forEach(function (custom) {
+        //         if (custom['custom_type'] === 'main') {
+        //             customsList['main'].push(custom);
+        //         }
+        //         if (custom['custom_type'] === 'head') {
+        //             customsList['head'].push(custom);
+        //         }
+        //         if (custom['custom_type'] === 'excise') {
+        //             customsList['excise'].push(custom);
+        //         }
+        //         if (custom['custom_type'] === 'others') {
+        //             customsList['others'].push(custom);
+        //         }
+        //     });
 
-            return customsList;
-        },
+        //     return customsList;
+        // },
 
         checkAutocomplete: function (data) {
             var searchInputElement = document.querySelector('#autocomplete');
@@ -168,26 +168,26 @@
                     clusterer.removeAll();
 
                     if (data['main'] == 1) {
-                        window.points.getPoints(geoObjects['main'], window.points.getCustomsList(customsCoords)['main'], data['captions']);
+                        window.points.getPoints(geoObjects['main'], customsCoords, data['captions']);
                         clusterer.add(geoObjects['main']);
                     }
 
                     if (data['head'] == 1) {
-                        window.points.getPoints(geoObjects['head'], window.points.getCustomsList(customsCoords)['head'], data['captions']);
+                        window.points.getPoints(geoObjects['head'], customsCoords, data['captions']);
                         clusterer.add(geoObjects['head']);
                     }
 
                     if (data['excise'] == 1) {
-                        window.points.getPoints(geoObjects['excise'], window.points.getCustomsList(customsCoords)['excise'], data['captions']);
+                        window.points.getPoints(geoObjects['excise'], customsCoords, data['captions']);
                         clusterer.add(geoObjects['excise']);
                     }
 
                     if (data['others'] == 1) {
-                        window.points.getPoints(geoObjects['others'], window.points.getCustomsList(customsCoords)['others'], data['captions']);
+                        window.points.getPoints(geoObjects['others'], customsCoords, data['captions']);
                         clusterer.add(geoObjects['others']);
                     }
 
-                    myMap.geoObjects.add(clusterer);
+                    // myMap.geoObjects.add(clusterer);
 
                     myMap.geoObjects.add(clusterer);
                     myMap.setBounds(clusterer.getBounds(), {
@@ -210,8 +210,8 @@
                         myMap.geoObjects.add(searchCollection);
 
                         // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
-                        myMap.setBounds(searchCollection.getBounds()); 
-                        myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
+                        // myMap.setBounds(searchCollection.getBounds()); 
+                        // myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
                     }
 
                     // myMap.geoObjects.add(searchCollection);
