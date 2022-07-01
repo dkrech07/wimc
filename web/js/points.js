@@ -41,13 +41,13 @@
         },
 
         // Получает список коллекций;
-        getCollection: function (myMap, customsParam, collection) {
-            if (customsParam) {
-                myMap.geoObjects.add(collection);
-            } else {
-                myMap.geoObjects.remove(collection);
-            }
-        },
+        // getCollection: function (myMap, customsParam, collection) {
+        //     if (customsParam) {
+        //         myMap.geoObjects.add(collection);
+        //     } else {
+        //         myMap.geoObjects.remove(collection);
+        //     }
+        // },
 
         checkClusterPoints: function (myMap, clusterer) {
             clusterer.events.add('click', function (e) {
@@ -150,7 +150,7 @@
             }
         },
 
-        getData: function (data, geoObjects, clusterer, searchCollection, myMap) {
+        getData: function (data, clusterer, searchCollection, myMap) {
             $.ajax({
                 url: '/checkbox',
                 type: 'POST',
@@ -163,36 +163,43 @@
                     console.log('response:');
                     console.log(customsCoords);
 
+                    geoObjects = [];
+
                     window.points.checkAutocomplete(data['autocomplete']);
 
                     clusterer.removeAll();
 
-                    if (data['main'] == 1) {
-                        window.points.getPoints(geoObjects['main'], customsCoords, data['captions']);
-                        clusterer.add(geoObjects['main']);
-                    }
+                    window.points.getPoints(geoObjects, customsCoords, data['captions']);
 
-                    if (data['head'] == 1) {
-                        window.points.getPoints(geoObjects['head'], customsCoords, data['captions']);
-                        clusterer.add(geoObjects['head']);
-                    }
-
-                    if (data['excise'] == 1) {
-                        window.points.getPoints(geoObjects['excise'], customsCoords, data['captions']);
-                        clusterer.add(geoObjects['excise']);
-                    }
-
-                    if (data['others'] == 1) {
-                        window.points.getPoints(geoObjects['others'], customsCoords, data['captions']);
-                        clusterer.add(geoObjects['others']);
-                    }
-
-                    // myMap.geoObjects.add(clusterer);
-
+                    clusterer.add(geoObjects);
                     myMap.geoObjects.add(clusterer);
                     myMap.setBounds(clusterer.getBounds(), {
                         checkZoomRange: true
                     });
+
+                    // if (data['main'] == 1) {
+                    //     window.points.getPoints(geoObjects, customsCoords, data['captions']);
+                    // }
+
+                    // if (data['head'] == 1) {
+                    //     window.points.getPoints(geoObjects, customsCoords, data['captions']);
+                    //     // clusterer.add(geoObjects['head']);
+                    // }
+
+                    // if (data['excise'] == 1) {
+                    //     window.points.getPoints(geoObjects, customsCoords, data['captions']);
+                    //     // clusterer.add(geoObjects['excise']);
+                    // }
+
+                    // if (data['others'] == 1) {
+                    //     window.points.getPoints(geoObjects, customsCoords, data['captions']);
+                    //     // clusterer.add(geoObjects['others']);
+                    // }
+
+
+                    // myMap.geoObjects.add(clusterer);
+
+
 
                     if (data['latitude'] && data['longitude']) {
                         searchCollection.removeAll();
