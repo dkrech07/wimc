@@ -1,5 +1,10 @@
 const yandexMap = document.querySelector('#map');
 
+if (!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
+    yandexMap.dataset.latitude = 37.76;
+    yandexMap.dataset.longitude = 77.64;
+}
+
 ymaps.ready(init);
 
 function init() {
@@ -11,11 +16,11 @@ function init() {
         searchControlProvider: 'yandex#search',
     }),
         searchCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (самая ближайшая точка);
-            preset: 'islands#orange'
+            // preset: 'islands#orange'
         }),
-        otherNearestCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (две дополнительные ближайшие точки);
-            preset: 'islands#yellowIcon'
-        }),
+        // otherNearestCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (две дополнительные ближайшие точки);
+        //     preset: 'islands#yellowIcon'
+        // }),
         clusterer = new ymaps.Clusterer({
             minClusterSize: 2,
             disableClickZoom: false,
@@ -29,18 +34,18 @@ function init() {
             clusterDisableClickZoom: true,
             clusterOpenBalloonOnClick: false,
         });
-        // Объект с точками (разделенными по типу на массивы);
-        // points = {
-        //     'main': [],
-        //     'head': [],
-        //     'excise': [],
-        //     'others': [],
-        // },
-        //     'main': [],
-        //     'head': [],
-        //     'excise': [],
-        //     'others': [],
-        // };
+    // Объект с точками (разделенными по типу на массивы);
+    // points = {
+    //     'main': [],
+    //     'head': [],
+    //     'excise': [],
+    //     'others': [],
+    // },
+    //     'main': [],
+    //     'head': [],
+    //     'excise': [],
+    //     'others': [],
+    // };
 
     // Карта состояний чекбоксов;
     var data = {

@@ -93,7 +93,7 @@ class CustomsFilterService
 
         return [
             "distance" => $distance,
-            "nearest" => null,
+            "point_type" => 'points',
             "custom_type" => $custom_type,
             'longitude' => $custom['COORDS_LONGITUDE'],
             'latitude' => $custom['COORDS_LATITUDE'],
@@ -190,9 +190,9 @@ class CustomsFilterService
         });
 
         if ($filterCustomsModel['longitude'] && $filterCustomsModel['latitude']) {
-            $customs_coords[0]['nearest'] = 1;
-            $customs_coords[1]['nearest'] = 1;
-            $customs_coords[2]['nearest'] = 1;
+            $customs_coords[0]['point_type'] = 'nearest';
+            $customs_coords[1]['point_type'] = 'nearest';
+            $customs_coords[2]['point_type'] = 'nearest';
         }
 
         return $customs_coords;

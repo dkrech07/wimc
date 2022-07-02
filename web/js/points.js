@@ -11,9 +11,11 @@
                 'others': '#E8B000',
             };
 
+            // getPointType
+
             for (var i = 0, len = points.length; i < len; i++) {
                 if (captions == 1) {
-                    geoObjects[i] = new ymaps.Placemark([points[i]['latitude'], points[i]['longitude']],
+                    geoObjects[points[i]['point_type']].push(new ymaps.Placemark([points[i]['latitude'], points[i]['longitude']],
                         {
                             iconCaption: points[i]['code'] + ' ' + points[i]['namt'],
                             balloonContentHeader: "<div class=ballon_header style='font-size: 12px;'>" + points[i]['code'] + " " + points[i]['namt'] + "</div>",
@@ -23,9 +25,9 @@
                         iconColor: pointsColors[points[i]['custom_type']],
                         hideIconOnBalloonOpen: false,
                         balloonOffset: [3, -25],
-                    });
+                    }));
                 } else {
-                    geoObjects[i] = new ymaps.Placemark([points[i]['latitude'], points[i]['longitude']],
+                    geoObjects[points[i]['point_type']].push(new ymaps.Placemark([points[i]['latitude'], points[i]['longitude']],
                         {
                             balloonContentHeader: "<div class=ballon_header style='font-size: 12px;'>" + points[i]['code'] + " " + points[i]['namt'] + "</div>",
                             balloonContentBody: '<div class=ballon_body>' + points[i]['adrtam'] + '</div>',
@@ -34,7 +36,7 @@
                         iconColor: pointsColors[points[i]['custom_type']],
                         hideIconOnBalloonOpen: false,
                         balloonOffset: [3, -25],
-                    });
+                    }));
                 }
 
             }
@@ -158,12 +160,17 @@
                 success: function (response) {
                     let customsCoords = JSON.parse(response);
 
-                    console.log('data:');
-                    console.log(data);
-                    console.log('response:');
-                    console.log(customsCoords);
+                    // console.log('data:');
+                    // console.log(data);
+                    // console.log('response:');
+                    // console.log(customsCoords);
 
-                    geoObjects = [];
+                    geoObjects = {
+                        'points': [],
+                        'nearest': [],
+                    };
+
+                    console.log(geoObjects);
 
                     window.points.checkAutocomplete(data['autocomplete']);
 
@@ -171,11 +178,39 @@
 
                     window.points.getPoints(geoObjects, customsCoords, data['captions']);
 
-                    clusterer.add(geoObjects);
+
+                    clusterer.add(geoObjects['points']);
                     myMap.geoObjects.add(clusterer);
-                    myMap.setBounds(clusterer.getBounds(), {
-                        checkZoomRange: true
-                    });
+
+                    if (data['latitude'] && data['longitude']) {
+                        searchCollection.removeAll();
+
+                        searchCollection.add(new ymaps.Placemark([data['latitude'], data['longitude']], {
+                            balloonContentHeader: 'Вы искали:',
+                            balloonContentBody: data['autocomplete'],
+                            balloonContentFooter: 'Координаты точки: ' + data['latitude'] + ', ' + data['longitude'],
+                            iconCaption: 'Ваша точка',
+                        }, {
+                            preset: 'islands#pinkDotIcon',
+                            iconColor: 'red',
+                        }));
+
+                        searchCollection.add(geoObjects['nearest'][0]);
+                        searchCollection.add(geoObjects['nearest'][1]);
+                        searchCollection.add(geoObjects['nearest'][2]);
+
+                        myMap.geoObjects.add(searchCollection);
+
+                        // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
+                        myMap.setBounds(searchCollection.getBounds());
+                        // myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
+                    }
+
+
+
+                    // myMap.setBounds(clusterer.getBounds(), {
+                    //     checkZoomRange: true
+                    // });
 
                     // if (data['main'] == 1) {
                     //     window.points.getPoints(geoObjects, customsCoords, data['captions']);
@@ -201,25 +236,7 @@
 
 
 
-                    if (data['latitude'] && data['longitude']) {
-                        searchCollection.removeAll();
 
-                        searchCollection.add(new ymaps.Placemark([data['latitude'], data['longitude']], {
-                            balloonContentHeader: 'Вы искали:',
-                            balloonContentBody: data['autocomplete'],
-                            balloonContentFooter: 'Координаты точки: ' + data['latitude'] + ', ' + data['longitude'],
-                            iconCaption: 'Ваша точка',
-                        }, {
-                            preset: 'islands#pinkDotIcon',
-                            iconColor: 'red',
-                        }));
-
-                        myMap.geoObjects.add(searchCollection);
-
-                        // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
-                        // myMap.setBounds(searchCollection.getBounds()); 
-                        // myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
-                    }
 
                     // myMap.geoObjects.add(searchCollection);
 
