@@ -13,23 +13,23 @@
 
             for (var i = 0, len = points.length; i < len; i++) {
                 if (captions == 1) {
-                    geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']],
+                    geoObjects[i] = new ymaps.Placemark([points[i]['latitude'], points[i]['longitude']],
                         {
-                            iconCaption: points[i]['properties']['iconCaption'],
-                            balloonContentHeader: points[i]['properties']['balloonContentHeader'],
-                            balloonContentBody: points[i]['properties']['balloonContentBody'],
-                            balloonContentFooter: points[i]['properties']['balloonContentFooter'],
+                            iconCaption: points[i]['code'] + ' ' + points[i]['namt'],
+                            balloonContentHeader: "<div class=ballon_header style='font-size: 12px;'>" + points[i]['code'] + " " + points[i]['namt'] + "</div>",
+                            balloonContentBody: '<div class=ballon_body>' + points[i]['adrtam'] + '</div>',
+                            balloonContentFooter: "<div class='ballon_footer'>" + points[i]['telefon'] + "</div>" + "<div class='ballon_footer'>" + points[i]['email'] + "</div>",
                         }, {
                         iconColor: pointsColors[points[i]['custom_type']],
                         hideIconOnBalloonOpen: false,
                         balloonOffset: [3, -25],
                     });
                 } else {
-                    geoObjects[i] = new ymaps.Placemark([points[i]['coordinates']['lat'], points[i]['coordinates']['lon']],
+                    geoObjects[i] = new ymaps.Placemark([points[i]['latitude'], points[i]['longitude']],
                         {
-                            balloonContentHeader: points[i]['properties']['balloonContentHeader'],
-                            balloonContentBody: points[i]['properties']['balloonContentBody'],
-                            balloonContentFooter: points[i]['properties']['balloonContentFooter'],
+                            balloonContentHeader: "<div class=ballon_header style='font-size: 12px;'>" + points[i]['code'] + " " + points[i]['namt'] + "</div>",
+                            balloonContentBody: '<div class=ballon_body>' + points[i]['adrtam'] + '</div>',
+                            balloonContentFooter: "<div class='ballon_footer'>" + points[i]['telefon'] + "</div>" + "<div class='ballon_footer'>" + points[i]['email'] + "</div>",
                         }, {
                         iconColor: pointsColors[points[i]['custom_type']],
                         hideIconOnBalloonOpen: false,

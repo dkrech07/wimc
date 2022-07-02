@@ -75,26 +75,6 @@ class CustomsFilterService
 
     public function getCustom($custom, $filterCustomsModel, $custom_type)
     {
-        $custom_color = [
-            'main' => 'padding: 3px; background: #00AA00; color: #FFFFFF;',
-            'head' => 'padding: 3px; background: #FF0000; color: #FFFFFF;',
-            'excise' => 'padding: 3px; background: #0000FF; color: #FFFFFF;',
-            'others' => 'padding: 3px; background: #E8B000; color: #FFFFFF;',
-        ];
-
-        if ($custom['TELEFON']) {
-            $phone_number = preg_replace('~\D+~', '',  $custom['TELEFON']);
-            $phone = ' <i class="bi bi-telephone-fill"></i> ' . '<a href="tel:' . '+7' . $phone_number . '">' . '+7' . $custom['TELEFON'] . '</a>';
-        } else {
-            $phone = '';
-        }
-
-        if ($custom['EMAIL']) {
-            $email = '<i class="bi bi-envelope-fill"></i> ' . '<a href="mailto:' . $custom['EMAIL'] . '">' . $custom['EMAIL'] . '</a>';
-        } else {
-            $email = '';
-        }
-
         $user_point = [
             "x" => $filterCustomsModel['longitude'],
             "y" => $filterCustomsModel['latitude'],
@@ -115,22 +95,72 @@ class CustomsFilterService
             "distance" => $distance,
             "nearest" => null,
             "custom_type" => $custom_type,
-            "coordinates" => [
-                'lon' => $custom['COORDS_LONGITUDE'],
-                'lat' => $custom['COORDS_LATITUDE'],
-            ],
+            'longitude' => $custom['COORDS_LONGITUDE'],
+            'latitude' => $custom['COORDS_LATITUDE'],
             "code" => $custom['CODE'],
-            "properties" => [
-                "balloonContentHeader" => '<div class=ballon_header style="font-size: 12px;' . $custom_color[$custom_type] . '">' . ' <i class="bi bi-geo-alt-fill"></i> ' . $custom['CODE'] . ' ' . $custom['NAMT'] . '</div>',
-                "balloonContentBody" => '<div class=ballon_body>' . $custom['ADRTAM'] . '</div>',
-                "balloonContentFooter" =>
-
-
-                '<div class=ballon_footer>' . $phone  . '</div>' .
-                    '<div class=ballon_footer>' . $email . '</div>',
-                "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
-            ],
+            "namt" => $custom['NAMT'],
+            "adrtam" => $custom['ADRTAM'],
+            "telefon" => $custom['TELEFON'],
+            "email" => $custom['EMAIL'],
         ];
+
+        // $custom_color = [
+        //     'main' => 'padding: 3px; background: #00AA00; color: #FFFFFF;',
+        //     'head' => 'padding: 3px; background: #FF0000; color: #FFFFFF;',
+        //     'excise' => 'padding: 3px; background: #0000FF; color: #FFFFFF;',
+        //     'others' => 'padding: 3px; background: #E8B000; color: #FFFFFF;',
+        // ];
+
+        // if ($custom['TELEFON']) {
+        //     $phone_number = preg_replace('~\D+~', '',  $custom['TELEFON']);
+        //     $phone = ' <i class="bi bi-telephone-fill"></i> ' . '<a href="tel:' . '+7' . $phone_number . '">' . '+7' . $custom['TELEFON'] . '</a>';
+        // } else {
+        //     $phone = '';
+        // }
+
+        // if ($custom['EMAIL']) {
+        //     $email = '<i class="bi bi-envelope-fill"></i> ' . '<a href="mailto:' . $custom['EMAIL'] . '">' . $custom['EMAIL'] . '</a>';
+        // } else {
+        //     $email = '';
+        // }
+
+        // if ($custom['TELEFON']) {
+        //     $phone_number = preg_replace('~\D+~', '',  $custom['TELEFON']);
+        //     $phone = '+7' . $phone_number . '">' . '+7' . $custom['TELEFON'] . '</a>';
+        // } else {
+        //     $phone = '';
+        // }
+
+        // if ($custom['EMAIL']) {
+        //     $email = '<i class="bi bi-envelope-fill"></i> ' . '<a href="mailto:' . $custom['EMAIL'] . '">' . $custom['EMAIL'] . '</a>';
+        // } else {
+        //     $email = '';
+        // }
+
+
+
+        // return [
+        //     "distance" => $distance,
+        //     "nearest" => null,
+        //     "custom_type" => $custom_type,
+        //     "coordinates" => [
+        //         'lon' => $custom['COORDS_LONGITUDE'],
+        //         'lat' => $custom['COORDS_LATITUDE'],
+        //     ],
+        //     "code" => $custom['CODE'],
+        //     "properties" => [
+        //         "balloonContentHeader" => '<div class=ballon_header style="font-size: 12px;' . $custom_color[$custom_type] . '">' . ' <i class="bi bi-geo-alt-fill"></i> ' . $custom['CODE'] . ' ' . $custom['NAMT'] . '</div>',
+        //         "balloonContentBody" => '<div class=ballon_body>' . $custom['ADRTAM'] . '</div>',
+        //         "balloonContentFooter" =>
+
+
+        //         '<div class=ballon_footer>' . $phone  . '</div>' .
+        //             '<div class=ballon_footer>' . $email . '</div>',
+        //         "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
+        //     ],
+        // ];
+
+
     }
 
     public function getCustoms($customs, $filterCustomsModel)
