@@ -272,6 +272,14 @@
                         nearestContainerElement.append(window.points.getNearestInfo(customsCoords[0]));
                         otherContainerElement.append(window.points.getNearestInfo(customsCoords[1]));
                         otherContainerElement.append(window.points.getNearestInfo(customsCoords[2]));
+
+                        var nearestItemElement = nearestPopupElement.querySelectorAll('.nearest-item');
+
+                        nearestItemElement.forEach((element) => {
+                            element.addEventListener('click', evt => {
+                                console.log(evt);
+                            });
+                        });
                     }
 
 

@@ -86,7 +86,7 @@ class CustomsFilterService
         ];
 
         if ($filterCustomsModel['longitude'] && $filterCustomsModel['latitude']) {
-            $distance = self::distanceTo($user_point, $current_point) * 10000;
+            $distance = self::distanceTo($user_point, $current_point) * 100;
 
             // $distance = round(self::distanceTo($user_point, $current_point) * 100, 2);
         } else {
@@ -188,7 +188,7 @@ class CustomsFilterService
         }
 
         usort($customs_coords, function ($a, $b) {
-            return ($a['distance'] - $b['distance']);
+            return ($a['distance'] * 100 - $b['distance'] * 100);
         });
 
         if ($filterCustomsModel['longitude'] && $filterCustomsModel['latitude']) {

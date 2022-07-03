@@ -560,7 +560,7 @@ body {
     opacity: 0.9;
 }
 
-.nearest-popup .nearest-header:hover{
+.nearest-popup .nearest-header:hover {
     cursor: pointer;
     opacity: 1;
 }
@@ -610,7 +610,7 @@ body {
 
 .nearest-item:hover {
     background-color: #D9D9D9;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .roll-button:hover {
@@ -648,7 +648,7 @@ body {
 
 /* Cookie */
 
-#cookie_note{
+#cookie_note {
     display: none;
     position: fixed;
     bottom: 45px;
@@ -663,35 +663,36 @@ body {
     z-index: 50;
 }
 
-#cookie_note p{
+#cookie_note p {
     margin: 0;
     font-size: 0.8rem;
     text-align: left;
     color: black;
 }
 
-.cookie_accept{
-    width:20%;
+.cookie_accept {
+    width: 20%;
 }
-@media (min-width: 576px){
-    #cookie_note.show{
+
+@media (min-width: 576px) {
+    #cookie_note.show {
         display: flex;
     }
 }
 
-@media (max-width: 575px){
-    #cookie_note.show{
+@media (max-width: 575px) {
+    #cookie_note.show {
         display: block;
         text-align: left;
-        width:100%;
+        width: 100%;
         bottom: 0;
     }
 
-    #cookie_note p{
+    #cookie_note p {
         margin-bottom: 15px;
     }
 
-    .cookie_accept{
-        width:100%;
+    .cookie_accept {
+        width: 100%;
     }
 }
