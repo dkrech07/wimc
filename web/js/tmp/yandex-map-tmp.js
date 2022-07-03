@@ -2,10 +2,10 @@
 if (yandexMap) {
 
 
-    if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
-        yandexMap.dataset.latitude = 37.76;
-        yandexMap.dataset.longitude = 77.64;
-    }
+    // if(!yandexMap.dataset.latitude && !yandexMap.dataset.longitude) {
+    //     yandexMap.dataset.latitude = 37.76;
+    //     yandexMap.dataset.longitude = 77.64;
+    // }
 
     // ymaps.ready(init);
 

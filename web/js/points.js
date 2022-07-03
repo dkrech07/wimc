@@ -152,6 +152,29 @@
             }
         },
 
+        getNearestInfo: function (item) {
+            var nearestItem = document.createElement('li');
+            nearestItem.className = 'nearest-item';
+
+            var nearestItemDistance = document.createElement('span');
+            nearestItemDistance.className = 'nearest-distance';
+            nearestItemDistance.textContent = '~' + Math.floor(item['distance']) + ' км';
+
+            var nearestItemName = document.createElement('span');
+            nearestItemName.className = 'nearest-name';
+            nearestItemName.textContent = item['namt'];
+
+            var nearestItemAddress = document.createElement('span');
+            nearestItemAddress.className = 'nearest-address';
+            nearestItemAddress.textContent = item['adrtam'];
+
+            nearestItem.append(nearestItemDistance);
+            nearestItem.append(nearestItemName);
+            nearestItem.append(nearestItemAddress);
+
+            return nearestItem;
+        },
+
         getData: function (data, clusterer, searchCollection, myMap) {
             $.ajax({
                 url: '/checkbox',
@@ -204,6 +227,48 @@
                         // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
                         myMap.setBounds(searchCollection.getBounds());
                         // myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
+
+
+                        var nearestPopupElement = document.querySelector('.nearest-popup');
+
+                        var nearestContainerElement = nearestPopupElement.querySelector('.nearest-list');
+                        var otherContainerElement = nearestPopupElement.querySelector('.nearest-others');
+
+                        if (nearestPopupElement.classList.contains('nearest-active')) {
+                            var nearestLists = nearestPopupElement.querySelectorAll('.nearest-list');
+                            while (nearestLists[0].firstChild) {
+                                nearestLists[0].removeChild(nearestLists[0].firstChild);
+                            }
+                            while (nearestLists[1].firstChild) {
+                                nearestLists[1].removeChild(nearestLists[1].firstChild);
+                            }
+                        } else {
+                            nearestPopupElement.classList.remove('nearest-disabled');
+                            nearestPopupElement.classList.add('nearest-active');
+                        }
+
+                        if (nearestPopupElement.classList.contains('roll-down')) {
+                            var nearestTitles = nearestPopupElement.querySelectorAll('.nearest-title');
+                            var nearestLists = nearestPopupElement.querySelectorAll('.nearest-list');
+                            var rollButtonElement = nearestPopupElement.querySelector('.roll-button');
+
+                            nearestPopupElement.classList.remove('roll-down');
+                            nearestPopupElement.classList.add('roll-up');
+
+                            rollButtonElement.textContent = 'Развернуть';
+
+                            nearestTitles.forEach(function (element) {
+                                element.style.display = 'block';
+                            });
+
+                            nearestLists.forEach(function (element) {
+                                element.style.display = 'block';
+                            });
+                        }
+
+                        nearestContainerElement.append(window.points.getNearestInfo(customsCoords[0]));
+                        otherContainerElement.append(window.points.getNearestInfo(customsCoords[1]));
+                        otherContainerElement.append(window.points.getNearestInfo(customsCoords[2]));
                     }
 
 

@@ -131,38 +131,37 @@ function init() {
     //                 return nearestItem;
     //             }
 
-    //             var nearestPopupElement = document.querySelector('.nearest-popup');
-    //             if (nearestPopupElement.classList.contains('nearest-active')) {
-    //                 var nearestLists = nearestPopupElement.querySelectorAll('.nearest-list');
-    //                 while (nearestLists[0].firstChild) {
-    //                     nearestLists[0].removeChild(nearestLists[0].firstChild);
-    //                 }
-    //                 while (nearestLists[1].firstChild) {
-    //                     nearestLists[1].removeChild(nearestLists[1].firstChild);
-    //                 }
-    //             } else {
-    //                 nearestPopupElement.classList.remove('nearest-disabled');
-    //                 nearestPopupElement.classList.add('nearest-active');
-    //             }
+    // if (nearestPopupElement.classList.contains('nearest-active')) {
+    //     var nearestLists = nearestPopupElement.querySelectorAll('.nearest-list');
+    //     while (nearestLists[0].firstChild) {
+    //         nearestLists[0].removeChild(nearestLists[0].firstChild);
+    //     }
+    //     while (nearestLists[1].firstChild) {
+    //         nearestLists[1].removeChild(nearestLists[1].firstChild);
+    //     }
+    // } else {
+    //     nearestPopupElement.classList.remove('nearest-disabled');
+    //     nearestPopupElement.classList.add('nearest-active');
+    // }
 
-    //             if (nearestPopupElement.classList.contains('roll-down')) {
-    //                 var nearestTitles = nearestPopupElement.querySelectorAll('.nearest-title');
-    //                 var nearestLists = nearestPopupElement.querySelectorAll('.nearest-list');
-    //                 var rollButtonElement = nearestPopupElement.querySelector('.roll-button');
+    // if (nearestPopupElement.classList.contains('roll-down')) {
+    //     var nearestTitles = nearestPopupElement.querySelectorAll('.nearest-title');
+    //     var nearestLists = nearestPopupElement.querySelectorAll('.nearest-list');
+    //     var rollButtonElement = nearestPopupElement.querySelector('.roll-button');
 
-    //                 nearestPopupElement.classList.remove('roll-down');
-    //                 nearestPopupElement.classList.add('roll-up');
+    //     nearestPopupElement.classList.remove('roll-down');
+    //     nearestPopupElement.classList.add('roll-up');
 
-    //                 rollButtonElement.textContent = 'Развернуть';
+    //     rollButtonElement.textContent = 'Развернуть';
 
-    //                 nearestTitles.forEach(function (element) {
-    //                     element.style.display = 'block';
-    //                 });
+    //     nearestTitles.forEach(function (element) {
+    //         element.style.display = 'block';
+    //     });
 
-    //                 nearestLists.forEach(function (element) {
-    //                     element.style.display = 'block';
-    //                 });
-    //             }
+    //     nearestLists.forEach(function (element) {
+    //         element.style.display = 'block';
+    //     });
+    // }
 
     //             var nearestContainerElement = nearestPopupElement.querySelector('.nearest-list');
     //             var otherContainerElement = nearestPopupElement.querySelector('.nearest-others');
