@@ -158,7 +158,10 @@
 
             var nearestItemDistance = document.createElement('span');
             nearestItemDistance.className = 'nearest-distance';
-            nearestItemDistance.textContent = '~' + Math.floor(item['distance']) + ' км';
+            // nearestItemDistance.textContent = '~' + Math.floor(item['distance']) + ' км';
+            var number = item['distance'];
+            nearestItemDistance.textContent = '~' + (Math.floor(number * 100) / 100) + ' км';
+
 
             var nearestItemName = document.createElement('span');
             nearestItemName.className = 'nearest-name';
@@ -183,17 +186,17 @@
                 success: function (response) {
                     let customsCoords = JSON.parse(response);
 
-                    // console.log('data:');
-                    // console.log(data);
-                    // console.log('response:');
-                    // console.log(customsCoords);
+                    console.log('data:');
+                    console.log(data);
+                    console.log('response:');
+                    console.log(customsCoords);
 
                     geoObjects = {
                         'points': [],
                         'nearest': [],
                     };
 
-                    console.log(geoObjects);
+                    // console.log(geoObjects);
 
                     window.points.checkAutocomplete(data['autocomplete']);
 

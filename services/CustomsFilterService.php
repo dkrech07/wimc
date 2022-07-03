@@ -87,6 +87,8 @@ class CustomsFilterService
 
         if ($filterCustomsModel['longitude'] && $filterCustomsModel['latitude']) {
             $distance = self::distanceTo($user_point, $current_point) * 10000;
+
+            // $distance = round(self::distanceTo($user_point, $current_point) * 100, 2);
         } else {
             $distance = null;
         }
