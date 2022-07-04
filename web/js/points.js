@@ -275,9 +275,13 @@
 
                         var nearestItemElement = nearestPopupElement.querySelectorAll('.nearest-item');
 
-                        nearestItemElement.forEach((element) => {
+                        nearestItemElement.forEach((element, index) => {
                             element.addEventListener('click', evt => {
-                                console.log(evt);
+                                console.log(index);
+
+                                geoObjects['nearest'][index].balloon.open(myMap.getCenter(), { content: 'Hello Yandex!' }, { closeButton: true });
+
+                                // myMap.balloon.open(myMap.getCenter(), { content: 'Hello Yandex!' }, { closeButton: true });
                             });
                         });
                     }
