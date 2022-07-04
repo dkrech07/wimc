@@ -14,9 +14,11 @@ function init() {
         controls: ['zoomControl'] // , 'routeButtonControl' 'searchControl', 
     }, {
         searchControlProvider: 'yandex#search',
+                    // preset: 'islands#orange'
+
     }),
         searchCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (самая ближайшая точка);
-            // preset: 'islands#orange'
+            preset: 'islands#orange'
         }),
         // otherNearestCollection = new ymaps.GeoObjectCollection(null, { // Коллекция для найденных точек (две дополнительные ближайшие точки);
         //     preset: 'islands#yellowIcon'

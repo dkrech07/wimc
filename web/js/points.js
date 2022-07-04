@@ -219,7 +219,13 @@
                         }, {
                             preset: 'islands#pinkDotIcon',
                             iconColor: 'red',
+                            hideIconOnBalloonOpen: false,
+                            balloonOffset: [3, -25],
                         }));
+
+                        
+                        // var squareLayout = ymaps.templateLayoutFactory.createClass('<div class="placemark_layout_container"><div class="square_layout">$</div></div>');
+                        // geoObjects['nearest'][0].squareLayout = squareLayout;
 
                         searchCollection.add(geoObjects['nearest'][0]);
                         searchCollection.add(geoObjects['nearest'][1]);
@@ -230,7 +236,6 @@
                         // Сделаем зум карты до двух точек (точки пользователя и ближайшего к ней поста);
                         myMap.setBounds(searchCollection.getBounds());
                         // myMap.setZoom(myMap.getZoom()-2); //Чуть-чуть уменьшить зум для красоты
-
 
                         var nearestPopupElement = document.querySelector('.nearest-popup');
 
@@ -273,15 +278,21 @@
                         otherContainerElement.append(window.points.getNearestInfo(customsCoords[1]));
                         otherContainerElement.append(window.points.getNearestInfo(customsCoords[2]));
 
+                        // nearestContainerElement.style.backgroundColor = '#D9D9D9';
+
                         var nearestItemElement = nearestPopupElement.querySelectorAll('.nearest-item');
 
                         nearestItemElement.forEach((element, index) => {
+                
                             element.addEventListener('click', evt => {
-                                console.log(index);
 
-                                geoObjects['nearest'][index].balloon.open(myMap.getCenter(), { content: 'Hello Yandex!' }, { closeButton: true });
+                                nearestItemElement.forEach(element => {
+                                    element.style.backgroundColor = '#FFFFFF';
+                                });
 
-                                // myMap.balloon.open(myMap.getCenter(), { content: 'Hello Yandex!' }, { closeButton: true });
+                                element.style.backgroundColor = '#D9D9D9';
+
+                                geoObjects['nearest'][index].balloon.open(myMap.getCenter());
                             });
                         });
                     }
