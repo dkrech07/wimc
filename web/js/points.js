@@ -211,12 +211,61 @@
                     if (data['latitude'] && data['longitude']) {
                         searchCollection.removeAll();
 
+                        // Создание метки с квадратной активной областью.
+                        var squareLayout = ymaps.templateLayoutFactory.createClass('<div class="nearest_point_layout blink"></div>');
+
+                        
+                        customsCoords.forEach(element => {
+                            if (element['point_type'] == 'nearest') {
+                                searchCollection.add(new ymaps.Placemark([element['latitude'], element['longitude']], {
+                                    // balloonContentHeader: 'Вы искали:',
+                                    // balloonContentBody: data['autocomplete'],
+                                    // balloonContentFooter: 'Координаты точки: ' + data['latitude'] + ', ' + data['longitude'],
+                                    // iconCaption: 'Ваша точка',
+                                }, {
+                                    iconLayout: squareLayout,
+                                    // iconShape: {
+                                    //     type: 'Rectangle',
+                                    //     // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+                                    //     coordinates: [
+                                    //         [-25, -25], [25, 25]
+                                    //     ]
+                                    // },
+                                    // iconLayout: 'default#image',
+                                    // iconImageClipRect: [[69,0], [97, 46]],
+                                    // iconImageHref: 'images/sprite.png',
+                                    // iconImageSize: [35, 63],
+                                    // iconImageOffset: [-35, -63],
+                                    
+                                    // preset: 'islands#pinkDotIcon',
+                                    // iconColor: 'red',
+                                    // hideIconOnBalloonOpen: false,
+                                    // balloonOffset: [3, -25],
+                                }));
+                            }
+             
+                        });
+
                         searchCollection.add(new ymaps.Placemark([data['latitude'], data['longitude']], {
                             balloonContentHeader: 'Вы искали:',
                             balloonContentBody: data['autocomplete'],
                             balloonContentFooter: 'Координаты точки: ' + data['latitude'] + ', ' + data['longitude'],
                             iconCaption: 'Ваша точка',
                         }, {
+                            // iconLayout: squareLayout,
+                            // iconShape: {
+                            //     type: 'Rectangle',
+                            //     // Прямоугольник описывается в виде двух точек - верхней левой и нижней правой.
+                            //     coordinates: [
+                            //         [-25, -25], [25, 25]
+                            //     ]
+                            // },
+                            // iconLayout: 'default#image',
+                            // iconImageClipRect: [[69,0], [97, 46]],
+                            // iconImageHref: 'images/sprite.png',
+                            // iconImageSize: [35, 63],
+                            // iconImageOffset: [-35, -63],
+                            
                             preset: 'islands#pinkDotIcon',
                             iconColor: 'red',
                             hideIconOnBalloonOpen: false,
