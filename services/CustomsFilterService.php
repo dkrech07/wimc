@@ -18,51 +18,89 @@ class CustomsFilterService
 {
     public function getFilteredCustoms(FilterCustoms $form_model) //: object
     {
-        $sql = "SELECT * FROM customs";
+        // Головные
+        // Посты, код которых заканчивается на *****000, за исключением постов, код которых начинается на 10009*** и на 121-125*****.
+        // Акцизные
+        // Посты, код которых начинается на 10009***.
+        // Специальные
+        // Посты, код которых начинается на 121-125*****.
+        // 	Основные
+        // Посты, которые не подошли под условия выше. То есть, все посты, кроме тех, код которых заканчивается на *****000 или начинается на 10009*** и 121-125*****.
 
-        $without_head_query = "SUBSTRING(CODE, -3) NOT IN (000) AND SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
-        $without_excise_query = "SUBSTRING(CODE, 1, 5) NOT IN (10009)";
-        $without_others_query = "SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
 
-        $queries = [
-            'head' => $without_head_query,
-            'excise' => $without_excise_query,
-            'others' => $without_others_query,
+        $main_query = "SELECT * FROM customs WHERE SUBSTRING(CODE, -3) NOT IN (000) AND SUBSTRING(CODE, 1, 5) NOT IN (10009) AND SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
+        $head_query = "SELECT * FROM customs WHERE SUBSTRING(CODE, -3) IN (000) AND SUBSTRING(CODE, 1, 5) NOT IN (10009) AND SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
+        $excise_query = "SELECT * FROM customs WHERE SUBSTRING(CODE, 1, 5) IN (10009)";
+        $others_query = "SELECT * FROM customs WHERE SUBSTRING(CODE, 1, 3) IN (121, 122, 123, 124, 125)";
+
+        $customs = [
+            'main' => null,
+            'head' => null,
+            'excise' => null,
+            'others' => null,
         ];
 
+        if ($form_model->main == '1') {
+            $customs['main'] = Customs::findBySql($main_query)->all();
+        }
+
         if ($form_model->head == '1') {
-            unset($queries['head']);
-        } else {
-            $queries['head'] = $without_head_query;
+            $customs['head'] = Customs::findBySql($head_query)->all();
         }
 
         if ($form_model->excise == '1') {
-            unset($queries['excise']);
-        } else {
-            $queries['excise'] = $without_excise_query;
+            $customs['excise'] = Customs::findBySql($excise_query)->all();
         }
 
         if ($form_model->others == '1') {
-            unset($queries['others']);
-        } else {
-            $queries['others'] = $without_others_query;
+            $customs['others'] = Customs::findBySql($others_query)->all();
         }
 
-        $queries_keys = [];
-        foreach ($queries as $key => $query) {
-            $queries_keys[] = $key;
-        }
+        return $customs;
 
-        foreach ($queries_keys as $key => $query) {
-            if ($key === 0) {
-                $sql .= " WHERE ";
-            } else {
-                $sql .= " AND ";
-            }
-            $sql .= $queries[$query];
-        }
+        // $without_head_query = "SUBSTRING(CODE, -3) NOT IN (000) AND SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
+        // $without_excise_query = "SUBSTRING(CODE, 1, 5) NOT IN (10009)";
+        // $without_others_query = "SUBSTRING(CODE, 1, 3) NOT IN (121, 122, 123, 124, 125)";
 
-        return Customs::findBySql($sql)->all();
+        // $queries = [
+        //     'head' => $without_head_query,
+        //     'excise' => $without_excise_query,
+        //     'others' => $without_others_query,
+        // ];
+
+        // if ($form_model->head == '1') {
+        //     unset($queries['head']);
+        // } else {
+        //     $queries['head'] = $without_head_query;
+        // }
+
+        // if ($form_model->excise == '1') {
+        //     unset($queries['excise']);
+        // } else {
+        //     $queries['excise'] = $without_excise_query;
+        // }
+
+        // if ($form_model->others == '1') {
+        //     unset($queries['others']);
+        // } else {
+        //     $queries['others'] = $without_others_query;
+        // }
+
+        // $queries_keys = [];
+        // foreach ($queries as $key => $query) {
+        //     $queries_keys[] = $key;
+        // }
+
+        // foreach ($queries_keys as $key => $query) {
+        //     if ($key === 0) {
+        //         $sql .= " WHERE ";
+        //     } else {
+        //         $sql .= " AND ";
+        //     }
+        //     $sql .= $queries[$query];
+        // }
+
+        // return Customs::findBySql($sql)->all();
     }
 
     function distanceTo($user_point, $current_point)
@@ -105,87 +143,52 @@ class CustomsFilterService
             "telefon" => $custom['TELEFON'],
             "email" => $custom['EMAIL'],
         ];
-
-        // $custom_color = [
-        //     'main' => 'padding: 3px; background: #00AA00; color: #FFFFFF;',
-        //     'head' => 'padding: 3px; background: #FF0000; color: #FFFFFF;',
-        //     'excise' => 'padding: 3px; background: #0000FF; color: #FFFFFF;',
-        //     'others' => 'padding: 3px; background: #E8B000; color: #FFFFFF;',
-        // ];
-
-        // if ($custom['TELEFON']) {
-        //     $phone_number = preg_replace('~\D+~', '',  $custom['TELEFON']);
-        //     $phone = ' <i class="bi bi-telephone-fill"></i> ' . '<a href="tel:' . '+7' . $phone_number . '">' . '+7' . $custom['TELEFON'] . '</a>';
-        // } else {
-        //     $phone = '';
-        // }
-
-        // if ($custom['EMAIL']) {
-        //     $email = '<i class="bi bi-envelope-fill"></i> ' . '<a href="mailto:' . $custom['EMAIL'] . '">' . $custom['EMAIL'] . '</a>';
-        // } else {
-        //     $email = '';
-        // }
-
-        // if ($custom['TELEFON']) {
-        //     $phone_number = preg_replace('~\D+~', '',  $custom['TELEFON']);
-        //     $phone = '+7' . $phone_number . '">' . '+7' . $custom['TELEFON'] . '</a>';
-        // } else {
-        //     $phone = '';
-        // }
-
-        // if ($custom['EMAIL']) {
-        //     $email = '<i class="bi bi-envelope-fill"></i> ' . '<a href="mailto:' . $custom['EMAIL'] . '">' . $custom['EMAIL'] . '</a>';
-        // } else {
-        //     $email = '';
-        // }
-
-
-
-        // return [
-        //     "distance" => $distance,
-        //     "nearest" => null,
-        //     "custom_type" => $custom_type,
-        //     "coordinates" => [
-        //         'lon' => $custom['COORDS_LONGITUDE'],
-        //         'lat' => $custom['COORDS_LATITUDE'],
-        //     ],
-        //     "code" => $custom['CODE'],
-        //     "properties" => [
-        //         "balloonContentHeader" => '<div class=ballon_header style="font-size: 12px;' . $custom_color[$custom_type] . '">' . ' <i class="bi bi-geo-alt-fill"></i> ' . $custom['CODE'] . ' ' . $custom['NAMT'] . '</div>',
-        //         "balloonContentBody" => '<div class=ballon_body>' . $custom['ADRTAM'] . '</div>',
-        //         "balloonContentFooter" =>
-
-
-        //         '<div class=ballon_footer>' . $phone  . '</div>' .
-        //             '<div class=ballon_footer>' . $email . '</div>',
-        //         "iconCaption" => $custom['CODE'] . ' ' . $custom['NAMT'],
-        //     ],
-        // ];
-
-
     }
 
     public function getCustoms($customs, $filterCustomsModel)
     {
         $customs_coords = [];
 
-        foreach ($customs as $number => $custom) {
-            if (substr($custom['CODE'], -3) == '000') {
-                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'head');
-            } else if (substr($custom['CODE'], 0, 5) == '10009') {
-                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'excise');
-            } else if (
-                substr($custom['CODE'], 0, 3) == '121'
-                || substr($custom['CODE'], 0, 3) == '122'
-                || substr($custom['CODE'], 0, 3) == '123'
-                || substr($custom['CODE'], 0, 3) == '124'
-                || substr($custom['CODE'], 0, 3) == '125'
-            ) {
-                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'others');
-            } else {
+        // foreach ($customs as $number => $custom) {
+        //     if (substr($custom['CODE'], -3) == '000') {
+        //         $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'head');
+        //     } else if (substr($custom['CODE'], 0, 5) == '10009') {
+        //         $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'excise');
+        //     } else if (
+        //         substr($custom['CODE'], 0, 3) == '121'
+        //         || substr($custom['CODE'], 0, 3) == '122'
+        //         || substr($custom['CODE'], 0, 3) == '123'
+        //         || substr($custom['CODE'], 0, 3) == '124'
+        //         || substr($custom['CODE'], 0, 3) == '125'
+        //     ) {
+        //         $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'others');
+        //     } else {
+        //         $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'main');
+        //     }
+        // }
+        if ($customs['main']) {
+            foreach ($customs['main'] as $number => $custom) {
                 $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'main');
             }
         }
+
+        if ($customs['head']) {
+            foreach ($customs['head'] as $number => $custom) {
+                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'head');
+            }
+        }
+        if ($customs['excise']) {
+            foreach ($customs['excise'] as $number => $custom) {
+                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'excise');
+            }
+        }
+        if ($customs['others']) {
+            foreach ($customs['others'] as $number => $custom) {
+                $customs_coords[] = self::getCustom($custom, $filterCustomsModel, 'others');
+            }
+        }
+
+        // key
 
         usort($customs_coords, function ($a, $b) {
             return ($a['distance'] * 100 - $b['distance'] * 100);
@@ -198,5 +201,6 @@ class CustomsFilterService
         }
 
         return $customs_coords;
+        // return $customs;
     }
 }

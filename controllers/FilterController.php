@@ -31,16 +31,10 @@ class FilterController extends Controller
 
             (new LogService())->logIP(Yii::$app->request->userIP);
 
-
             $customs = (new CustomsFilterService())->getFilteredCustoms($filterCustomsModel);
-
-
-
-            // (new CustomsFilterService())->getCustom($custom, $custom_type, $captions = null);
-
             $customs_coords = (new CustomsFilterService())->getCustoms($customs, $filterCustomsModel);
-
             return json_encode($customs_coords, JSON_UNESCAPED_UNICODE);
+            // return json_encode($customs, JSON_UNESCAPED_UNICODE);
         }
     }
 }
