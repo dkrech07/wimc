@@ -313,6 +313,7 @@
                             nearestPopupElement.classList.add('roll-up');
 
                             rollButtonElement.textContent = 'Развернуть';
+                            //<i class="bi bi-caret-down-fill"></i>
 
                             nearestTitles.forEach(function (element) {
                                 element.style.display = 'block';
