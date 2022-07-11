@@ -103,6 +103,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_d
         <ul class="nearest-list"></ul>
         <h4 class="nearest-title">Еще посты рядом</h4>
         <ul class="nearest-list nearest-others"></ul>
-        <div class="roll-button">Свернуть</div>
+        <div class="roll-button">Свернуть </div>
+        <!-- <i class="bi bi-caret-up-fill"></i> -->
     </div>
 </div>

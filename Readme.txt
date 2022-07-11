@@ -45,6 +45,19 @@ http://localhost/wimc/web/index.php?r=customs/index
 
 ---------------------------------------------------------
 
+
+
+фильтрация на фронте -> фильтр sql -> фильтр php (для наполнения массива для отправки на фронт) -> получение на фронте
+
+
+
+
+
+
+
+
+
+
     <?= $form->field($searchCustomsModel, 'nearest_lat', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lat']) ?>
     <?= $form->field($searchCustomsModel, 'nearest_lon', ['template' => '{input}'])->hiddenInput(['id' => 'nearest_lon']) ?>
     <?= $form->field($searchCustomsModel, 'distance', ['template' => '{input}'])->hiddenInput(['id' => 'distance']) ?>
