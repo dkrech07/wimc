@@ -29,7 +29,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $page->page_meta_d
             // 'enableAjaxValidation' => true,
             'options' => [
                 'autocomplete' => 'off',
-                'class' => '', //form-horizontal
+                'class' => 'dropzone', //form-horizontal
                 'style' => 'margin-bottom: 10px;',
             ],
         ]); ?>

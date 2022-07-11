@@ -24,15 +24,18 @@ class AppAsset extends AssetBundle
         'css/site.css',
         "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css",
         "//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css",
+        "https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css",
     ];
     public $js = [
-        // 'https://code.jquery.com/jquery-3.6.0.js',
+        'js/points.js',
         'https://code.jquery.com/ui/1.13.1/jquery-ui.js',
         'js/jquery.ui.autocomplete.html.js',
         'js/autocomplete.js',
         'js/yandex-map.js',
         'js/nearestPopup.js',
         'js/cookie.js',
+        'https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js',
+        'js/dropzone-custom.js',
         'js/contacts-form.js'
     ];
     public $depends = [

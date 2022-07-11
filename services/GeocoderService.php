@@ -20,10 +20,13 @@ class GeocoderService
             'polygon_geojson' => 1,
         ]);
 
-        $url = "http://nominatim.openstreetmap.org/search?$query";
+        $url = "http://nominatim.openstreetmap.org/search?$query&accept-language=ru&countrycodes=ru";
+
+        // $url = "http://nominatim.openstreetmap.org/search?$query";
         $client = new Client([
             'base_uri' => $url,
         ]);
+
 
         $request = new Request('PUT', $url);
         $response = $client->send($request);

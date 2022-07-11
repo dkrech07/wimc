@@ -18,8 +18,8 @@ $this->title = 'Grandmaster - Admin';
 
 <div class="content-block col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
     <h3 class="grandmaster-title">Сообщения</h3>
-    <p>Сообщения из формы со страницы "Связаться с нами" <a target="_blank" href="/contacts">https://mycustoms.site/contacts</a></p>
-
+    <p>Сообщения из формы со страницы "Связаться с нами" <a target="_blank" href="/contacts">https://mycustoms.site/contacts</a>
+    </p>
 
     <table class="customs-table">
         <thead class="customs-head">
