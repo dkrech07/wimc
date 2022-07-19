@@ -40,9 +40,8 @@ class CustomsFilterService
             'others' => null,
         ];
 
-        if ($form_model->main == '1') {
-            $customs['main'] = Customs::findBySql($main_query)->all();
-        }
+
+        $customs['main'] = Customs::findBySql($main_query)->all();
 
         if ($form_model->head == '1') {
             $customs['head'] = Customs::findBySql($head_query)->all();

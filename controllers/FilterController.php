@@ -19,7 +19,6 @@ class FilterController extends Controller
             $request = Yii::$app->request;
             $data = $request->post();
 
-            $filterCustomsModel->main = $data['main'];
             $filterCustomsModel->head = $data['head'];
             $filterCustomsModel->excise = $data['excise'];
             $filterCustomsModel->others = $data['others'];
